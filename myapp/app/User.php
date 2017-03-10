@@ -15,8 +15,13 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password'
+        , 'phone', 'isBlocked', 'bankName', 'bankAccountName', 'bankAccountNumber'
+        , 'bitCoinAddress', 'avatar', 'relatedCountryID', 'credibilityScore',
     ];
+    public function country() {
+        $this->belongsTo('App\Country', 'relatedCountryID');
+    }
 
     /**
      * The attributes that should be hidden for arrays.
