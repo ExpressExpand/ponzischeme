@@ -12,7 +12,7 @@ return [
     | any other location as required by the application or its packages.
     */
 
-    'name' => 'Laravel',
+    'name' => 'Giveandget',
 
     /*
     |--------------------------------------------------------------------------
@@ -166,7 +166,8 @@ return [
         /*
          * Package Service Providers...
          */
-        Laravel\Tinker\TinkerServiceProvider::class,
+
+        //
 
         /*
          * Application Service Providers...
@@ -178,7 +179,9 @@ return [
         App\Providers\RouteServiceProvider::class,
 
         Zizaco\Entrust\EntrustServiceProvider::class,
-
+        Illuminate\Auth\AuthServiceProvider::class,
+        Collective\Html\HtmlServiceProvider::class,
+        Intervention\Image\ImageServiceProvider::class,
     ],
 
     /*
@@ -198,7 +201,6 @@ return [
         'Artisan' => Illuminate\Support\Facades\Artisan::class,
         'Auth' => Illuminate\Support\Facades\Auth::class,
         'Blade' => Illuminate\Support\Facades\Blade::class,
-        'Broadcast' => Illuminate\Support\Facades\Broadcast::class,
         'Bus' => Illuminate\Support\Facades\Bus::class,
         'Cache' => Illuminate\Support\Facades\Cache::class,
         'Config' => Illuminate\Support\Facades\Config::class,
@@ -229,6 +231,9 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
         'Entrust'   => Zizaco\Entrust\EntrustFacade::class,
+        'Form' => Collective\Html\FormFacade::class,
+        'Html' => Collective\Html\HtmlFacade::class,
+        'Image' => Intervention\Image\Facades\Image::class,
     ],
 
 ];
