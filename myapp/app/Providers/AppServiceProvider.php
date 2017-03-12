@@ -25,5 +25,6 @@ class AppServiceProvider extends ServiceProvider
     {
         $path = __DIR__;
         require_once $path. '/../Http/Helpers/function.php';
+        require_once $path. '/../Http/Helpers/EmailHelpers.php';
     }
 }

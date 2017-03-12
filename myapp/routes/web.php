@@ -22,5 +22,11 @@ Auth::routes();
 Route::get('/logout', 'Auth\LoginController@logout');
 Route::get('dashboard', 'UserController@dashboard');
 
-//make payments
-Route::get('new/donations', 'PhController@create');
+//provide help
+Route::get('new/donation', 'PhController@create');
+Route::get('new/donation/store', 'PhController@store');
+
+
+//get help
+Route::get('new/request', 'GhController@create');
+Route::get('new/store', 'GhController@store');
