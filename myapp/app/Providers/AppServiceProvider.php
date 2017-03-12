@@ -23,6 +23,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $path = __DIR__;
+        require_once $path. '/../Http/Helpers/function.php';
     }
 }

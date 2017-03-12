@@ -14,3 +14,13 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('template', function() {
+	return view('template');
+});
+Auth::routes();
+
+Route::get('/logout', 'Auth\LoginController@logout');
+Route::get('dashboard', 'UserController@dashboard');
+
+//make payments
+Route::get('new/donations', 'PhController@create');

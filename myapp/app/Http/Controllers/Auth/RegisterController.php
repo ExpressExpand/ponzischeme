@@ -7,6 +7,9 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
+use App\Country;
+use App\Referral;
+
 class RegisterController extends Controller
 {
     /*
@@ -27,7 +30,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/dashboard';
 
     /**
      * Create a new controller instance.
@@ -48,9 +51,11 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => 'required|max:255',
+            'fullname' => 'required|max:255',
             'email' => 'required|email|max:255|unique:users',
-            'password' => 'required|min:6|confirmed',
+            'password' => 'required|min:6|same:password_confirm',
+            'phone' => 'required|min:3',
+            'relatedCountryID' => 'required',
         ]);
     }
 
@@ -62,10 +67,44 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
-            'name' => $data['name'],
+        //we need to get the ip
+        $ip = get_ip_address();
+        //check if a referral email exists
+        if($data['referral_email'] && strlen($data['referral_email'])) {
+            //get their referral user model
+            $referrer = User::where(
+                'email', $data['referral_email'])->orWhere('referrerUsername', $data['referral_email'])->first();
+        }else{
+            $referrer = User::where('email', 'maxteetechnologies@gmail.com')->first();
+        }
+        $level = 1;
+        //check the current level of the referral and increment by one
+        if($referrer !== null) {
+            $level_check = Referral::where('relatedReferralUserID', $referrer->id)->first();
+            if($level_check) {
+                $level = $level_check->level + 1;
+            }    
+        }
+
+        $user = User::create([
+            'name' => $data['fullname'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
+            'phone' => $data['phone'],
+            'relatedCountryID' => $data['relatedCountryID'], 
+            'ip' => $ip,
         ]);
+        //update the referral model
+        $ref = new Referral();
+        $ref->relatedReferrerUserID = $referrer->id;//many relationship downlines
+        $ref->relatedReferralUserID = $user->id;//one relationship the recommended guy
+        $ref->level = $level;
+        $ref->save();
+        return $user;
+    }
+    public function showRegistrationForm()
+    {
+        $countries = Country::pluck('name', 'id');
+        return view('auth.register', compact('countries'));
     }
 }

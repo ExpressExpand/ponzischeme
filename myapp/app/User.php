@@ -17,7 +17,8 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'phone', 'bankName', 'accountNumber', 'accountName',
+        'bitcoinAddress', 'avatar', 'relatedCountryID', 'points', 'isBlocked', 'ip', 'referrerUsername'
     ];
 
     /**
@@ -28,4 +29,10 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function country() {
+        return $this->belongsTo('App\Country', 'relatedCountryID');
+    }
+
+
 }
