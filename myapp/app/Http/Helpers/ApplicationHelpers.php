@@ -1,6 +1,7 @@
 <?php 
 namespace app\Http\Helpers;
 use App\DonationHelp;
+
 use App\Http\Helpers\ApplicationHelpers;
 use App\Http\Helpers\MyCustomException;
 
@@ -24,7 +25,6 @@ final class ApplicationHelpers {
 					that is equal or greater than '.$highest);
 			}
 		}		
-		return true;
 	}
 	public static function checkForActivePh($user) {
 		$donations = array();
