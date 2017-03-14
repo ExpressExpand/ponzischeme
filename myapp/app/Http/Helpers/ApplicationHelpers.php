@@ -1,8 +1,9 @@
 <?php 
 namespace app\Http\Helpers;
-use App\DonationHelp
+use App\DonationHelp;
+
 final class ApplicationHelpers {
-	public static usersCantGoBelowPHAmountChecks($amount, $user) {
+	public static function usersCantGoBelowPHAmountChecks($amount, $user) {
 		$donations = DonationHelp::where(['userID' => $user->id, 'phGh' => 'ph'])->get;
 		if(!$donations) {
 			return true;
