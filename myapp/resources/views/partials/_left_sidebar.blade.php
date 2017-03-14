@@ -38,7 +38,7 @@
                 <li>
                     <a href="#"><i class="fa fa-money"></i> <span class="nav-label">Get Help</span><span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
-                        <li><a href="graph_flot.html">Request Payment</a></li>
+                        <li><a href="{{ url('new/request') }}">Request Payment</a></li>
                         <li><a href="graph_flot.html">Confirm Payment Received</a></li>
                         <li><a href="graph_flot.html">Transaction History</a></li>
                     </ul>

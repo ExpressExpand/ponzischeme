@@ -25,7 +25,7 @@ class PhRequest extends FormRequest
     {
         return [
             'paymentType' => 'required',
-            'amount' => 'required|number',
+            'amount' => 'required|numeric',
         ];
     }
 }

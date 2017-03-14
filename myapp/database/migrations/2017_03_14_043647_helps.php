@@ -20,6 +20,7 @@ class Helps extends Migration
             $table->string('phGh');
             $table->integer('isConfirmed')->default('0');
             $table->integer('userID')->references('id')->on('users');
+            $table->string('status');
             $table->timestamps();
             $table->softDeletes();
         });

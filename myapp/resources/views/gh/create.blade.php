@@ -1,5 +1,5 @@
 @extends('layouts/master')
-@section('title', 'Provide help')
+@section('title', 'Receive help')
 
 @section('content')       
     <div class="row wrapper border-bottom white-bg page-heading">
@@ -26,7 +26,7 @@
             <div class="col-sm-12">
                 <div class="ibox-content">
                     @include('partials/_alert')
-                    {{ Form::open(['url' => 'new/donation/store', 'class'=>'form-horizontal', 'method'=>'post']) }}
+                    {{ Form::open(['url' => 'new/request/store', 'class'=>'form-horizontal', 'method'=>'post']) }}
                         <p>Provide Help.</p>
                         <div class="alert alert-info">Note: Current Bitcoin Exchange Rate : 1 USD = 0.00081760 BTC</div>
                         <div class="form-group">

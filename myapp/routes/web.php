@@ -24,9 +24,9 @@ Route::get('dashboard', 'UserController@dashboard');
 
 //provide help
 Route::get('new/donation', 'PhController@create');
-Route::get('new/donation/store', 'PhController@store');
+Route::post('new/donation/store/', 'PhController@store');
 
 
 //get help
 Route::get('new/request', 'GhController@create');
-Route::get('new/store', 'GhController@store');
+Route::post('new/request/store', 'GhController@store');
