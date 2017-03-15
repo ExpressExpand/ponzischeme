@@ -30,3 +30,19 @@ Route::post('new/donation/store/', 'PhController@store');
 //get help
 Route::get('new/request', 'GhController@create');
 Route::post('new/request/store', 'GhController@store');
+
+//profile
+Route::get('profile', 'ProfileController@viewProfile');
+Route::put('change/password', 'ProfileController@changePassword');
+Route::put('profile/change/picture', 'ProfileController@changePicture');
+
+//check for registration bonuses and referral bonuses
+
+#profile-image1 {
+ //    cursor: pointer;
+  
+ //     width: 100px;
+ //    height: 100px;
+	// border:2px solid #03b1ce ;}
+	// .tital{ font-size:16px; font-weight:500;}
+	//  .bot-border{ border-bottom:1px #f8f8f8 solid;  margin:5px 0  5px 0}

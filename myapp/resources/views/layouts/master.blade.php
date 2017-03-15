@@ -13,6 +13,7 @@
     <link href="{{ asset('css.inspinia/plugins/iCheck/custom.css') }}" rel="stylesheet">
     <link href="{{ asset('css/inspinia/animate.css') }}" rel="stylesheet">
     <link href="{{ asset('css/inspinia/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/main.css') }}" rel="stylesheet">
 
 </head>
 <body>

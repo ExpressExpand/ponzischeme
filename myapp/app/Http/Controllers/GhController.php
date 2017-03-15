@@ -10,7 +10,7 @@ use App\Http\Helpers\MyCustomException;
 class GhController extends Controller
 {
 	public function __construct() {
-		$this->middleware(['auth', 'web']);
+		$this->middleware(['auth', 'blockedUser']);
 	}
     public function create() {
     	return view('gh.create');

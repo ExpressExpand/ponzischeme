@@ -10,7 +10,7 @@ use Auth;
 class PhController extends Controller
 {
 	public function __construct() {
-		$this->middleware(['auth','web']);
+		$this->middleware(['auth','blockedUser']);
 	}
     public function create() {
     	//check if the ph amount is blocked
