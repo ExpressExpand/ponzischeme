@@ -30,8 +30,8 @@
                     <ul class="nav nav-second-level">
                         <li><a href="{{ url('new/donation') }}">New Donation</a></li>
                         <li><a href="graph_flot.html">Make Payment</a></li>
-                        <li><a href="graph_flot.html">Confirm Payment</a></li>
-                        <li><a href="graph_flot.html">Transaction History</a></li>
+                        <li><a href="{{ url('all/ph/payments') }}">All Payments</a></li>
+                        <li><a href="{{ url('ph/transactions') }}">Transaction History</a></li>
                     </ul>
                 </li>
 

@@ -19,8 +19,8 @@ final class ApplicationHelpers {
 		})->get()->pluck('amount')->toArray();
 		if(count($donations) > 0) {
 			//determine the largest amount
-			$highest = max($check_amounts);
-			if($amounts < $highest) {
+			$highest = max($donations);
+			if($amount < $highest) {
 				throw new exception('You cannot go below your last ph. Ensure you put an amount 
 					that is equal or greater than '.$highest);
 			}

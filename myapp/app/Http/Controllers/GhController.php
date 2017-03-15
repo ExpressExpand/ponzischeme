@@ -23,4 +23,5 @@ class GhController extends Controller
     		return redirect()->back()->withInput()->withErrors($ex->getMessage());
     	}
     }
+    
 }

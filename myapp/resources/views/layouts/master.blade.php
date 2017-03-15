@@ -10,9 +10,15 @@
     <link href="{{ asset('css/inspinia/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/font-awesome/css/font-awesome.css') }}" rel="stylesheet">
 
-    <link href="{{ asset('css.inspinia/plugins/iCheck/custom.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/inspinia/plugins/iCheck/custom.css') }}" rel="stylesheet">
     <link href="{{ asset('css/inspinia/animate.css') }}" rel="stylesheet">
     <link href="{{ asset('css/inspinia/style.css') }}" rel="stylesheet">
+
+        <!-- Data Tables -->
+    <link href="{{ asset('css/inspinia/plugins/dataTables/dataTables.bootstrap.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/inspinia/plugins/dataTables/dataTables.responsive.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/inspinia/plugins/dataTables/dataTables.tableTools.min.css') }}" rel="stylesheet">
+
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
 
 </head>

@@ -65,4 +65,5 @@
     </div>        
 @stop
 @section('resources')
+
 @stop

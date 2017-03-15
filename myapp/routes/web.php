@@ -35,6 +35,8 @@ Route::post('new/request/store', 'GhController@store');
 Route::get('profile', 'ProfileController@viewProfile');
 Route::put('change/password', 'ProfileController@changePassword');
 Route::put('profile/change/picture', 'ProfileController@changePicture');
+Route::get('all/ph/payments', 'PhController@allPayments');
+Route::get('ph/transactions', 'PhController@transactions');
 
 //check for registration bonuses and referral bonuses
 
