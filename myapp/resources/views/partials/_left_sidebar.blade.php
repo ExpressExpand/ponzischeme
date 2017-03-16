@@ -43,7 +43,17 @@
                         <li><a href="graph_flot.html">Transaction History</a></li>
                     </ul>
                 </li>
-        
+
+                <!-- this part is the admin link -->
+                 <li>
+                    <a href="#"><i class="fa fa-money"></i> <span class="nav-label">Admin</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li><a href="{{ url('users') }}">Users</a></li>
+                        <li><a href="graph_flot.html">Confirm Payment Received</a></li>
+                        <li><a href="graph_flot.html">Transaction History</a></li>
+                    </ul>
+                </li>
+
                 <li>
                     <a href="grid_options.html"><i class="fa fa-laptop"></i>
                     <span class="nav-label">View Testimonies</span></a>

@@ -38,6 +38,9 @@ Route::put('profile/change/picture', 'ProfileController@changePicture');
 Route::get('all/ph/payments', 'PhController@allPayments');
 Route::get('ph/transactions', 'PhController@transactions');
 
+//admin
+Route::get('users', 'AdminController@viewUsers');
+
 //check for registration bonuses and referral bonuses
 
 #profile-image1 {

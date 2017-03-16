@@ -17,5 +17,13 @@ class DonationHelp extends Model
 
 	protected $table = 'donation_helps';
     protected $fillable = array('paymentType', 'amount', 'phGh', 'isConfirmed', 'userID', 'status');
+
+    protected function getStatusAttribute($value) {
+
+    }
+    public function statusMaps() {
+
+    }
+    // public fun?ction
  
 }

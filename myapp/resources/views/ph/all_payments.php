@@ -4,7 +4,8 @@
 @section('content')       
     <div class="row wrapper border-bottom white-bg page-heading">
         <div class="col-sm-4">
-            <h2>Transaction History(Provide Help)</h2>
+            <h2>All Payments</h2>
+            <div>This shows all Payments/Pairing made in the system either successful or cancelled</div>
             <ol class="breadcrumb">
                 <li>
                     <a href="index.html">This is</a>
@@ -25,35 +26,23 @@
         <div class="row">
             <div class="col-sm-12">
                 <div class="ibox-content">
+                    <h4>THE LIST BELOW PROVIDES CONTACT DETAILS OF EVERYONE YOU HAVE EVER BEEN MATCHED TO 
+                    PROVIDE HELP TO.</h4>
                     @include('partials/_alert')
                     <table class="table table-striped table-bordered table-hover dataTables-example" >
                     <thead>
                     <tr>
-                        <th>RecordID</th>
-                        <th>Amount Offered</th>
-                        <th>Amount Paid</th>
-                        <th>Total Confirmed</th>
-                        <th>Outstanding</th>
-                        <th>Date</th>
-                        <th>Points</th>
-                        <th>Status</th>
+                        <th>TRANS ID</th>
+                        <th>Amount</th>
+                        <th>MATCHED DATE</th>
+                        <th>BENEFICIARY</th>
+                        <th>ACCOUNT DETAILS</th>
+                        <th>ATTACHMENTS</th>
+                        <th>STATUS</th>
                     </tr>
                     </thead>
                     <tbody>
-                    <?php if($donations && count($donations) > 0) : ?>
-                    @foreach($donations as $donation) 
-                    <tr class="gradeX">    
-                        <td>{{ $donation->recordID() }}</td>
-                        <td>{{ $donation->amount }}</td>
-                        <td>{{ $amount->recordID }}</td>
-                        <td>{{ $donation->recordID }}</td>
-                        <td>{{ $donation->recordID }}</td>
-                        <td>{{ $donation->recordID }}</td>
-                        <td><label class=""><a href="{{ url(['show/transaction', $donation->id]) }}"> 
-                        {{ $donation->status }} Click here for details</a></label></td>
-                    </tr>
-                    @endforeach
-                    <?php else: ?>
+                   
                         <tr>
                             <th colspan="8"><center>No Data Available</center></th>
                         </tr>
@@ -62,14 +51,13 @@
                     </tbody>
                     <tfoot>
                     <tr>
-                        <th>ID</th>
-                        <th>Amount Offered</th>
-                        <th>Amount Paid</th>
-                        <th>Total Confirmed</th>
-                        <th>Outstanding</th>
-                        <th>Date</th>
-                        <th>Points</th>
-                        <th>Status</th>
+                       <th>TRANS ID</th>
+                        <th>Amount</th>
+                        <th>MATCHED DATE</th>
+                        <th>BENEFICIARY</th>
+                        <th>ACCOUNT DETAILS</th>
+                        <th>ATTACHMENTS</th>
+                        <th>STATUS</th>
                     </tr>
                     </tfoot>
                     </table>
