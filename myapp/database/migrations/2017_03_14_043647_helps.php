@@ -21,7 +21,7 @@ class Helps extends Migration
             $table->integer('isConfirmed')->default('0');
             $table->integer('userID')->references('id')->on('users');
             $table->string('status');
-            $table->string('recordID');
+            $table->string('recordID')->unique()->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

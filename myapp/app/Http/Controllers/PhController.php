@@ -8,6 +8,8 @@ use App\Http\Helpers\ApplicationHelpers;
 use Auth;
 use App\DonationHelp;
 use Session;
+use App\Http\Helpers\MyCustomException;
+
 
 
 class PhController extends Controller
@@ -34,7 +36,7 @@ class PhController extends Controller
 
     		Session::flash('flash_message', "Your Donation was successful. Please wait while you are matched.");
     		return redirect()->back();
-    	}catch(Exception $ex) {
+    	}catch(MyCustomException $ex) {
     		return redirect()->back()->withInput()->withErrors($ex->getMessage());
     	}
     }

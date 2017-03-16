@@ -21,7 +21,7 @@ final class ApplicationHelpers {
 			//determine the largest amount
 			$highest = max($donations);
 			if($amount < $highest) {
-				throw new exception('You cannot go below your last ph. Ensure you put an amount 
+				throw new MyCustomException('You cannot go below your last ph. Ensure you put an amount 
 					that is equal or greater than '.$highest);
 			}
 		}		
