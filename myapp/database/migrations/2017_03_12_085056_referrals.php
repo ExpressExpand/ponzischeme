@@ -23,6 +23,15 @@ class Referrals extends Migration
         });
     }
 
+Schema::create('help_transactions', function(Blueprint $table) {
+    $table->increments('id');
+    $table->integer('helpID');
+    $table->string('recipientUserID');
+    $table->string('payerUserID');
+    $table->string('filename');
+    $table->string('fileHash');
+    $table->timestamps();
+});
     /**
      * Reverse the migrations.
      *
