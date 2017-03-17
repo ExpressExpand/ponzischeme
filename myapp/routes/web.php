@@ -25,6 +25,8 @@ Route::get('dashboard', 'UserController@dashboard');
 //provide help
 Route::get('new/donation', 'PhController@create');
 Route::post('new/donation/store/', 'PhController@store');
+Route::get('all/ph/payments', 'PhController@allPayments');
+Route::get('ph/transactions', 'PhController@transactions');
 
 
 //get help
@@ -33,11 +35,12 @@ Route::post('new/request/store', 'GhController@store');
 
 //profile
 Route::get('profile', 'ProfileController@viewProfile');
+Route::put('profile/store', 'ProfileController@storeProfile');
+Route::put('profile/change/username', 'ProfileController@changeUsername');
 Route::put('change/password', 'ProfileController@changePassword');
 Route::put('profile/change/picture', 'ProfileController@changePicture');
-Route::get('all/ph/payments', 'PhController@allPayments');
-Route::get('ph/transactions', 'PhController@transactions');
-
+Route::get('verify/email', 'ProfileController@verifyEmail');
+Route::get('verified/email/{hash}', 'ProfileController@verifiedEmail');
 //admin
 Route::get('users', 'AdminController@viewUsers');
 

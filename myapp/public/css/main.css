@@ -22,6 +22,9 @@
 .error {
 	color: red;
 }
+.green{
+    color:green;
+}
 
 .image-change{
     position: relative;

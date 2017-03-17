@@ -29,7 +29,6 @@
                     <div class="row">
                         <div class="col-sm-3">
                             <div>
-                                @include('partials/_alert')
                                 {!! Form::open( ['url' => 'profile/change/picture', 'method' => 'put', 'role' => 'form', 'file' => 'true', 'id' => 'avatar-form', 
                                 'enctype' => 'multipart/form-data']) !!}
                                     <div class="avatar-holder">
@@ -56,11 +55,20 @@
                             </div>
                         </div>
                         <div class="col-sm-6">
+                                @include('partials/_alert')
                             <div class="row profile-group clearfix">
                                 <div class="col-sm-3 key"><span>Email: </span></div>
-                                <div class="col-sm-9 data"><span class="error">{{ $user->email}} 
-                                        <a class="pull-right error" href="{{ url('verifyEmail') }}">
-                                          <i class="fa fa-exclamation-triangle"></i> Verify</a></span></div>
+                                <div class="col-sm-9 data">
+                                    @if($user->isVerified == 1)
+                                        <span class="green">{{ $user->email}} 
+                                        <a class="pull-right green " href="{{ url('verify/email') }}">
+                                        <i class="fa fa-check"></i> Verified</a></span>
+                                    @else
+                                        <span class="error">{{ $user->email}} 
+                                        <a class="pull-right error" href="{{ url('verify/email') }}">
+                                          <i class="fa fa-exclamation-triangle"></i> Verify</a></span>
+                                    @endif
+                                </div>
                             </div>
                             <div class="row profile-group">
                                 <div class="col-sm-3 key">Phone: </div>
@@ -73,7 +81,7 @@
                             <div class="row profile-group">
                                 <div class="col-sm-3 key">Referral Username: </div>
                                 <div class="col-sm-9 data">
-                                    {{ Form::model($user, ['url' => 'profile/changeUsername'
+                                    {{ Form::model($user, ['url' => 'profile/change/username'
                                     , 'method' => 'put',
                                     'class' => 'form-horizontal']) }}
 
@@ -85,15 +93,15 @@
                             </div>
                             <h3>Account Information</h3><hr />
                             <?php 
-                                if(strlen('bankName')) {
-                                    $bank_disabled =  true;
+                                if(strlen($user->bankName) == 0 ) {
+                                    $readonly =  '';
                                 }else {
-                                    $bank_disabled = false;
+                                    $readonly = 'readonly';
                                 }
                             ?>
                             {{ Form::model($user, ['url' => 'profile/store', 'method' => 'put',
                              'class' => 'form-horizontal']) }}
-                                @if($bank_disabled)
+                                @if(!strlen($user->bankName))
                                 <div class="alert alert-warning"> 
                                     You have to contact admin to be able to change your bank details.</div>
                                 @else
@@ -105,26 +113,26 @@
                                     <label for="bankName" class="col-sm-3 control-label">Bank Name: </label>
                                     <div class="col-sm-9">
                                     {{ Form::text('bankName', null, ['class' => 'form-control', 'required'
-                                    , 'readonly' => $bank_disabled ]) }}
+                                    , $readonly]) }}
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="accountName" class="col-sm-3 control-label">Account Name:</label>
                                     <div class="col-sm-9">
                                     {{ Form::text('accountName', null, ['class' => 'form-control', 'required',
-                                     'readonly' => $bank_disabled]) }}
+                                     $readonly]) }}
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="accountNumber" class="col-sm-3 control-label">Account Number:</label>
                                     <div class="col-sm-9">
                                     {{ Form::text('accountNumber', null, ['class' => 'form-control',
-                                     'required',  'readonly' => $bank_disabled]) }}
+                                     'required',  $readonly]) }}
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-sm-offset-3 col-sm-9">
-                                        @if(!$bank_disabled) 
+                                        @if(strlen($user->bankName) == 0) 
                                             {{Form::submit('Save changes', ['class'=> 'btn btn-primary'])}}
                                         @endif
                                     </div>

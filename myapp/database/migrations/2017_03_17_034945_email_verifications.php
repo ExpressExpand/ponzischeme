@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Helps extends Migration
+class EmailVerifications extends Migration
 {
     /**
      * Run the migrations.
@@ -13,17 +13,11 @@ class Helps extends Migration
      */
     public function up()
     {
-        Schema::create('donation_helps', function(Blueprint $table) {
+        Schema::create('email_verifications', function(Blueprint $table){
             $table->increments('id');
-            $table->string('paymentType'); //bitcoin or bank
-            $table->string('amount'); //will be in kobos
-            $table->string('phGh');
-            $table->integer('isConfirmed')->default('0');
+            $table->string('hash');
             $table->integer('userID')->references('id')->on('users');
-            $table->string('status');
-            $table->string('recordID')->unique();
             $table->timestamps();
-            $table->softDeletes();
         });
     }
 
@@ -34,6 +28,6 @@ class Helps extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('donation_helps');
+        Schema::dropIfExists('email_verifications');
     }
 }

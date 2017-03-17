@@ -16,11 +16,17 @@ class DonationHelp extends Model
 	static $SLIP_ELAPSED = 'elapsed'; //after the set time has elapsed
 
 	protected $table = 'donation_helps';
-    protected $fillable = array('paymentType', 'amount', 'phGh', 'isConfirmed', 'userID', 'status');
+    protected $fillable = array('paymentType', 'amount', 'phGh', 'isConfirmed', 'userID', 'status', 'recordID');
 
     protected function getStatusAttribute($value) {
 
     }
+    protected $dates = [
+        'created_at',
+        'updated_at',
+        'deleted_at'
+    ];
+    
     public function statusMaps() {
 
     }
