@@ -40,29 +40,26 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <?php if($donations && count($donations) > 0) : ?>
-                    @foreach($donations as $donation) 
-                    <tr class="gradeX">    
-                        <td>{{ $donation->recordID() }}</td>
-                        <td>{{ $donation->amount }}</td>
-                        <td>{{ $amount->recordID }}</td>
-                        <td>{{ $donation->recordID }}</td>
-                        <td>{{ $donation->recordID }}</td>
-                        <td>{{ $donation->recordID }}</td>
-                        <td><label class=""><a href="{{ url(['show/transaction', $donation->id]) }}"> 
-                        {{ $donation->status }} Click here for details</a></label></td>
-                    </tr>
-                    @endforeach
-                    <?php else: ?>
-                        <tr>
-                            <th colspan="8"><center>No Data Available</center></th>
+                    @if(count($donations) > 0)
+                        @foreach($donations as $donation)  
+                        <tr class="gradeX">    
+                            <td>{{ $donation->recordID }}</td>
+                            <td>{{ number_format($donation->amount) }}</td>
+                            <td>{{ $donation->amount }}</td>
+                            <td>{{ $donation->recordID }}</td>
+                            <td>{{ $donation->recordID }}</td>
+                            <td>{{ $donation->created_at }}</td>
+                            <td>{{ $donation->points }}</td>
+                            <td><label class=""><a href="{{ url('show/transaction', $donation->id) }}"> 
+                            {{ $donation->status }} Click here for details</a></label></td>
                         </tr>
-                    <?php endif; ?>
+                        @endforeach
+                    @endif
                     
                     </tbody>
                     <tfoot>
                     <tr>
-                        <th>ID</th>
+                        <th>RecordID</th>
                         <th>Amount Offered</th>
                         <th>Amount Paid</th>
                         <th>Total Confirmed</th>

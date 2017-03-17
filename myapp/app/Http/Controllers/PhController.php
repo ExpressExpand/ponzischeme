@@ -32,6 +32,7 @@ class PhController extends Controller
     		$donate->phGh = 'ph';
     		$donate->userID = $user->id;
     		$donate->status = DonationHelp::$SLIP_PENDING;
+            $donate->recordID = uniqid();
     		$donate->save();
 
     		Session::flash('flash_message', "Your Donation was successful. Please wait while you are matched.");
@@ -47,7 +48,7 @@ class PhController extends Controller
     public function transactions() {
         //get all the ph slips
         $user = Auth::User();
-        $donations = DonationHelp::where(['userID' => $user->id, 'phGh' => 'ph'])->get();
+        $donations = DonationHelp::where(['userID' => $user->id, 'phGh' => 'ph'])->paginate(15);
         return view('ph/transactions', compact('donations'));
     }
 }
