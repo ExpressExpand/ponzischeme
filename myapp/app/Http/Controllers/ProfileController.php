@@ -12,6 +12,8 @@ use Session;
 use App\EmailVerify;
 use URL;
 use Carbon;
+use App\User;
+use Hash;
 use App\Http\Helpers\EmailHelpers;
 
 class ProfileController extends Controller
@@ -154,5 +156,33 @@ class ProfileController extends Controller
         , $url
         , $url);
         return $body;
+    }
+    public function changePassword() {
+        $user = Auth::User();
+        return view('profile.password', compact('user'));
+    }
+    public function storeChangedPassword(Request $request, $user_id) {
+        //only admin can perform this operation
+        $inputs = $request->all();
+        $validator = $this->validate($request, [
+            'old_password' => 'required|min:6',
+            'password' => 'required|min:6',
+            'confirmPassword' => 'required|min:6|same:password',
+        ]);
+        if($validator !== null) {
+            return redirect()->back();
+        }
+        //everything is ok save the password profile
+        $user = User::findOrFail($user_id);
+   
+        if(!Hash::check($inputs['old_password'], $user->password)) {
+            return redirect()->back()->withErrors('Your old password does not match your
+              previous password in the system. Please contact support');
+        }
+        $user->password = bcrypt($inputs['password']);
+        $user->save();
+        //if successful redirect
+        Session::flash('flash_message', 'Password change successful');
+        return redirect()->back();
     }
 }

@@ -9,6 +9,7 @@ use Illuminate\Foundation\Auth\RegistersUsers;
 
 use App\Country;
 use App\Referral;
+use App\Role;
 
 class RegisterController extends Controller
 {
@@ -94,6 +95,10 @@ class RegisterController extends Controller
             'relatedCountryID' => $data['relatedCountryID'], 
             'ip' => $ip,
         ]);
+
+        //attach users to role
+        $user->attachRole(Role::where('name', 'users')->first()->id);
+
         //update the referral model
         $ref = new Referral();
         $ref->relatedReferrerUserID = $referrer->id;//many relationship downlines

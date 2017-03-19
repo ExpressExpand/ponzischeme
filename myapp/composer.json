@@ -10,7 +10,8 @@
         "zizaco/entrust": "5.2.x-dev",
         "laravelcollective/html": "5.3.*",
         "intervention/image": "^2.3",
-        "phpmailer/phpmailer": "^5.2"
+        "phpmailer/phpmailer": "^5.2",
+        "unisharp/laravel-filemanager": "^1.6"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

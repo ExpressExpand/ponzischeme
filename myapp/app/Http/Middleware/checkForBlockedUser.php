@@ -18,7 +18,7 @@ class checkForBlockedUser
     {
         $user = Auth::User();
         if($user->isBlocked == 1) {
-            return redirect('/dashboad');
+            return redirect('/dashboard')->withErrors('Your account has been blocked');
         }
         return $next($request);
     }

@@ -31,6 +31,10 @@ class Kernel extends HttpKernel
             \App\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
         ],
+        'customChecks' => [
+            \App\Http\Middleware\checkForBlockedUser::class,
+            \App\Http\Middleware\CheckIfUserEmailIsVerified::class,
+        ],
 
         'api' => [
             'throttle:60,1',
@@ -55,7 +59,5 @@ class Kernel extends HttpKernel
         'role' => \Zizaco\Entrust\Middleware\EntrustRole::class,
         'permission' => \Zizaco\Entrust\Middleware\EntrustPermission::class,
         'ability' => \Zizaco\Entrust\Middleware\EntrustAbility::class,
-        //custom middleware
-        'blockedUser' => \App\Http\Middleware\checkForBlockedUser::class,
     ];
 }

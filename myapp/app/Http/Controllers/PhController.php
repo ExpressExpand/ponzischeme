@@ -15,7 +15,7 @@ use App\Http\Helpers\MyCustomException;
 class PhController extends Controller
 {
 	public function __construct() {
-		$this->middleware(['auth','blockedUser']);
+		$this->middleware(['auth','customChecks']);
 	}
     public function create() {
     	//check if the ph amount is blocked
@@ -51,4 +51,5 @@ class PhController extends Controller
         $donations = DonationHelp::where(['userID' => $user->id, 'phGh' => 'ph'])->paginate(15);
         return view('ph/transactions', compact('donations'));
     }
+    
 }

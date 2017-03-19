@@ -60,9 +60,9 @@
                                 <div class="col-sm-3 key"><span>Email: </span></div>
                                 <div class="col-sm-9 data">
                                     @if($user->isVerified == 1)
-                                        <span class="green">{{ $user->email}} 
-                                        <a class="pull-right green " href="{{ url('verify/email') }}">
-                                        <i class="fa fa-check"></i> Verified</a></span>
+                                        <span class="green">{{ $user->email}} </span>
+                                        <span class="pull-right green" >
+                                        <i class="fa fa-check"></i> Verified</span>
                                     @else
                                         <span class="error">{{ $user->email}} 
                                         <a class="pull-right error" href="{{ url('verify/email') }}">

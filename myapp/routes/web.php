@@ -37,20 +37,25 @@ Route::post('new/request/store', 'GhController@store');
 Route::get('profile', 'ProfileController@viewProfile');
 Route::put('profile/store', 'ProfileController@storeProfile');
 Route::put('profile/change/username', 'ProfileController@changeUsername');
-Route::put('change/password', 'ProfileController@changePassword');
+Route::get('change/password', 'ProfileController@changePassword');
+Route::patch('change/password/store/{user_id}', 'ProfileController@storeChangedPassword');
 Route::put('profile/change/picture', 'ProfileController@changePicture');
 Route::get('verify/email', 'ProfileController@verifyEmail');
 Route::get('verified/email/{hash}', 'ProfileController@verifiedEmail');
 //admin
 Route::get('users', 'AdminController@viewUsers');
+Route::get('admin/block/user/{user_id}', 'AdminController@blockUser');
+Route::get('admin/unblock/user/{user_id}', 'AdminController@unblockUser');
+Route::get('admin/user/profile/{user_id}', 'AdminController@viewUserProfile');
+Route::patch('admin/change/password/store/{user_id}', 'AdminController@storeChangedUserPassword');
+Route::post('admin/change/role', 'AdminController@changeRoles');
+
+Route::get('admin/phorders', 'AdminController@viewPhOrders');
+Route::get('admin/ghorders', 'AdminController@viewGhOrders');
+Route::get('admin/gh/matching', 'AdminController@matchGHRequest');
+
+//announcements
+Route::resource('announcements', 'AnnouncementController');
+Route::resource('message', 'MessageController');
 
 //check for registration bonuses and referral bonuses
-
-#profile-image1 {
- //    cursor: pointer;
-  
- //     width: 100px;
- //    height: 100px;
-	// border:2px solid #03b1ce ;}
-	// .tital{ font-size:16px; font-weight:500;}
-	//  .bot-border{ border-bottom:1px #f8f8f8 solid;  margin:5px 0  5px 0}
