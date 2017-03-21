@@ -138,6 +138,7 @@ class AdminController extends Controller
     	return view('admin.gh', compact('collections', 'confirmed_count'
     		, 'pending_count', 'payout_count', 'pending_amount', 'confirmed_amount'));
     }
+   
     public function matchGHRequest(Request $request, $gh_id) {
 
     }

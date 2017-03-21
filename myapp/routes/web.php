@@ -55,7 +55,9 @@ Route::get('admin/ghorders', 'AdminController@viewGhOrders');
 Route::get('admin/gh/matching', 'AdminController@matchGHRequest');
 
 //announcements
+Route::get('announcements/view', 'AnnouncementController@adminViewAnnouncement');
 Route::resource('announcements', 'AnnouncementController');
 Route::resource('message', 'MessageController');
 
+Route::resource('referral', 'ReferralController');
 //check for registration bonuses and referral bonuses

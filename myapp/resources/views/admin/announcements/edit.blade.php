@@ -26,18 +26,20 @@
             <div class="col-sm-12">
                 <div class="ibox-content">
                     @include('partials/_alert')
-                    {{ Form::open(['url' => 'announcements', 'class'=>'form-horizontal', 'method'=>'post']) }}
+                    {{ Form::model($announcement, ['url' => 'announcements/update/'
+                    , 'class'=>'form-horizontal', 'method'=>'put']) }}
                         
                         <div class="form-group">
                             <div class="col-lg-12">
                                 {{ Form::textarea('message', null, ['class' => 'form-control',
                                  'required', 'id' => 'editor', 'rows' => '20']) }}
+                                 {{ Form::hidden('announcement_id', $announcement->id, []) }}
                             </div>
                         </div>                       
                         <div class="form-group">
                             <div class=" col-lg-10">
                                 <button class="btn btn-sm btn-primary" type="submit">
-                                <i class="fa fa-paper-plane"></i> Submit</button>
+                                <i class="fa fa-refresh"></i> Update</button>
                             </div>
                         </div>
                     {{ Form::close() }}

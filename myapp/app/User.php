@@ -34,5 +34,9 @@ class User extends Authenticatable
         return $this->belongsTo('App\Country', 'relatedCountryID');
     }
 
+    public function donations() {
+        return $this->hasMany('App\DonationHelp', 'userID');
+    }
+
 
 }

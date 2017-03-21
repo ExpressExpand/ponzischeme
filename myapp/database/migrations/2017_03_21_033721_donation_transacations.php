@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Referrals extends Migration
+class DonationTransacations extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,16 @@ class Referrals extends Migration
      */
     public function up()
     {
-        Schema::create('referrals', function(Blueprint $table) {
+        Schema::create('help_transactions', function(Blueprint $table) {
             $table->increments('id');
-            $table->integer('relatedReferrerUserID');
-            $table->integer('relatedReferralUserID');
-            $table->integer('level')->default('0');
+            $table->integer('helpID');
+            $table->string('recipientUserID');
+            $table->string('payerUserID');
+            $table->string('filename');
+            $table->string('fileHash');
             $table->timestamps();
-            $table->softDeletes();
         });
     }
-
 
     /**
      * Reverse the migrations.
@@ -31,6 +31,6 @@ class Referrals extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('referrals');
+        Schema::dropIfExists('help_transactions');
     }
 }

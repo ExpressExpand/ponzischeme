@@ -16,7 +16,6 @@
                         <ul class="dropdown-menu animated fadeInRight m-t-xs">
                             <li><a href="{{ url('profile') }}">My Profile</a></li>
                             <li><a href="{{ url('change/password') }}">Change Password</a></li>
-                            <li><a href="{{ url('logout') }}">Logout</a></li>
                         </ul>
                     </div>
                     <div class="logo-element">
@@ -28,7 +27,9 @@
                     <span class="nav-label">Dashboard</span> </a>
                 </li>
                 <li>
-                    <a href="layouts.html"><i class="fa fa-diamond"></i> <span class="nav-label">Layouts</span> <span class="label label-primary pull-right">NEW</span></a>
+                    <a href="{{ url('referral') }}"><i class="fa fa-user-plus"></i>
+                    <span class="nav-label">Referrals</span>
+                    <span class="label label-info pull-right">62</span></a>
                 </li>
                 <li>
                     <a href="#"><i class="fa fa-credit-card"></i> 
@@ -53,7 +54,7 @@
 
                 @role(['admin', 'superadmin'])
                     <!-- this part is the admin link -->
-                 <li>
+                <li>
                     <a href="#"><i class="fa fa-users"></i> <span class="nav-label">Admin</span>
                     <span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
@@ -64,50 +65,32 @@
                         <li><a href="{{ url('admin/ghorders') }}">GH Orders</a></li>
                     </ul>
                 </li>
-
-                 <li>
-                    <a href="{{ url('announcements/create') }}"><i class="fa fa-newspaper-o"></i>
-                    <span class="nav-label">Create Announcement</span></a>
+                <li>
+                    <a href="#"><i class="fa fa-newspaper-o"></i> <span class="nav-label">Announcement</span>
+                    <span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li><a href="{{ url('announcements/create') }}">Create Announcement</a></li>
+                        <li><a href="{{ url('announcements/view') }}">View Announcements</a>
+                        </li>
+                    </ul>
                 </li>
                 @endrole
                 <li>
-                <a href="{{ url('announcements') }}"><i class="fa fa-newspaper-o"></i>
-                    <span class="nav-label">Announcement</span></a>
-
+                    <a href="{{ url('announcements') }}"><i class="fa fa-newspaper-o"></i>
+                        <span class="nav-label">Announcement</span></a>
+                </li>
                 <li>
                     <a href="#"><i class="fa fa-quote-left"></i>
                     <span class="nav-label">View Testimonies</span></a>
                 </li>
                
-                 <li>
+                <li>
                     <a href="#"><i class="fa fa-question-circle"></i>
                     <span class="nav-label">FAQ</span></a>
                 </li>
-                              
                 <li>
-                    <a href="#"><i class="fa fa-sitemap"></i> <span class="nav-label">Menu Levels </span><span class="fa arrow"></span></a>
-                    <ul class="nav nav-second-level">
-                        <li>
-                            <a href="#">Third Level <span class="fa arrow"></span></a>
-                            <ul class="nav nav-third-level">
-                                <li>
-                                    <a href="#">Third Level Item</a>
-                                </li>
-                                <li>
-                                    <a href="#">Third Level Item</a>
-                                </li>
-                                <li>
-                                    <a href="#">Third Level Item</a>
-                                </li>
-
-                            </ul>
-                        </li>
-                        <li><a href="#">Second Level Item</a></li>
-                        <li>
-                            <a href="#">Second Level Item</a></li>
-                        <li>
-                            <a href="#">Second Level Item</a></li>
-                    </ul>
+                    <li><a href="{{ url('logout') }}"><i class="fa fa-sign-out"></i>
+                        <span class="nav-label">Logout</span></a></li>
                 </li>
             </ul>
 

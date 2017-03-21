@@ -6,6 +6,22 @@ function getPaymentType() {
         'bitcoin' => 'Bitcoin Payment ($)',
     );
 }
+function getExcerpt($str, $maxLength=100) {
+    //filter of images
+    $str = strip_tags($str,"<b><i><a><br><p></p><img>");
+
+    if(strlen($str) > $maxLength) {
+        $excerpt   = substr($str, 0, $maxLength-3);
+        $lastSpace = strrpos($excerpt, ' ');
+        $excerpt   = substr($excerpt, 0, $lastSpace);
+        $excerpt  .= '...';
+    } else {
+        $excerpt = $str;
+    }
+    
+    return $excerpt;
+
+}
 /**
  * Ensures an ip address is both a valid IP and does not fall within
  * a private network range.
