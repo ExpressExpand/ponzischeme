@@ -6,6 +6,8 @@ use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use App\Http\Helpers\MyCustomException;
+use App\Http\Helpers\EmailHelpers;
 
 use App\Country;
 use App\Referral;
@@ -51,6 +53,9 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
+        if($data['email'] == $data['referral_email']) {
+            $data['referral_email'] = '';
+        }
         return Validator::make($data, [
             'fullname' => 'required|max:255',
             'email' => 'required|email|max:255|unique:users',
@@ -68,6 +73,7 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        $referrer= null;
         //we need to get the ip
         $ip = get_ip_address();
         //check if a referral email exists
@@ -78,6 +84,11 @@ class RegisterController extends Controller
         }else{
             $referrer = User::where('email', 'maxteetechnologies@gmail.com')->first();
         }
+        if($referrer == null) {
+            $referrer = User::where('email', 'maxteetechnologies@gmail.com')->first();
+        }
+
+
         $level = 1;
         //check the current level of the referral and increment by one
         if($referrer !== null) {
@@ -105,11 +116,38 @@ class RegisterController extends Controller
         $ref->relatedReferralUserID = $user->id;//one relationship the recommended guy
         $ref->level = $level;
         $ref->save();
+
+        //now send an email the the user
+        $email = new EmailHelpers($user);
+        $email->setSubject = 'no-reply';
+        $email->body = $this->getBodyHtml($user);
+        $email->send();
+
         return $user;
     }
     public function showRegistrationForm()
     {
         $countries = Country::pluck('name', 'id');
         return view('auth.register', compact('countries'));
+    }
+    private function getBodyHtml($user) {
+        $body = sprintf('   
+            <table border="1" cellpadding="0" cellspacing="0" width="100%s">
+                <tr>
+                 <td style="padding: 25px 0 0 0;">
+                   <h3> Hello %s, </h3>
+                   <p>Thank you for creating an account on GiveandGet.com. </p>
+
+                    <br />
+                    <p>Management.</p>
+                    <p>%s</p>
+                 </td>
+                </tr>
+            </table>
+        '
+        ,'%'
+        , ucfirst($user->name)
+        , env('EMAILHELPER_USERNAME'));
+        return $body;
     }
 }

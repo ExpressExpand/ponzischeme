@@ -70,4 +70,31 @@ final class ApplicationHelpers {
 			'16000' => 10000
 		);
 	}
+	public static function checkForMutilplesOfTen($amount){
+		if($amount % 10 !== 0){
+			throw new MyCustomException('The amount must be in multiples of 10');
+		}
+	}
+
+	//matching begins
+	public static function doExactMatch ($ghs, $phs) {
+		echo "Finding exact match..............<br />";
+		foreach($ghs as $gh) {
+            foreach($phs as $ph) {
+            	echo "Matching PH".$ph->user->name."(".$ph->amount.") with GH ".$gh->user->name."(".$gh->amount.")...<br />";
+                if($gh == $ph) {
+                    //match exists
+                    var_dump('exact match');
+                }
+            }
+        }
+	}
+	public static function matchOneGHToTwoPH($ghs, $phs) {
+		echo "Finding one gh to two ph..............<br />";
+		// foreach($ghs as $gh) {
+		// 	for($i=0;$i<)
+		// }
+
+	}
+
 }

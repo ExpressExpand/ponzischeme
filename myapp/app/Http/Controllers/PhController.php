@@ -23,9 +23,9 @@ class PhController extends Controller
     }
     public function store(PhRequest $request) {
     	$user = Auth::user();
-    	// dd($request->input('paymentType'));
     	try{
     		ApplicationHelpers::usersCantGoBelowPHAmountChecks($request->input('amount'), $user);
+            ApplicationHelpers::checkForMutilplesOfTen($request->input('amount'));
     		$donate = new DonationHelp();
     		$donate->paymentType = $request->input('paymentType');
     		$donate->amount = $request->amount;

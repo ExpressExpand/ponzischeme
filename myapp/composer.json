@@ -11,7 +11,8 @@
         "laravelcollective/html": "5.3.*",
         "intervention/image": "^2.3",
         "phpmailer/phpmailer": "^5.2",
-        "unisharp/laravel-filemanager": "^1.6"
+        "unisharp/laravel-filemanager": "^1.6", 
+        "guzzlehttp/guzzle": "~5.3|~6.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

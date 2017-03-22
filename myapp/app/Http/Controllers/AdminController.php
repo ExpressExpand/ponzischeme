@@ -9,6 +9,8 @@ use Session;
 use Auth;
 use App\Role;
 use App\DonationHelp;
+use App\Http\Helpers\ApplicationHelpers;
+use App\Http\Helpers\MyCustomException; 
 
 class AdminController extends Controller
 {
@@ -139,8 +141,14 @@ class AdminController extends Controller
     		, 'pending_count', 'payout_count', 'pending_amount', 'confirmed_amount'));
     }
    
-    public function matchGHRequest(Request $request, $gh_id) {
-
+    public function matchGHRequest(Request $request) {
+        //get all the pending gh
+        $ghs = DonationHelp::where(['phGh'=>'gh', 'status'=>DonationHelp::$SLIP_PENDING])->get()->toArray();dd($ghs);
+        //get all the phs
+        $phs = DonationHelp::where(['phGh'=>'ph', 'status'=>DonationHelp::$SLIP_PENDING])->get();
+        //do exact match
+        ApplicationHelpers::doExactMatch($ghs, $phs);
+        ApplicationHelpers::matchOneGHToTwoPH($ghs, $phs);
     }
 
 }

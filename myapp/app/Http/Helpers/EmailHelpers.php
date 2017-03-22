@@ -19,7 +19,12 @@ final class EmailHelpers {
 	public $subject;
 	public $attachment;
     public $from;
+    private $recipient;
+    public $debug = false;
 
+    public function __construct($recipient) {
+        $this->recipient = $recipient;
+    }
 	/**
     * @author FAMUREWA TAIWO EZEKIEL
     * @return This returns an array that contains boolean and also the status error as a string
@@ -69,17 +74,27 @@ final class EmailHelpers {
         }
         return false;
 	}
+    //admin sending the email
+    public function send() {
+        $mail = $this->initializeMail();
+        $mail->subject = $this->subject;    
+        $mail->MsgHTML($this->body);
+        $mail->addAddress($this->recipient->email, $this->recipient->name);
+        $mail->setFrom(env('EMAILHELPER_USERNAME'), env('EMAILHELPER_ADMIN_NAME'));
+        $mail->send();dd($mail);    
+        return $mail;
+    }
 	private static function getSettings($mail) {
 		$mail->isSMTP(); // tell to use smtp
-    	// $mail->SMTPDebug = 2;
+        $mail->SMTPDebug = 2;
         $mail->CharSet = "utf-8"; // set charset to utf8
         $mail->SMTPAuth = true;  // use smpt auth
-        $mail->SMTPSecure = "tls";//env('EMAILHELPER_SMTP'); // or ssl
-        $mail->Host = "mail.kickandfollow.com";//env('EMAILHELPER_HOST');
-        $mail->Port = 25; // most likely something different for you. This is the mailtrap.io port i use for testing. 
-        $mail->Username = "admin@kickandfollow.com";//env('EMAILHELPER_USERNAME');
-        $mail->Password = "RaphSegun@123";//env('EMAILHELPER_PASSWORD');
-        
+        $mail->SMTPSecure = env('EMAILHELPER_SMTP', 'tls'); // or ssl
+        $mail->SMTPAutoTLS = false;
+        $mail->Host = env('EMAILHELPER_HOST');
+        $mail->Port = 26; // most likely something different for you. This is the mailtrap.io port i use for testing. 
+        $mail->Username = env('EMAILHELPER_USERNAME');
+        $mail->Password = env('EMAILHELPER_PASSWORD');
         return $mail;
 	}
 }
