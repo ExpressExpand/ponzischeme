@@ -34,7 +34,9 @@ class DonationHelp extends Model
     public function user(){
         return $this->belongsTo('App\User', 'userID');
     }
-    
+    public function transactions() {
+        return $this->hasMany('App\DonationTransaction', 'donationHelpID');
+    }
     public function statusMaps() {
 
     }

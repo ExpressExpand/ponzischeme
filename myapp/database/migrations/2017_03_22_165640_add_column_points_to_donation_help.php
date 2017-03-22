@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Announcements extends Migration
+class AddColumnPointsToDonationHelp extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,8 @@ class Announcements extends Migration
      */
     public function up()
     {
-        Schema::create('announcements', function($table) {
-            $table->increments('id');
-            $table->text('message');
-            $table->integer('userID')->references('id')->on('users');
-            $table->timestamps();
+        Schema::table('donation_help_transactions', function(Blueprint $table) {
+            $table->integer('points')->default(0);
         });
     }
 
@@ -28,6 +25,9 @@ class Announcements extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('announcements');
+         Schema::table('donation_help_transactions', function($table)
+        {
+            $table->dropColumn('points');
+        });
     }
 }

@@ -13,14 +13,21 @@ class DonationTransacations extends Migration
      */
     public function up()
     {
-        Schema::create('help_transactions', function(Blueprint $table) {
+        Schema::create('donation_help_transactions', function(Blueprint $table) {
             $table->increments('id');
-            $table->integer('helpID');
+            $table->integer('donationHelpID');
             $table->string('recipientUserID');
             $table->string('payerUserID');
+            $table->string('receiverConfirmed')->default(0);
+            $table->string('payerConfirmed')->default(0);
+            $table->integer('amount')->default(0);
             $table->string('filename');
             $table->string('fileHash');
+            $table->integer('penaltyDate');
+            $table->integer('matchDate');
+            $table->string('fakePOP')->default('0');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
@@ -31,6 +38,6 @@ class DonationTransacations extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('help_transactions');
+        Schema::dropIfExists('donation_help_transactions');
     }
 }

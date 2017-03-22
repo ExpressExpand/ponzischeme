@@ -4,19 +4,22 @@
 @section('content')       
     <div class="row wrapper border-bottom white-bg page-heading">
         <div class="col-sm-4">
-            <h2>Transaction History(Provide Help)</h2>
+            <h2>PROVIDE HELP (PENDING)</h2>
             <ol class="breadcrumb">
                 <li>
-                    <a href="index.html">This is</a>
+                    <a href="{{ url('dashboard') }}">Dashboard</a>
+                </li>
+                <li>
+                    Provide Help
                 </li>
                 <li class="active">
-                    <strong>Breadcrumb</strong>
+                    <strong>Pending PH</strong>
                 </li>
             </ol>
         </div>
         <div class="col-sm-8">
             <div class="title-action">
-                <a href="#" class="btn btn-primary">This is action area</a>
+                <!-- <a href="#" class="btn btn-primary">This is action area</a> -->
             </div>
         </div>
     </div>
@@ -26,17 +29,18 @@
             <div class="col-sm-12">
                 <div class="ibox-content">
                     @include('partials/_alert')
+                    <div class="alert alert-info">Manage All your Pending Ph here.
+                     You can also decide to cancel you ph orders if you decide.</div>
                     <table class="table table-striped table-bordered table-hover dataTables-example" >
                     <thead>
                     <tr>
-                        <th>RecordID</th>
-                        <th>Amount Offered</th>
-                        <th>Amount Paid</th>
-                        <th>Total Confirmed</th>
-                        <th>Outstanding</th>
-                        <th>Date</th>
-                        <th>Points</th>
-                        <th>Status</th>
+                        <th>RECORD ID</th>
+                        <th>AMOUNT OFFERED</th>
+                        <th>PAID AMOUNT</th>
+                        <th>OUTSTANDING</th>
+                        <th>DATE</th>
+                        <th>POINTS</th>
+                        <th>STATUS</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -45,9 +49,17 @@
                         <tr class="gradeX">    
                             <td>{{ $donation->recordID }}</td>
                             <td>{{ number_format($donation->amount) }}</td>
-                            <td>{{ $donation->amount }}</td>
-                            <td>{{ $donation->recordID }}</td>
-                            <td>{{ $donation->recordID }}</td>
+                            <td>
+                                <!-- //check if the user has transactions and add the paid transactions -->
+                                <?php $paid_amount = 0; ?>
+                                @foreach($donation->transactions as $transaction) 
+                                    @if($transaction->fakePOP == 0 && $transaction->receiverConfirmed == 1)
+                                        $amount += $transaction->amount
+                                    @endif 
+                                @endforeach
+                                {{ number_format($paid_amount) }}
+                            </td>
+                            <td>{{ number_format($donation->amount - $paid_amount) }}</td>
                             <td>{{ $donation->created_at }}</td>
                             <td>{{ $donation->points }}</td>
                             <td><label class=""><a href="{{ url('show/transaction', $donation->id) }}"> 
@@ -59,14 +71,13 @@
                     </tbody>
                     <tfoot>
                     <tr>
-                        <th>RecordID</th>
-                        <th>Amount Offered</th>
-                        <th>Amount Paid</th>
-                        <th>Total Confirmed</th>
-                        <th>Outstanding</th>
-                        <th>Date</th>
-                        <th>Points</th>
-                        <th>Status</th>
+                        <th>RECORD ID</th>
+                        <th>AMOUNT OFFERED</th>
+                        <th>PAID AMOUNT</th>
+                        <th>OUTSTANDING</th>
+                        <th>DATE</th>
+                        <th>POINTS</th>
+                        <th>STATUS</th>
                     </tr>
                     </tfoot>
                     </table>

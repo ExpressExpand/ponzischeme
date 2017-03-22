@@ -36,7 +36,7 @@
                     <span class="nav-label">Provide Help</span><span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li><a href="{{ url('new/donation') }}">New Donation</a></li>
-                        <li><a href="graph_flot.html">Make Payment</a></li>
+                        <li><a href="{{ url('ph/make/payments') }}">Make Payment</a></li>
                         <li><a href="{{ url('all/ph/payments') }}">All Payments</a></li>
                         <li><a href="{{ url('ph/transactions') }}">Transaction History</a></li>
                     </ul>

@@ -65,6 +65,7 @@ final class ApplicationHelpers {
 			throw new MyCustomException("Your GH amount exceeds the overall amount you can GH", 1);
 		}
 	}
+	// TODO
 	public static function bonuses() {
 		$bonus = array(
 			'16000' => 10000
@@ -75,13 +76,21 @@ final class ApplicationHelpers {
 			throw new MyCustomException('The amount must be in multiples of 10');
 		}
 	}
+	//ph minimum amount
+	//TODO
+	public static function checkForMinimumPHAmount($amount) {
+		if($amount < 1000) {
+			throw new MyCustomException("You cannot go below 1000");
+		}
+	}
 
 	//matching begins
 	public static function doExactMatch ($ghs, $phs) {
 		echo "Finding exact match..............<br />";
 		foreach($ghs as $gh) {
             foreach($phs as $ph) {
-            	echo "Matching PH".$ph->user->name."(".$ph->amount.") with GH ".$gh->user->name."(".$gh->amount.")...<br />";
+            	echo "Matching PH".$ph->user->name."(".$ph->amount.") 
+            		with GH ".$gh->user->name."(".$gh->amount.")...<br />";
                 if($gh == $ph) {
                     //match exists
                     var_dump('exact match');
@@ -94,7 +103,6 @@ final class ApplicationHelpers {
 		// foreach($ghs as $gh) {
 		// 	for($i=0;$i<)
 		// }
-
 	}
 
 }

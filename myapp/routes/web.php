@@ -27,6 +27,7 @@ Route::get('new/donation', 'PhController@create');
 Route::post('new/donation/store/', 'PhController@store');
 Route::get('all/ph/payments', 'PhController@allPayments');
 Route::get('ph/transactions', 'PhController@transactions');
+Route::get('ph/make/payments', 'PhController@makePayment');
 
 
 //get help
