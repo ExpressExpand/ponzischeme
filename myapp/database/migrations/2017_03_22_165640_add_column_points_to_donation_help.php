@@ -13,7 +13,7 @@ class AddColumnPointsToDonationHelp extends Migration
      */
     public function up()
     {
-        Schema::table('donation_help_transactions', function(Blueprint $table) {
+        Schema::table('donation_helps', function(Blueprint $table) {
             $table->integer('points')->default(0);
         });
     }
@@ -25,7 +25,7 @@ class AddColumnPointsToDonationHelp extends Migration
      */
     public function down()
     {
-         Schema::table('donation_help_transactions', function($table)
+         Schema::table('donation_helps', function($table)
         {
             $table->dropColumn('points');
         });
