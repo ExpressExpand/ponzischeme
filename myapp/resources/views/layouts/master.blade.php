@@ -13,8 +13,11 @@
     <link href="{{ asset('css/inspinia/plugins/iCheck/custom.css') }}" rel="stylesheet">
     <link href="{{ asset('css/inspinia/animate.css') }}" rel="stylesheet">
     <link href="{{ asset('css/inspinia/style.css') }}" rel="stylesheet">
+    
+    <!-- <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,600,700" rel="stylesheet"> -->
+    
 
-        <!-- Data Tables -->
+             <!-- Data Tables -->
     <link href="{{ asset('css/inspinia/plugins/dataTables/dataTables.bootstrap.css') }}" rel="stylesheet">
     <link href="{{ asset('css/inspinia/plugins/dataTables/dataTables.responsive.css') }}" rel="stylesheet">
     <link href="{{ asset('css/inspinia/plugins/dataTables/dataTables.tableTools.min.css') }}" rel="stylesheet">
