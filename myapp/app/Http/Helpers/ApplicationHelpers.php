@@ -85,24 +85,232 @@ final class ApplicationHelpers {
 	}
 
 	//matching begins
-	public static function doExactMatch ($ghs, $phs) {
+	public static function doExactMatch (array $ghs, array $phs, array $users) {
 		echo "Finding exact match..............<br />";
-		foreach($ghs as $gh) {
-            foreach($phs as $ph) {
-            	echo "Matching PH".$ph->user->name."(".$ph->amount.") 
-            		with GH ".$gh->user->name."(".$gh->amount.")...<br />";
+		foreach($ghs as $gh_key => $gh) {
+			$gh_name = $users[$gh['userID']];
+            foreach($phs as $ph_key => $ph) {
+            	$ph_name = $users[$ph['userID']];
+            	echo "Matching PH ".$ph_name."(".$ph['amount'].") 
+            		with GH ".$gh_name."(".$gh['amount'].")...<br />";
+
                 if($gh == $ph) {
                     //match exists
-                    var_dump('exact match');
+                    echo "Match FOUND FOR  PH ".$ph_name."(".$ph['amount'].") 
+            			with GH ".$gh_name."(".$gh['amount'].")...<br />";
+
+            		//remove from the array
+            		unset($phs[$ph_key]);
+            		unset($ghs[$gh_key]);
+            		//secondly update the donation:help table
+            		$update_gh = DonationHelp::findOrFail($gh['id']);
+            		$update_gh->status = DonationHelp::$SLIP_MATCHED;
+            		$update_ph->matchDate = date('Y-m-d H:i:s', time());
+            		$update_gh->save();
+
+            		$update_ph = DonationHelp::findOrFail($ph['id']);
+            		$update_ph->status = DonationHelp::$SLIP_MATCHED;
+            		$update_ph->matchDate = date('Y-m-d H:i:s', time());
+            		$update_ph->save();
                 }
             }
         }
+        return array($ghs, $phs);
 	}
-	public static function matchOneGHToTwoPH($ghs, $phs) {
+
+	public static function matchOneGHToTwoPH(array $ghs, array $phs, $users) {
 		echo "Finding one gh to two ph..............<br />";
-		// foreach($ghs as $gh) {
-		// 	for($i=0;$i<)
-		// }
+		$ph_count = count($phs);
+		foreach ($ghs as $gh_key => $gh) {
+			$gh_name = $users[$gh['userID']];
+			for($i=0; $i<$ph_count; $i++){
+				for($j=0; $j<count($phs); $j++) {
+					$ph_name_one = $users[$phs[$i]['userID']];
+					$ph_name_two = $users[$phs[$j]['userID']];
+					if($i==$j) {
+						continue;
+					}
+					$sum = $i+$j;
+					if($gh == $sum) {
+						echo "Matching GH ".$gh_name."(".$gh['amount'].") 
+            				with PH ".$ph_name_one." and ".$ph_name_one."....<br />";
+	            		
+	            		//remove from the array
+	            		unset($ghs[$gh_key]);
+	            		unset($phs[$i]);
+	            		unset($phs[$j]);
+	            		//secondly update the donation:help table
+	            		$update_gh = DonationHelp::findOrFail($gh['id']);
+	            		$update_gh->status = DonationHelp::$SLIP_MATCHED;
+	            		$update_ph->matchDate = date('Y-m-d H:i:s', time());
+	            		$update_gh->save();
+
+	            		$update_ph = DonationHelp::findOrFail($phs[$i]['id']);
+	            		$update_ph->status = DonationHelp::$SLIP_MATCHED;
+	            		$update_ph->matchDate = date('Y-m-d H:i:s', time());
+	            		$update_ph->save();
+
+	            		$update_ph = DonationHelp::findOrFail($phs[$j]['id']);
+	            		$update_ph->status = DonationHelp::$SLIP_MATCHED;
+	            		$update_ph->matchDate = date('Y-m-d H:i:s', time());
+	            		$update_ph->save();
+					}
+				}
+			}
+		}
+		return array($ghs, $phs);
 	}
+
+	public static function matchOnePHToTwoGH(array $ghs, array $phs, $users) {
+		echo "Finding one ph to two gh..............<br />";
+		$gh_count = count($ghs);
+		foreach ($phs as $ph) {
+			$ph_name = $users[$ph['userID']];
+			for($i=0; $i<$gh_count; $i++){
+				for($j=0; $j<count($ghs); $j++) {
+					$gh_name_one = $users[$ghs[$i]['userID']];
+					$gh_name_two = $users[$ghs[$j]['userID']];
+					if($i==$j) {
+						continue;
+					}
+					$sum = $i+$j;
+					if($ph == $sum) {
+						echo "Matching PH ".$ph_name."(".$ph['amount'].") 
+            				with GH ".$gh_name_one." and ".$gh_name_two."....<br />";
+						
+						//remove from the array
+	            		unset($phs[$ph_key]);
+	            		unset($ghs[$i]);
+	            		unset($ghs[$j]);
+
+	            		//secondly update the donation:help table
+	            		$update_ph = DonationHelp::findOrFail($ph['id']);
+	            		$update_ph->status = DonationHelp::$SLIP_MATCHED;
+	            		$update_ph->matchDate = date('Y-m-d H:i:s', time());
+	            		$update_ph->save();
+
+	            		$update_gh = DonationHelp::findOrFail($ghs[$i]['id']);
+	            		$update_gh->status = DonationHelp::$SLIP_MATCHED;
+	            		$update_ph->matchDate = date('Y-m-d H:i:s', time());
+	            		$update_gh->save();
+
+	            		$update_gh = DonationHelp::findOrFail($ghs[$j]['id']);
+	            		$update_gh->status = DonationHelp::$SLIP_MATCHED;
+	            		$update_ph->matchDate = date('Y-m-d H:i:s', time());
+	            		$update_gh->save();
+					}
+				}
+			}
+		}
+		return array($ghs, $phs);
+	}
+	public static function matchOneGHToTHREEPH(array $ghs, array $phs, $users) {
+		echo "Finding one gh to three ph..............<br />";
+		$ph_count = count($phs);
+		foreach ($ghs as $gh) {
+			$gh_name = $users[$gh['userID']];
+			for($i=0; $i<$ph_count; $i++){
+				for($j=0; $j<count($phs); $j++) {
+					for($k=0; $k<count($phs); $k++) {
+						if($i==$j || $i==$k || $j==$k){
+							continue;
+						}
+						$ph_name_one = $users[$phs[$i]['userID']];
+						$ph_name_two = $users[$phs[$j]['userID']];
+						$ph_name_three = $users[$phs[$k]['userID']];
+					
+						$sum = $i+$j+$k;
+						if($gh == $sum) {
+							echo "Matching GH ".$gh_name."(".$gh['amount'].") 
+	            				with PH ".$ph_name_one." and ".$ph_name_one." and ".$ph_name_three."....<br />";
+							
+
+							//remove from the array
+		            		unset($ghs[$gh_key]);
+		            		unset($phs[$i]);
+		            		unset($phs[$j]);
+		            		unset($phs[$k]);
+		            		//secondly update the donation:help table
+		            		$update_gh = DonationHelp::findOrFail($gh['id']);
+		            		$update_gh->status = DonationHelp::$SLIP_MATCHED;
+		            		$update_ph->matchDate = date('Y-m-d H:i:s', time());
+		            		$update_gh->save();
+
+		            		$update_ph = DonationHelp::findOrFail($phs[$i]['id']);
+		            		$update_ph->status = DonationHelp::$SLIP_MATCHED;
+		            		$update_ph->matchDate = date('Y-m-d H:i:s', time());
+		            		$update_ph->save();
+
+		            		$update_ph = DonationHelp::findOrFail($phs[$j]['id']);
+		            		$update_ph->status = DonationHelp::$SLIP_MATCHED;
+		            		$update_ph->matchDate = date('Y-m-d H:i:s', time());
+		            		$update_ph->save();
+
+		            		$update_ph = DonationHelp::findOrFail($phs[$k]['id']);
+		            		$update_ph->status = DonationHelp::$SLIP_MATCHED;
+		            		$update_ph->matchDate = date('Y-m-d H:i:s', time());
+		            		$update_ph->save();
+						}
+					}
+				}
+			}
+		}
+		return array($ghs, $phs);
+	}
+	//one person pays three people
+	public static function matchOnePHToTHREEGH(array $ghs, array $phs, $users) {
+		echo "Finding one ph to three gh..............<br />";
+		$gh_count = count($ghs);
+		foreach ($phs as $ph) {
+			$ph_name = $users[$ph['userID']];
+			for($i=0; $i<$gh_count; $i++){
+				for($j=0; $j<count($ghs); $j++) {
+					for($k=0; $k<count($ghs); $k++) {
+						if($i==$j || $i==$k || $j==$k){
+							continue;
+						}
+						$gh_name_one = $users[$ghs[$i]['userID']];
+						$gh_name_two = $users[$ghs[$j]['userID']];
+						$gh_name_three = $users[$ghs[$k]['userID']];
+					
+						$sum = $i+$j+$k;
+						if($ph == $sum) {
+							echo "Matching PH ".$ph_name."(".$ph['amount'].") 
+	            				with GH ".$gh_name_one." and ".$gh_name_one." and ".$gh_name_three."....<br />";
+							
+							//remove from the array
+		            		unset($phs[$ph_key]);
+		            		unset($ghs[$i]);
+		            		unset($ghs[$j]);
+		            		unset($ghs[$k]);
+
+		            		//secondly update the donation:help table
+		            		$update_ph = DonationHelp::findOrFail($ph['id']);
+		            		$update_ph->status = DonationHelp::$SLIP_MATCHED;
+		            		$update_ph->matchDate = date('Y-m-d H:i:s', time());
+		            		$update_ph->save();
+
+		            		$update_gh = DonationHelp::findOrFail($ghs[$i]['id']);
+		            		$update_gh->status = DonationHelp::$SLIP_MATCHED;
+		            		$update_ph->matchDate = date('Y-m-d H:i:s', time());
+		            		$update_gh->save();
+
+		            		$update_gh = DonationHelp::findOrFail($ghs[$j]['id']);
+		            		$update_gh->status = DonationHelp::$SLIP_MATCHED;
+		            		$update_ph->matchDate = date('Y-m-d H:i:s', time());
+		            		$update_gh->save();
+							
+							$update_gh = DonationHelp::findOrFail($ghs[$k]['id']);
+		            		$update_gh->status = DonationHelp::$SLIP_MATCHED;
+		            		$update_ph->matchDate = date('Y-m-d H:i:s', time());
+		            		$update_gh->save();
+	            		}
+					}
+				}
+			}
+		}
+		return array($ghs, $phs);
+	}
+
 
 }
