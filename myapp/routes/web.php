@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 Route::get('template', function() {
 	return view('template');
@@ -62,3 +62,5 @@ Route::resource('message', 'MessageController');
 
 Route::resource('referral', 'ReferralController');
 //check for registration bonuses and referral bonuses
+
+Route::get('messaging/inbox', 'MessagingController@inbox');
