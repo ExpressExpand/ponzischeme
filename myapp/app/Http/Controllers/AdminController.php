@@ -143,12 +143,14 @@ class AdminController extends Controller
    
     public function matchGHRequest(Request $request) {
         //get all the pending gh
-        $ghs = DonationHelp::where(['phGh'=>'gh', 'status'=>DonationHelp::$SLIP_PENDING])->get()->toArray();dd($ghs);
+        $ghs = DonationHelp::where(['phGh'=>'gh', 'status'=>DonationHelp::$SLIP_PENDING])->get()->toArray();
         //get all the phs
-        $phs = DonationHelp::where(['phGh'=>'ph', 'status'=>DonationHelp::$SLIP_PENDING])->get();
+        $phs = DonationHelp::where(['phGh'=>'ph', 'status'=>DonationHelp::$SLIP_PENDING])->get()->toArray();
+        //get all the users
+        $users = User::where('isBlocked = 0')->pluck('name', 'id');
         //do exact match
-        ApplicationHelpers::doExactMatch($ghs, $phs);
-        ApplicationHelpers::matchOneGHToTwoPH($ghs, $phs);
+        ApplicationHelpers::doExactMatch($ghs, $phs, $users);
+        ApplicationHelpers::matchOneGHToTwoPH($ghs, $phs, $users);
     }
 
 }

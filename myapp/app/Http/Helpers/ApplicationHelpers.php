@@ -87,10 +87,11 @@ final class ApplicationHelpers {
 	//matching begins
 	public static function doExactMatch ($ghs, $phs) {
 		echo "Finding exact match..............<br />";
+		$name = $users[$ph['userID']];
 		foreach($ghs as $gh) {
             foreach($phs as $ph) {
-            	echo "Matching PH".$ph->user->name."(".$ph->amount.") 
-            		with GH ".$gh->user->name."(".$gh->amount.")...<br />";
+            	echo "Matching PH".$name."(".$ph['amount'].") 
+            		with GH ".$name."(".$gh['amount'].")...<br />";
                 if($gh == $ph) {
                     //match exists
                     var_dump('exact match');
