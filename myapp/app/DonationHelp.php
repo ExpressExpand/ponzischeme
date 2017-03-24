@@ -18,7 +18,7 @@ class DonationHelp extends Model
 
 	protected $table = 'donation_helps';
     protected $fillable = array('paymentType', 'amount', 'phGh', 'isConfirmed'
-        , 'userID', 'status', 'recordID', 'points');
+        , 'userID', 'status', 'recordID', 'points', 'matchCounter');
 
     protected function getStatusAttribute($value) {
         return ucfirst($value); 
@@ -40,6 +40,6 @@ class DonationHelp extends Model
     public function statusMaps() {
 
     }
-    // public fun?ction
+    // public function
  
 }

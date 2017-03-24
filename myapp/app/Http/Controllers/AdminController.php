@@ -142,15 +142,41 @@ class AdminController extends Controller
     }
    
     public function matchGHRequest(Request $request) {
-        //get all the pending gh
-        $ghs = DonationHelp::where(['phGh'=>'gh', 'status'=>DonationHelp::$SLIP_PENDING])->get()->toArray();
+
+        //get all the pending gh and also based on date TODO
+        $ghs = DonationHelp::where(['phGh'=>'gh', 'status'=>DonationHelp::$SLIP_PENDING])
+            ->whereRaw('created_at <= DATE_SUB(curdate(), INTERVAL 3 WEEK) ')->get()->toArray();
+        // $ghs = DonationHelp::where(['phGh'=>'gh', 'status'=>DonationHelp::$SLIP_PENDING])->get()->toArray();
         //get all the phs
-        $phs = DonationHelp::where(['phGh'=>'ph', 'status'=>DonationHelp::$SLIP_PENDING])->get()->toArray();
-        //get all the users
-        $users = User::where('isBlocked = 0')->pluck('name', 'id');
+        $phs = DonationHelp::where(['phGh'=>'ph', 'status'=>DonationHelp::$SLIP_PENDING])
+            ->whereRaw('created_at <= DATE_ADD(curdate(), INTERVAL 3 WEEK) ')->get()->toArray();
+        //get all the userss
+        $users = User::pluck('name', 'id')->toArray();
         //do exact match
-        ApplicationHelpers::doExactMatch($ghs, $phs, $users);
-        ApplicationHelpers::matchOneGHToTwoPH($ghs, $phs, $users);
+        list($ghs, $phs) = ApplicationHelpers::doExactMatch($ghs, $phs, $users);
+        list($ghs, $phs) = ApplicationHelpers::matchOneGHToTwoPH($ghs, $phs, $users);
+        list($ghs, $phs) = ApplicationHelpers::matchOnePHToTwoGH($ghs, $phs, $users);
+        list($ghs, $phs) = ApplicationHelpers::matchOneGHToTHREEPH($ghs, $phs, $users);
+        list($ghs, $phs) = ApplicationHelpers::matchOnePHToTHREEGH($ghs, $phs, $users);
+
+        //if no match exists set the matchcount to one
+        if(count($ghs) > 0) {
+            foreach ($ghs as $gh) {
+                $update_gh = DonationHelp::findOrFail($gh['id']);
+                $update_gh->matchCounter = $update_gh->matchCounter + 1;
+                $update_gh->save();
+                echo "Saving ".$update_gh->user->name." with amount ".$update_gh->amount."....<br />";
+            }
+        }
+        if(count($phs) > 0) {
+            foreach ($phs as $ph) {
+                $update_ph = DonationHelp::findOrFail($ph['id']);
+                $update_ph->matchCounter = $update_ph->matchCounter + 1;
+                $update_ph->save();
+                echo "Saving ".$update_ph->user->name." with amount ".$update_ph->amount."....<br />";
+
+            }
+        }
     }
 
 }
