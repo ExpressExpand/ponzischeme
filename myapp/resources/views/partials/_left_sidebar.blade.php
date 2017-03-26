@@ -4,10 +4,13 @@
                 <li class="nav-header">
                     <div class="dropdown profile-element"> <span>
                             @if(strlen($user->avatar) > 0)
-                            <img alt="image" class="img-circle" src="{{ asset('images/profilepix/'.$user->avatar) }}" width="50px" />
+                            <img alt="image" class="img-circle" 
+                                src="{{ asset('images/profilepix/'.$user->avatar) }}"
+                                 width="50px" />
                              
                             @else
-                            <img alt="image" class="img-circle" src="{{ asset('images/profilepix/avatar.jpg') }}" width="50px" />
+                            <img alt="image" class="img-circle" src="{{ asset('images/profilepix/avatar.jpg') }}"
+                             width="50px" height="auto" />
                             @endif
                         </span>
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#">
@@ -47,8 +50,8 @@
                     <span class="nav-label">Get Help</span><span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li><a href="{{ url('new/request') }}">Request Payment</a></li>
-                        <li><a href="graph_flot.html">Confirm Payment Received</a></li>
-                        <li><a href="graph_flot.html">Transaction History</a></li>
+                        <li><a href="{{ url('confirm/gh/payment') }}">Confirm Payment Received</a></li>
+                        <li><a href="{{ url('confirm/gh/payment') }}">Transaction History</a></li>
                     </ul>
                 </li>
 

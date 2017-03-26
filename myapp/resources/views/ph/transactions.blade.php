@@ -29,8 +29,8 @@
             <div class="col-sm-12">
                 <div class="ibox-content">
                     @include('partials/_alert')
-                    <div class="alert alert-info">Manage All your Pending Ph here.
-                     You can also decide to cancel you ph orders if you decide.</div>
+                    <div class="alert alert-info">The records below shows all the  provide help request you have placed via the portal and gives real time status of each. Manage All your Pending Ph here.
+                     You can also decide to cancel any of your pending ph orders if you wish.</div>
                     <table class="table table-striped table-bordered table-hover dataTables-example" >
                     <thead>
                     <tr>
@@ -62,8 +62,21 @@
                             <td>{{ number_format($donation->amount - $paid_amount) }}</td>
                             <td>{{ $donation->created_at }}</td>
                             <td>{{ $donation->points }}</td>
-                            <td><label class=""><a href="{{ url('show/transaction', $donation->id) }}"> 
-                            {{ $donation->status }} Click here for details</a></label></td>
+
+                            <td>
+                            @if(strtolower($donation->status) == App\DonationHelp::$SLIP_CONFIRMED)
+                                <label class=""><a href="{{ url('ph/show/transaction', $donation->id) }}"> 
+                                    {{ $donation->status }} Click here for details</a></label>
+                            @elseif(strtolower($donation->status) == App\DonationHelp::$SLIP_PENDING) 
+                                {{ $donation->status }} <label class="label label-warning">
+                                <a href="{{ url('ph/cancel', $donation->id) }}"> 
+                                      Cancel PH</a></label>
+                            @else
+                                {{$donation->status}}
+                            @endif
+
+
+                            </td>
                         </tr>
                         @endforeach
                     @endif
