@@ -51,7 +51,7 @@
                     <ul class="nav nav-second-level">
                         <li><a href="{{ url('new/request') }}">Request Payment</a></li>
                         <li><a href="{{ url('confirm/gh/payment') }}">Confirm Payment Received</a></li>
-                        <li><a href="{{ url('confirm/gh/payment') }}">Transaction History</a></li>
+                        <li><a href="{{ url('confirm/gh/payment/history') }}">Payment History</a></li>
                     </ul>
                 </li>
 
@@ -66,6 +66,7 @@
                             <span class="label label-info pull-right">62</span></a> 
                         </li>
                         <li><a href="{{ url('admin/ghorders') }}">GH Orders</a></li>
+                        <li><a href="{{ url('admin/fakepop') }}">Fake Pop</a></li>
                     </ul>
                 </li>
                 <li>

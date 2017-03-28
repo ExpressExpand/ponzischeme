@@ -42,6 +42,7 @@ Route::get('confirm/gh/payment/edit/{trans_id}', 'GhController@confirmReceivedPa
 Route::get('view/gh/attachment/{trans_id}', 'GhController@viewGHAttachment');
 Route::get('confirm/gh/payment/store/{trans_id}', 'GhController@storeConfirmReceivedPayment');
 Route::get('flagpop/{trans_id}', 'GhController@flagAsPop');
+Route::get('confirm/gh/payment/history', 'GhController@paymentHistory');
 
 //profile
 Route::get('profile', 'ProfileController@viewProfile');
@@ -59,6 +60,7 @@ Route::get('admin/unblock/user/{user_id}', 'AdminController@unblockUser');
 Route::get('admin/user/profile/{user_id}', 'AdminController@viewUserProfile');
 Route::patch('admin/change/password/store/{user_id}', 'AdminController@storeChangedUserPassword');
 Route::post('admin/change/role', 'AdminController@changeRoles');
+Route::get('admin/fakepop', 'AdminController@fakepop');
 
 
 Route::get('admin/phorders', 'AdminController@viewPhOrders');

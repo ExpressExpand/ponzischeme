@@ -78,9 +78,9 @@ class GhController extends Controller
             , $transaction->collectionHelpID)->sum('amount');
         if($transaction->collection->amount == $gh_sum){
             //full payment received
-            $transaction->collection->status == DonationHelp::$SLIP_WITHDRAWAL;
+            $transaction->collection->status = DonationHelp::$SLIP_WITHDRAWAL;
         }else{
-            $transaction->collection->status == DonationHelp::$SLIP_PARTIALWITHDRAWAL;
+            $transaction->collection->status = DonationHelp::$SLIP_PARTIALWITHDRAWAL;
         }
         $transaction->collection->save();
 
@@ -115,7 +115,18 @@ class GhController extends Controller
         $transaction->save();
 
         Session::flash('flash_message', 'Operation successful.
-         Please wait an admin will get back to you on this');
+         Please wait, The system will automatically rematch you within 72 hours while the support team 
+         takes a look at the failed transaction. We are sorry for any inconvieniences. Be rest assured, 
+         This will be resolved in a timely fashion');
         return redirect()->back();
+    }
+    public function paymentHistory(Request $request) {
+        $user = Auth::User();
+        $collections = DonationHelp::where('userID', $user->id)
+            ->where('phGh', 'gh')->where(function($query) {
+                $query->where('status', DonationHelp::$SLIP_WITHDRAWAL)
+                ->orWhere('status', DonationHelp::$SLIP_PARTIALWITHDRAWAL);
+            })->get();
+        return view('gh/history', compact('collections'));
     }
 }

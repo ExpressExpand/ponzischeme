@@ -30,6 +30,7 @@
                     <div class="alert alert-info">
                         The records below shows your active get help request. Please ensure you have received  your alert before clicking confirm. Once clicked, it cannot be reversed.
                     </div>
+
                     <table class="table table-striped table-bordered table-hover dataTables-example" >
                     <thead>
                     <tr>
@@ -48,7 +49,9 @@
                     @if(count($collections) > 0) 
                         @foreach($collections as $collection)
                         @foreach($collection->ghtransactions as $transaction)
-                        
+                            @if($transaction->receiverConfirmed == 1) 
+                                <?php continue; ?>
+                            @endif
                             <tr>
                                 <td>{{ ++$counter }}</td>
                                 <td>{{ $transaction->matchDate }}</td>
@@ -59,9 +62,12 @@
                                     {{ $collection->paymentType }}
                                 </td>
                                 <td>
-                                    <div><a href="{{ url('confirm/gh/payment/edit', $transaction->id) }}"
-                                         class="label label-danger">
-                                        Confirm Payment</a></div><br />
+                                    <div>
+                                        @if($transaction->fakePOP == 0)
+                                            <a href="{{ url('confirm/gh/payment/edit', $transaction->id) }}"
+                                                 class="label label-danger">
+                                                Confirm Payment</a></div><br />
+                                        @endif
                                     @if($transaction->payerConfirmed == 1)
                                         <a href="{{ url('view/gh/attachment', $transaction->id) }}" 
                                         class="label label-success">
@@ -70,8 +76,14 @@
                                 </td>
                                 <td>
                                     @if($transaction->payerConfirmed == 1)
-                                    <a href="{{ url('flagpop', $transaction->id) }}" id="confirmFakePop">
-                                        <span class="label label-danger">Flag as Fake POP</span></a>
+                                        @if($transaction->fakePOP == 1)
+                                            <a href="{{ url('flagpop', $transaction->id) }}" id="confirmFakePop">
+                                            <span class="label label-danger">Fake POP Resolve in Progress</span></a>
+                                        @else
+                                            <a href="{{ url('flagpop', $transaction->id) }}" id="confirmFakePop">
+                                            <span class="label label-danger">Flag as Fake POP</span></a>
+                                        @endif
+                                    
                                     @else
                                         <span class="label label-info">In Progress</span>
                                     @endif

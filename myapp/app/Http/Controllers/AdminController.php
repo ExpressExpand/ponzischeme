@@ -11,6 +11,7 @@ use App\Role;
 use App\DonationHelp;
 use App\Http\Helpers\ApplicationHelpers;
 use App\Http\Helpers\MyCustomException; 
+use App\DonationTransaction;
 
 class AdminController extends Controller
 {
@@ -186,5 +187,10 @@ class AdminController extends Controller
         //get all the phs
         $phs = DonationHelp::where(['phGh'=>'ph', 'status'=>DonationHelp::$SLIP_PENDING])
             ->whereRaw('created_at <= DATE_ADD(curdate(), INTERVAL 3 WEEK) ')->get()->toArray();
+    }
+    public function fakepop() {
+        //get all the transactions
+        $transactions = DonationTransaction::where('fakePOP', 1)->get();
+        return view('admin/users/fakepop', compact('transactions'));
     }
 }
