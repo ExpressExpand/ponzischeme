@@ -28,11 +28,21 @@ Route::post('new/donation/store/', 'PhController@store');
 Route::get('all/ph/payments', 'PhController@allPayments');
 Route::get('ph/transactions', 'PhController@transactions');
 Route::get('ph/make/payments', 'PhController@makePayment');
-
+Route::get('ph/cancel/{ph_id}', 'PhController@cancelPH');
+Route::get('confirm/ph/payment/{trans_ids}', 'PhController@confirmMatchPayment');
+Route::post('confirm/ph/payment/store', 'PhController@storeConfirmMatchPayment');
+Route::get('view/attachment/{trans_id}', 'PhController@viewPHAttachment');
+// ph/show/transaction
 
 //get help
 Route::get('new/request', 'GhController@create');
 Route::post('new/request/store', 'GhController@store');
+Route::get('confirm/gh/payment', 'GhController@displayReceivedPayment');
+Route::get('confirm/gh/payment/edit/{trans_id}', 'GhController@confirmReceivedPayment');
+Route::get('view/gh/attachment/{trans_id}', 'GhController@viewGHAttachment');
+Route::get('confirm/gh/payment/store/{trans_id}', 'GhController@storeConfirmReceivedPayment');
+Route::get('flagpop/{trans_id}', 'GhController@flagAsPop');
+Route::get('confirm/gh/payment/history', 'GhController@paymentHistory');
 
 //profile
 Route::get('profile', 'ProfileController@viewProfile');
@@ -50,16 +60,19 @@ Route::get('admin/unblock/user/{user_id}', 'AdminController@unblockUser');
 Route::get('admin/user/profile/{user_id}', 'AdminController@viewUserProfile');
 Route::patch('admin/change/password/store/{user_id}', 'AdminController@storeChangedUserPassword');
 Route::post('admin/change/role', 'AdminController@changeRoles');
+
 Route::get('admin/messaging/compose', 'AdminController@compose');
 Route::post('admin/messaging/send/message', 'AdminController@sendMessage');
 Route::get('admin/messaging/inbox', 'AdminController@inbox');
 Route::get('admin/messaging/outbox', 'AdminController@outbox');
 Route::get('admin/messaging/detail/{id}', 'AdminController@showMessage');
 
+Route::get('admin/fakepop', 'AdminController@fakepop');
 
 Route::get('admin/phorders', 'AdminController@viewPhOrders');
 Route::get('admin/ghorders', 'AdminController@viewGhOrders');
 Route::get('admin/gh/matching', 'AdminController@matchGHRequest');
+Route::get('admin/block/donor/delete/{trans_id}', 'AdminController@blockDonorAndDeleteTrans');
 
 //announcements
 Route::get('announcements/view', 'AnnouncementController@adminViewAnnouncement');

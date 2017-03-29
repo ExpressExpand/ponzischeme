@@ -148,7 +148,7 @@ class AdminController extends Controller
 
         //get all the pending gh and also based on date TODO
         $ghs = DonationHelp::where(['phGh'=>'gh', 'status'=>DonationHelp::$SLIP_PENDING])
-            ->whereRaw('created_at <= DATE_SUB(curdate(), INTERVAL 3 WEEK) ')->get()->toArray();
+            ->get()->toArray();
         // $ghs = DonationHelp::where(['phGh'=>'gh', 'status'=>DonationHelp::$SLIP_PENDING])->get()->toArray();
         //get all the phs
         $phs = DonationHelp::where(['phGh'=>'ph', 'status'=>DonationHelp::$SLIP_PENDING])
@@ -159,8 +159,8 @@ class AdminController extends Controller
         list($ghs, $phs) = ApplicationHelpers::doExactMatch($ghs, $phs, $users);
         list($ghs, $phs) = ApplicationHelpers::matchOneGHToTwoPH($ghs, $phs, $users);
         list($ghs, $phs) = ApplicationHelpers::matchOnePHToTwoGH($ghs, $phs, $users);
-        list($ghs, $phs) = ApplicationHelpers::matchOneGHToTHREEPH($ghs, $phs, $users);
-        list($ghs, $phs) = ApplicationHelpers::matchOnePHToTHREEGH($ghs, $phs, $users);
+        list($ghs, $phs) = ApplicationHelpers::matchOneGHToThreePH($ghs, $phs, $users);
+        list($ghs, $phs) = ApplicationHelpers::matchOnePHToThreeGH($ghs, $phs, $users);
 
         //if no match exists set the matchcount to one
         if(count($ghs) > 0) {
@@ -168,7 +168,7 @@ class AdminController extends Controller
                 $update_gh = DonationHelp::findOrFail($gh['id']);
                 $update_gh->matchCounter = $update_gh->matchCounter + 1;
                 $update_gh->save();
-                echo "Saving ".$update_gh->user->name." with amount ".$update_gh->amount."....<br />";
+                // echo "Saving ".$update_gh->user->name." with amount ".$update_gh->amount."....<br />";
             }
         }
         if(count($phs) > 0) {
@@ -176,11 +176,11 @@ class AdminController extends Controller
                 $update_ph = DonationHelp::findOrFail($ph['id']);
                 $update_ph->matchCounter = $update_ph->matchCounter + 1;
                 $update_ph->save();
-                echo "Saving ".$update_ph->user->name." with amount ".$update_ph->amount."....<br />";
-
+                // echo "Saving ".$update_ph->user->name." with amount ".$update_ph->amount."....<br />";
             }
         }
     }
+
     public function compose() {
         return view('admin/messaging/compose');
     }
@@ -231,4 +231,32 @@ class AdminController extends Controller
         return view('admin/messaging/details', compact('message'));   
     }
 
+    public function matchPartialWithdrawalGHRequest() {
+        //TODO
+         //get all the pending gh and also based on date TODO
+        $ghs = DonationHelp::where(['phGh'=>'gh', 'status'=>DonationHelp::$SLIP_WITHDRAWAL])
+            ->get()->toArray();
+        // $ghs = DonationHelp::where(['phGh'=>'gh', 'status'=>DonationHelp::$SLIP_PENDING])->get()->toArray();
+        //get all the phs
+        $phs = DonationHelp::where(['phGh'=>'ph', 'status'=>DonationHelp::$SLIP_PENDING])
+            ->whereRaw('created_at <= DATE_ADD(curdate(), INTERVAL 3 WEEK) ')->get()->toArray();
+    }
+    public function fakepop() {
+        //get all the transactions
+        $transactions = DonationTransaction::where('fakePOP', 1)->get();
+        return view('admin/users/fakepop', compact('transactions'));
+    }
+    public function blockDonorAndDeleteTrans(Request $request, $trans_id) {
+        //get the trans
+        $transaction = DonationTransaction::findOrFail($trans_id);
+        if($transaction){
+            //block donor
+            $transaction->donation->user->isBlocked = 1;
+            $transaction->donation->save();
+            //delete the transaction
+            $transaction->delete();
+            Session::flash('flash_message', 'Transaction Succesful');
+            return Reirect('admin/pop');
+        }
+    }
 }

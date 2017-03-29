@@ -37,6 +37,9 @@ class DonationHelp extends Model
     public function transactions() {
         return $this->hasMany('App\DonationTransaction', 'donationHelpID');
     }
+    public function ghtransactions() {
+        return $this->hasMany('App\DonationTransaction', 'collectionHelpID');
+    }
     public function statusMaps() {
 
     }

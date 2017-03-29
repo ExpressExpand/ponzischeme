@@ -9,7 +9,9 @@ use Auth;
 use App\DonationHelp;
 use Session;
 use App\Http\Helpers\MyCustomException;
+use App\DonationTransaction;
 
+use App\Http\Helper\CustomFileAttachment;
 
 
 class PhController extends Controller
@@ -26,6 +28,8 @@ class PhController extends Controller
     	try{
     		ApplicationHelpers::usersCantGoBelowPHAmountChecks($request->input('amount'), $user);
             ApplicationHelpers::checkForMutilplesOfTen($request->input('amount'));
+            ApplicationHelpers::checkForExistingPh($user);
+
     		$donate = new DonationHelp();
     		$donate->paymentType = $request->input('paymentType');
     		$donate->amount = $request->amount;
@@ -60,11 +64,63 @@ class PhController extends Controller
         return view('ph/make_payment', compact('donations'));
     }
     public function transactions() {
-        //Manage all your pending PH entries
+        //Manage all your pending PH entries and all provide help request
         $user = Auth::User();
-        $donations = DonationHelp::where(['userID' => $user->id, 'phGh' => 'ph'
-            , 'status'=> DonationHelp::$SLIP_PENDING])->paginate(50);
+        $donations = DonationHelp::where(['userID' => $user->id, 'phGh' => 'ph'])
+            ->where('status', '!==', DonationHelp::$SLIP_MATCHED)->paginate(50);
         return view('ph/transactions', compact('donations'));
+    }
+    public function cancelPH(Request $request, $ph_id){
+        $user = Auth::User();
+        $donation = DonationHelp::where(['userID'=> $user->id, 'id'=> $ph_id])->first();
+        if(strtolower($donation->status) == DonationHelp::$SLIP_PENDING) {
+            $donation->status = DonationHelp::$SLIP_CANCELLED;
+            $donation->save();
+        }else{
+            return redirect()->back()->withErrors('You do not have any pending ph');
+        }
+        
+        Session::flash('flash_message', 'Your Ph has been cancelled successfully');
+        return redirect()->back();
+    }
+    public function confirmMatchPayment(Request $request, $trans_id){
+        $user = Auth::User();
+        $transaction = DonationTransaction::where(['id'=> $trans_id])->first();
+        if($transaction->donation->user->id !== $user->id) {
+            return redirect()->back();                    
+        }
+        return view('ph/confirm_payment', compact('transaction'));
+    }
+    public function storeConfirmMatchPayment(Request $request) {
+        $user = Auth::User();
+        $transaction = DonationTransaction::where(
+            ['id'=>$request->input('transaction_id')])->first();
+        if($transaction->donation->user->id !== $user->id) {
+            return redirect()->back();
+        }
+        //upload the attachment
+        $filename = $filehash = '';
+        try{
+            list($filename, $filehash) = CustomFileAttachment::uploadAttachment($request);
+        }catch(MyFileException $ex) {
+            return redirect()->back()->withErrors($ex->getMessage());
+        }
+        $transaction->filename = $filename;
+        $transaction->fileHash = $filehash;
+        $transaction->payerConfirmed = 1;
+        $transaction->comment = $request->input('comment');
+        $transaction->save();
+        Session::flash('flash_message', 'Confirmation Successful');
+        return redirect('ph/make/payments');
+    }
+    public function viewPHAttachment(Request $request, $trans_id) {
+        $user = Auth::User();
+        $transaction = DonationTransaction::where(
+            ['id'=>$trans_id])->first();    
+        if($transaction->donation->user->id !== $user->id) {
+            return redirect()->back();
+        }
+        return view('ph/attachment', compact('transaction'));
     }
     
 }
