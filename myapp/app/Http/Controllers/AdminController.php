@@ -11,6 +11,9 @@ use App\Role;
 use App\DonationHelp;
 use App\Http\Helpers\ApplicationHelpers;
 use App\Http\Helpers\MyCustomException; 
+use App\Http\Requests\MessagingRequest;
+use App\Messaging;
+use App\MessagingTransaction;
 
 class AdminController extends Controller
 {
@@ -177,6 +180,55 @@ class AdminController extends Controller
 
             }
         }
+    }
+    public function compose() {
+        return view('admin/messaging/compose');
+    }
+    public function sendMessage(MessagingRequest $request) {
+        $user = Auth::User();
+        $inputs = $request->all();
+        //get all the users
+        $users = User::where('isBlocked', 0)->pluck('id');
+        $messaging = Messaging::create($inputs);
+        //get the transactions
+        foreach($users as $id) {
+            if($id == $user->id) {
+                continue;
+            }
+            $transaction = new MessagingTransaction();
+            $transaction->messagingID = $messaging->id;
+            $transaction->userID = $id;
+            $transaction->messageFlag = 'received';
+            $transaction->save();
+        }
+        $transaction = new MessagingTransaction();
+        $transaction->messagingID = $messaging->id;
+        $transaction->userID = $user->id;
+        $transaction->messageFlag = 'sent';
+        $transaction->save();
+
+        Session::flash('flash_message', 'Message Sent successfully');
+        return redirect()->back();
+    }
+    public function inbox() {
+        $user = Auth::User();
+        $messages = MessagingTransaction::where('userID', $user->id)
+            ->where('messageFlag', 'received')->latest()->paginate(50);
+        return view('admin/messaging/inbox', compact('messages'));
+    }
+    public function outbox() {
+        $user = Auth::User();
+        $messages = MessagingTransaction::where('userID', $user->id)
+            ->where('messageFlag', 'sent')->latest()->paginate(50);
+        return view('admin/messaging/outbox', compact('messages'));
+    }
+    public function showMessage(Request $request, $trans_id) {
+        $user = Auth::User();
+        $message = MessagingTransaction::where('id', $trans_id)
+            ->where('userID', $user->id)->first();
+        $message->readStatus = 1;
+        $message->save();
+        return view('admin/messaging/details', compact('message'));   
     }
 
 }

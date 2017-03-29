@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Messaging;
 use App\Auth;
+use App\Http\Requests\MessagingRequest;
+
 class MessagingController extends Controller
 {
     public function __construct() {
@@ -20,5 +22,8 @@ class MessagingController extends Controller
     	$user = Auth::User();
     	$messages = MessagingTransaction::where(['recipientID' => $user->id, 'messageFlag' => 'sent']);
     	return view('messaging/outbox', compact('user'));
+    }
+    public function compose(MessagingRequest $request) {
+        dd($request);
     }
 }

@@ -50,6 +50,12 @@ Route::get('admin/unblock/user/{user_id}', 'AdminController@unblockUser');
 Route::get('admin/user/profile/{user_id}', 'AdminController@viewUserProfile');
 Route::patch('admin/change/password/store/{user_id}', 'AdminController@storeChangedUserPassword');
 Route::post('admin/change/role', 'AdminController@changeRoles');
+Route::get('admin/messaging/compose', 'AdminController@compose');
+Route::post('admin/messaging/send/message', 'AdminController@sendMessage');
+Route::get('admin/messaging/inbox', 'AdminController@inbox');
+Route::get('admin/messaging/outbox', 'AdminController@outbox');
+Route::get('admin/messaging/detail/{id}', 'AdminController@showMessage');
+
 
 Route::get('admin/phorders', 'AdminController@viewPhOrders');
 Route::get('admin/ghorders', 'AdminController@viewGhOrders');
@@ -64,3 +70,5 @@ Route::resource('referral', 'ReferralController');
 //check for registration bonuses and referral bonuses
 
 Route::get('messaging/inbox', 'MessagingController@inbox');
+Route::get('messaging/outbox', 'MessagingController@outbox');
+Route::get('messaging/compose', 'MessagingController@compose');

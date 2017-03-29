@@ -183,6 +183,7 @@ return [
         Collective\Html\HtmlServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
         App\Providers\SidebarServiceProvider::class,
+        App\Providers\unreadMessageCountProvider::class,
         Unisharp\Laravelfilemanager\LaravelFilemanagerServiceProvider::class,        
     ],
 

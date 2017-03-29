@@ -1,7 +1,8 @@
 <?php
-
 use Illuminate\Database\Seeder;
 use App\Role;
+use App\User;
+
 class RoleDatabaseSeeder extends Seeder
 {
     /**
@@ -35,7 +36,9 @@ class RoleDatabaseSeeder extends Seeder
 		$role->description  = 'These are the registered users that are admins'; // optional
 		$role->save();
 
-		// $user->attachRole($admin);
+		$user = User::find(1);
+
+		$user->attachRole($role);
 		// $user->hasRole('admin');   // true
 		// $user->can('edit-user'); 
     }
