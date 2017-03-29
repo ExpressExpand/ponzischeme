@@ -34,45 +34,38 @@
                         <th>RECIPIENT </th>
                         <th>DONOR</th>
                         <th>DATE</th>
-                        <th>PRROFS</th>
-                        <th>STATUS</th>
+                        <th>PROOFS</th>
+                        <th>ACTION</th>
                     </tr>
                     </thead>
                     <tbody>
-                    @if($users)
+                    @if($transactions)
                     <?php $count = 0; ?>
-                    @foreach ($users as $user)
-                    @if($user->hasRole('superadmin'))
-                        <?php continue; ?>
-                    @endif
+                    @foreach ($transactions as $transaction)
                     <tr>
                        <td>{{ ++$count }}</td> 
                        <td class="clearfix">
-                       <a href="{{ url('admin/user/profile', $user->id) }}"> {{ $user->name }}</a>
-                        <span class="pull-right">
-                            <input type="checkbox" name="user_ids[]" value="{{ $user->id }}">
-                        </span></td> 
-                       <td>{{ $user->email }}</td> 
+                       <a href="{{ url('admin/user/profile', $transaction->collection->user->id) }}">
+                        {{ $transaction->collection->user->name }}</a>
+                        </td> 
+                        <td> <a href="{{ url('admin/user/profile', $transaction->donation->user->id) }}">
+                        {{ $transaction->donation->user->name }}</a>
+                        </td> 
+                       <td>{{ $transaction->updated_at }}</td> 
                        <td>
-                            <?php $roles = array();
-                               foreach($user->roles as $role) {
-                                 $roles[] = $role->display_name; 
-                               }
-                               echo implode(',', $roles); ?>
+                           <a href="{{ url('view/gh/attachment', $transaction->id) }}" 
+                                        class="label label-success"> View Attachment</a>
                        </td> 
-                       <td>{{ $user->points }}</td> 
                        <td>
-                       @if($user->isBlocked == 0)
-                           <label class="label label-primary">Active</label>
-                            <a href="{{ url('admin/block/user', $user->id) }}" 
-                            class="btn btn-primary btn-sm">Block</a>
-                       @else
-                            <label class="label label-danger">Inactive</label>
-                            <a href="{{ url('admin/unblock/user', $user->id) }}" 
-                            class="btn btn-danger btn-sm">Unblock</a>
-                       @endif
+                            @if($transaction->donation->user->isBlocked == 0)
+                           <a href="{{ url('admin/block/donor/delete', $transaction->donation->user->id) }}"
+                            class="btn btn-danger btn-sm">Block Donor</a>
+                            @else
+                                <a admin="{{ url('admin/delete/transaction'
+                                , $transaction->id) }}"
+                                class="btn btn-danger">Delete Transaction</a>
+                            @endif
                        </td> 
-                       <td>{{ date('M d, Y h:i:sa', strtotime($user->created_at)) }}</td> 
                     </tr>
                     @endforeach
                     @else
@@ -85,12 +78,11 @@
                     <tfoot>
                     <tr>
                         <th>ID</th>
-                        <th>NAME </th>
-                        <th>EMAIL</th>
-                        <th>ROLE</th>
-                        <th>POINTS</th>
-                        <th>STATUS</th>
+                        <th>RECIPIENT </th>
+                        <th>DONOR</th>
                         <th>DATE</th>
+                        <th>PROOFS</th>
+                        <th>ACTION</th>
                     </tr>
                     </tfoot>
                     </table>

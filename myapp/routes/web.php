@@ -66,6 +66,7 @@ Route::get('admin/fakepop', 'AdminController@fakepop');
 Route::get('admin/phorders', 'AdminController@viewPhOrders');
 Route::get('admin/ghorders', 'AdminController@viewGhOrders');
 Route::get('admin/gh/matching', 'AdminController@matchGHRequest');
+Route::get('admin/block/donor/delete/{trans_id}', 'AdminController@blockDonorAndDeleteTrans');
 
 //announcements
 Route::get('announcements/view', 'AnnouncementController@adminViewAnnouncement');

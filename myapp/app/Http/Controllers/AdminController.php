@@ -193,4 +193,17 @@ class AdminController extends Controller
         $transactions = DonationTransaction::where('fakePOP', 1)->get();
         return view('admin/users/fakepop', compact('transactions'));
     }
+    public function blockDonorAndDeleteTrans(Request $request, $trans_id) {
+        //get the trans
+        $transaction = DonationTransaction::findOrFail($trans_id);
+        if($transaction){
+            //block donor
+            $transaction->donation->user->isBlocked = 1;
+            $transaction->donation->save();
+            //delete the transaction
+            $transaction->delete();
+            Session::flash('flash_message', 'Transaction Succesful');
+            return Reirect('admin/pop');
+        }
+    }
 }

@@ -99,8 +99,9 @@ class GhController extends Controller
         $user = Auth::User();
         $transaction = DonationTransaction::where(
             ['id'=>$trans_id])->first();    
-        if($transaction->collection->user->id !== $user->id) {
-            return redirect()->back();
+        if($transaction->collection->user->id !== $user->id ) {
+            if (!$user->hasRole('superadmin'))
+                return redirect()->back();
         }
         return view('ph/attachment', compact('transaction'));
     }
