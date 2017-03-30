@@ -184,7 +184,9 @@ return [
         Intervention\Image\ImageServiceProvider::class,
         App\Providers\SidebarServiceProvider::class,
         App\Providers\unreadMessageCountProvider::class,
-        Unisharp\Laravelfilemanager\LaravelFilemanagerServiceProvider::class,        
+        Unisharp\Laravelfilemanager\LaravelFilemanagerServiceProvider::class,    
+
+        Mews\Captcha\CaptchaServiceProvider::class,    
     ],
 
     /*
@@ -238,7 +240,7 @@ return [
         'Html' => Collective\Html\HtmlFacade::class,
         'Image' => Intervention\Image\Facades\Image::class,
         'Carbon' => 'Carbon\Carbon',
-        
+        'Captcha' => Mews\Captcha\Facades\Captcha::class,
     ],
 
 ];

@@ -78,6 +78,26 @@
                         </li>
                     </ul>
                 </li>
+                <li>
+                    <a href="#"><i class="fa fa-envelope"></i> 
+                    <span class="nav-label">Messages</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li><a href="{{ url('admin/messaging/compose') }}">Compose</a></li>
+                        <li><a href="{{ url('admin/messaging/inbox') }}">Inbox</a></li>
+                        <li><a href="{{ url('admin/messaging/outbox') }}">Outbox</a></li>
+                    </ul>
+                </li>
+                @endrole
+                @role(['user', 'superadmin'])
+                <li>
+                    <a href="#"><i class="fa fa-envelope"></i> 
+                    <span class="nav-label">Messages</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li><a href="{{ url('messaging/compose') }}">Compose</a></li>
+                        <li><a href="{{ url('messaging/inbox') }}">Inbox</a></li>
+                        <li><a href="{{ url('messaging/outbox') }}">Outbox</a></li>
+                    </ul>
+                </li>
                 @endrole
                 <li>
                     <a href="{{ url('announcements') }}"><i class="fa fa-newspaper-o"></i>

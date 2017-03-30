@@ -28,7 +28,15 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <div class="g-recaptcha" data-sitekey="6LcboBgUAAAAAKsJrg-3azvWrSJPfJGhXqM4P3AC"></div>
+                    <!-- <div class="g-recaptcha" data-sitekey="6LcboBgUAAAAAKsJrg-3azvWrSJPfJGhXqM4P3AC"></div> -->
+                    <span id="captcha">{!! captcha_img('flat') !!} </span>
+                    <a href="javascript:void(0);" id="refresh" class="reload_captcha">
+                    <i class="fa fa-refresh"></i></a>
+
+                    <div><br />
+                    <p><span class="green"><strong> ENTER CAPTCHA: </strong></span>
+                    <input type="text" name="captcha" required=""></p>
+                    </div>
                 </div>
                 <div class="form-group">
                     <button type="submit" class="btn btn-primary block full-width m-b">Login</button>
@@ -40,4 +48,19 @@
 @stop
 @section('resources')
 <script src='https://www.google.com/recaptcha/api.js'></script>
+<script>
+    $('.reload_captcha').click(function() {
+        $.ajax({
+            url: '/captcha/post/code/',
+            type: 'get',
+            success: function(resp) {
+                $('#captcha').empty();
+                $('#captcha').html(resp.data);
+            },
+            error(err) {
+                console.log(err);
+            }
+        })
+    });
+</script>
 @stop

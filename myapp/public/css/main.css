@@ -23,7 +23,12 @@
 	color: red;
 }
 .green{
-    color:green;
+    color:#4edc85;
+}
+.reload_captcha .fa-refresh{
+    font-size: 30px;
+    color: #4edc85;
+    margin-left: 10px;
 }
 
 .image-change{

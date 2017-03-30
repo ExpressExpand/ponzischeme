@@ -5,7 +5,8 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
-
+use Response;
+// use Gregwar\Captcha\CaptchaBuilder;
 class LoginController extends Controller
 {
     /*
@@ -37,6 +38,12 @@ class LoginController extends Controller
     {
         $this->middleware('guest', ['except' => 'logout']);
     }
+     public function showLoginForm()
+    {
+        // $builder = new CaptchaBuilder;
+        // $builder->build($width = 150, $height = 40);
+        return view('auth.login');
+    }
     
     protected function credentials(Request $request)
     {
@@ -46,6 +53,19 @@ class LoginController extends Controller
     }
     public function username() {
         return 'login';
+    }
+
+    protected function validateLogin(Request $request)
+    {
+        $this->validate($request, [
+            $this->username() => 'required', 'password' => 'required',
+            'captcha' => 'required|captcha',
+        ]);
+    }
+    public function captcha() {
+        $img = captcha_img('flat');
+        $response = Response::json(array('data' => $img));
+        return $response;
     }
 
 

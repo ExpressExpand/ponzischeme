@@ -14,6 +14,7 @@
 Route::get('/', function () {
     return view('index');
 });
+Route::get('/captcha/post/code/', 'Auth\LoginController@captcha');
 Route::get('template', function() {
 	return view('template');
 });
@@ -85,3 +86,4 @@ Route::resource('referral', 'ReferralController');
 Route::get('messaging/inbox', 'MessagingController@inbox');
 Route::get('messaging/outbox', 'MessagingController@outbox');
 Route::get('messaging/compose', 'MessagingController@compose');
+Route::post('messaging/send/message', 'MessagingController@sendMessage');

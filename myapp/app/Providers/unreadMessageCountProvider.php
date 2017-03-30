@@ -13,7 +13,8 @@ class unreadMessageCountProvider extends ServiceProvider
      */
     public function boot()
     {
-        view()->composer('partials/admin/_messaging', 'App\Http\ViewComposers\UnReadMessageComposer');
+        view()->composer(['partials/admin/_messaging',
+         'partials/_messaging'], 'App\Http\ViewComposers\UnReadMessageComposer');
     }
 
     /**

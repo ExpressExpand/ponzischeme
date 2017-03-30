@@ -41,7 +41,7 @@
                     </div>
                 </form>
                 <h2>
-                    Outbox ({{ $messages->count() }})
+                    Outbox 
                 </h2>
                 <div class="mail-tools tooltip-demo m-t-md">
                     <div class="btn-group pull-right">

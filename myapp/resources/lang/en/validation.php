@@ -101,6 +101,10 @@ return [
         'attribute-name' => [
             'rule-name' => 'custom-message',
         ],
+        'captcha' => [
+            'captcha' => 'Incorrect security code',
+            'required' => 'The captcha field is required',
+        ],
     ],
 
     /*
