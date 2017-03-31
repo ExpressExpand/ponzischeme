@@ -25,6 +25,9 @@
 .green{
     color:#4edc85;
 }
+.reload_captcha{
+    cursor: pointer;
+}
 .reload_captcha .fa-refresh{
     font-size: 30px;
     color: #4edc85;
