@@ -6,13 +6,10 @@
         <div class="col-sm-4">
             <h2>Outbox Message</h2>
             <ol class="breadcrumb">
-                <li>
-                    <a href="index.html">Admin</a>
-                </li>
                 <li class="">
                     <strong>Messages</strong>
                 </li>
-                <li class="">
+                <li class="active">
                     <strong>Outbox</strong>
                 </li>
             </ol>

@@ -18,13 +18,15 @@ class MessagingController extends Controller
     public function inbox() {
     	$user = Auth::User();
     	//get all the inbox messages
-    	$messages = MessagingTransaction::where(['recipientID' => $user->id, 'messageFlag' => 'received']);
+    	 $messages = MessagingTransaction::where('userID', $user->id)
+            ->where('messageFlag', 'received')->latest()->paginate(50);
     	return view('messaging/inbox', compact('messages'));
     }
     public function outbox() {
     	$user = Auth::User();
-    	$messages = MessagingTransaction::where(['recipientID' => $user->id, 'messageFlag' => 'sent']);
-    	return view('messaging/outbox', compact('user'));
+    	$messages = MessagingTransaction::where('userID', $user->id)
+            ->where('messageFlag', 'sent')->latest()->paginate(50);
+    	return view('messaging/outbox', compact('user', 'messages'));
     }
     public function compose(Request $request) {
         return view('messaging/compose');

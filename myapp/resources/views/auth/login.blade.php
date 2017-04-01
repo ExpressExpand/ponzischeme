@@ -30,8 +30,8 @@
                 <div class="form-group">
                     <!-- <div class="g-recaptcha" data-sitekey="6LcboBgUAAAAAKsJrg-3azvWrSJPfJGhXqM4P3AC"></div> -->
                     <span id="captcha">{!! captcha_img('flat') !!} </span>
-                    <a href="javascript:void(0);" id="refresh" class="reload_captcha">
-                    <i class="fa fa-refresh"></i></a>
+                    <span id="refresh" class="reload_captcha">
+                    <i class="fa fa-refresh"></i></span>
 
                     <div><br />
                     <p><span class="green"><strong> ENTER CAPTCHA: </strong></span>
@@ -54,7 +54,7 @@
             url: '/captcha/post/code/',
             type: 'get',
             success: function(resp) {
-                $('#captcha').empty();
+                // $('#captcha').empty();
                 $('#captcha').html(resp.data);
             },
             error(err) {

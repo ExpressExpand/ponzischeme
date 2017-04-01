@@ -1,19 +1,16 @@
 @extends('layouts/master')
-@section('title', 'Outbox Message')
+@section('title', 'Inbox Message')
 
 @section('content')       
     <div class="row wrapper border-bottom white-bg page-heading">
         <div class="col-sm-4">
-            <h2>Outbox Message</h2>
+            <h2>Inbox Message</h2>
             <ol class="breadcrumb">
                 <li>
-                    <a href="index.html">Admin</a>
+                    <a href="index.html">Messages</a>
                 </li>
-                <li class="">
-                    <strong>Messages</strong>
-                </li>
-                <li class="">
-                    <strong>Outbox</strong>
+                <li class="active">
+                    <strong>Inbox</strong>
                 </li>
             </ol>
         </div>
@@ -26,7 +23,7 @@
 
     <div class="wrapper wrapper-content">
         <div class="row">
-            @include('partials/admin/_messaging')
+            @include('partials/_messaging')
             <div class="col-lg-9 animated fadeInRight">
             <div class="mail-box-header">
 
@@ -41,7 +38,7 @@
                     </div>
                 </form>
                 <h2>
-                    Outbox 
+                    Inbox ({{ $messages->where('readStatus', 0)->count() }})
                 </h2>
                 <div class="mail-tools tooltip-demo m-t-md">
                     <div class="btn-group pull-right">
@@ -60,8 +57,9 @@
 
                 <table class="table table-hover table-mail">
                 <tbody>
-                @foreach($messages as $transaction)
-                        <tr class="read">
+                @foreach($messages as $transaction) 
+                    @if($transaction->readStatus == 0) 
+                        <tr class="unread">
                             <td class="check-mail">
                                 <input type="checkbox" class="i-checks">
                             </td>
@@ -76,7 +74,23 @@
                             <td class="text-right mail-date">
                                 {{ $transaction->created_at->diffForHumans() }}</td>
                         </tr>
-                  
+                    @elseif($transaction->readStatus == 1)
+                        <tr class="read">
+                            <td class="check-mail">
+                                <input type="checkbox" class="i-checks">
+                            </td>
+                            <td class="mail-ontact"><a href="{{ url('admin/messaging/detail'
+                            , $transaction->id) }}">
+                                Members</a></td>
+                            <td class="mail-subject"><a href="{{ url('admin/messaging/detail'
+                            , $transaction->id) }}">
+                                {{ $transaction->message->subject }}
+                            </a></td>
+                            <td class=""><!-- <i class="fa fa-paperclip"></i> --></td>
+                            <td class="text-right mail-date">
+                                {{ $transaction->created_at->diffForHumans() }}</td>
+                        </tr>
+                    @endif
                 @endforeach
                 </tbody>
                 </table>

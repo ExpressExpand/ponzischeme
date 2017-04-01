@@ -26,6 +26,10 @@
     color:#00ceae;/*#4edc85;*/
 }
 
+.reload_captcha{
+    cursor: pointer;
+}
+
 .reload_captcha .fa-refresh{
     font-size: 30px;
     color: #00ceae;
