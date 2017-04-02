@@ -40,12 +40,12 @@
                                 ['placeholder' => 'Select', 'class' => 'form-control', 'required']) }}
                             </div>
                         </div>
-                        <div class="form-group">
+                       <!--  <div class="form-group">
                             <label class="col-lg-2 control-label" for="promoCode">Promo Code:</label>
                             <div class="col-lg-10">
                                 <input type="text" placeholder="promoCode" class="form-control">
                             </div>
-                        </div>
+                        </div> -->
                          <div class="form-group">
                             <label class="col-lg-2 control-label" for="amount">Amount <span class="error">*</span>:</label>
                             <div class="col-lg-10">

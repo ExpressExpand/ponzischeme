@@ -50,7 +50,7 @@
                     @if(count($donations) > 0)
                         @foreach($donations as $donation)
                         @foreach($donation->transactions as $transaction)
-                            @if($transaction->receiverConfirmed) == 1){
+                            @if($transaction->receiverConfirmed == 1)
                                 <?php continue; ?>
                             @endif
                             <tr>
@@ -80,6 +80,9 @@
                                          class="label label-info">
                                         Confirm Payment</a>
                                     @else
+                                        <div>
+                                            <span class="pie">50/100</span>
+                                        </div>
                                         <a href="{{ url('view/attachment', $transaction->id) }}" 
                                         class="label label-success">
                                         View Attachment</a>
@@ -115,7 +118,14 @@
 <script src="{{ asset('js/inspinia/plugins/dataTables/dataTables.bootstrap.js') }}"></script>
 <script src="{{ asset('js/inspinia/plugins/dataTables/dataTables.responsive.js') }}"></script>
 <script src="{{ asset('js/inspinia/plugins/dataTables/dataTables.tableTools.min.js') }}"></script>
-
+<script src="{!! asset('js/inspinia/plugins/peity/jquery.peity.min.js') !!}"></script>
+<script>
+    $(function() {
+        $("span.pie").peity("pie", {
+            fill: ['#1ab394', '#d7d7d7', '#ffffff']
+        })
+    });
+</script>
 <script>
     $(document).ready(function() {
         $('.dataTables-example').dataTable({

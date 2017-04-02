@@ -80,6 +80,9 @@
                                             <a href="{{ url('flagpop', $transaction->id) }}" id="confirmFakePop">
                                             <span class="label label-danger">Fake POP Resolve in Progress</span></a>
                                         @else
+                                            <div>
+                                                <span class="pie">50/100</span>
+                                            </div>
                                             <a href="{{ url('flagpop', $transaction->id) }}" id="confirmFakePop">
                                             <span class="label label-danger">Flag as Fake POP</span></a>
                                         @endif
@@ -125,6 +128,14 @@
         if(!result){
             e.preventDefault();
         }
+    });
+</script>
+<script src="{!! asset('js/inspinia/plugins/peity/jquery.peity.min.js') !!}"></script>
+<script>
+    $(function() {
+        $("span.pie").peity("pie", {
+            fill: ['#1ab394', '#d7d7d7', '#ffffff']
+        })
     });
 </script>
 <script>

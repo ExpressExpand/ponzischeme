@@ -1,23 +1,25 @@
 @extends('layouts/master')
-@section('title', 'Receive help')
+@section('title', 'Referrals')
 
 @section('content')       
     <div class="row wrapper border-bottom white-bg page-heading">
         <div class="col-sm-4">
-            <h2>All Payments</h2>
-            <div>This shows all Payments/Pairing made in the system either successful or cancelled</div>
+            <h2>REFERRALS</h2>
             <ol class="breadcrumb">
                 <li>
-                    <a href="index.html">This is</a>
+                    <a href="index.html">Dashboard</a>
                 </li>
                 <li class="active">
-                    <strong>Breadcrumb</strong>
+                    <strong>Referrals</strong>
                 </li>
             </ol>
         </div>
         <div class="col-sm-8">
             <div class="title-action">
-                <a href="#" class="btn btn-primary">This is action area</a>
+                Your referral ID is 
+                <span class="error"> 
+                    <?php echo env('URL').'?referral_id='.$ref_id; ?>
+                </span>
             </div>
         </div>
     </div>
@@ -25,43 +27,55 @@
     <div class="wrapper wrapper-content">
         <div class="row">
             <div class="col-sm-12">
+            <div class="alert alert-info">
+                The table below shows the information of your referrals
+            </div>
+                 
                 <div class="ibox-content">
-                    <h4>THE LIST BELOW PROVIDES CONTACT DETAILS OF EVERYONE YOU HAVE EVER BEEN MATCHED TO 
-                    PROVIDE HELP TO.</h4>
                     @include('partials/_alert')
+                                    
                     <table class="table table-striped table-bordered table-hover dataTables-example" >
                     <thead>
                     <tr>
-                        <th>TRANS ID</th>
-                        <th>Amount</th>
-                        <th>MATCHED DATE</th>
-                        <th>BENEFICIARY</th>
-                        <th>ACCOUNT DETAILS</th>
-                        <th>ATTACHMENTS</th>
-                        <th>STATUS</th>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Phone</th>
+                        <th>Email</th>
+                        <th>Date Joined</th>
                     </tr>
                     </thead>
                     <tbody>
-                   
+                    @if($referrals)
+                    <?php $count = 0; ?>
+                    @foreach ($referrals as $referral)
                         <tr>
-                            <th colspan="8"><center>No Data Available</center></th>
+                            <td>{{ ++$count }}</td>
+                            <td>{{ $referral->member->name }}</td>
+                            <td>{{ $referral->member->phone }}</td>
+                            <td>{{ $referral->member->email }}</td>
+                            <td>{{ date('d-m-Y', strtotime($referral->member->created_at)) }}</td>
                         </tr>
-                    <?php endif; ?>
+                    @endforeach
+                    @else
+                        <tr>
+                            <th colspan="8"><center>No Referrals Available</center></th>
+                        </tr>
+                    @endif
                     
                     </tbody>
                     <tfoot>
                     <tr>
-                       <th>TRANS ID</th>
-                        <th>Amount</th>
-                        <th>MATCHED DATE</th>
-                        <th>BENEFICIARY</th>
-                        <th>ACCOUNT DETAILS</th>
-                        <th>ATTACHMENTS</th>
-                        <th>STATUS</th>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Phone</th>
+                        <th>Email</th>
+                        <th>Date Joined</th>
                     </tr>
                     </tfoot>
                     </table>
-
+                    
+                    {{ Form::close() }}
+                    <div class="paginate">{{ $referrals->render() }}</div>
                 </div>
             </div>
         </div>

@@ -20,7 +20,7 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->string('phone')->unique();
             $table->string('bankName')->nullable();
-            $table->integer('accountNumber')->nullable();
+            $table->string('accountNumber')->nullable();
             $table->string('accountName')->nullable();
             $table->string('bitcoinAddress')->nullable();
             $table->string('avatar')->nullable();

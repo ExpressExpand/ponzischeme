@@ -185,4 +185,16 @@ class ProfileController extends Controller
         Session::flash('flash_message', 'Password change successful');
         return redirect()->back();
     }
+    public function updateBitcoin(Request $request) {
+        $validator = $this->validate($request, array('bitcoinAddress'=> 'required|min:3'));
+        if($validator !== null) {
+            return redirect()->back();
+        }
+        //everything is ok save the password profile
+        $user = Auth::User();
+        $user->bitcoinAddress= $request->input('bitcoinAddress');
+        $user->save();
+        Session::flash('flash_message', 'Bitcoin address was successful');
+        return redirect()->back();
+    }
 }

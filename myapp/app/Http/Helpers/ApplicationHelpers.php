@@ -14,8 +14,7 @@ final class ApplicationHelpers {
 		->where(function($query) {
 			$query->orWhere('status', 'confirmed')
 			->orWhere('status', 'matched')
-			->orWhere('status', 'pending')
-			->orWhere('status', 'withdrawn');
+			->orWhere('status', 'pending');
 		})->get()->pluck('amount')->toArray();
 		if(count($donations) > 0) {
 			//determine the largest amount
@@ -25,6 +24,34 @@ final class ApplicationHelpers {
 					that is equal or greater than '.$highest);
 			}
 		}		
+	}
+	public static function getPointColor($points) {
+		if($points > 50) {
+			return '#00ceae';
+		}elseif($points < 50) {
+			return '#DC143C';
+		}else{
+			return '#F0E68C';
+		}
+	}
+	public static function getCurrentBitcoinRate(){
+		$ch = curl_init();
+        //SETUUP URL
+        curl_setopt($ch, CURLOPT_URL, "http://api.coindesk.com/v1/bpi/currentprice.json");
+        // curl_setopt( $ch, CURLOPT_POST, true );
+        // curl_setopt( $ch, CURLOPT_HTTPHEADER, $this->getHeaders());
+        // curl_setopt($ch, CURLINFO_HEADER_OUT, true);
+        curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );
+        $response = json_decode(curl_exec($ch)); 
+        // $code = curl_getinfo($ch);
+        // Close connection
+        curl_close($ch);
+        $rate = $response->bpi->USD->rate;
+        $rate = (float) str_replace(',','', $rate);
+        //convert to dollars
+        $dollar = 1 / $rate;
+        $dollar = number_format($dollar, 8, '.','');
+        return $dollar;
 	}
 	public static function checkForActivePh($user) {
 		$donations = array();

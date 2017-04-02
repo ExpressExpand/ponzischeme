@@ -43,6 +43,7 @@
                 <h2>
                     Inbox ({{ $messages->where('readStatus', 0)->count() }})
                 </h2>
+                {{ Form::open([ 'url' => 'messaging/delete', 'method'=>'delete']) }}
                 <div class="mail-tools tooltip-demo m-t-md">
                     <div class="btn-group pull-right">
                         <button class="btn btn-white btn-sm"><i class="fa fa-arrow-left"></i></button>
@@ -64,7 +65,7 @@
                     @if($transaction->readStatus == 0) 
                         <tr class="unread">
                             <td class="check-mail">
-                                <input type="checkbox" class="i-checks">
+                                <input type="checkbox" name="transaction[]" value="{{ $transaction->id }}" class="i-checks">
                             </td>
                             <td class="mail-ontact"><a href="{{ url('admin/messaging/detail'
                             , $transaction->id) }}">
@@ -80,7 +81,7 @@
                     @elseif($transaction->readStatus == 1)
                         <tr class="read">
                             <td class="check-mail">
-                                <input type="checkbox" class="i-checks">
+                                <input type="checkbox" name="transaction[]" value="{{ $transaction->id }}" class="i-checks">
                             </td>
                             <td class="mail-ontact"><a href="{{ url('admin/messaging/detail'
                             , $transaction->id) }}">
@@ -100,6 +101,7 @@
                 <div class="paginate">{{ $messages->render() }} </div>
 
                 </div>
+                {{ Form::close() }}
             </div>
         </div>
     </div>        

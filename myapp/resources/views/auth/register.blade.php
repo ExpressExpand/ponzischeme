@@ -51,7 +51,7 @@
                 <div class="form-group">
                     <div class="input-group">  
                         <input id="referral_email" type="text" class="form-control" name="referral_email"
-                         placeholder="Referral Email">
+                         value="{{ $ref_id }}" placeholder="Referral Email">
                         <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
                     </div>
                 </div>
@@ -61,7 +61,7 @@
                     'class' => 'form-control']) }}
                 </div>
                 <div class="form-group"><label>
-                By clicking on the "register now" button, I fully understand all the risks. I made decision to participate in Get Help Worldwide, being of sound mind and memory.</label></form>
+                By clicking on the "register now" button, I fully understand all the risks. I made decision to participate in easypayworldwide.com, being of sound mind and memory.</label></form>
                 <!-- <div class="form-group">
                         <div class="checkbox i-checks"><label> <input type="checkbox"><i></i> Agree the terms and policy </label></div>
                 </div> -->

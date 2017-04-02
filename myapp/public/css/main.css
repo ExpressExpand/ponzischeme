@@ -25,7 +25,23 @@
 .green{
     color:#00ceae;/*#4edc85;*/
 }
-
+.red{
+    color: #F0E68C;
+}
+.yellow{
+    color: #DC143C;
+}
+.user_points {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 28px;
+    text-align: center;
+    vertical-align: middle;
+    color: #fff;
+}
 .reload_captcha{
     cursor: pointer;
 }

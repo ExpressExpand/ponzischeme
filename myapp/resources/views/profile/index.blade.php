@@ -6,17 +6,14 @@
         <div class="col-sm-4">
             <h2>My Profile</h2>
             <ol class="breadcrumb">
-                <li>
-                    <a href="index.html">This is</a>
-                </li>
                 <li class="active">
-                    <strong>Breadcrumb</strong>
+                    <a href="{{ url('profile') }}">Profile</a>
                 </li>
             </ol>
         </div>
         <div class="col-sm-8">
             <div class="title-action">
-                <a href="#" class="btn btn-primary">My Profile</a>
+                <!-- <a href="#" class="btn btn-primary">My Profile</a> -->
             </div>
         </div>
     </div>
@@ -91,6 +88,19 @@
                                     {{ Form::close() }}
                                 </div>
                             </div>
+                             <div class="row profile-group">
+                                <div class="col-sm-3 key">Bitcoin: </div>
+                                <div class="col-sm-9 data">
+                                    {{ Form::model($user, ['url' => 'profile/bitcoin/store'
+                                    , 'method' => 'put',
+                                    'class' => 'form-horizontal']) }}
+
+                                    {{ Form::text('bitcoinAddress', null, ['class' => '', 'required']) }}
+                                    <span> {{ Form::submit('Submit', ['class' => '']) }}</span>
+                                    
+                                    {{ Form::close() }}
+                                </div>
+                            </div>
                             <h3>Account Information</h3><hr />
                             <?php 
                                 if(strlen($user->bankName) == 0 ) {
@@ -140,6 +150,14 @@
                             {{ Form::close() }}
                         </div>
                         <div class="col-sm-3">
+                            <div class="points">
+                                <?php 
+                                    $color = App\Http\Helpers\ApplicationHelpers::getPointColor($user->points); 
+
+                                ?>
+                                <div class="user_points" style="background-color: {{$color}}">{{ $user->points }} points 
+                                </div>
+                            </div>
                             <!-- google ads -->
                             @include('partials/_google_ads')
                         </div>

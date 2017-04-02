@@ -30,9 +30,12 @@
                     <span class="nav-label">Dashboard</span> </a>
                 </li>
                 <li>
-                    <a href="{{ url('referral') }}"><i class="fa fa-user-plus"></i>
-                    <span class="nav-label">Referrals</span>
-                    <span class="label label-info pull-right">62</span></a>
+                    <a href="#"><i class="fa fa-user-plus"></i> 
+                    <span class="nav-label">Referrals</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li><a href="{{ url('manage/referral') }}">Manage Referrals</a></li>
+                        <li><a href="{{ url('referral') }}">Referrals</a></li>
+                    </ul>
                 </li>
                 <li>
                     <a href="#"><i class="fa fa-credit-card"></i> 
@@ -88,7 +91,7 @@
                     </ul>
                 </li>
                 @endrole
-                @role(['user', 'superadmin'])
+                @role(['users', 'superadmin'])
                 <li>
                     <a href="#"><i class="fa fa-envelope"></i> 
                     <span class="nav-label">Messages</span><span class="fa arrow"></span></a>

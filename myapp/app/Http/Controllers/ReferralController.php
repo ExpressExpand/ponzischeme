@@ -5,24 +5,59 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Referral;
 use Auth;
-
+use App\DonationHelp;
 class ReferralController extends Controller
 {
     public function __construct() {
     	$this->middleware(['auth','customChecks']);
     }
-    public function index() {
+    public function manageReferrals() {
     	$user = Auth::User();
     	//get the referrals
-    	$referrals = Referral::where('relatedReferrerUserID', $user->id)->paginate(50);
-    	//count the total referals
-    	$referrals_count = Referral::where('relatedReferrerUserID', $user->id)->count();
-    	//get the total referral amount
+    	$referrals = Referral::where('relatedReferrerUserID', $user->id)->get();
+        $refs = array();
+        $confirmed_amount = 0;
     	foreach($referrals as $referral) {
-    		//get the  number of confirmed ph
-    		$donations = $referral->donations;
+            //loop through donations
+            foreach($referral->member->donations as $donation) {
+                if($donation->phGh == 'gh') {
+                    continue;
+                }
+                $data = array();
+                $data['name'] = $referral->member->name;  
+                $data['amount'] = number_format($donation->amount,2);
+                $bonus = 0.1 * $donation->amount;
+                if(strtolower($donation->status) == DonationHelp::$SLIP_CONFIRMED) {
+                    $data['status'] = 'Completed';
+                    $data['bonus'] = number_format($bonus, 2);
+                    $amount += $confirmed_amount;
+                }else{
+                    $data['status'] = 'Pending';
+                    $data['bonus'] = number_format(0, 2);
+                }
+                $data['date'] = date('d-m-Y', strtotime($donation->created_at));
+                $refs[]  = $data;
+            }
     	}
-
-    	return view('referrals/index', compact('referrals'));
+        usort($refs, 'sortDateFunction');
+        
+        //get the referrer if
+        $ref_id = $user->email;
+        if(strlen($user->referrerUsername) > 0) {
+            $ref_id = $user->referrerUsername;
+        }
+    	return view('referrals/index', compact('referrals', 'ref_id', 'refs', 'confirmed_amount'));
+    }
+    public function referrals() {
+        $user = Auth::User();
+        //get the referrals
+        $referrals = Referral::where('relatedReferrerUserID', $user->id)->paginate(50);
+               
+        //get the referrer if
+        $ref_id = $user->email;
+        if(strlen($user->referrerUsername) > 0) {
+            $ref_id = $user->referrerUsername;
+        }
+        return view('referrals/referrals', compact('referrals', 'ref_id'));
     }
 }

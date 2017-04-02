@@ -145,14 +145,57 @@ class AdminController extends Controller
     }
    
     public function matchGHRequest(Request $request) {
-
+        $this->matchGHByBankRequest($request);
+        $this->matchGHByBitcoinRequest($request);
+        
+    }
+    public function matchGHByBankRequest($request) {
         //get all the pending gh and also based on date TODO
         $ghs = DonationHelp::where(['phGh'=>'gh', 'status'=>DonationHelp::$SLIP_PENDING])
+            ->where('paymentType', 'bank')
             ->get()->toArray();
         // $ghs = DonationHelp::where(['phGh'=>'gh', 'status'=>DonationHelp::$SLIP_PENDING])->get()->toArray();
         //get all the phs
         $phs = DonationHelp::where(['phGh'=>'ph', 'status'=>DonationHelp::$SLIP_PENDING])
-            ->whereRaw('created_at <= DATE_ADD(curdate(), INTERVAL 3 WEEK) ')->get()->toArray();
+            ->whereRaw('created_at <= DATE_SUB(curdate(), INTERVAL 3 WEEK) ')
+            ->where('paymentType', 'bank')->get()->toArray();
+        //get all the userss
+        $users = User::pluck('name', 'id')->toArray();
+        //do exact match
+        list($ghs, $phs) = ApplicationHelpers::doExactMatch($ghs, $phs, $users);
+        list($ghs, $phs) = ApplicationHelpers::matchOneGHToTwoPH($ghs, $phs, $users);
+        list($ghs, $phs) = ApplicationHelpers::matchOnePHToTwoGH($ghs, $phs, $users);
+        list($ghs, $phs) = ApplicationHelpers::matchOneGHToThreePH($ghs, $phs, $users);
+        list($ghs, $phs) = ApplicationHelpers::matchOnePHToThreeGH($ghs, $phs, $users);
+
+        //if no match exists set the matchcount to one
+        if(count($ghs) > 0) {
+            foreach ($ghs as $gh) {
+                $update_gh = DonationHelp::findOrFail($gh['id']);
+                $update_gh->matchCounter = $update_gh->matchCounter + 1;
+                $update_gh->save();
+                // echo "Saving ".$update_gh->user->name." with amount ".$update_gh->amount."....<br />";
+            }
+        }
+        if(count($phs) > 0) {
+            foreach ($phs as $ph) {
+                $update_ph = DonationHelp::findOrFail($ph['id']);
+                $update_ph->matchCounter = $update_ph->matchCounter + 1;
+                $update_ph->save();
+                // echo "Saving ".$update_ph->user->name." with amount ".$update_ph->amount."....<br />";
+            }
+        }
+    }
+    public function matchGHByBitcoinRequest($request) {
+        //get all the pending gh and also based on date TODO
+        $ghs = DonationHelp::where(['phGh'=>'gh', 'status'=>DonationHelp::$SLIP_PENDING])
+            ->where('paymentType', 'bitcoin')->get()->toArray();
+        // $ghs = DonationHelp::where(['phGh'=>'gh', 'status'=>DonationHelp::$SLIP_PENDING])->get()->toArray();
+        //get all the phs
+        $phs = DonationHelp::where(['phGh'=>'ph', 'status'=>DonationHelp::$SLIP_PENDING])
+            ->where('paymentType', 'bitcoin')
+            ->whereRaw('created_at <= DATE_SUB(curdate(), INTERVAL 3 WEEK) ')
+            ->get()->toArray();
         //get all the userss
         $users = User::pluck('name', 'id')->toArray();
         //do exact match
@@ -210,6 +253,37 @@ class AdminController extends Controller
         Session::flash('flash_message', 'Message Sent successfully');
         return redirect()->back();
     }
+    public function replyMessage(Request $request) {
+       $validator = $this->validate($request, array(
+            'body' => 'required|min:3'
+        ));
+       if($validator !==null) {
+            return redirect()->back()->withErrors($validator)->withInput();
+       }
+       $user = Auth::User();
+        $inputs = $request->all();
+        $subject = (substr($inputs['subject'], 0, 3) == 'RE:') ? $inputs['subject'] : 'RE:'.$inputs['subject'];
+        //get all the users
+        $messaging = new Messaging();
+        $messaging->body = $inputs['body'];
+        $messaging->subject = $subject;
+        $messaging->save();
+        //get the transactions
+        $transaction = new MessagingTransaction();
+        $transaction->messagingID = $messaging->id;
+        $transaction->userID = $inputs['recipient_id'];
+        $transaction->messageFlag = 'received';
+        $transaction->save();
+
+        $transaction = new MessagingTransaction();
+        $transaction->messagingID = $messaging->id;
+        $transaction->userID = $user->id;
+        $transaction->messageFlag = 'sent';
+        $transaction->save();
+
+        Session::flash('flash_message', 'Message replied successfully');
+        return redirect()->back();
+    }
     public function inbox() {
         $user = Auth::User();
         $messages = MessagingTransaction::where('userID', $user->id)
@@ -228,7 +302,9 @@ class AdminController extends Controller
             ->where('userID', $user->id)->first();
         $message->readStatus = 1;
         $message->save();
-        return view('admin/messaging/details', compact('message'));   
+        $sender = MessagingTransaction::where('messageFlag', 'sent')
+            ->where('messagingID', $message->messagingID)->first();
+        return view('admin/messaging/details', compact('message', 'sender'));   
     }
 
     public function matchPartialWithdrawalGHRequest() {

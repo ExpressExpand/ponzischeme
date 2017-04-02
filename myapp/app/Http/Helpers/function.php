@@ -22,6 +22,11 @@ function getExcerpt($str, $maxLength=100) {
     return $excerpt;
 
 }
+function sortDateFunction($a, $b) {
+    $res = (strtotime($a['date']) < strtotime($b['date'])) ? 1 : -1;
+    return $res;
+}
+
 /**
  * Ensures an ip address is both a valid IP and does not fall within
  * a private network range.

@@ -17,7 +17,46 @@ class GhController extends Controller
 		$this->middleware(['auth', 'customChecks']);
 	}
     public function create() {
-    	return view('gh.create');
+        $user = Auth::User();
+        //get the bitcoin rate
+        $btc = ApplicationHelpers::getCurrentBitcoinRate();
+        //get all the pending phs
+        $donations = DonationHelp::where('userID', $user->id)->where('phGh', 'ph')
+            ->where('status', DonationHelp::$SLIP_CONFIRMED)
+            ->whereRaw('created_at <= DATE_SUB(curDate(), INTERVAL 30 DAYS)')->get();
+
+        //get the bonuses
+        //first check for the registration bonus
+        $bonus = 0;
+        if($user->isBonusCollected == 0) {
+            $bonus = $user->bonusAmount;
+        }
+        //secondly check for the referral bonus
+        $referrals = Referral::where('relatedReferrerUserID', $user->id)->get();
+        //TODO
+        foreach($referrals as $referral) {
+            //loop through donations
+            foreach($referral->member->donations as $donation) {
+                if($donation->phGh == 'gh') {
+                    continue;
+                }
+                $data = array();
+                $data['name'] = $referral->member->name;  
+                $data['amount'] = number_format($donation->amount,2);
+                $bonus = 0.1 * $donation->amount;
+                if(strtolower($donation->status) == DonationHelp::$SLIP_CONFIRMED) {
+                    $data['status'] = 'Completed';
+                    $data['bonus'] = number_format($bonus, 2);
+                    $amount += $confirmed_amount;
+                }else{
+                    $data['status'] = 'Pending';
+                    $data['bonus'] = number_format(0, 2);
+                }
+                $data['date'] = date('d-m-Y', strtotime($donation->created_at));
+                $refs[]  = $data;
+            }
+        }
+    	return view('gh.create', compact('btc', 'donations'));
     }
     public function store(PhRequest $request) {
      	$user = Auth::user();
@@ -69,7 +108,7 @@ class GhController extends Controller
         $transaction->receiverConfirmed = 1;
         $transaction->save();
 
-        //we need to check if this person has received all ammounts
+        //we need to check if this person has received all amounts
         //get the collections
         $collection = DonationHelp::where(['userID' => $user->id
             , 'id'=> $transaction->collectionHelpID, 'phGh'=> 'gh'])->first();
@@ -87,12 +126,19 @@ class GhController extends Controller
         //check if the donation has fully been paid
         $ph_sum = DonationTransaction::where('donationHelpID'
             , $transaction->donationHelpID)->sum('amount');
-        if($transaction->donation->amount == $ph_sum){
+        if((int) $transaction->donation->amount == (int) $ph_sum){
             //full payment received
-            $transaction->donation->status == DonationHelp::$SLIP_CONFIRMED;
+            $transaction->donation->status = DonationHelp::$SLIP_CONFIRMED;
+            //credit points to the donor
+            $transaction->donation->user->points = $transaction->donation->user->points + 5;
+            $transaction->donation->user->save();
         }
         $transaction->donation->save();
-        Session::flash('flash_message', 'Payment confirmation successful');
+        //credit point to the recipient for confirming the payment
+        $user->points = $user->points + 5;
+        $user->save();
+
+        Session::flash('flash_message', 'Payment confirmation successful. +5 Points added');
         return redirect('confirm/gh/payment');
     }
     public function viewGHAttachment(Request $request, $trans_id) {

@@ -54,7 +54,7 @@
                                 <?php $paid_amount = 0; ?>
                                 @foreach($donation->transactions as $transaction) 
                                     @if($transaction->fakePOP == 0 && $transaction->receiverConfirmed == 1)
-                                        $amount += $transaction->amount
+                                        <?php $paid_amount += $transaction->amount; ?>
                                     @endif 
                                 @endforeach
                                 {{ number_format($paid_amount) }}

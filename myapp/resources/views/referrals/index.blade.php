@@ -1,22 +1,25 @@
 @extends('layouts/master')
-@section('title', 'Ph orders')
+@section('title', 'Manage Referrals')
 
 @section('content')       
     <div class="row wrapper border-bottom white-bg page-heading">
         <div class="col-sm-4">
-            <h2>MY REFERRALS</h2>
+            <h2>MANAGE REFERRALS</h2>
             <ol class="breadcrumb">
                 <li>
                     <a href="index.html">Dashboard</a>
                 </li>
                 <li class="active">
-                    <strong>Referral</strong>
+                    <strong>Manage Referral</strong>
                 </li>
             </ol>
         </div>
         <div class="col-sm-8">
             <div class="title-action">
-                Your referral ID is <span class="error"> https://gethelpworldwide.com?ref_id=maxteetechnologies@gmail.com</span>
+                Your referral ID is 
+                <span class="error"> 
+                    <?php echo env('URL').'?referral_id='.$ref_id; ?>
+                </span>
             </div>
         </div>
     </div>
@@ -24,7 +27,9 @@
     <div class="wrapper wrapper-content">
         <div class="row">
             <div class="col-sm-12">
-
+            <div class="alert alert-info">
+                This table show real time of all activities of your referrals.
+            </div>
                  <div class="row">
                     <div class="col-lg-6">
                         <div class="ibox float-e-margins">
@@ -33,7 +38,7 @@
                                 <h5>CONFIRMED REFERRAL BONUS</h5>
                             </div>
                             <div class="ibox-content">
-                                <h1 class="no-margins">0</h1>
+                                <h1 class="no-margins">{{ number_format($confirmed_amount,2) }}</h1>
                             </div>
                         </div>
                     </div>
@@ -44,7 +49,7 @@
                                 <h5>NUMBER OF REFERRALS</h5>
                             </div>
                             <div class="ibox-content">
-                                <h1 class="no-margins">0</h1>
+                                <h1 class="no-margins">{{ $referrals->count() }}</h1>
                             </div>
                         </div>
                     </div>
@@ -64,16 +69,16 @@
                     </tr>
                     </thead>
                     <tbody>
-                    @if($referrals)
+                    @if($refs)
                     <?php $count = 0; ?>
-                    @foreach ($referrals as $referral)
+                    @foreach ($refs as $referral)
                         <tr>
                             <td>{{ ++$count }}</td>
-                            <td>{{ $referral->member->name }}</td>
-                            <td>{{ $referral->member->name }}</td>
-                            <td>{{ $referral->member->name }}</td>
-                            <td>{{ $referral->member->name }}</td>
-                            <td>{{ $referral->member->name }}</td>
+                            <td>{{ $referral['name'] }}</td>
+                            <td>{{ $referral['amount'] }}</td>
+                            <td>{{ $referral['bonus'] }}</td>
+                            <td>{{ $referral['status'] }}</td>
+                            <td>{{ $referral['date'] }}</td>
                         </tr>
                     @endforeach
                     @else
@@ -94,7 +99,7 @@
                     </tr>
                     </tfoot>
                     </table>
-                    <div><span class="paginate">{{ $referrals->render() }}</span></div>
+                    
                     {{ Form::close() }}
                 </div>
             </div>

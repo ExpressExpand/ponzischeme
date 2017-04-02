@@ -57,4 +57,22 @@ class MessagingController extends Controller
         Session::flash('flash_message', 'Successul. The support team will get back to you');
         return redirect()->back();
     }
+    public function showMessage(Request $request, $trans_id){
+       $user = Auth::User();
+        $message = MessagingTransaction::where('id', $trans_id)
+            ->where('userID', $user->id)->first();
+        $message->readStatus = 1;
+        $message->save();
+        return view('messaging/details', compact('message'));   
+    }
+    public function deleteMessage(Request $request){
+        $user = Auth::User();
+        $inputs = $request->all();
+        //query the transactions
+        $message = MessagingTransaction::whereIn('id', $inputs['transaction'])
+            ->where('userID', $user->id)->delete();
+
+        Session::flash('flash_message', 'Messages Deleted');
+        return redirect()->back();
+    }
 }

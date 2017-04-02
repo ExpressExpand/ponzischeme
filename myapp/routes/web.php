@@ -11,9 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+// Route::get('/', function () {
+//     return view('index');
+// });
+Route::get('/', 'HomeController@index');
 Route::get('/captcha/post/code/', 'Auth\LoginController@captcha');
 Route::get('template', function() {
 	return view('template');
@@ -49,6 +50,7 @@ Route::get('confirm/gh/payment/history', 'GhController@paymentHistory');
 Route::get('profile', 'ProfileController@viewProfile');
 Route::put('profile/store', 'ProfileController@storeProfile');
 Route::put('profile/change/username', 'ProfileController@changeUsername');
+Route::put('profile/bitcoin/store', 'ProfileController@updateBitcoin');
 Route::get('change/password', 'ProfileController@changePassword');
 Route::patch('change/password/store/{user_id}', 'ProfileController@storeChangedPassword');
 Route::put('profile/change/picture', 'ProfileController@changePicture');
@@ -64,6 +66,7 @@ Route::post('admin/change/role', 'AdminController@changeRoles');
 
 Route::get('admin/messaging/compose', 'AdminController@compose');
 Route::post('admin/messaging/send/message', 'AdminController@sendMessage');
+Route::post('admin/messaging/reply/message', 'AdminController@replyMessage');
 Route::get('admin/messaging/inbox', 'AdminController@inbox');
 Route::get('admin/messaging/outbox', 'AdminController@outbox');
 Route::get('admin/messaging/detail/{id}', 'AdminController@showMessage');
@@ -78,12 +81,15 @@ Route::get('admin/block/donor/delete/{trans_id}', 'AdminController@blockDonorAnd
 //announcements
 Route::get('announcements/view', 'AnnouncementController@adminViewAnnouncement');
 Route::resource('announcements', 'AnnouncementController');
-Route::resource('message', 'MessageController');
 
-Route::resource('referral', 'ReferralController');
+Route::get('manage/referral', 'ReferralController@manageReferrals');
+Route::get('referral', 'ReferralController@referrals');
 //check for registration bonuses and referral bonuses
 
 Route::get('messaging/inbox', 'MessagingController@inbox');
 Route::get('messaging/outbox', 'MessagingController@outbox');
 Route::get('messaging/compose', 'MessagingController@compose');
+Route::get('messaging/detail/{id}', 'MessagingController@showMessage');
 Route::post('messaging/send/message', 'MessagingController@sendMessage');
+//this is general for both admin and users
+Route::delete('messaging/delete', 'MessagingController@deleteMessage');

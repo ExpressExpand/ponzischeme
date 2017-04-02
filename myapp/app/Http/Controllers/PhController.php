@@ -29,6 +29,19 @@ class PhController extends Controller
     		ApplicationHelpers::usersCantGoBelowPHAmountChecks($request->input('amount'), $user);
             ApplicationHelpers::checkForMutilplesOfTen($request->input('amount'));
             ApplicationHelpers::checkForExistingPh($user);
+            
+            switch($request->input('paymentType')){
+                case 'bank':
+                    if(strlen($user->bankName) == 0){
+                        return redirect()->back()->withErrors('You need to configure your bank details first');
+                    }
+                break;
+                case 'bitcoin':
+                    if(strlen($user->bitcoinAddress) == 0){
+                        return redirect()->back()->withErrors('You need to configure your bitcoin details first');
+                    }
+                break;
+            }
 
     		$donate = new DonationHelp();
     		$donate->paymentType = $request->input('paymentType');
@@ -67,7 +80,7 @@ class PhController extends Controller
         //Manage all your pending PH entries and all provide help request
         $user = Auth::User();
         $donations = DonationHelp::where(['userID' => $user->id, 'phGh' => 'ph'])
-            ->where('status', '!==', DonationHelp::$SLIP_MATCHED)->paginate(50);
+            ->where('status', '=', DonationHelp::$SLIP_PENDING)->paginate(50);
         return view('ph/transactions', compact('donations'));
     }
     public function cancelPH(Request $request, $ph_id){
@@ -76,11 +89,20 @@ class PhController extends Controller
         if(strtolower($donation->status) == DonationHelp::$SLIP_PENDING) {
             $donation->status = DonationHelp::$SLIP_CANCELLED;
             $donation->save();
+
+            //DEDUCT 5 PTS FOR CANCELLED PH
+            $user->points = $user->points - 5;
+            if($user->points <= 0) {
+                //block account
+                $user->isBlocked = 1;
+            }
+            $user->save();
+
         }else{
             return redirect()->back()->withErrors('You do not have any pending ph');
         }
         
-        Session::flash('flash_message', 'Your Ph has been cancelled successfully');
+        Session::flash('flash_message', 'Your Ph has been cancelled successfully. 5pts have been deducted');
         return redirect()->back();
     }
     public function confirmMatchPayment(Request $request, $trans_id){

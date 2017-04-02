@@ -12,6 +12,7 @@ use App\Http\Helpers\EmailHelpers;
 use App\Country;
 use App\Referral;
 use App\Role;
+use Session;
 
 class RegisterController extends Controller
 {
@@ -87,7 +88,8 @@ class RegisterController extends Controller
         if($referrer == null) {
             $referrer = User::where('email', 'maxteetechnologies@gmail.com')->first();
         }
-
+        $referrer->points = $referrer->points + 5;
+        $referrer->save();
 
         $level = 1;
         //check the current level of the referral and increment by one
@@ -128,7 +130,13 @@ class RegisterController extends Controller
     public function showRegistrationForm()
     {
         $countries = Country::pluck('name', 'id');
-        return view('auth.register', compact('countries'));
+        //get the referral if available from the session
+        $ref_id = Session::get('ref_id');
+        if(!$ref_id || !isset($ref_id)) {
+            $ref_id = '';
+        }
+        
+        return view('auth.register', compact('countries', 'ref_id'));
     }
     private function getBodyHtml($user) {
         $body = sprintf('   
