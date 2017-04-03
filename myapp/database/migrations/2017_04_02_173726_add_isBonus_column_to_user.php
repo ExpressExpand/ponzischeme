@@ -15,6 +15,8 @@ class AddIsBonusColumnToUser extends Migration
     {
         Schema::table('users', function(Blueprint $table) {
             $table->integer('isBonusCollected')->default(0);
+            $table->integer('bonusAmount')->default(0);
+            $table->string('bonusType')->nullable();
         });
     }
 
@@ -28,6 +30,8 @@ class AddIsBonusColumnToUser extends Migration
          Schema::table('users', function($table)
         {
             $table->dropColumn('isBonusCollected');
+            $table->dropColumn('bonusAmount');
+            $table->dropColumn('bonusType');
         });
     }
 }

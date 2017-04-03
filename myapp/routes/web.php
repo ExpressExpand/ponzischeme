@@ -45,6 +45,7 @@ Route::get('view/gh/attachment/{trans_id}', 'GhController@viewGHAttachment');
 Route::get('confirm/gh/payment/store/{trans_id}', 'GhController@storeConfirmReceivedPayment');
 Route::get('flagpop/{trans_id}', 'GhController@flagAsPop');
 Route::get('confirm/gh/payment/history', 'GhController@paymentHistory');
+Route::get('gh/extend/date/{trans_id}', 'GhController@extendDate');
 
 //profile
 Route::get('profile', 'ProfileController@viewProfile');

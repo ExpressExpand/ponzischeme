@@ -127,12 +127,33 @@ class GhController extends Controller
         $ph_sum = DonationTransaction::where('donationHelpID'
             , $transaction->donationHelpID)->sum('amount');
         if((int) $transaction->donation->amount == (int) $ph_sum){
+            //check if thats the first donation then credit the reg bonus
+            $donation = DonationHelp::where('userID', $transaction->donation->user->id)
+            ->where('phGh', 'ph')->where('status', DonationHelp::$SLIP_CONFIRMED)->first();
+            if(!$donation) {
+                if($transaction->donation->user->isBonusCollected == 0){
+                    if(strtolower($transaction->donation->paymentType) == 'bank') {
+                        //credit the user with bonus
+                        $bonus_amount = ApplicationHelpers::getRegistrationBonusInNaira(
+                        $transaction->donation->amount);
+                        $transaction->donation->user->bonusType = 'bank';
+                    }elseif(strtolower($transaction->donation->paymentType) == 'bitcoin'){
+                        $bonus_amount = ApplicationHelpers::getRegistrationBonusInDollar(
+                        $transaction->donation->amount);
+                        $transaction->donation->user->bonusType = 'bitcoin';
+                    }
+                    $transaction->donation->user->isBonusCollected = 1;
+                    $transaction->donation->user->bonusAmount = $bonus_amount;
+                }
+            }
+
             //full payment received
             $transaction->donation->status = DonationHelp::$SLIP_CONFIRMED;
             //credit points to the donor
             $transaction->donation->user->points = $transaction->donation->user->points + 5;
             $transaction->donation->user->save();
         }
+
         $transaction->donation->save();
         //credit point to the recipient for confirming the payment
         $user->points = $user->points + 5;
@@ -175,5 +196,24 @@ class GhController extends Controller
                 ->orWhere('status', DonationHelp::$SLIP_PARTIALWITHDRAWAL);
             })->get();
         return view('gh/history', compact('collections'));
+    }
+    public function extendDate(Request $request, $trans_id) {
+        $user = Auth::User();
+        $transaction = DonationTransaction::where('id', $trans_id)->first();
+        if($transaction->collection->user->id !== $user->id) {
+            return redirect()->back()->withErrors('You dont have access to this operation');
+        } 
+        //add 24 hours to penalty date
+        $transaction->penaltyDate = $transaction->penaltyDate + (24 * 60 * 60);
+        $transaction->save();
+        //penalize the donor by subtracting the points
+        $transaction->donation->user->points = $transaction->donation->user->points - 25;
+        if($transaction->donation->user->points <= 0) {
+            //block the account
+            $transaction->donation->user->isBlocked = 1;
+        }
+        $transaction->donation->user->save();
+        Session::flash('flash_message', 'Successful extension of date');
+        return redirect()->back();
     }
 }

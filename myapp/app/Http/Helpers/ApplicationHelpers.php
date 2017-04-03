@@ -25,6 +25,28 @@ final class ApplicationHelpers {
 			}
 		}		
 	}
+	public static function getRegistrationBonusInNaira($amount) {
+		$bonus = 0;
+		if($amount >= 16000 && $amount < 160000) {
+			$bonus = 5000;
+		}elseif($amount >=  160000 && $amount < 500000){
+			$bonus = 10000;
+		}elseif($amount >= 500000) {
+			$bonus = 32000;
+		}
+		return $bonus;
+	}
+	public static function getRegistrationBonusInDollar($amount) {
+		$bonus = 0;
+		if($amount >= 50 && $amount < 500) {
+			$bonus = 20;
+		}elseif($amount >=  500 && $amount < 2000){
+			$bonus = 50;
+		}elseif($amount >= 2000) {
+			$bonus = 100;
+		}
+		return $bonus;
+	}
 	public static function getPointColor($points) {
 		if($points > 50) {
 			return '#00ceae';

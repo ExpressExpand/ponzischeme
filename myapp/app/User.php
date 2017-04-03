@@ -19,7 +19,7 @@ class User extends Authenticatable
     protected $fillable = [
         'name', 'email', 'password', 'phone', 'bankName', 'accountNumber', 'accountName', 'isBonusCollected',
         'bitcoinAddress', 'avatar', 'relatedCountryID', 'points', 'isBlocked', 'ip', 'referrerUsername'
-        , 'bonusAmount'
+        , 'bonusAmount', 'bonusType',
     ];
 
     /**
