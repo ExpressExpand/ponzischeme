@@ -34,8 +34,8 @@ class AdminController extends Controller
     		}
     		$roles[$id] = $value;
     	}
-    	
-    	return view('admin/users/view', compact('users', 'roles', 'users_count', 'active_count', 'inactive_count'));
+    	return view('admin/users/view', compact(
+            'users', 'roles', 'users_count', 'active_count', 'inactive_count'));
     }
     public function blockUser(Request $request, $user_id) {
     	$user = User::findOrFail($user_id);
@@ -334,5 +334,22 @@ class AdminController extends Controller
             Session::flash('flash_message', 'Transaction Succesful');
             return Reirect('admin/pop');
         }
+    }
+    public function banNotifyGhWhoFailToPhCron() {
+        //get the donation. //THIS SCRIPTS RUN EVERY DAY
+        //send two warning emails on day1 and day2
+        $collections = DonationHelp::where('phGh', 'gh')
+            ->where('status', DonationHelp::$SLIP_WITHDRAWAL)
+            ->whereRaw('updated_at >= DATE_SUB(curdate(), INTERVAL 4 DAY)')
+            ->chunk(100, function($collections) {
+
+            foreach($collections as $collection) {
+                //bring out the pending users and check if the user has a pending/confirmed ph
+                $user_id = $collection->user->id;
+                $donation = DonationHelp::where('phGh', 'ph')
+                    ->where('userID', $user_id)->orderBy('updated_at', 'desc')->first();
+                //check the date
+            }
+        });
     }
 }

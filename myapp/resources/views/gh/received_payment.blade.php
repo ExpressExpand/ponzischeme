@@ -62,16 +62,24 @@
                                     {{ $collection->paymentType }}
                                 </td>
                                 <td>
+                                    @if($transaction->isDefaulted  = 0)
                                     <div>
-                                        @if($transaction->fakePOP == 0)
-                                            <a href="{{ url('confirm/gh/payment/edit', $transaction->id) }}"
-                                                 class="label label-danger">
-                                                Confirm Payment</a></div><br />
-                                        @endif
+                                    @if($transaction->fakePOP == 0)
+                                        <a href="{{ url('confirm/gh/payment/edit', $transaction->id) }}"
+                                             class="label label-danger">
+                                            Confirm Payment</a></div><br />
+                                    @endif
                                     @if($transaction->payerConfirmed == 1)
                                         <a href="{{ url('view/gh/attachment', $transaction->id) }}" 
                                         class="label label-success">
                                         View Attachment</a>
+                                    @else
+                                        <a href="{{ url('gh/extend/date', $transaction->id) }}" 
+                                        class="label label-success">
+                                        Extend by 24 hours</a>
+                                    @endif
+                                    @else
+                                    <span class="label label-danger">You will be rematched donor refused to pay.</span>
                                     @endif
                                 </td>
                                 <td>
