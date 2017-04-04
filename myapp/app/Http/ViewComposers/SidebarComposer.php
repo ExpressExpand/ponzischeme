@@ -2,6 +2,7 @@
 namespace App\Http\ViewComposers;
 use Illuminate\View\View;
 use Auth;
+use App\MessagingTransaction;
 /**
 * 
 */
@@ -14,6 +15,11 @@ class SidebarComposer
 	}
 	public function compose(View $view) {
 		$user = Auth::User();
-		$view->with('user', $user);
+		//get the message
+		$messages = array();
+    	$messages = MessagingTransaction::where(
+    		['userID'=> $user->id, 'messageFlag'=> 'received'])->where('readStatus', 0)
+    		->take(5)->latest()->get();
+		$view->with(compact('user', 'messages'));
 	}
 }

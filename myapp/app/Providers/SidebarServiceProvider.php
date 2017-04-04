@@ -13,7 +13,8 @@ class SidebarServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        view()->composer('partials/_left_sidebar', 'App\Http\ViewComposers\SidebarComposer');
+        view()->composer(['partials/_left_sidebar', 'partials/_top_navbar'],
+         'App\Http\ViewComposers\SidebarComposer');
     }
 
     /**

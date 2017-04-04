@@ -1,23 +1,18 @@
 <nav class="navbar navbar-static-top  " role="navigation" style="margin-bottom: 0">
         <div class="navbar-header">
             <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
-            <form role="search" class="navbar-form-custom" action="http://webapplayers.com/inspinia_admin-v2.0/search_results.html">
-                <div class="form-group">
-                    <input type="text" placeholder="Search for something..." class="form-control" name="top-search" id="top-search">
-                </div>
-            </form>
         </div>
             <ul class="nav navbar-top-links navbar-right">
-                <li>
-                    <span class="m-r-sm text-muted welcome-message">Welcome to INSPINIA+ Admin Theme.</span>
-                </li>
                 <li class="dropdown">
                     <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
-                        <i class="fa fa-envelope"></i>  <span class="label label-warning">16</span>
+                        <i class="fa fa-envelope"></i>  <span class="label label-warning">
+                            {{ $messages->count() }}
+                        </span>
                     </a>
                     <ul class="dropdown-menu dropdown-messages">
+                        @foreach($messages as $message)
                         <li>
-                            <div class="dropdown-messages-box">
+                            <!-- <div class="dropdown-messages-box">
                                 <a href="profile.html" class="pull-left">
                                     <img alt="image" class="img-circle" src="img/a7.jpg">
                                 </a>
@@ -26,34 +21,20 @@
                                     <strong>Mike Loreipsum</strong> started following <strong>Monica Smith</strong>. <br>
                                     <small class="text-muted">3 days ago at 7:58 pm - 10.06.2014</small>
                                 </div>
-                            </div>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
+                            </div> -->
                             <div class="dropdown-messages-box">
                                 <a href="profile.html" class="pull-left">
-                                    <img alt="image" class="img-circle" src="img/a4.jpg">
+                                    <img alt="image" class="img-circle" src="img/a7.jpg">
                                 </a>
-                                <div class="media-body ">
-                                    <small class="pull-right text-navy">5h ago</small>
-                                    <strong>Chris Johnatan Overtunk</strong> started following <strong>Monica Smith</strong>. <br>
-                                    <small class="text-muted">Yesterday 1:21 pm - 11.06.2014</small>
+                                <div class="media-body">
+                                    <small class="pull-right">
+                                        {{ $message->created_at->diffForHumans() }}</small>
+                                    {{ getExcerpt($message->subject,50) }}
+                                    <strong> - Admin</strong>. <br>
                                 </div>
                             </div>
                         </li>
-                        <li class="divider"></li>
-                        <li>
-                            <div class="dropdown-messages-box">
-                                <a href="profile.html" class="pull-left">
-                                    <img alt="image" class="img-circle" src="img/profile.jpg">
-                                </a>
-                                <div class="media-body ">
-                                    <small class="pull-right">23h ago</small>
-                                    <strong>Monica Smith</strong> love <strong>Kim Smith</strong>. <br>
-                                    <small class="text-muted">2 days ago at 2:30 am - 11.06.2014</small>
-                                </div>
-                            </div>
-                        </li>
+                        @endforeach
                         <li class="divider"></li>
                         <li>
                             <div class="text-center link-block">
@@ -106,12 +87,41 @@
                         </li>
                     </ul>
                 </li>
-
-
-                <li>
-                    <a href="login.html">
-                        <i class="fa fa-sign-out"></i> Log out
+                <li class="dropdown">
+                    <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                        <img src="{{ asset('images/app/avatar.jpg') }}" 
+                            alt="users picture" class="img-circle" width="30px" height="30px">
+                            <span>{{ $user->name }}</span>
                     </a>
+                    <ul class="dropdown-menu top-user-menu">
+                        <li>
+                            <div class="dropdown-messages-box">
+                                <div class="media-body">
+                                    <a href="{{ url('profile') }}">
+                                        My Profile
+                                    </a>
+                                </div>               
+                            </div>
+                        </li>
+                        <li>
+                            <div class="dropdown-messages-box">
+                                <div class="media-body">
+                                    <a href="{{ url('change/password') }}">
+                                        Change Password
+                                    </a>
+                                </div>               
+                            </div>
+                        </li>
+                        <li>
+                            <div class="dropdown-messages-box">
+                                <div class="media-body">
+                                    <a href="{{ url('logout') }}">
+                                       Log out
+                                    </a>
+                                </div>               
+                            </div>
+                        </li>                        
+                    </ul>
                 </li>
             </ul>
 

@@ -29,7 +29,7 @@
                                 {!! Form::open( ['url' => 'profile/change/picture', 'method' => 'put', 'role' => 'form', 'file' => 'true', 'id' => 'avatar-form', 
                                 'enctype' => 'multipart/form-data']) !!}
                                     <div class="avatar-holder">
-                                        @if(strlen($user->avatar))
+                                    @if(strlen($user->avatar))
                                         <img src="{{ asset('images/profilepix/'.$user->avatar) }}" 
                                         alt="users picture" class="img-thumbnail" width="100%">
                                     @else 
