@@ -12,7 +12,7 @@ class DonationTransaction extends Model
     	'donationHelpID', 'collectionHelpID', 'recipientUserID', 'payerUserID', 
     	'receiverConfirmed', 'amount',
     	'payerConfirmed', 'filename', 
-    	'fileHash', 'penaltyDate', 'matchDate', 'fakePOP'
+    	'fileHash', 'penaltyDate', 'matchDate', 'fakePOP', 'isDefaulted',
     );
     public function donation() {
     	return $this->belongsTo('App\DonationHelp', 'donationHelpID');

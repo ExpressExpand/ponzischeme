@@ -43,9 +43,7 @@
                     </thead>
                     <tbody>
                     <?php $counter = 0; ?>
-                    @if(count($collections) > 0)
-                        
-                    @endif
+                   
                     
                     </tbody>
                     <tfoot>

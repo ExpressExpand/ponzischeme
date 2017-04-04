@@ -10,6 +10,7 @@ use App\Http\Helpers\MyCustomException;
 use App\DonationHelp;
 use Session;
 use App\DonationTransaction;
+use App\Referral;
 
 class GhController extends Controller
 {
@@ -23,7 +24,7 @@ class GhController extends Controller
         //get all the pending phs
         $donations = DonationHelp::where('userID', $user->id)->where('phGh', 'ph')
             ->where('status', DonationHelp::$SLIP_CONFIRMED)
-            ->whereRaw('created_at <= DATE_SUB(curDate(), INTERVAL 30 DAYS)')->get();
+            ->whereRaw('created_at <= DATE_SUB(curDate(), INTERVAL 30 DAY)')->get();
 
         //get the bonuses
         //first check for the registration bonus
@@ -204,13 +205,15 @@ class GhController extends Controller
             return redirect()->back()->withErrors('You dont have access to this operation');
         } 
         //add 24 hours to penalty date
-        $transaction->penaltyDate = $transaction->penaltyDate + (24 * 60 * 60);
+        $transaction->penaltyDate = strtotime($transaction->penaltyDate) + (24 * 60 * 60);
         $transaction->save();
         //penalize the donor by subtracting the points
         $transaction->donation->user->points = $transaction->donation->user->points - 25;
         if($transaction->donation->user->points <= 0) {
             //block the account
             $transaction->donation->user->isBlocked = 1;
+            //then change the transaction ticket
+            $transaction->isDefaulted = 1;
         }
         $transaction->donation->user->save();
         Session::flash('flash_message', 'Successful extension of date');
