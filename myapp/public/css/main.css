@@ -7,6 +7,17 @@
 .top-user-menu li a:hover{
     color: #00ceae;
 }
+.custom-block{
+    display: block;
+    clear: both;
+}
+.sidebar_name{
+    display: inline-block;
+    margin-left: 5px;
+}
+.sidebar_img {
+    display: inline-block;
+}
 .profile-group{
 	margin-right: -15px;
     margin-left: -15px;

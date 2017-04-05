@@ -2,27 +2,28 @@
         <div class="sidebar-collapse">
             <ul class="nav" id="side-menu">
                 <li class="nav-header">
-                    <div class="dropdown profile-element"> <span>
+                    <div class="dropdown profile-element"> 
+                        <span class="sidebar_img">
                             @if(strlen($user->avatar) > 0)
                             <img alt="image" class="img-circle" 
                                 src="{{ asset('images/profilepix/'.$user->avatar) }}"
-                                 width="50px" />
+                                 width="50px" height="50px" />
                              
                             @else
                             <img alt="image" class="img-circle" src="{{ asset('images/profilepix/avatar.jpg') }}"
-                             width="50px" height="auto" />
+                             width="50px" height="50px" />
                             @endif
                         </span>
-                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                        <a data-toggle="dropdown" class="dropdown-toggle sidebar_name" href="#">
                             <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">{{ $user->name }}</strong>
-                             </span> <span class="text-muted text-xs block"><b class="caret"></b></span> </span> </a>
-                        <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                             </span></a>
+                       <!--  <ul class="dropdown-menu animated fadeInRight m-t-xs">
                             <li><a href="{{ url('profile') }}">My Profile</a></li>
                             <li><a href="{{ url('change/password') }}">Change Password</a></li>
-                        </ul>
+                        </ul> -->
                     </div>
                     <div class="logo-element">
-                        IN+
+                        
                     </div>
                 </li>
                 <li>

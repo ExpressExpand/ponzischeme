@@ -10,7 +10,6 @@
                         </span>
                     </a>
                     <ul class="dropdown-menu dropdown-messages">
-                        @foreach($messages as $message)
                         <li>
                             <!-- <div class="dropdown-messages-box">
                                 <a href="profile.html" class="pull-left">
@@ -22,75 +21,53 @@
                                     <small class="text-muted">3 days ago at 7:58 pm - 10.06.2014</small>
                                 </div>
                             </div> -->
-                            <div class="dropdown-messages-box">
+                        @foreach($messages as $message)
+                            <div class="dropdown-messages-box custom-block">
                                 <a href="profile.html" class="pull-left">
-                                    <img alt="image" class="img-circle" src="img/a7.jpg">
+                                    <img src="{{ asset('images/app/avatar.jpg') }}" 
+                                    alt="users picture" class="img-circle" width="100%">
                                 </a>
-                                <div class="media-body">
+                                <div class="media-body clearfix">
                                     <small class="pull-right">
                                         {{ $message->created_at->diffForHumans() }}</small>
-                                    {{ getExcerpt($message->subject,50) }}
+                                    {{ getExcerpt($message->message->subject,50) }}
                                     <strong> - Admin</strong>. <br>
+                                    <!-- <small class="text-muted">3 days ago at 7:58 pm - 10.06.2014</small> -->
                                 </div>
-                            </div>
-                        </li>
+                            </div><br />
                         @endforeach
+                        </li>
                         <li class="divider"></li>
                         <li>
+                            @role('users')
                             <div class="text-center link-block">
-                                <a href="mailbox.html">
+                                <a href="{{ url('messaging/inbox') }}">
                                     <i class="fa fa-envelope"></i> <strong>Read All Messages</strong>
                                 </a>
                             </div>
-                        </li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
-                        <i class="fa fa-bell"></i>  <span class="label label-primary">8</span>
-                    </a>
-                    <ul class="dropdown-menu dropdown-alerts">
-                        <li>
-                            <a href="mailbox.html">
-                                <div>
-                                    <i class="fa fa-envelope fa-fw"></i> You have 16 messages
-                                    <span class="pull-right text-muted small">4 minutes ago</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="profile.html">
-                                <div>
-                                    <i class="fa fa-twitter fa-fw"></i> 3 New Followers
-                                    <span class="pull-right text-muted small">12 minutes ago</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="grid_options.html">
-                                <div>
-                                    <i class="fa fa-upload fa-fw"></i> Server Rebooted
-                                    <span class="pull-right text-muted small">4 minutes ago</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
+                            @endrole
+                            @role(['admin', 'superadmin'])
                             <div class="text-center link-block">
-                                <a href="notifications.html">
-                                    <strong>See All Alerts</strong>
-                                    <i class="fa fa-angle-right"></i>
+                                <a href="{{ url('admin/messaging/inbox') }}">
+                                    <i class="fa fa-envelope"></i> <strong>Read All Messages</strong>
                                 </a>
                             </div>
+                            @endrole
                         </li>
                     </ul>
                 </li>
+               
                 <li class="dropdown">
                     <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
-                        <img src="{{ asset('images/app/avatar.jpg') }}" 
-                            alt="users picture" class="img-circle" width="30px" height="30px">
+                             @if(strlen($user->avatar) > 0)
+                            <img alt="avatar" class="img-circle" 
+                                src="{{ asset('images/profilepix/'.$user->avatar) }}"
+                                 width="30px" height="30px" />
+                             
+                            @else
+                            <img alt="avatar" class="img-circle" src="{{ asset('images/profilepix/avatar.jpg') }}"
+                             width="30px" height="30px" />
+                            @endif
                             <span>{{ $user->name }}</span>
                     </a>
                     <ul class="dropdown-menu top-user-menu">
