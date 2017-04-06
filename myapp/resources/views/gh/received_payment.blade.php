@@ -111,7 +111,7 @@
                         <th>MATCH DATE</th>
                         <th>PENALTY DATE</th>
                         <th>AMOUNT</th>
-                        <th>RECIPIENT</th>
+                        <th>PAID BY</th>
                         <th>PAYMENT DETAILS</th>
                         <th>ACTION</th>
                         <th>STATUS</th>

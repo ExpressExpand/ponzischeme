@@ -40,11 +40,14 @@ class UserController extends Controller
             , 'status'=> DonationHelp::$SLIP_MATCHED])->get();
     	return $donations;
     }
+    // private function 
     private function retrieveMatchedGhs($user) {
     	$collections = array();
-    	$collections = DonationHelp::where(['userID' => $user->id
-            , 'status'=> DonationHelp::$SLIP_MATCHED, 'phGh'=> 'gh'])->get();
+    	$collections = DonationHelp::where('userID', $user->id)
+    	->where(function($query){
+    		$query->where('status', DonationHelp::$SLIP_MATCHED)
+    		->orWhere('status', DonationHelp::$SLIP_PENDING);
+    	})->get();
     	return $collections;
     }
-
 }
