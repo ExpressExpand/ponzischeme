@@ -38,7 +38,7 @@ Route::get('view/attachment/{trans_id}', 'PhController@viewPHAttachment');
 
 //get help
 Route::get('new/request', 'GhController@create');
-Route::post('new/request/store', 'GhController@store');
+Route::get('new/request/store/{id}', 'GhController@store');
 Route::get('confirm/gh/payment', 'GhController@displayReceivedPayment');
 Route::get('confirm/gh/payment/edit/{trans_id}', 'GhController@confirmReceivedPayment');
 Route::get('view/gh/attachment/{trans_id}', 'GhController@viewGHAttachment');

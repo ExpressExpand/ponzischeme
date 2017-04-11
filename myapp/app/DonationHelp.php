@@ -15,6 +15,7 @@ class DonationHelp extends Model
 	static $SLIP_CANCELLED = 'cancelled'; //users cancelling a ph/gh request
 	static $SLIP_ELAPSED = 'elapsed'; //after the set time has elapsed
     static $SLIP_PARTIALWITHDRAWAL = 'partial';
+    
 
 	protected $table = 'donation_helps';
     protected $fillable = array('paymentType', 'amount', 'phGh', 'isConfirmed'
@@ -25,6 +26,9 @@ class DonationHelp extends Model
     }
     protected function getPaymentTypeAttribute($value) {
         return ucfirst($value); 
+    }
+    protected function setPaymentTypeAttribute($value) {
+        $this->value = strtolower($value);
     }
     protected $dates = [
         'created_at',
