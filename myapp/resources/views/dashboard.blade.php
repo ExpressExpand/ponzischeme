@@ -112,7 +112,6 @@
                         </thead>
                         <tbody>
                         @foreach($collections as $collection) 
-                        @if(is_array($collection->ghtransactions))
                         @foreach($collection->ghtransactions as $transaction)
                             @if($transaction->receiverConfirmed == 1)
                                 <?php continue; ?>
@@ -131,18 +130,6 @@
                              </td>
                         </tr>
                         @endforeach
-                        @else
-                        	 <tr>                     
-                            <td>{{ number_format($collection->amount, 2) }}</td>
-                            <td><small></small></td>
-                            <td class="text-navy"><i class="fa fa-clock-o"></i>
-                            	<small> {{ date('d-m-Y h:i:sa', strtotime($collection->created_at))}}
-                            	 </small></td>
-                             <td>
-                                <span class="badge badge-info">{{ $collection->status }}</span>
-                             </td>
-                        </tr>
-                        @endif
                         @endforeach
                         </tbody>
                     </table>
