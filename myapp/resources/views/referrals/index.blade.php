@@ -46,10 +46,10 @@
                         <div class="ibox float-e-margins">
                             <div class="ibox-title">
                                 <span class="label label-info pull-right">Total</span>
-                                <h5>NUMBER OF REFERRALS</h5>
+                                <h5>BONUS REMIANING (STILL IN THE SYSTEM)</h5>
                             </div>
                             <div class="ibox-content">
-                                <h1 class="no-margins">{{ $referrals->count() }}</h1>
+                                <h1 class="no-margins">{{ number_format($remaining_bonus,2) }}</h1>
                             </div>
                         </div>
                     </div>
@@ -58,7 +58,7 @@
                     @include('partials/_alert')
                                     
                     <table class="table table-striped table-bordered table-hover dataTables-example" >
-                    <thead>
+                    
                     <tr>
                         <th>ID</th>
                         <th>Name</th>
@@ -67,8 +67,7 @@
                         <th>STATUS</th>
                         <th>DATE ADDED</th>
                     </tr>
-                    </thead>
-                    <tbody>
+                  
                     @if($refs)
                     <?php $count = 0; ?>
                     @foreach ($refs as $referral)
@@ -83,11 +82,10 @@
                     @endforeach
                     @else
                         <tr>
-                            <th colspan="8"><center>No Data Available</center></th>
+                            <th colspan="6"><center>No Data Available</center></th>
                         </tr>
                     @endif
                     
-                    </tbody>
                     <tfoot>
                     <tr>
                         <th>ID</th>

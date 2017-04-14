@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Referral;
 use Auth;
 use App\DonationHelp;
+use App\ReferralBonus;
+
 class ReferralController extends Controller
 {
     public function __construct() {
@@ -30,7 +32,7 @@ class ReferralController extends Controller
                 if(strtolower($donation->status) == DonationHelp::$SLIP_CONFIRMED) {
                     $data['status'] = 'Completed';
                     $data['bonus'] = number_format($bonus, 2);
-                    $amount += $confirmed_amount;
+                    $confirmed_amount += $bonus;
                 }else{
                     $data['status'] = 'Pending';
                     $data['bonus'] = number_format(0, 2);
@@ -39,6 +41,11 @@ class ReferralController extends Controller
                 $refs[]  = $data;
             }
     	}
+        $confirmed_amount = 0.1 * $confirmed_amount;
+        //get the referral bonuses
+        $withdrawn_bonus = $user->bonuses->sum('amount');
+
+        $remaining_bonus = $confirmed_amount = $withdrawn_bonus;
         usort($refs, 'sortDateFunction');
         
         //get the referrer if
@@ -46,7 +53,8 @@ class ReferralController extends Controller
         if(strlen($user->referrerUsername) > 0) {
             $ref_id = $user->referrerUsername;
         }
-    	return view('referrals/index', compact('referrals', 'ref_id', 'refs', 'confirmed_amount'));
+    	return view('referrals/index', compact('referrals', 'ref_id', 'refs'
+            , 'remaining_bonus', 'confirmed_amount'));
     }
     public function referrals() {
         $user = Auth::User();

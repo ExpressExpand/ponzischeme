@@ -37,13 +37,32 @@
                         <th>PH AMOUNT</th>
                         <th>YIELD AMOUNT</th>
                         <th>BONUSES</th>
-                        <th>REQUEST AMOUNT</th>
+                        <th>WITHDRAWAL AMOUNT</th>
                         <th>STATUS</th>
                     </tr>
                     </thead>
                     <tbody>
-                    <?php $counter = 0; ?>
-                   
+                    <?php $counter = 0; $is_bonus = true;  ?>
+                    @foreach($donations as $donation)
+                    <tr>
+                        <td>{{ ++$counter }}</td>
+                        <td>{{ date('d-m-Y h:i', $mature_date) }}</td>
+                        <td>{{ $donation->amount }}</td>
+                        <td>{{ $yield_amount }}</td>
+                        @if($is_bonus)
+                        <td><?php $cal_bonus = $ref_bonus + $reg_bonus; 
+                            echo number_format($cal_bonus, 2); 
+                            $is_bonus = false; ?></td>
+                        <td><?php $total = $cal_bonus + $yield_amount;
+                            echo number_format($total, 2);
+                            ?></td>
+                        @else
+                            <td>{{ number_format(0, 2) }}</td>
+                            <td>{{ number_format(0, 2) }}</td>
+                        @endif
+                        <td><a href="{{ url('new/request/store', $donation->id) }}" class="btn btn-primary btn-sm">Redeem pledge</td>
+                    </tr>
+                    @endforeach
                     
                     </tbody>
                     <tfoot>
@@ -53,7 +72,7 @@
                         <th>PH AMOUNT</th>
                         <th>YIELD AMOUNT</th>
                         <th>BONUSES</th>
-                        <th>REQUEST AMOUNT</th>
+                        <th>WITHDRAWAL AMOUNT</th>
                         <th>STATUS</th>
                     </tr>
                     </tfoot>

@@ -38,6 +38,9 @@ class User extends Authenticatable
     public function donations() {
         return $this->hasMany('App\DonationHelp', 'userID');
     }
+    public function bonuses() {
+        return $this->hasMany('App\ReferralBonus', 'userID');
+    }
 
 
 }
