@@ -4,9 +4,13 @@ namespace App;
 use Carbon\Carbon;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
+
 
 class DonationTransaction extends Model
 {
+    use SoftDeletes;
+
     protected $table = 'donation_help_transactions';
     protected $fillable = array(
     	'donationHelpID', 'collectionHelpID', 'recipientUserID', 'payerUserID', 

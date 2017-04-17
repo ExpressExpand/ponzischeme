@@ -58,7 +58,7 @@
                        </td> 
                        <td>
                             @if($transaction->donation->user->isBlocked == 0)
-                           <a href="{{ url('admin/block/donor/delete', $transaction->donation->user->id) }}"
+                           <a href="{{ url('admin/block/donor/delete', $transaction->id) }}"
                             class="btn btn-danger btn-sm">Block Donor</a>
                             @else
                                 <a admin="{{ url('admin/delete/transaction'

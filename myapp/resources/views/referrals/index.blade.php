@@ -18,7 +18,7 @@
             <div class="title-action">
                 Your referral ID is 
                 <span class="error"> 
-                    <?php echo env('URL').'?referral_id='.$ref_id; ?>
+                    <?php echo env('CUSTOM_URL').'?referral_id='.$ref_id; ?>
                 </span>
             </div>
         </div>

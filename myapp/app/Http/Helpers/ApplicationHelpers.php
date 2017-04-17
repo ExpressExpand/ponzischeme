@@ -85,16 +85,16 @@ final class ApplicationHelpers {
 				can Get Help", 1);
 		}
 	}
-	public static function checkForExistingGh ($user) {
-		$donations = array();
-		$donations = DonationHelp::where(['userID' => $user->id, 'phGh' => 'gh'
-			, 'status' => DonationHelp::$SLIP_PENDING])
-		->get()->toArray();
-		if(count($donations) > 0) {
-			throw new MyCustomException("You cannot create more than one
-			 existing GH Request", 1);
-		}
-	}
+	// public static function checkForExistingGh ($user) {
+	// 	$donations = array();
+	// 	$donations = DonationHelp::where(['userID' => $user->id, 'phGh' => 'gh'
+	// 		, 'status' => DonationHelp::$SLIP_PENDING])
+	// 	->get()->toArray();
+	// 	if(count($donations) > 0) {
+	// 		throw new MyCustomException("You cannot create more than one
+	// 		 existing GH Request", 1);
+	// 	}
+	// }
 	public static function checkForExistingPh ($user) {
 		$donations = array();
 		$donations = DonationHelp::where(['userID' => $user->id, 'phGh' => 'ph'])
@@ -107,25 +107,25 @@ final class ApplicationHelpers {
 			 confirmed before you can create another", 1);
 		}
 	}
-	public static function checkForGhEligibility($user, $amount) {
-		$donations = array();
-		$donations = DonationHelp::where(['userID' => $user->id, 'phGh' => 'ph'])
-			->where( function($query) {
-				$query->where('status', DonationHelp::$SLIP_CONFIRMED)
-				->orWhere('status', DonationHelp::$SLIP_PARTIALWITHDRAWAL);
-			})->pluck('amount')->toArray();
-		//add the referral to the donation_amount
-		$donation_amount = array_sum($donations);
+	// public static function checkForGhEligibility($user, $amount) {
+	// 	$donations = array();
+	// 	$donations = DonationHelp::where(['userID' => $user->id, 'phGh' => 'ph'])
+	// 		->where( function($query) {
+	// 			$query->where('status', DonationHelp::$SLIP_CONFIRMED)
+	// 			->orWhere('status', DonationHelp::$SLIP_PARTIALWITHDRAWAL);
+	// 		})->pluck('amount')->toArray();
+	// 	//add the referral to the donation_amount
+	// 	$donation_amount = array_sum($donations);
 
-		//TODO:://check for confirmed referral amount before user can withdraw
+	// 	//TODO:://check for confirmed referral amount before user can withdraw
 
-		if(count($donation == 0)) {
-			throw new MyCustomException("Sorry you are not eligible to withdraw.
-			 Make sure you PH and you PH are confrimed before you can withdraw", 1);
-		}elseif($donation_amount < $amount){
-			throw new MyCustomException("Your GH amount exceeds the overall amount you can GH", 1);
-		}
-	}
+	// 	if(count($donation == 0)) {
+	// 		throw new MyCustomException("Sorry you are not eligible to withdraw.
+	// 		 Make sure you PH and you PH are confrimed before you can withdraw", 1);
+	// 	}elseif($donation_amount < $amount){
+	// 		throw new MyCustomException("Your GH amount exceeds the overall amount you can GH", 1);
+	// 	}
+	// }
 	// TODO
 	public static function bonuses() {
 		$bonus = array(

@@ -14,6 +14,7 @@ use App\Http\Helpers\MyCustomException;
 use App\Http\Requests\MessagingRequest;
 use App\Messaging;
 use App\MessagingTransaction;
+use App\DonationTransaction;
 
 class AdminController extends Controller
 {
@@ -331,8 +332,8 @@ class AdminController extends Controller
             $transaction->donation->save();
             //delete the transaction
             $transaction->delete();
-            Session::flash('flash_message', 'Transaction Succesful');
-            return Reirect('admin/pop');
+            Session::flash('flash_message', 'User was Succesfully blocked');
+            return redirect()->back();
         }
     }
     public function banNotifyGhWhoFailToPhCron() {

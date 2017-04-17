@@ -13,6 +13,7 @@
     <link href="{{ asset('css/inspinia/plugins/iCheck/custom.css') }}" rel="stylesheet">
     <link href="{{ asset('css/inspinia/animate.css') }}" rel="stylesheet">
     <link href="{{ asset('css/inspinia/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/inspinia/plugins/morris/morris-0.4.3.min.css') }}" rel="stylesheet">
     
     <!-- <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,600,700" rel="stylesheet"> -->
     

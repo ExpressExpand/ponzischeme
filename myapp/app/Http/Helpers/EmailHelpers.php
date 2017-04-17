@@ -20,13 +20,17 @@ final class EmailHelpers {
 	public $attachment;
     public $from;
     private $recipient;
+    private $sender;
+    private $is_admin = false;
     public $debug = false;
 
-    public function __construct($recipient) {
+    public function __construct($sender=null, $recipient, $is_admin = false) {
+        $this->is_admin = $is_admin;
+        $this->sender = $sender;
         $this->recipient = $recipient;
     }
 	/**
-    * @author FAMUREWA TAIWO EZEKIEL
+    * @author me
     * @return This returns an array that contains boolean and also the status error as a string
     */
     public function setSubject($subject) {
@@ -79,20 +83,26 @@ final class EmailHelpers {
         $mail = $this->initializeMail();
         $mail->subject = $this->subject;    
         $mail->MsgHTML($this->body);
-        $mail->addAddress($this->recipient->email, $this->recipient->name);
-        $mail->setFrom(env('EMAILHELPER_USERNAME'), env('EMAILHELPER_ADMIN_NAME'));
-        $mail->send();dd($mail);    
+        if($this->is_admin) {
+            //send email to the admin
+            $mail->setFrom($this->sender->email, $this->sender->name);
+            $mail->addAddress(env('EMAILHELPER_USERNAME'), env('EMAILHELPER_ADMIN_NAME'));
+        }else{
+            $mail->addAddress($this->recipient->email, $this->recipient->name);
+            $mail->setFrom(env('EMAILHELPER_USERNAME'), env('EMAILHELPER_ADMIN_NAME'));
+        }
+        $mail->send();
         return $mail;
     }
 	private static function getSettings($mail) {
 		$mail->isSMTP(); // tell to use smtp
-        $mail->SMTPDebug = 2;
+        // $mail->SMTPDebug = 3;
         $mail->CharSet = "utf-8"; // set charset to utf8
         $mail->SMTPAuth = true;  // use smpt auth
-        $mail->SMTPSecure = env('EMAILHELPER_SMTP', 'tls'); // or ssl
+        $mail->SMTPSecure = 'ssl';//env('EMAILHELPER_SMTP', 'tls'); // or ssl
         $mail->SMTPAutoTLS = false;
         $mail->Host = env('EMAILHELPER_HOST');
-        $mail->Port = 26; // most likely something different for you. This is the mailtrap.io port i use for testing. 
+        $mail->Port = env('EMAILHELPER_PORT'); 
         $mail->Username = env('EMAILHELPER_USERNAME');
         $mail->Password = env('EMAILHELPER_PASSWORD');
         return $mail;

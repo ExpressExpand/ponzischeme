@@ -13,6 +13,7 @@
 }
 .sidebar_name{
     display: inline-block;
+
     margin-left: 5px;
 }
 .sidebar_img {
@@ -23,11 +24,21 @@
     margin-left: -15px;
     margin-bottom: 15px;
 }
+.dashboard_payouts{
+    margin-top: 2px;
+}
+.white-bg{
+    background-color: #fff;
+}
 .profile-group .key {
 	padding-top: 7px;
     margin-bottom: 0;
     text-align: right;
     font-weight: bold;
+}
+.dashboard-title {
+    background-color: green;
+    width: 100%;
 }
 .profile-group .data {
 	background-color: #FFFFFF;

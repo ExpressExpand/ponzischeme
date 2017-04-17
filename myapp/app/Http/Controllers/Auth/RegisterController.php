@@ -120,7 +120,8 @@ class RegisterController extends Controller
         $ref->save();
 
         //now send an email the the user
-        $email = new EmailHelpers($user);
+        $sender = null;
+        $email = new EmailHelpers($sender, $user);
         $email->setSubject = 'no-reply';
         $email->body = $this->getBodyHtml($user);
         $email->send();
@@ -144,7 +145,7 @@ class RegisterController extends Controller
                 <tr>
                  <td style="padding: 25px 0 0 0;">
                    <h3> Hello %s, </h3>
-                   <p>Thank you for creating an account on GiveandGet.com. </p>
+                   <p>Thank you for creating an account on Easypayworldwide.com. </p>
 
                     <br />
                     <p>Management.</p>

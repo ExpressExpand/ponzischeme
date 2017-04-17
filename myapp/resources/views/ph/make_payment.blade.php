@@ -67,7 +67,7 @@
                                         <p><strong>Bank:</strong> {{ $transaction->collection->user->bankName }}</p>
                                     @else
                                         <p><strong>Bitcoin: </strong>
-                                         {{ $transaction->collectin->user->bitcoinAddress }}</p>
+                                         {{ $transaction->collection->user->bitcoinAddress }}</p>
                                     @endif
                                     <p><strong><i class="fa fa-phone"></i></strong> 
                                     {{ $transaction->collection->user->phone }}</p>

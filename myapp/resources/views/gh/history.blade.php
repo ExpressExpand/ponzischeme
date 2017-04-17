@@ -49,7 +49,8 @@
                     @if(count($collections) > 0)
                         @foreach($collections as $history)
                         @foreach($history->ghtransactions as $transaction)
-                            @if($transaction->receiverConfirmed) == 1){
+                            @if($transaction->receiverConfirmed) == 1)
+
                             <tr>
                                 <td>{{ ++$counter }}</td>
                                 <td>{{ date('M d, Y h:i:sa', strtotime($transaction->updated_at)) }}</td>

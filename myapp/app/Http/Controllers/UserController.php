@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 use App\MessagingTransaction;
 use Auth;
 use App\DonationHelp;
+use App\DonationTransaction;
+use Mail;
+use Carbon;
 
 class UserController extends Controller
 {
@@ -17,12 +20,16 @@ class UserController extends Controller
     	$messages = $this->getInboxMessages($user);
     	$donations = $this->retrieveMatchedPhs($user);
     	$collections = $this->retrieveMatchedGhs($user);
+        $payouts = $this->retrievePayouts();
+        $active_phs = $this->getActivePHStatusInWeek($user);
 
     	$data = array(
     		'user' => $user,
     		'messages' => $messages,
     		'donations' => $donations,
     		'collections' => $collections,
+            'payouts' => $payouts,
+            'active_phs' => $active_phs,
     	);
     	return view('dashboard', $data);
     }
@@ -43,11 +50,24 @@ class UserController extends Controller
     // private function 
     private function retrieveMatchedGhs($user) {
     	$collections = array();
-    	$collections = DonationHelp::where('userID', $user->id)
+    	$collections = DonationHelp::where(['userID' => $user->id, 'phGh' => 'gh'])
     	->where(function($query){
     		$query->where('status', DonationHelp::$SLIP_MATCHED)
     		->orWhere('status', DonationHelp::$SLIP_PENDING);
     	})->get();
     	return $collections;
+    }
+    private function retrievePayouts() {
+        $payouts = DonationTransaction::where(['receiverConfirmed' => 1, 'fakePOP' => 0])->paginate(10);
+        return $payouts;
+    }
+    private function getActivePHStatusInWeek($user) {
+        $active_phs = DonationHelp::where(['userID' => $user->id, 'phGh' => 'ph'])
+            ->where(function($query) {
+                $query->where('status', DonationHelp::$SLIP_MATCHED)
+                ->orWhere('status', DonationHelp::$SLIP_PENDING)
+                ->orWhere('status', DonationHelp::$SLIP_CONFIRMED);
+        })->get();
+        return $active_phs;
     }
 }

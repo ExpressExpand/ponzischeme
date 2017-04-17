@@ -27,9 +27,9 @@ class DonationHelp extends Model
     protected function getPaymentTypeAttribute($value) {
         return ucfirst($value); 
     }
-    protected function setPaymentTypeAttribute($value) {
-        $this->value = strtolower($value);
-    }
+    // protected function setPaymentTypeAttribute($value) {dd($value);
+    //     $this->paymentType = strtolower($value);
+    // }
     protected $dates = [
         'created_at',
         'updated_at',

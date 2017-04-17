@@ -14,7 +14,13 @@
 // Route::get('/', function () {
 //     return view('index');
 // });
-Route::get('/', 'HomeController@index');
+// Route::get('/', 'HomeController@index');
+Route::get('/', [
+	'as' => 'index',
+	'uses' => 'HomeController@index'
+]);
+Route::get('terms', 'HomeController@terms');
+Route::get('how', 'HomeController@how');
 Route::get('/captcha/post/code/', 'Auth\LoginController@captcha');
 Route::get('template', function() {
 	return view('template');

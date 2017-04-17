@@ -26,6 +26,23 @@ class Kernel extends ConsoleKernel
     {
         // $schedule->command('inspire')
         //          ->hourly();
+//         $schedule->call(function()
+        // {
+        //     // Do some task...
+
+        // })->hourly();
+        
+        // $schedule->command('queue:work')->cron('* * * * * *');
+
+        //         // Run every 5 minutes
+        // $schedule->command('queue:work')->everyFiveMinutes();
+
+        // // Run once a day
+        // $schedule->command('queue:work')->daily();
+
+        // // Run Mondays at 8:15am
+        // $schedule->command('queue:work')->weeklyOn(1, '8:15');
+        // php /path/to/artisan schedule:run 1>> /dev/null 2>&1
     }
 
     /**

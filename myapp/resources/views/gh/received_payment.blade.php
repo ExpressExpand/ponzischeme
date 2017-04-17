@@ -62,7 +62,7 @@
                                     {{ $collection->paymentType }}
                                 </td>
                                 <td>
-                                    @if($transaction->isDefaulted  = 0)
+                                    @if($transaction->isDefaulted  == 0)
                                     <div>
                                     @if($transaction->fakePOP == 0)
                                         <a href="{{ url('confirm/gh/payment/edit', $transaction->id) }}"

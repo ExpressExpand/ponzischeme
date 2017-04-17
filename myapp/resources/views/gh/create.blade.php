@@ -44,11 +44,19 @@
                     <tbody>
                     <?php $counter = 0; $is_bonus = true;  ?>
                     @foreach($donations as $donation)
+                    <?php 
+                        $mature_date = strtotime($donation->created_at) + (30 * 24 * 60 * 60);
+                        if(strtolower($donation->paymentType) == 'bank') {
+                            $yield_amount = 1.3 * $donation->amount;
+                        }else{
+                            $yield_amount = 1.5 * $donation->amount;
+                        }
+                    ?>
                     <tr>
                         <td>{{ ++$counter }}</td>
                         <td>{{ date('d-m-Y h:i', $mature_date) }}</td>
-                        <td>{{ $donation->amount }}</td>
-                        <td>{{ $yield_amount }}</td>
+                        <td>{{ number_format($donation->amount,2) }}</td>
+                        <td>{{ number_format($yield_amount, 2) }}</td>
                         @if($is_bonus)
                         <td><?php $cal_bonus = $ref_bonus + $reg_bonus; 
                             echo number_format($cal_bonus, 2); 

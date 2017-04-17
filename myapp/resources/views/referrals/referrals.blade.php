@@ -18,7 +18,7 @@
             <div class="title-action">
                 Your referral ID is 
                 <span class="error"> 
-                    <?php echo env('URL').'?referral_id='.$ref_id; ?>
+                    <?php echo env('CUSTOM_URL').'?referral_id='.$ref_id; ?>
                 </span>
             </div>
         </div>
@@ -53,7 +53,7 @@
                             <td>{{ $referral->member->name }}</td>
                             <td>{{ $referral->member->phone }}</td>
                             <td>{{ $referral->member->email }}</td>
-                            <td>{{ date('d-m-Y', strtotime($referral->member->created_at)) }}</td>
+                            <td>{{ date('d-M-Y', strtotime($referral->member->created_at)) }}</td>
                         </tr>
                     @endforeach
                     @else

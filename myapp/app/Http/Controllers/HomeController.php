@@ -23,9 +23,16 @@ class HomeController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(Request $request) {
+        //referral id
          $ref_id = $request->input('referral_id');
          Session::put('ref_id', $ref_id);
          return view('index');
+    }
+    public function terms() {
+        return view('terms');
+    }
+    public function how() {
+        return view('how');
     }
     
 }

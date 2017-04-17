@@ -11,8 +11,7 @@ use Session;
 use App\Http\Helpers\MyCustomException;
 use App\DonationTransaction;
 
-use App\Http\Helper\CustomFileAttachment;
-
+use App\Http\Helpers\CustomFileAttachment;
 
 class PhController extends Controller
 {
@@ -33,18 +32,18 @@ class PhController extends Controller
             switch($request->input('paymentType')){
                 case 'bank':
                     if(strlen($user->bankName) == 0){
-                        return redirect()->back()->withErrors('You need to configure your bank details first');
+                        return redirect()->back()->withErrors('You need to configure your bank details first from your profile.');
                     }
                 break;
                 case 'bitcoin':
                     if(strlen($user->bitcoinAddress) == 0){
-                        return redirect()->back()->withErrors('You need to configure your bitcoin details first');
+                        return redirect()->back()->withErrors('You need to configure your bitcoin details first from your profile.');
                     }
                 break;
             }
 
     		$donate = new DonationHelp();
-    		$donate->paymentType = $request->input('paymentType');
+    		$donate->paymentType = strtolower($request->input('paymentType'));
     		$donate->amount = $request->amount;
     		$donate->phGh = 'ph';
     		$donate->userID = $user->id;
@@ -124,7 +123,7 @@ class PhController extends Controller
         $filename = $filehash = '';
         try{
             list($filename, $filehash) = CustomFileAttachment::uploadAttachment($request);
-        }catch(MyFileException $ex) {
+        }catch(MyCustomException $ex) {
             return redirect()->back()->withErrors($ex->getMessage());
         }
         $transaction->filename = $filename;

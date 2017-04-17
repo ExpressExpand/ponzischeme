@@ -22,7 +22,7 @@ class GhController extends Controller
         $user = Auth::User();
         //get the bitcoin rate
         $btc = ApplicationHelpers::getCurrentBitcoinRate();
-        //get all the pending phs
+        //get all the pending phs created 30 days ago which is now due
         $donations = DonationHelp::where('userID', $user->id)->where('phGh', 'ph')
             ->where('status', DonationHelp::$SLIP_CONFIRMED)
             ->whereRaw('created_at <= DATE_SUB(curDate(), INTERVAL 30 DAY)')->get();
@@ -50,13 +50,9 @@ class GhController extends Controller
                     $ref_bonus += $bonus;
                 }
             }
-        }
-        //get the total amount to be paid
-        $yield_amount = 0.3 * $donation->amount;
-        $mature_date = strtotime($donation->created_at) + (30 * 24 * 60 * 60);
-       
-    	return view('gh.create', compact('btc', 'donations'
-            , 'yield_amount', 'ref_bonus', 'reg_bonus', 'mature_date'));
+        }       
+    	return view('gh.create', compact('btc', 'donations',
+            'ref_bonus', 'reg_bonus', 'mature_date'));
     }
     public function store(PhRequest $request, $donation_id) {
      	$user = Auth::user();
@@ -66,46 +62,46 @@ class GhController extends Controller
                 , 'id' => '$donation_id'])->first();
 
             //secondly check for the referral bonus
-        $referrals = Referral::where('relatedReferrerUserID', $user->id)->get();
-        $ref_bonus = 0;
-        //TODO
-        foreach($referrals as $referral) {
-            //loop through donations
-            foreach($referral->member->donations as $donation) {
-                if($donation->phGh == 'gh') {
-                    continue;
-                }
-                $data = array(); 
-                $bonus = 0.1 * $donation->amount;
-                if(strtolower($donation->status) == DonationHelp::$SLIP_CONFIRMED) {
-                    $data['bonus'] = $bonus;
-                    $ref_bonus += $bonus;
+            $referrals = Referral::where('relatedReferrerUserID', $user->id)->get();
+            $ref_bonus = 0;
+            //TODO
+            foreach($referrals as $referral) {
+                //loop through donations
+                foreach($referral->member->donations as $donation) {
+                    if($donation->phGh == 'gh') {
+                        continue;
+                    }
+                    $data = array(); 
+                    $bonus = 0.1 * $donation->amount;
+                    if(strtolower($donation->status) == DonationHelp::$SLIP_CONFIRMED) {
+                        $data['bonus'] = $bonus;
+                        $ref_bonus += $bonus;
+                    }
                 }
             }
-        }
-        //get the total amount to be paid
-        $ph_amount = 0.3 * $donation->amount;
-        $collections = array();
-        
-        //create a transaction request now
-        if(count($donations) > 0) {
-            foreach($donations as $donation){
-                //create a pending collection
-                $check = DonationHelp::where('userID', $user->id)->where('phGh', 'gh')
-                    ->where('status', DonationHelp::$SLIP_PENDING)->get();
-                //check if the collection already exists
-                $collection = new DonationHelp();
-                $collection->paymentType = strtolower($donation->paymentType);
-                $colleciton->amount = ($ph_amount + $ref_bonus + $reg_bonus);
-                $collection->phGh = 'gh';
-                $collection->status = DonationHelp::$SLIP_CONFIRMED;   
-                $collection->userID = $user->id;
-                $collection->recordId = uniqid();
-                $collection->save();
+            //get the total amount to be paid
+            $ph_amount = 0.3 * $donation->amount;
+            $collections = array();
+            
+            //create a transaction request now
+            if(count($donations) > 0) {
+                foreach($donations as $donation){
+                    //create a pending collection
+                    $check = DonationHelp::where('userID', $user->id)->where('phGh', 'gh')
+                        ->where('status', DonationHelp::$SLIP_PENDING)->get();
+                    //check if the collection already exists
+                    $collection = new DonationHelp();
+                    $collection->paymentType = strtolower($donation->paymentType);
+                    $colleciton->amount = ($ph_amount + $ref_bonus + $reg_bonus);
+                    $collection->phGh = 'gh';
+                    $collection->status = DonationHelp::$SLIP_CONFIRMED;   
+                    $collection->userID = $user->id;
+                    $collection->recordId = uniqid();
+                    $collection->save();
 
-                $collections[] = $collection;
+                    $collections[] = $collection;
+                }
             }
-        }
             Session::flash('flash_message', "Your Request was successful.   
                 Please wait while you are matched.");
             return redirect()->back();

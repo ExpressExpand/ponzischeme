@@ -1,15 +1,33 @@
-@extends('layouts/master_auth')
-@section('title', 'Registration')
-
-@section('content')       
-    <div class="middle-box text-center loginscreen   animated fadeInDown">
-        <div>
-            <div>
-
-                <h1 class="logo-name">IN+</h1>
-            </div>
-            <h3>Register to IN+</h3>
-            <p>Create account to see it in action.</p>
+@include('partials/home/_header')
+<nav class="navbar navbar-fixed-top navbar-default">
+    <div class="container">
+        <div class="navbar-header"> 
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span> 
+            </button>
+            <a class="navbar-brand" href="{{ url('/') }}">
+                <img src="{{asset('images/app/logo.png') }}" width="64px" height="auto" alt="easypay logo">
+            </a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="{{ url('/') }}">How It Works</a></li>
+                <li><a href="{{ url('/') }}">About</a></li>
+                <li><a href="{{ url('/') }}">Faq</a></li>
+                <li><a href="{{ url('/') }}">Contact</a></li>
+                <li><a href="{{ url('login') }}" class="btn-auth btn-login">Login</a></li>
+                <li><a href="{{ url('register') }}" class="btn-auth btn-register">Register</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>   
+<div class="container-fluid bg-grey">
+<!-- <div class="row register_wrap bg-grey"> -->
+    <div class="col-sm-12">
+        <div class="form_wrap">
+            <h4><i class="fa fa-sign-in"></i> Login.</h4><hr />
             @include('partials/_alert')
             <form class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">
                     {{ csrf_field() }}
@@ -27,7 +45,7 @@
                         <span class="input-group-addon"><i class="fa fa-lock"></i></span>
                     </div>
                 </div>
-                <div class="form-group">
+                <div class="form-group text-center">
                     <!-- <div class="g-recaptcha" data-sitekey="6LcboBgUAAAAAKsJrg-3azvWrSJPfJGhXqM4P3AC"></div> -->
                     <span id="captcha">{!! captcha_img('flat') !!} </span>
                     <span id="refresh" class="reload_captcha">
@@ -39,28 +57,10 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <button type="submit" class="btn btn-primary block full-width m-b">Login</button>
+                    <button type="submit" class="btn btn-primary block full-width m-b form-control">Login</button>
                 </div>
             </form>
-                
-        </div>
+        </div>  
     </div>
-@stop
-@section('resources')
-<script src='https://www.google.com/recaptcha/api.js'></script>
-<script>
-    $('.reload_captcha').click(function() {
-        $.ajax({
-            url: '/captcha/post/code/',
-            type: 'get',
-            success: function(resp) {
-                // $('#captcha').empty();
-                $('#captcha').html(resp.data);
-            },
-            error(err) {
-                console.log(err);
-            }
-        })
-    });
-</script>
-@stop
+</div>
+    @include('partials/home/_footer')
