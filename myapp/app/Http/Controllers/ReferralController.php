@@ -19,20 +19,27 @@ class ReferralController extends Controller
     	$referrals = Referral::where('relatedReferrerUserID', $user->id)->get();
         $refs = array();
         $remaining_amount = 0;
+        
+        $withdrawn_ref_ids = ReferralBonus::where('userID'
+            , $user->id)->pluck('amount', 'donationHelpID')->toArray();
     	foreach($referrals as $referral) {
             //loop through donations
             foreach($referral->member->donations as $donation) {
                 if($donation->phGh == 'gh') {
                     continue;
                 }
+                
                 $data = array();
                 $data['name'] = $referral->member->name;  
                 $data['amount'] = number_format($donation->amount,2);
                 $bonus = 0.1 * $donation->amount;
+                
                 if(strtolower($donation->status) == DonationHelp::$SLIP_CONFIRMED) {
                     $data['status'] = 'Completed';
                     $data['bonus'] = number_format($bonus, 2);
-                    $remaining_amount += $bonus;
+                    if(!in_array($donation->id, array_keys($withdrawn_ref_ids))) {
+                        $remaining_amount += $bonus;
+                    }
                 }else{
                     $data['status'] = 'Pending';
                     $data['bonus'] = number_format(0, 2);
@@ -43,9 +50,8 @@ class ReferralController extends Controller
     	}
         
         //get the referral bonuses
-        $withdrawn_bonus = $user->bonuses->sum('amount');
+        $withdrawn_amount = array_sum(array_values($withdrawn_ref_ids));
 
-        $remaining_bonus = $withdrawn_bonus;
         usort($refs, 'sortDateFunction');
         
         //get the referrer if
@@ -54,7 +60,7 @@ class ReferralController extends Controller
             $ref_id = $user->referrerUsername;
         }
     	return view('referrals/index', compact('referrals', 'ref_id', 'refs'
-            , 'remaining_bonus', 'remaining_amount'));
+            , 'withdrawn_amount', 'remaining_amount'));
     }
     public function referrals() {
         $user = Auth::User();

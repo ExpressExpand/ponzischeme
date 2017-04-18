@@ -38,7 +38,7 @@
                                 <h5>WITHDRAWN REFERRAL BONUS</h5>
                             </div>
                             <div class="ibox-content">
-                                <h1 class="no-margins">{{ number_format($remaining_bonus,2) }}</h1>
+                                <h1 class="no-margins">{{ number_format($withdrawn_amount,2) }}</h1>
                             </div>
                         </div>
                     </div>
