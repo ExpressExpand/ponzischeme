@@ -26,12 +26,12 @@
                             </div>
                             
                              @if(strlen($user->avatar) > 0)
-                            <img alt="profile pix" class="img-circle circle-border m-b-md"  
+                            <img alt="profile pix" class="img-circle circle-bordera m-b-md"  
                                 src="{{ asset('images/profilepix/'.$user->avatar) }}"
-                                  />
+                                width="100px" height="100px"  />
                              
                             @else
-                            <img alt="profile-pix" class="img-circle circle-border m-b-md" src="{{ asset('images/profilepix/avatar.jpg') }}"
+                            <img alt="profile-pix" class="img-circle circle-bordera m-b-md" src="{{ asset('images/profilepix/avatar.jpg') }}"
                              width="100px" height="100px" />
                             @endif
                             <div>

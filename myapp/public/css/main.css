@@ -7,6 +7,10 @@
 .top-user-menu li a:hover{
     color: #00ceae;
 }
+img.circle-bordera {
+  border: 6px solid #315294;
+  border-radius: 50%;
+}
 .custom-block{
     display: block;
     clear: both;
