@@ -35,6 +35,7 @@
                     <tr>
                         <th>ID</th>
                         <th>Amount</th>
+                        <th>DATE CREATED</th>
                         <th>MATCHED DATE</th>
                         <th>BENEFICIARY</th>
                         <th>ACCOUNT DETAILS</th>
@@ -50,7 +51,8 @@
                         <tr>
                             <td>{{ ++$counter }}</td>
                             <td>{{ number_format($transaction->amount, 2) }}</td>
-                            <td>{{ date('d-m-Y', strtotime($transaction->updated_at)) }}</td>
+                            <td>{{ date('d-M-Y', strtotime($donation->created_at)) }}</td>
+                            <td>{{ date('d-M-Y', strtotime($transaction->updated_at)) }}</td>
                             <td>{{ $transaction->collection->user->name }}</td>
                             <td>
                                 @if(strtolower($donation->paymentType) == 'bank')
@@ -97,6 +99,7 @@
                     <tr>
                        <th>TRANS ID</th>
                         <th>Amount</th>
+                        <th>DATE CREATED</th>
                         <th>MATCHED DATE</th>
                         <th>BENEFICIARY</th>
                         <th>ACCOUNT DETAILS</th>

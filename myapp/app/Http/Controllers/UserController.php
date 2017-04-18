@@ -58,11 +58,12 @@ class UserController extends Controller
     	return $collections;
     }
     private function retrievePayouts() {
-        $payouts = DonationTransaction::where(['receiverConfirmed' => 1, 'fakePOP' => 0])->paginate(10);
+        $payouts = DonationTransaction::where(['receiverConfirmed' => 1, 'fakePOP' => 0,
+         'payerConfirmed' => 1])->paginate(10);
         return $payouts;
     }
     private function getActivePHStatusInWeek($user) {
-        $active_phs = DonationHelp::where(['userID' => $user->id, 'phGh' => 'ph'])
+        $active_phs = DonationHelp::where(['userID' => $user->id, 'phGh' => 'ph', 'isConfirmed' => 0])
             ->where(function($query) {
                 $query->where('status', DonationHelp::$SLIP_MATCHED)
                 ->orWhere('status', DonationHelp::$SLIP_PENDING)

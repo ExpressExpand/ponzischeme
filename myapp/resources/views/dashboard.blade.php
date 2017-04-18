@@ -64,7 +64,7 @@
                         </div>
                         </div>
 
-
+                        @if(count($active_phs) > 0)
                         <div class="ibox">
                         <div class="ibox-content">
                         <?php 
@@ -92,6 +92,7 @@
                         ?>
                         </div>
                         </div>
+                        @endif
                     </div>
                 </div>
             </div>
@@ -220,8 +221,8 @@
                                     <i class="fa fa-money"></i>
                                 </div>
                                 <div class="vertical-timeline-content">
-                                <p>{{ getExcerpt($payout->collection->user->name, 8) }} received <span class="badge badge-info">{{ number_format($payout->amount) }}</span> <br />
-                                 From {{ getExcerpt($payout->donation->user->name ) }} 
+                                <p>{{ $payout->collection->user->name }} received <span class="badge badge-info">{{ number_format($payout->amount) }}</span> <br />
+                                 From {{ $payout->donation->user->name  }} 
                                 </p>
                                     <span class="vertical-date small text-muted"> 
                                     {{ $payout->updated_at->diffForHumans() }} </span>

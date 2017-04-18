@@ -35,10 +35,10 @@
                         <div class="ibox float-e-margins">
                             <div class="ibox-title">
                                 <span class="label label-success pull-right">Total</span>
-                                <h5>CONFIRMED REFERRAL BONUS</h5>
+                                <h5>WITHDRAWN REFERRAL BONUS</h5>
                             </div>
                             <div class="ibox-content">
-                                <h1 class="no-margins">{{ number_format($confirmed_amount,2) }}</h1>
+                                <h1 class="no-margins">{{ number_format($remaining_bonus,2) }}</h1>
                             </div>
                         </div>
                     </div>
@@ -46,10 +46,10 @@
                         <div class="ibox float-e-margins">
                             <div class="ibox-title">
                                 <span class="label label-info pull-right">Total</span>
-                                <h5>BONUS REMIANING (STILL IN THE SYSTEM)</h5>
+                                <h5>BONUS REMAINING (STILL IN THE SYSTEM)</h5>
                             </div>
                             <div class="ibox-content">
-                                <h1 class="no-margins">{{ number_format($remaining_bonus,2) }}</h1>
+                                <h1 class="no-margins">{{ number_format($remaining_amount,2) }}</h1>
                             </div>
                         </div>
                     </div>

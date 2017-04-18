@@ -37,7 +37,7 @@
                         <th>PH AMOUNT</th>
                         <th>YIELD AMOUNT</th>
                         <th>BONUSES</th>
-                        <th>WITHDRAWAL AMOUNT</th>
+                        <th>WITHDRAWABLE AMOUNT</th>
                         <th>STATUS</th>
                     </tr>
                     </thead>
@@ -54,21 +54,39 @@
                     ?>
                     <tr>
                         <td>{{ ++$counter }}</td>
-                        <td>{{ date('d-m-Y h:i', $mature_date) }}</td>
+                        <td>{{ date('d-M-Y', $mature_date) }}</td>
                         <td>{{ number_format($donation->amount,2) }}</td>
                         <td>{{ number_format($yield_amount, 2) }}</td>
                         @if($is_bonus)
-                        <td><?php $cal_bonus = $ref_bonus + $reg_bonus; 
-                            echo number_format($cal_bonus, 2); 
-                            $is_bonus = false; ?></td>
-                        <td><?php $total = $cal_bonus + $yield_amount;
+                        <td>
+                            <?php $total_bonus = $ref_bonus + $reg_bonus; 
+                            if($reg_bonus !== 0) {
+                            $bonus = sprintf('Ref Bonus(%s) + Reg Bonus(%s) = %s'
+                                , number_format($ref_bonus,2)
+                                , number_format($reg_bonus,2)
+                                , number_format($total_bonus, 2));
+                            }else {
+                                $bonus = number_format($ref_bonus, 2);
+                            }
+                            $is_bonus = false; 
+                            echo $bonus;
+                            ?>
+                                    
+                        </td>
+                        <td><?php $total = $total_bonus + $yield_amount;
                             echo number_format($total, 2);
-                            ?></td>
+                            ?> 
+                            <span class="total" id="total_{{ $donation->id }}" style="display:none">
+                            {{ number_format($total,2) }}</span></td>
                         @else
                             <td>{{ number_format(0, 2) }}</td>
-                            <td>{{ number_format(0, 2) }}</td>
+                            <td>{{ number_format($yield_amount, 2) }}</td>
                         @endif
-                        <td><a href="{{ url('new/request/store', $donation->id) }}" class="btn btn-primary btn-sm">Redeem pledge</td>
+                        <td><a href="{{ url('new/request/store', $donation->id) }}" 
+                            class="btn btn-primary btn-sm" 
+                            data-id ="{{ $donation->id }}"
+                            onClick="return confirmRequest(this);">
+                            Redeem pledge</td>
                     </tr>
                     @endforeach
                     
@@ -80,7 +98,7 @@
                         <th>PH AMOUNT</th>
                         <th>YIELD AMOUNT</th>
                         <th>BONUSES</th>
-                        <th>WITHDRAWAL AMOUNT</th>
+                        <th>WITHDRAWABLE AMOUNT</th>
                         <th>STATUS</th>
                     </tr>
                     </tfoot>
@@ -97,4 +115,16 @@
 <script src="{{ asset('js/plugins/dataTables/dataTables.bootstrap.js') }}"></script>
 <script src="{{ asset('js/plugins/dataTables/dataTables.responsive.js') }}"></script>
 <script src="{{ asset('js/plugins/dataTables/dataTables.tableTools.min.js') }}"></script>
+<script type="text/javascript">
+    
+    function confirmRequest(o) {
+        var id = $(o).attr('data-id');
+        var total = $('#total_'+id).text();
+        var ans = confirm('Are you sure you want to redeem your pledge of '+total+'?');
+        if(ans == false) {
+            return false;
+        }
+    }
+    
+</script>
 @stop

@@ -7,9 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 class ReferralBonus extends Model
 {
     protected $table = 'referral_bonus';
-    protected $fillable = array('userID', 'amount', 'donationTransactionID');
+    protected $fillable = array('userID', 'amount', 'donationHelpID');
 
-   	public function transaction() {
-   		return $this->belongsTo('DonationTransaction', 'donationTransactionID');
+   	public function donation() {
+   		return $this->belongsTo('DonationTransaction', 'donationHelpID');
    	}
 }

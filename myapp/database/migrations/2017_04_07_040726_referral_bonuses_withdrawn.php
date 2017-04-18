@@ -17,7 +17,8 @@ class ReferralBonusesWithdrawn extends Migration
             $table->increments('id');
             $table->integer('userID');
             $table->string('amount');
-            $table->string('donationTransactionID');
+            $table->string('donationHelpID');
+            $table->timestamps();
         });
     }
 
