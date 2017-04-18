@@ -207,6 +207,13 @@
                     </div>
                     <div class="ibox-content">
                     @foreach($payouts as $payout)
+                    <?php 
+                        if($payout->collection->user->hasRole('superadmin') 
+                         || $payout->donation->user->hasRole('superadmin')) {
+                            continue;
+                        }
+                    ?>
+
                         <div id="vertical-timeline" class="vertical-container dark-timeline">
                             <div class="vertical-timeline-block">
                                 <div class="vertical-timeline-icon gray-bg">
