@@ -26,15 +26,17 @@ class Kernel extends ConsoleKernel
     {
         // $schedule->command('inspire')
         //          ->hourly();
-//         $schedule->call(function()
-        // {
-        //     // Do some task...
+        $schedule->call(function()
+        {
+            // Do some task...
+            //here we want to ban the users
 
-        // })->hourly();
+
+        })->hourlyAt(120);
         
-        // $schedule->command('queue:work')->cron('* * * * * *');
+        $schedule->command('queue:work')->cron('* * * * * *');
 
-        //         // Run every 5 minutes
+                // Run every 5 minutes
         // $schedule->command('queue:work')->everyFiveMinutes();
 
         // // Run once a day
@@ -44,6 +46,7 @@ class Kernel extends ConsoleKernel
         // $schedule->command('queue:work')->weeklyOn(1, '8:15');
         // php /path/to/artisan schedule:run 1>> /dev/null 2>&1
     }
+    
 
     /**
      * Register the Closure based commands for the application.

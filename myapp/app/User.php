@@ -41,6 +41,9 @@ class User extends Authenticatable
     public function bonuses() {
         return $this->hasMany('App\ReferralBonus', 'userID');
     }
+    public function ghLogs() {
+        return $this->hasOne('App\GhLog', 'userID');
+    }
 
 
 }
