@@ -5,6 +5,8 @@ namespace App\Console;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 
+use App\Http\Controllers\CronController;
+
 class Kernel extends ConsoleKernel
 {
     /**
@@ -30,11 +32,19 @@ class Kernel extends ConsoleKernel
         {
             // Do some task...
             //here we want to ban the users
-
+            CronController::banUserWhoFailToPHAfterSuccessfulGH();
 
         })->hourlyAt(120);
+
+        $schedule->call(function() {
+            CronController::sendEmailReminderBeforeDeadline();
+        })->daily();
+        $schedule->call(function() {
+            CronController::blockUserWhoFailedToMeetPHDeadline();
+        })->hourly();
+
         
-        $schedule->command('queue:work')->cron('* * * * * *');
+        // $schedule->command('queue:work')->cron('* * * * * *');
 
                 // Run every 5 minutes
         // $schedule->command('queue:work')->everyFiveMinutes();

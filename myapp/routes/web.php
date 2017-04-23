@@ -78,6 +78,9 @@ Route::get('admin/messaging/inbox', 'AdminController@inbox');
 Route::get('admin/messaging/outbox', 'AdminController@outbox');
 Route::get('admin/messaging/detail/{id}', 'AdminController@showMessage');
 
+
+Route::get('admin/withdraw/{amount}', 'AdminController@adminGHRequestStore');
+
 Route::get('admin/fakepop', 'AdminController@fakepop');
 
 Route::get('admin/phorders', 'AdminController@viewPhOrders');
