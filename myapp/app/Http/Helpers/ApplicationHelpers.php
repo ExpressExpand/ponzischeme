@@ -5,6 +5,8 @@ use App\DonationHelp;
 use App\Http\Helpers\ApplicationHelpers;
 use App\Http\Helpers\MyCustomException;
 use App\DonationTransaction;
+use App\Http\Helpers\EmailHelpers;
+use App\User;
 
 final class ApplicationHelpers {
 	public static function usersCantGoBelowPHAmountChecks($amount, $user) {
@@ -187,6 +189,60 @@ final class ApplicationHelpers {
 		$transaction->penaltyDate = $penalty_date;
 		$transaction->matchDate = time();
 		$transaction->save();
+
+		//send email telling them they have been matched
+		$email = new EmailHelpers(null, $transaction->donation->user, false);
+		$email->setSubject = 'MATCHED PROVIDE HELP';
+		$email->setBody(self::getBody($transaction->donation->user, 'ph'));
+		$email->send();
+
+		$email = new EmailHelpers(null, $transaction->collection->user, false);
+		$email->setSubject = 'MATCHED GET HELP REQUEST';
+		$email->setBody(self::getBody($transaction->collection->user, 'gh'));
+		$email->send();
+	}
+	private static function createTransactionForReMatchedRequests($donation_id
+		, $transaction) {
+		$penalty_date = self::processPenaltyDate();
+
+		$transaction->donationHelpID = $donation_id;
+		$transaction->collectionHelpID = $transaction->collection->id;
+		$transaction->recipientUserID = '';
+		$transaction->payerUserID = '';
+		$transaction->amount = $transaction->amount;
+		$transaction->filename = '';
+		$transaction->fileHash = '';
+		$transaction->penaltyDate = $penalty_date;
+		$transaction->matchDate = time();
+		$transaction->fakePOP = 0;
+		$transaction->deleted_at = null;
+		$transaction->save();
+
+		//send email telling them they have been matched
+		$email = new EmailHelpers(null, $transaction->donation->user, false);
+		$email->setSubject = 'MATCHED PROVIDE HELP';
+		$email->setBody(self::getBody($transaction->donation->user, 'ph'));
+		$email->send();
+
+		$email = new EmailHelpers(null, $transaction->collection->user, false);
+		$email->setSubject = 'REMATCHED GET HELP';
+		$email->setBody(self::getBody($transaction->collection->user, 'gh'));
+		$email->send();
+	}
+	public static function getBody($user, $type) {
+		if($type == 'ph'){
+			$msg = sprintf('<p>You have been matched to provide help.
+			 Please check your personal office.</p>');
+		}elseif($type == 'gh'){
+			$msg = sprintf('<p>You have been rematched to get help.
+			 Please check your personal office.</p>');
+		}
+		$body = sprintf('
+			<h2>Hello %s</h2> %s
+			<p>Regards, </p>
+			<p>Mgt</p>'
+			, $user->name, $msg);
+		return $body;
 	}
 	//matching begins
 	public static function doExactMatch (array $ghs, array $phs, array $users) {
@@ -531,6 +587,196 @@ final class ApplicationHelpers {
 		}
 		return array($ghs, $phs);
 	}
+	public static function matchAdminToPH (User $user, array $phs, array $users, $amount) {
+		echo "Finding exact match..............<br />";
+        foreach($phs as $ph_key => $ph) {
+        	$ph_name = $users[$ph['userID']];
+        	
+            if($amount == $ph['amount']) {
+            	echo "Matching PH ".$ph_name."(".$ph['amount'].") ...<br />";
+            	//check that u dont match a user to himself
+            	if($ph['userID'] == $user->id) {
+            		continue;
+            	}
+                //match exists
+                echo "Match FOUND FOR  PH ".$ph_name."(".$ph['amount'].") 
+        			...<br />";            		
+        		//secondly update the donation:help table
+        		$update_gh = new DonationHelp();
+        		$update_gh->paymentType = 'bank';
+        		$update_gh->amount = $amount;
+        		$update_gh->phGh = 'gh';
+        		$update_gh->userID = $user->id;
+        		$update_gh->recordID = uniqid();
+        		$update_gh->status = DonationHelp::$SLIP_MATCHED;
+        		$update_gh->matchDate = date('Y-m-d H:i:s', time());
+        		$update_gh->save();
 
+        		$update_ph = DonationHelp::findOrFail($ph['id']);
+        		$update_ph->status = DonationHelp::$SLIP_MATCHED;
+        		$update_ph->matchDate = date('Y-m-d H:i:s', time());
+        		$update_ph->save();
+        		self::createTransactionForMatchedRequests($update_ph->id, $update_gh->id
+        			, $amount);
 
+        		//remove from the array
+        		unset($phs[$ph_key]);
+            }
+        }
+        return $phs;
+	}
+	public static function matchTransactionToOnePH (array $phs, array $users, $transactions, $payment_type) {
+		echo "Finding exact match..............<br />";
+		foreach($transactions as $transaction) {
+			if($transaction->collection->paymentType !== $payment_type) {
+				continue;
+			}
+	        foreach($phs as $ph_key => $ph) {
+	        	$ph_name = $users[$ph['userID']];
+	        	
+	            if($transaction->amount == $ph['amount']) {
+	            	echo "Matching PH ".$ph_name."(".$ph['amount'].") ...<br />";
+	            	//check that u dont match a user to himself
+	            	if($ph['userID'] == $transaction->collection->user->id) {
+	            		continue;
+	            	}
+	                //match exists
+	                echo "Match FOUND FOR  PH ".$ph_name."(".$ph['amount'].") 
+	        			...<br />";            		
+	        		
+	        		$update_ph = DonationHelp::findOrFail($ph['id']);
+	        		$update_ph->status = DonationHelp::$SLIP_MATCHED;
+	        		$update_ph->matchDate = date('Y-m-d H:i:s', time());
+	        		$update_ph->save();
+	        		self::createTransactionForReMatchedRequests($update_ph->id, $transaction);
+
+	        		//remove from the array
+	        		unset($phs[$ph_key]);
+	            }
+	        }
+	    }
+        return $phs;
+	}
+	public static function matchTransactionToTwoPH (array $phs, array $users, $transactions
+		, $payment_type) {
+		echo "Finding exact match..............<br />";
+		$ph_count = count($phs);
+		foreach($transactions as $transaction) {
+			if($transaction->collection->paymentType !== $payment_type) {
+				continue;
+			}
+			for($i=0; $i<$ph_count; $i++){
+				for($j=0; $j<count($phs); $j++) {
+					if(!array_key_exists($i, $phs) || !array_key_exists($j, $phs)) {
+						continue;
+					}
+					$ph_name_one = $users[$phs[$i]['userID']];
+					$ph_name_two = $users[$phs[$j]['userID']];
+					if($i==$j) {
+						continue;
+					}
+					$sum = $phs[$i]['amount'] + $phs[$j]['amount'];
+					if($transaction->amount == $sum) {
+						//check that u dont match a user to himself
+	                	if($phs[$i]['userID'] == $transaction->collection->user->id
+	                	 || $phs[$j]['userID'] == $transaction->collection->user->id) {
+	                		continue;
+	                	}
+						echo "Matching GH ".$$transaction->collection->user->name."(".
+						$transaction->collection->user->amount.") 
+            				with PH ".$ph_name_one.$phs[$i]['amount'].
+            				" and ".$ph_name_two.$phs[$j]['amount']."....<br />";
+	            		
+	
+	            		$update_ph = DonationHelp::findOrFail($phs[$i]['id']);
+	            		$update_ph->status = DonationHelp::$SLIP_MATCHED;
+	            		$update_ph->matchDate = date('Y-m-d H:i:s', time());
+	            		$update_ph->save();
+
+	            		self::createTransactionForReMatchedRequests($update_ph->id, $transaction);
+
+	            		$update_ph = DonationHelp::findOrFail($phs[$j]['id']);
+	            		$update_ph->status = DonationHelp::$SLIP_MATCHED;
+	            		$update_ph->matchDate = date('Y-m-d H:i:s', time());
+	            		$update_ph->save();
+
+	            		
+            			self::createTransactionForReMatchedRequests($update_ph->id, $transaction);
+
+	            		//remove from the array
+	            		unset($phs[$i]);
+	            		unset($phs[$j]);
+					}
+				}
+			}
+	    }
+        return $phs;
+	}
+
+	public static function matchTransactionToThreePH (array $phs, array $users, $transactions
+		, $payment_type) {
+		echo "Finding exact match..............<br />";
+		$ph_count = count($phs);
+		foreach($transactions as $transaction) {
+			if($transaction->collection->paymentType !== $payment_type) {
+				continue;
+			}
+			for($i=0; $i<$ph_count; $i++){
+				for($j=0; $j<count($phs); $j++) {
+					for($k=0; $k<count($phs); $k++) {
+						if(!array_key_exists($i, $phs) || !array_key_exists($j, $phs)
+							|| !array_key_exists($k, $phs)) {
+							continue;
+						}
+						if($i==$j || $i==$k || $j==$k){
+							continue;
+						}
+						$ph_name_one = $users[$phs[$i]['userID']];
+						$ph_name_two = $users[$phs[$j]['userID']];
+						$ph_name_three = $users[$phs[$k]['userID']];
+					
+						$sum = $phs[$i]['amount'] + $phs[$j]['amount'] + $phs[$k]['amount'];
+						if($transaction->amount == $sum) {
+							//check that u dont match a user to himself
+		                	if($phs[$i]['userID'] == $transaction->collection->user->id 
+		                		|| $phs[$j]['userID'] == $transaction->collection->user->id 
+		                		|| $phs[$k]['userID'] == $transaction->collection->user->id) {
+		                		continue;
+		                	}
+							echo "Matching GH ".$transaction->collection->user->name."(".
+							$transaction->collection->user->amount .") 
+	            				with PH ".$ph_name_one." and ".$ph_name_two." and ".$ph_name_three."....<br />";
+							
+		            		$update_ph = DonationHelp::findOrFail($phs[$i]['id']);
+		            		$update_ph->status = DonationHelp::$SLIP_MATCHED;
+		            		$update_ph->matchDate = date('Y-m-d H:i:s', time());
+		            		$update_ph->save();
+
+		            		self::createTransactionForMatchedRequests($update_ph->id, $transaction);
+
+		            		$update_ph = DonationHelp::findOrFail($phs[$j]['id']);
+		            		$update_ph->status = DonationHelp::$SLIP_MATCHED;
+		            		$update_ph->matchDate = date('Y-m-d H:i:s', time());
+		            		$update_ph->save();
+
+		            		self::createTransactionForMatchedRequests($update_ph->id, $transaction);
+
+		            		$update_ph = DonationHelp::findOrFail($phs[$k]['id']);
+		            		$update_ph->status = DonationHelp::$SLIP_MATCHED;
+		            		$update_ph->matchDate = date('Y-m-d H:i:s', time());
+		            		$update_ph->save();
+
+		            		self::createTransactionForMatchedRequests($update_ph->id, $transaction);
+
+		            		//remove from the array
+		            		unset($phs[$i]);
+		            		unset($phs[$j]);
+		            		unset($phs[$k]);
+						}
+					}
+				}
+			}
+	    }
+        return $phs;
+	}
 }

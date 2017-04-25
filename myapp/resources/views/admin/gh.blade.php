@@ -7,16 +7,19 @@
             <h2>GH ORDERS</h2>
             <ol class="breadcrumb">
                 <li>
-                    <a href="index.html">This is</a>
+                    <a href="{{ url('dashboard') }}">Dashboard</a>
+                </li>
+                <li class="">
+                    <strong>Admin</strong>
                 </li>
                 <li class="active">
-                    <strong>Breadcrumb</strong>
+                    <strong>Gh orders</strong>
                 </li>
             </ol>
         </div>
         <div class="col-sm-8">
             <div class="title-action">
-                <a href="#" class="btn btn-primary">This is action area</a>
+                <!-- <a href="#" class="btn btn-primary">This is action area</a> -->
             </div>
         </div>
     </div>

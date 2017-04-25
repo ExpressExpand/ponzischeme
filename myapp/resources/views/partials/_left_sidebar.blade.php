@@ -92,7 +92,7 @@
                     </ul>
                 </li>
                 @endrole
-                @role(['users', 'superadmin'])
+                @role(['users'])
                 <li>
                     <a href="#"><i class="fa fa-envelope"></i> 
                     <span class="nav-label">Messages</span><span class="fa arrow"></span></a>

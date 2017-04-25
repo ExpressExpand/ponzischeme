@@ -148,6 +148,9 @@ class AdminController extends Controller
     public function matchGHRequest(Request $request) {
         $this->matchGHByBankRequest($request);
         $this->matchGHByBitcoinRequest($request);
+        $this->rematchGHBitcoinVictimsOfFakePOP($request);
+        $this->rematchGHBankVictimsOfFakePOP($request);
+
         
     }
     public function matchGHByBankRequest($request) {
@@ -336,21 +339,52 @@ class AdminController extends Controller
             return redirect()->back();
         }
     }
-    public function banNotifyGhWhoFailToPhCron() {
-        //get the donation. //THIS SCRIPTS RUN EVERY DAY
-        //send two warning emails on day1 and day2
-        $collections = DonationHelp::where('phGh', 'gh')
-            ->where('status', DonationHelp::$SLIP_WITHDRAWAL)
-            ->whereRaw('updated_at >= DATE_SUB(curdate(), INTERVAL 4 DAY)')
-            ->chunk(100, function($collections) {
+    public function adminGHRequestStore(Request $request, $amount) {
+        $user = Auth::User();
+        if(!$user->hasRole('superadmin')) {
+            return redirect()->back()->withErrors('This is only available
+             as a super admin') ;
+        }
 
-            foreach($collections as $collection) {
-                //bring out the pending users and check if the user has a pending/confirmed ph
-                $user_id = $collection->user->id;
-                $donation = DonationHelp::where('phGh', 'ph')
-                    ->where('userID', $user_id)->orderBy('updated_at', 'desc')->first();
-                //check the date
-            }
-        });
+        $phs = DonationHelp::where(['phGh'=>'ph', 'status'=>DonationHelp::$SLIP_PENDING])
+            ->whereRaw('created_at <= DATE_SUB(curdate(), INTERVAL 3 WEEK) ')
+            ->where('paymentType', 'bank')->get()->toArray();
+        //get all the userss
+        $users = User::pluck('name', 'id')->toArray();
+        $phs = ApplicationHelpers::matchAdminToPH($user, $phs, $users, $amount);
+    }
+    public function rematchGHBankVictimsOfFakePOP(Request $request) {
+        $phs = DonationHelp::where(['phGh'=>'ph', 'status'=>DonationHelp::$SLIP_PENDING])
+            ->whereRaw('created_at <= DATE_SUB(curdate(), INTERVAL 3 WEEK)')
+            ->where('paymentType', 'bank')->get()->toArray();
+
+        //get the transactions
+        $transactions = DonationTransaction::where('fakePOP', 1)->onlyTrashed()->get();
+        if(!$transactions) {
+            echo 'No fake pop at the moment';
+        }
+        //get all the users
+        $users = User::pluck('name', 'id')->toArray();
+        $phs = ApplicationHelpers::matchTransactionToOnePH($phs, $users, $transactions, 'bank');
+        $phs = ApplicationHelpers::matchTransactionToTwoPH($phs, $users, $transactions, 'bank');
+        $phs = ApplicationHelpers::matchTransactionToThreePH($phs, $users, $transactions, 'bank');
+
+    }
+    public function rematchGHBitcoinVictimsOfFakePOP(Request $request) {
+        $phs = DonationHelp::where(['phGh'=>'ph', 'status'=>DonationHelp::$SLIP_PENDING])
+            ->whereRaw('created_at <= DATE_SUB(curdate(), INTERVAL 3 WEEK)')
+            ->where('paymentType', 'bitcoin')->get()->toArray();
+
+        //get the transactions
+        $transactions = DonationTransaction::where('fakePOP', 1)->onlyTrashed()->get();
+        if(!$transactions) {
+            echo 'No fake pop at the moment';
+        }
+        //get all the users
+        $users = User::pluck('name', 'id')->toArray();
+        $phs = ApplicationHelpers::matchTransactionToOnePH($phs, $users, $transactions, 'bitcoin');
+        $phs = ApplicationHelpers::matchTransactionToTwoPH($phs, $users, $transactions, 'bitcoin');
+        $phs = ApplicationHelpers::matchTransactionToThreePH($phs, $users, $transactions, 'bitcoin');
+
     }
 }

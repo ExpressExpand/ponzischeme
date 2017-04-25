@@ -10,6 +10,7 @@ use App\DonationHelp;
 use Session;
 use App\Http\Helpers\MyCustomException;
 use App\DonationTransaction;
+use App\GhLog;
 
 use App\Http\Helpers\CustomFileAttachment;
 
@@ -50,6 +51,11 @@ class PhController extends Controller
     		$donate->status = DonationHelp::$SLIP_PENDING;
             $donate->recordID = uniqid();
     		$donate->save();
+
+            //log it
+            $log = new GhLog();
+            $log->userID = $user->id;
+            $log->save();
 
     		Session::flash('flash_message', "Your Donation was successful. Please wait while you are matched.");
     		return redirect()->back();

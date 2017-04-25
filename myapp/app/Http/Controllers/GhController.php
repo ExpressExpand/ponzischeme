@@ -12,6 +12,7 @@ use Session;
 use App\DonationTransaction;
 use App\Referral;
 use App\ReferralBonus;
+use App\GhLog;
 
 class GhController extends Controller
 {
@@ -126,10 +127,15 @@ class GhController extends Controller
             foreach($refs as $r) {
                 $r->save();
             }
-            //finally update the donation as collected
+            //update the donation as collected
             $donation->isConfirmed = 1;
             $donation->save();
-        
+
+            //finally log the transaction
+            $user->ghlog->userID = $user->id;
+            $user->ghlog->setStatus = 1;
+            $user->ghlog->save();
+                    
             Session::flash('flash_message', "Your Request was successful.   
                 Please wait while you are matched.");
             return redirect()->back();
