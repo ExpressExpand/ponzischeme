@@ -18,15 +18,17 @@ class MessagingTransactionsNew extends Migration
      */
     public function up()
     {
-         Schema::create('Messaging_transactions', function($table) {
-            $table->increments('id');
-            $table->integer('messagingID')->references('id')->on('messaging');
-            $table->integer('userID')->references('id')->on('users');
-            $table->integer('readStatus')->default(0);
-            $table->string('messageFlag')->nullable();
-            $table->timestamps();
-            $table->softDeletes();
-        });
+        if (!Schema::hasTable('Messaging_transactions')) {
+             Schema::create('Messaging_transactions', function($table) {
+                $table->increments('id');
+                $table->integer('messagingID')->references('id')->on('messaging');
+                $table->integer('userID')->references('id')->on('users');
+                $table->integer('readStatus')->default(0);
+                $table->string('messageFlag')->nullable();
+                $table->timestamps();
+                $table->softDeletes();
+            });
+        }
     }
 
     /**
