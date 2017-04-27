@@ -25,7 +25,7 @@ class ProfileController extends Controller
         $user = Auth::User();
         $email = new EmailHelpers($user, $user);
         $email->setSubject('Email Verification');
-        $email->setbody($body);
+        $email->setbody('hello');
         if(!$email->send()){
             // return redirect()->back()->withErrors('An error occured while trying to send email.
             //  Please try again later');
