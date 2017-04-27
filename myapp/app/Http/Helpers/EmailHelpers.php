@@ -81,7 +81,7 @@ final class EmailHelpers {
     //admin sending the email
     public function send() {
         $mail = $this->initializeMail();
-        $mail->subject = $this->subject;    
+        $mail->Subject = $this->subject;    
         $mail->MsgHTML($this->body);
         if($this->is_admin) {
             //send email to the admin
