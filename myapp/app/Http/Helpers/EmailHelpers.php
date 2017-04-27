@@ -22,7 +22,7 @@ final class EmailHelpers {
     private $recipient;
     private $sender;
     private $is_admin = false;
-    public $debug = true;
+    public $debug = false;
 
     public function __construct($sender=null, $recipient, $is_admin = false) {
         $this->is_admin = $is_admin;
@@ -91,12 +91,12 @@ final class EmailHelpers {
             $mail->addAddress($this->recipient->email, $this->recipient->name);
             $mail->setFrom(env('EMAILHELPER_USERNAME'), env('EMAILHELPER_ADMIN_NAME'));
         }
-        $mail->send();var_dump($mail);exit;
+        $mail->send();
         return $mail;
     }
 	private static function getSettings($mail) {
 		$mail->isSMTP(); // tell to use smtp
-        $mail->SMTPDebug = 3;
+        // $mail->SMTPDebug = 3;
         $mail->CharSet = "utf-8"; // set charset to utf8
         $mail->SMTPAuth = true;  // use smpt auth
         $mail->SMTPSecure = env('EMAILHELPER_SMTP', 'tls'); // or ssl

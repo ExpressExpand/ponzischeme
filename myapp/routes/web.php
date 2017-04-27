@@ -63,7 +63,7 @@ Route::patch('change/password/store/{user_id}', 'ProfileController@storeChangedP
 Route::put('profile/change/picture', 'ProfileController@changePicture');
 Route::get('verify/email', 'ProfileController@verifyEmail');
 Route::get('verified/email/{hash}', 'ProfileController@verifiedEmail');
-Route::get('test/email', 'ProfileController@testEmail');
+// Route::get('test/email', 'ProfileController@testEmail');
 //admin
 Route::get('users', 'AdminController@viewUsers');
 Route::get('admin/block/user/{user_id}', 'AdminController@blockUser');
