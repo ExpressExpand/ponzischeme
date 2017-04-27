@@ -18,8 +18,8 @@ class MessagingTransactionsNew extends Migration
      */
     public function up()
     {
-        if (!Schema::hasTable('Messaging_transactions')) {
-             Schema::create('Messaging_transactions', function($table) {
+        if (!Schema::hasTable('messaging_transactions')) {
+             Schema::create('messaging_transactions', function($table) {
                 $table->increments('id');
                 $table->integer('messagingID')->references('id')->on('messaging');
                 $table->integer('userID')->references('id')->on('users');
