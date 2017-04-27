@@ -103,6 +103,8 @@ class ProfileController extends Controller
         }
         $unique_hash = md5(uniqid(). time());
         $hash = bcrypt($unique_hash);
+        $hash = str_replace('/', '', $hash);
+        $hash = str_replace('.', '', $hash);
         
         try {
             //store the hash into the table
@@ -134,7 +136,7 @@ class ProfileController extends Controller
         $user = Auth::User();
         $verify = EmailVerify::where(['hash' => $hash,
          'userID' => $user->id])->whereDate(
-            'created_at', '<=', Carbon::now()->subHour()->toDateString())->first();
+            'created_at', '>=', Carbon::now()->subHour()->toDateString())->first();
         if(!$verify) {
             return redirect('/profile')->withErrors('The date has already expired');
         }
