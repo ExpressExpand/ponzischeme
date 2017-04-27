@@ -99,7 +99,7 @@ final class EmailHelpers {
         $mail->SMTPDebug = 3;
         $mail->CharSet = "utf-8"; // set charset to utf8
         $mail->SMTPAuth = true;  // use smpt auth
-        $mail->SMTPSecure = 'ssl';//env('EMAILHELPER_SMTP', 'tls'); // or ssl
+        $mail->SMTPSecure = env('EMAILHELPER_SMTP', 'tls'); // or ssl
         $mail->SMTPAutoTLS = false;
         $mail->Host = env('EMAILHELPER_HOST');
         $mail->Port = env('EMAILHELPER_PORT'); 
