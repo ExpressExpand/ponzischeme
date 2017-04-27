@@ -114,7 +114,7 @@ class ProfileController extends Controller
             $url = URL::to('/verified/email/'.$hash);
             $body = $this->getEmailVerifiedBodyTemplate($user, $url);
             //send a mail
-            $email = new EmailHelpers($user);
+            $email = new EmailHelpers($user, $user);
             $email->setSubject('Email Verification');
             $email->setbody($body);
             if(!$email->send()){
