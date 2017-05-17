@@ -30,7 +30,7 @@
             <div class="col-lg-9 animated fadeInRight">
             <div class="mail-box-header">
 
-                <form method="get" action="http://webapplayers.com/inspinia_admin-v2.0/index.html" class="pull-right mail-search">
+                <form method="get" action="{{ url(/)}}}" class="pull-right mail-search">
                     <div class="input-group">
                         <input type="text" class="form-control input-sm" name="search" placeholder="Search email">
                         <div class="input-group-btn">
