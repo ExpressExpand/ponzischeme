@@ -18,7 +18,7 @@ class MasterComposer
 	}
 	public function compose(View $view) {
 		//show the analytics
-        $analytics = AnalyticReports::saveStats(request());dd($analytics);
+        $analytics = AnalyticReports::saveStats(request());
 		$view->with(compact('analytics'));
 	}
 }
