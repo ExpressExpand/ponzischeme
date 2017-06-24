@@ -90,12 +90,12 @@ final class EmailHelpers {
         }else{
             $mail->addAddress($this->recipient->email, $this->recipient->name);
             $mail->setFrom(env('EMAILHELPER_USERNAME'), env('EMAILHELPER_ADMIN_NAME'));
-        }
+        }dd($mail);
         $mail->send();
         return $mail;
     }
 	private static function getSettings($mail) {
-		$mail->isSMTP(); // tell to use smtp
+		// $mail->isSMTP(); // tell to use smtp
         // $mail->SMTPDebug = 3;
         $mail->CharSet = "utf-8"; // set charset to utf8
         $mail->SMTPAuth = true;  // use smpt auth
@@ -105,6 +105,7 @@ final class EmailHelpers {
         $mail->Port = env('EMAILHELPER_PORT'); 
         $mail->Username = env('EMAILHELPER_USERNAME');
         $mail->Password = env('EMAILHELPER_PASSWORD');
+
         return $mail;
 	}
 }
