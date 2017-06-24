@@ -29,5 +29,6 @@ class AppServiceProvider extends ServiceProvider
         require_once $path. '/../Http/Helpers/MyCustomException.php';
         require_once $path. '/../Http/Helpers/ApplicationHelpers.php';
         require_once $path. '/../Http/Helpers/CustomFileAttachment.php';
+        require_once $path. '/../Http/Helpers/AnalyticReports.php';
     }
 }

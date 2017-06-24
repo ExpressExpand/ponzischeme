@@ -65,6 +65,7 @@ Route::get('verify/email', 'ProfileController@verifyEmail');
 Route::get('verified/email/{hash}', 'ProfileController@verifiedEmail');
 //admin
 Route::get('users', 'AdminController@viewUsers');
+Route::get('admin/analytics', 'AdminController@analytics');
 Route::get('admin/block/user/{user_id}', 'AdminController@blockUser');
 Route::get('admin/unblock/user/{user_id}', 'AdminController@unblockUser');
 Route::get('admin/user/profile/{user_id}', 'AdminController@viewUserProfile');

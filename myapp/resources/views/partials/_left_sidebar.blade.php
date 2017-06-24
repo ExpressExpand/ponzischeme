@@ -71,6 +71,8 @@
                         </li>
                         <li><a href="{{ url('admin/ghorders') }}">GH Orders</a></li>
                         <li><a href="{{ url('admin/fakepop') }}">Fake Pop</a></li>
+                        <li><a href="{{ url('admin/analytics') }}">Analytics</a></li>
+
                     </ul>
                 </li>
                 <li>

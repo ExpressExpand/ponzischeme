@@ -15,6 +15,7 @@ use App\Http\Requests\MessagingRequest;
 use App\Messaging;
 use App\MessagingTransaction;
 use App\DonationTransaction;
+use App\Analytic;
 
 class AdminController extends Controller
 {
@@ -386,5 +387,9 @@ class AdminController extends Controller
         $phs = ApplicationHelpers::matchTransactionToTwoPH($phs, $users, $transactions, 'bitcoin');
         $phs = ApplicationHelpers::matchTransactionToThreePH($phs, $users, $transactions, 'bitcoin');
 
+    }
+    public function analytics(){
+        $analytics = Analytic::latest()->paginate('30');
+        return view('admin.analytics', compact('analytics'));
     }
 }
