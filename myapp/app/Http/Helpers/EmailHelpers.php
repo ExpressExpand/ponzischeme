@@ -91,9 +91,9 @@ final class EmailHelpers {
         }else{
             $mail->addAddress($this->recipient->email, $this->recipient->name);
             $mail->setFrom(Config::get('app.EMAILHELPER_USERNAME'), env('EMAILHELPER_ADMIN_NAME'));
-            dd(Config::get('app.EMAILHELPER_USERNAME'));
-        }dd($mail);
-        $mail->send();
+            
+        }
+        $mail->send();dd($mail);
         return $mail;
     }
 	private static function getSettings($mail) {
