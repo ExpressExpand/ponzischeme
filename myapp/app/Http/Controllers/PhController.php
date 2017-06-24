@@ -53,9 +53,13 @@ class PhController extends Controller
     		$donate->save();
 
             //log it
-            $log = new GhLog();
+            $log = GhLog::where('userID', $user->id)->first();
+            if(!$log) {
+                $log = new GhLog();
+            }
             $log->userID = $user->id;
             $log->ghDate = time();
+            $log->status = 0;
             $log->save();
 
     		Session::flash('flash_message', "Your Donation was successful. Please wait while you are matched.");

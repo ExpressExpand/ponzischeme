@@ -132,7 +132,7 @@ class GhController extends Controller
             $donation->save();
 
             //finally log the transaction
-            $user->ghlog->userID = $user->id;
+            // $user->ghlog->userID = $user->id;
             $user->ghlog->setStatus = 1;
             $user->ghlog->save();
                     
