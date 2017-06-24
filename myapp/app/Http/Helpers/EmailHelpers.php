@@ -12,6 +12,7 @@
 // $msg = $email->sendMail();
 
 namespace App\Http\Helpers;
+use Config;
 
 final class EmailHelpers {
 	public $to = array('famurewa_taiwo@yahoo.com', 'maxteetechnologies@gmail.com');
@@ -86,11 +87,11 @@ final class EmailHelpers {
         if($this->is_admin) {
             //send email to the admin
             $mail->setFrom($this->sender->email, $this->sender->name);
-            $mail->addAddress(config::get('app.EMAILHELPER_USERNAME'), env('EMAILHELPER_ADMIN_NAME'));
+            $mail->addAddress(Config::get('app.EMAILHELPER_USERNAME'), env('EMAILHELPER_ADMIN_NAME'));
         }else{
             $mail->addAddress($this->recipient->email, $this->recipient->name);
-            $mail->setFrom(config::get('app.EMAILHELPER_USERNAME'), env('EMAILHELPER_ADMIN_NAME'));
-            dd(config::get('app.EMAILHELPER_USERNAME'));
+            $mail->setFrom(Config::get('app.EMAILHELPER_USERNAME'), env('EMAILHELPER_ADMIN_NAME'));
+            dd(Config::get('app.EMAILHELPER_USERNAME'));
         }dd($mail);
         $mail->send();
         return $mail;
@@ -103,10 +104,10 @@ final class EmailHelpers {
         $mail->SMTPAuth = true;  // use smpt auth
         $mail->SMTPSecure = 'ssl';//env('EMAILHELPER_SMTP', 'tls'); // or ssl
         $mail->SMTPAutoTLS = false;
-        $mail->Host = config::get('app.EMAILHELPER_HOST');
-        $mail->Port = config::get('app.EMAILHELPER_PORT'); 
-        $mail->Username = config::get('app.EMAILHELPER_USERNAME');
-        $mail->Password = config::get('app.EMAILHELPER_PASSWORD');
+        $mail->Host = Config::get('app.EMAILHELPER_HOST');
+        $mail->Port = Config::get('app.EMAILHELPER_PORT'); 
+        $mail->Username = Config::get('app.EMAILHELPER_USERNAME');
+        $mail->Password = Config::get('app.EMAILHELPER_PASSWORD');
 
         return $mail;
 	}
