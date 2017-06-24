@@ -21,17 +21,6 @@ class ProfileController extends Controller
 	public function __construct() {
 		$this->middleware('auth');
 	}
-    // public function testEmail() {
-    //     $user = Auth::User();
-    //     $email = new EmailHelpers($user, $user);
-    //     $email->subject = 'Email Verification';
-    //     $email->setbody('hello world');
-    //     if(!$email->send()){
-    //         // return redirect()->back()->withErrors('An error occured while trying to send email.
-    //         //  Please try again later');
-    //     }
-    //     dd($email);exit;
-    // }
     public function viewProfile() {
     	$user = Auth::User();
     	return view('profile/index',compact('user'));
@@ -103,8 +92,6 @@ class ProfileController extends Controller
         }
         $unique_hash = md5(uniqid(). time());
         $hash = bcrypt($unique_hash);
-        $hash = str_replace('/', '', $hash);
-        $hash = str_replace('.', '', $hash);
         
         try {
             //store the hash into the table
@@ -116,7 +103,7 @@ class ProfileController extends Controller
             $url = URL::to('/verified/email/'.$hash);
             $body = $this->getEmailVerifiedBodyTemplate($user, $url);
             //send a mail
-            $email = new EmailHelpers($user, $user);
+            $email = new EmailHelpers($user);
             $email->setSubject('Email Verification');
             $email->setbody($body);
             if(!$email->send()){
@@ -136,7 +123,7 @@ class ProfileController extends Controller
         $user = Auth::User();
         $verify = EmailVerify::where(['hash' => $hash,
          'userID' => $user->id])->whereDate(
-            'created_at', '>=', Carbon::now()->subHour()->toDateString())->first();
+            'created_at', '<=', Carbon::now()->subHour()->toDateString())->first();
         if(!$verify) {
             return redirect('/profile')->withErrors('The date has already expired');
         }

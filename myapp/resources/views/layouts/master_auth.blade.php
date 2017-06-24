@@ -8,7 +8,6 @@
     <title>@yield('title')</title>
 
     <link href="{{ asset('css/inspinia/bootstrap.min.css') }}" rel="stylesheet">
-    {{ Html::favicon(url('images/app/logo.png')) }}
     <link href="{{ asset('css/font-awesome/css/font-awesome.css') }}" rel="stylesheet">
 
     <link href="{{ asset('css.inspinia/plugins/iCheck/custom.css') }}" rel="stylesheet">
