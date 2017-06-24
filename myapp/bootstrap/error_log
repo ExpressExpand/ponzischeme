@@ -1,0 +1,40 @@
+[02-May-2017 00:18:25 America/New_York] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Foundation\Application' not found in /home/afripeaj/public_html/giveandget/myapp/bootstrap/app.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/bootstrap/app.php on line 14
+[03-May-2017 00:54:30 America/New_York] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Foundation\Application' not found in /home/afripeaj/public_html/giveandget/myapp/bootstrap/app.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/bootstrap/app.php on line 14
+[03-May-2017 03:59:23 America/New_York] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Foundation\Application' not found in /home/afripeaj/public_html/giveandget/myapp/bootstrap/app.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/bootstrap/app.php on line 14
+[05-May-2017 06:52:49 America/New_York] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Foundation\Application' not found in /home/afripeaj/public_html/giveandget/myapp/bootstrap/app.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/bootstrap/app.php on line 14
+[05-May-2017 06:55:28 America/New_York] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Foundation\Application' not found in /home/afripeaj/public_html/giveandget/myapp/bootstrap/app.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/bootstrap/app.php on line 14
+[07-May-2017 19:37:25 America/New_York] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Foundation\Application' not found in /home/afripeaj/public_html/giveandget/myapp/bootstrap/app.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/bootstrap/app.php on line 14
+[09-May-2017 03:03:23 America/New_York] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Foundation\Application' not found in /home/afripeaj/public_html/giveandget/myapp/bootstrap/app.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/bootstrap/app.php on line 14
+[01-Jun-2017 23:15:57 America/New_York] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Foundation\Application' not found in /home/afripeaj/public_html/giveandget/myapp/bootstrap/app.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/bootstrap/app.php on line 14
+[10-Jun-2017 17:53:11 America/New_York] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Foundation\Application' not found in /home/afripeaj/public_html/giveandget/myapp/bootstrap/app.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/bootstrap/app.php on line 14
+[15-Jun-2017 10:41:15 America/New_York] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Foundation\Application' not found in /home/afripeaj/public_html/giveandget/myapp/bootstrap/app.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/bootstrap/app.php on line 14

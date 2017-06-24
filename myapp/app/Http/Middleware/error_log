@@ -1,0 +1,51 @@
+[02-May-2017 16:10:37 America/New_York] PHP Fatal error:  Class 'Illuminate\Cookie\Middleware\EncryptCookies' not found in /home/afripeaj/public_html/giveandget/myapp/app/Http/Middleware/EncryptCookies.php on line 7
+[02-May-2017 16:10:37 America/New_York] PHP Stack trace:
+[02-May-2017 16:10:37 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/app/Http/Middleware/EncryptCookies.php:0
+[02-May-2017 16:10:52 America/New_York] PHP Fatal error:  Class 'Illuminate\Foundation\Http\Middleware\VerifyCsrfToken' not found in /home/afripeaj/public_html/giveandget/myapp/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[02-May-2017 16:10:52 America/New_York] PHP Stack trace:
+[02-May-2017 16:10:52 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/app/Http/Middleware/VerifyCsrfToken.php:0
+[03-May-2017 00:51:45 America/New_York] PHP Fatal error:  Class 'Illuminate\Cookie\Middleware\EncryptCookies' not found in /home/afripeaj/public_html/giveandget/myapp/app/Http/Middleware/EncryptCookies.php on line 7
+[03-May-2017 00:51:45 America/New_York] PHP Stack trace:
+[03-May-2017 00:51:45 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/app/Http/Middleware/EncryptCookies.php:0
+[03-May-2017 00:52:23 America/New_York] PHP Fatal error:  Class 'Illuminate\Foundation\Http\Middleware\VerifyCsrfToken' not found in /home/afripeaj/public_html/giveandget/myapp/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[03-May-2017 00:52:23 America/New_York] PHP Stack trace:
+[03-May-2017 00:52:23 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/app/Http/Middleware/VerifyCsrfToken.php:0
+[04-May-2017 20:20:40 America/New_York] PHP Fatal error:  Class 'Illuminate\Cookie\Middleware\EncryptCookies' not found in /home/afripeaj/public_html/giveandget/myapp/app/Http/Middleware/EncryptCookies.php on line 7
+[04-May-2017 20:20:40 America/New_York] PHP Stack trace:
+[04-May-2017 20:20:40 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/app/Http/Middleware/EncryptCookies.php:0
+[04-May-2017 20:20:51 America/New_York] PHP Fatal error:  Class 'Illuminate\Foundation\Http\Middleware\VerifyCsrfToken' not found in /home/afripeaj/public_html/giveandget/myapp/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[04-May-2017 20:20:51 America/New_York] PHP Stack trace:
+[04-May-2017 20:20:51 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/app/Http/Middleware/VerifyCsrfToken.php:0
+[06-May-2017 18:36:26 America/New_York] PHP Fatal error:  Class 'Illuminate\Cookie\Middleware\EncryptCookies' not found in /home/afripeaj/public_html/giveandget/myapp/app/Http/Middleware/EncryptCookies.php on line 7
+[06-May-2017 18:36:26 America/New_York] PHP Stack trace:
+[06-May-2017 18:36:26 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/app/Http/Middleware/EncryptCookies.php:0
+[06-May-2017 18:36:30 America/New_York] PHP Fatal error:  Class 'Illuminate\Foundation\Http\Middleware\VerifyCsrfToken' not found in /home/afripeaj/public_html/giveandget/myapp/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[06-May-2017 18:36:30 America/New_York] PHP Stack trace:
+[06-May-2017 18:36:30 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/app/Http/Middleware/VerifyCsrfToken.php:0
+[07-May-2017 18:31:52 America/New_York] PHP Fatal error:  Class 'Illuminate\Cookie\Middleware\EncryptCookies' not found in /home/afripeaj/public_html/giveandget/myapp/app/Http/Middleware/EncryptCookies.php on line 7
+[07-May-2017 18:31:52 America/New_York] PHP Stack trace:
+[07-May-2017 18:31:52 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/app/Http/Middleware/EncryptCookies.php:0
+[07-May-2017 18:32:05 America/New_York] PHP Fatal error:  Class 'Illuminate\Foundation\Http\Middleware\VerifyCsrfToken' not found in /home/afripeaj/public_html/giveandget/myapp/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[07-May-2017 18:32:05 America/New_York] PHP Stack trace:
+[07-May-2017 18:32:05 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/app/Http/Middleware/VerifyCsrfToken.php:0
+[09-May-2017 11:39:22 America/New_York] PHP Fatal error:  Class 'Illuminate\Cookie\Middleware\EncryptCookies' not found in /home/afripeaj/public_html/giveandget/myapp/app/Http/Middleware/EncryptCookies.php on line 7
+[09-May-2017 11:39:22 America/New_York] PHP Stack trace:
+[09-May-2017 11:39:22 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/app/Http/Middleware/EncryptCookies.php:0
+[09-May-2017 11:41:07 America/New_York] PHP Fatal error:  Class 'Illuminate\Foundation\Http\Middleware\VerifyCsrfToken' not found in /home/afripeaj/public_html/giveandget/myapp/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[09-May-2017 11:41:07 America/New_York] PHP Stack trace:
+[09-May-2017 11:41:07 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/app/Http/Middleware/VerifyCsrfToken.php:0
+[01-Jun-2017 23:35:17 America/New_York] PHP Fatal error:  Class 'Illuminate\Foundation\Http\Middleware\VerifyCsrfToken' not found in /home/afripeaj/public_html/giveandget/myapp/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[01-Jun-2017 23:35:17 America/New_York] PHP Stack trace:
+[01-Jun-2017 23:35:17 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/app/Http/Middleware/VerifyCsrfToken.php:0
+[06-Jun-2017 00:32:15 America/New_York] PHP Fatal error:  Class 'Illuminate\Cookie\Middleware\EncryptCookies' not found in /home/afripeaj/public_html/giveandget/myapp/app/Http/Middleware/EncryptCookies.php on line 7
+[06-Jun-2017 00:32:15 America/New_York] PHP Stack trace:
+[06-Jun-2017 00:32:15 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/app/Http/Middleware/EncryptCookies.php:0
+[06-Jun-2017 20:25:29 America/New_York] PHP Fatal error:  Class 'Illuminate\Foundation\Http\Middleware\VerifyCsrfToken' not found in /home/afripeaj/public_html/giveandget/myapp/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[06-Jun-2017 20:25:29 America/New_York] PHP Stack trace:
+[06-Jun-2017 20:25:29 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/app/Http/Middleware/VerifyCsrfToken.php:0
+[11-Jun-2017 00:46:17 America/New_York] PHP Fatal error:  Class 'Illuminate\Foundation\Http\Middleware\VerifyCsrfToken' not found in /home/afripeaj/public_html/giveandget/myapp/app/Http/Middleware/VerifyCsrfToken.php on line 7
+[11-Jun-2017 00:46:17 America/New_York] PHP Stack trace:
+[11-Jun-2017 00:46:17 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/app/Http/Middleware/VerifyCsrfToken.php:0
+[15-Jun-2017 23:10:03 America/New_York] PHP Fatal error:  Class 'Illuminate\Cookie\Middleware\EncryptCookies' not found in /home/afripeaj/public_html/giveandget/myapp/app/Http/Middleware/EncryptCookies.php on line 7
+[15-Jun-2017 23:10:03 America/New_York] PHP Stack trace:
+[15-Jun-2017 23:10:03 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/app/Http/Middleware/EncryptCookies.php:0

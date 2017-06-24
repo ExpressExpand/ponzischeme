@@ -1,0 +1,64 @@
+[02-May-2017 19:57:51 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/resources/views/referrals/index.blade.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/resources/views/referrals/index.blade.php on line 21
+[02-May-2017 19:58:08 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/resources/views/referrals/referrals.blade.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/resources/views/referrals/referrals.blade.php on line 21
+[03-May-2017 13:42:01 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/resources/views/referrals/index.blade.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/resources/views/referrals/index.blade.php on line 21
+[03-May-2017 13:42:08 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/resources/views/referrals/referrals.blade.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/resources/views/referrals/referrals.blade.php on line 21
+[04-May-2017 20:25:55 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/resources/views/referrals/index.blade.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/resources/views/referrals/index.blade.php on line 21
+[04-May-2017 20:26:01 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/resources/views/referrals/referrals.blade.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/resources/views/referrals/referrals.blade.php on line 21
+[06-May-2017 18:27:47 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/resources/views/referrals/index.blade.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/resources/views/referrals/index.blade.php on line 21
+[06-May-2017 18:27:49 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/resources/views/referrals/referrals.blade.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/resources/views/referrals/referrals.blade.php on line 21
+[07-May-2017 20:28:47 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/resources/views/referrals/referrals.blade.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/resources/views/referrals/referrals.blade.php on line 21
+[08-May-2017 06:33:10 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/resources/views/referrals/index.blade.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/resources/views/referrals/index.blade.php on line 21
+[09-May-2017 11:39:01 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/resources/views/referrals/referrals.blade.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/resources/views/referrals/referrals.blade.php on line 21
+[10-May-2017 01:44:01 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/resources/views/referrals/index.blade.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/resources/views/referrals/index.blade.php on line 21
+[31-May-2017 14:22:17 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/resources/views/referrals/referrals.blade.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/resources/views/referrals/referrals.blade.php on line 21
+[02-Jun-2017 03:20:13 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/resources/views/referrals/index.blade.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/resources/views/referrals/index.blade.php on line 21
+[02-Jun-2017 03:20:16 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/resources/views/referrals/index.blade.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/resources/views/referrals/index.blade.php on line 21
+[07-Jun-2017 00:49:49 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/resources/views/referrals/index.blade.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/resources/views/referrals/index.blade.php on line 21

@@ -1,0 +1,57 @@
+[05-May-2017 06:40:37 America/New_York] PHP Notice:  Undefined variable: directory in /home/afripeaj/public_html/giveandget/myapp/resources/views/vendor/laravel-filemanager/folders.blade.php on line 1
+[05-May-2017 06:40:37 America/New_York] PHP Stack trace:
+[05-May-2017 06:40:37 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/vendor/laravel-filemanager/folders.blade.php:0
+[05-May-2017 06:40:37 America/New_York] PHP Notice:  Trying to get property of non-object in /home/afripeaj/public_html/giveandget/myapp/resources/views/vendor/laravel-filemanager/folders.blade.php on line 1
+[05-May-2017 06:40:37 America/New_York] PHP Stack trace:
+[05-May-2017 06:40:37 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/vendor/laravel-filemanager/folders.blade.php:0
+[05-May-2017 06:40:37 America/New_York] PHP Notice:  Undefined variable: directory in /home/afripeaj/public_html/giveandget/myapp/resources/views/vendor/laravel-filemanager/folders.blade.php on line 2
+[05-May-2017 06:40:37 America/New_York] PHP Stack trace:
+[05-May-2017 06:40:37 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/vendor/laravel-filemanager/folders.blade.php:0
+[05-May-2017 06:40:37 America/New_York] PHP Notice:  Trying to get property of non-object in /home/afripeaj/public_html/giveandget/myapp/resources/views/vendor/laravel-filemanager/folders.blade.php on line 2
+[05-May-2017 06:40:37 America/New_York] PHP Stack trace:
+[05-May-2017 06:40:37 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/vendor/laravel-filemanager/folders.blade.php:0
+[05-May-2017 06:40:44 America/New_York] PHP Notice:  Undefined variable: file in /home/afripeaj/public_html/giveandget/myapp/resources/views/vendor/laravel-filemanager/item.blade.php on line 1
+[05-May-2017 06:40:44 America/New_York] PHP Stack trace:
+[05-May-2017 06:40:44 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/vendor/laravel-filemanager/item.blade.php:0
+[05-May-2017 06:40:44 America/New_York] PHP Notice:  Undefined variable: file in /home/afripeaj/public_html/giveandget/myapp/resources/views/vendor/laravel-filemanager/item.blade.php on line 2
+[05-May-2017 06:40:44 America/New_York] PHP Stack trace:
+[05-May-2017 06:40:44 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/vendor/laravel-filemanager/item.blade.php:0
+[05-May-2017 06:40:47 America/New_York] PHP Notice:  Undefined variable: file in /home/afripeaj/public_html/giveandget/myapp/resources/views/vendor/laravel-filemanager/list-view.blade.php on line 30
+[05-May-2017 06:40:47 America/New_York] PHP Stack trace:
+[05-May-2017 06:40:47 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/vendor/laravel-filemanager/list-view.blade.php:0
+[07-May-2017 12:54:52 America/New_York] PHP Notice:  Undefined variable: directory in /home/afripeaj/public_html/giveandget/myapp/resources/views/vendor/laravel-filemanager/folders.blade.php on line 1
+[07-May-2017 12:54:52 America/New_York] PHP Stack trace:
+[07-May-2017 12:54:52 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/vendor/laravel-filemanager/folders.blade.php:0
+[07-May-2017 12:54:52 America/New_York] PHP Notice:  Trying to get property of non-object in /home/afripeaj/public_html/giveandget/myapp/resources/views/vendor/laravel-filemanager/folders.blade.php on line 1
+[07-May-2017 12:54:52 America/New_York] PHP Stack trace:
+[07-May-2017 12:54:52 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/vendor/laravel-filemanager/folders.blade.php:0
+[07-May-2017 12:54:52 America/New_York] PHP Notice:  Undefined variable: directory in /home/afripeaj/public_html/giveandget/myapp/resources/views/vendor/laravel-filemanager/folders.blade.php on line 2
+[07-May-2017 12:54:52 America/New_York] PHP Stack trace:
+[07-May-2017 12:54:52 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/vendor/laravel-filemanager/folders.blade.php:0
+[07-May-2017 12:54:52 America/New_York] PHP Notice:  Trying to get property of non-object in /home/afripeaj/public_html/giveandget/myapp/resources/views/vendor/laravel-filemanager/folders.blade.php on line 2
+[07-May-2017 12:54:52 America/New_York] PHP Stack trace:
+[07-May-2017 12:54:52 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/vendor/laravel-filemanager/folders.blade.php:0
+[07-May-2017 12:54:58 America/New_York] PHP Notice:  Undefined variable: file in /home/afripeaj/public_html/giveandget/myapp/resources/views/vendor/laravel-filemanager/item.blade.php on line 1
+[07-May-2017 12:54:58 America/New_York] PHP Stack trace:
+[07-May-2017 12:54:58 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/vendor/laravel-filemanager/item.blade.php:0
+[07-May-2017 12:54:58 America/New_York] PHP Notice:  Undefined variable: file in /home/afripeaj/public_html/giveandget/myapp/resources/views/vendor/laravel-filemanager/item.blade.php on line 2
+[07-May-2017 12:54:58 America/New_York] PHP Stack trace:
+[07-May-2017 12:54:58 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/vendor/laravel-filemanager/item.blade.php:0
+[07-May-2017 12:55:00 America/New_York] PHP Notice:  Undefined variable: file in /home/afripeaj/public_html/giveandget/myapp/resources/views/vendor/laravel-filemanager/list-view.blade.php on line 30
+[07-May-2017 12:55:00 America/New_York] PHP Stack trace:
+[07-May-2017 12:55:00 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/vendor/laravel-filemanager/list-view.blade.php:0
+[15-Jun-2017 19:06:39 America/New_York] PHP Notice:  Undefined variable: file in /home/afripeaj/public_html/giveandget/myapp/resources/views/vendor/laravel-filemanager/list-view.blade.php on line 30
+[15-Jun-2017 19:06:39 America/New_York] PHP Stack trace:
+[15-Jun-2017 19:06:39 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/vendor/laravel-filemanager/list-view.blade.php:0
+[15-Jun-2017 22:50:52 America/New_York] PHP Notice:  Undefined variable: directory in /home/afripeaj/public_html/giveandget/myapp/resources/views/vendor/laravel-filemanager/folders.blade.php on line 1
+[15-Jun-2017 22:50:52 America/New_York] PHP Stack trace:
+[15-Jun-2017 22:50:52 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/vendor/laravel-filemanager/folders.blade.php:0
+[15-Jun-2017 22:50:52 America/New_York] PHP Notice:  Trying to get property of non-object in /home/afripeaj/public_html/giveandget/myapp/resources/views/vendor/laravel-filemanager/folders.blade.php on line 1
+[15-Jun-2017 22:50:52 America/New_York] PHP Stack trace:
+[15-Jun-2017 22:50:52 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/vendor/laravel-filemanager/folders.blade.php:0
+[15-Jun-2017 22:50:52 America/New_York] PHP Notice:  Undefined variable: directory in /home/afripeaj/public_html/giveandget/myapp/resources/views/vendor/laravel-filemanager/folders.blade.php on line 2
+[15-Jun-2017 22:50:52 America/New_York] PHP Stack trace:
+[15-Jun-2017 22:50:52 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/vendor/laravel-filemanager/folders.blade.php:0
+[15-Jun-2017 22:50:52 America/New_York] PHP Notice:  Trying to get property of non-object in /home/afripeaj/public_html/giveandget/myapp/resources/views/vendor/laravel-filemanager/folders.blade.php on line 2
+[15-Jun-2017 22:50:52 America/New_York] PHP Stack trace:
+[15-Jun-2017 22:50:52 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/vendor/laravel-filemanager/folders.blade.php:0

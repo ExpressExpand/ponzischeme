@@ -1,0 +1,337 @@
+[02-May-2017 16:10:31 America/New_York] PHP Notice:  Undefined variable: donation in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 48
+[02-May-2017 16:10:31 America/New_York] PHP Stack trace:
+[02-May-2017 16:10:31 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[02-May-2017 16:10:31 America/New_York] PHP Notice:  Trying to get property of non-object in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 48
+[02-May-2017 16:10:31 America/New_York] PHP Stack trace:
+[02-May-2017 16:10:31 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[02-May-2017 16:10:31 America/New_York] PHP Notice:  Undefined variable: donation in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 49
+[02-May-2017 16:10:31 America/New_York] PHP Stack trace:
+[02-May-2017 16:10:31 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[02-May-2017 16:10:31 America/New_York] PHP Notice:  Trying to get property of non-object in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 49
+[02-May-2017 16:10:31 America/New_York] PHP Stack trace:
+[02-May-2017 16:10:31 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[02-May-2017 16:10:31 America/New_York] PHP Notice:  Undefined variable: donation in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 52
+[02-May-2017 16:10:31 America/New_York] PHP Stack trace:
+[02-May-2017 16:10:31 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[02-May-2017 16:10:31 America/New_York] PHP Notice:  Trying to get property of non-object in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 52
+[02-May-2017 16:10:31 America/New_York] PHP Stack trace:
+[02-May-2017 16:10:31 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[02-May-2017 16:10:31 America/New_York] PHP Notice:  Undefined variable: ref_bonus in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 62
+[02-May-2017 16:10:31 America/New_York] PHP Stack trace:
+[02-May-2017 16:10:31 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[02-May-2017 16:10:31 America/New_York] PHP Notice:  Undefined variable: reg_bonus in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 62
+[02-May-2017 16:10:31 America/New_York] PHP Stack trace:
+[02-May-2017 16:10:31 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[02-May-2017 16:10:31 America/New_York] PHP Notice:  Undefined variable: reg_bonus in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 63
+[02-May-2017 16:10:31 America/New_York] PHP Stack trace:
+[02-May-2017 16:10:31 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[02-May-2017 16:10:31 America/New_York] PHP Notice:  Undefined variable: ref_bonus in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 64
+[02-May-2017 16:10:31 America/New_York] PHP Stack trace:
+[02-May-2017 16:10:31 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[02-May-2017 16:10:31 America/New_York] PHP Notice:  Undefined variable: reg_bonus in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 65
+[02-May-2017 16:10:31 America/New_York] PHP Stack trace:
+[02-May-2017 16:10:31 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[02-May-2017 16:11:55 America/New_York] PHP Fatal error:  'continue' not in the 'loop' or 'switch' context in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/received_payment.blade.php on line 53
+[03-May-2017 00:51:37 America/New_York] PHP Notice:  Undefined variable: donation in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 48
+[03-May-2017 00:51:37 America/New_York] PHP Stack trace:
+[03-May-2017 00:51:37 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[03-May-2017 00:51:37 America/New_York] PHP Notice:  Trying to get property of non-object in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 48
+[03-May-2017 00:51:37 America/New_York] PHP Stack trace:
+[03-May-2017 00:51:37 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[03-May-2017 00:51:37 America/New_York] PHP Notice:  Undefined variable: donation in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 49
+[03-May-2017 00:51:37 America/New_York] PHP Stack trace:
+[03-May-2017 00:51:37 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[03-May-2017 00:51:37 America/New_York] PHP Notice:  Trying to get property of non-object in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 49
+[03-May-2017 00:51:37 America/New_York] PHP Stack trace:
+[03-May-2017 00:51:37 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[03-May-2017 00:51:37 America/New_York] PHP Notice:  Undefined variable: donation in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 52
+[03-May-2017 00:51:37 America/New_York] PHP Stack trace:
+[03-May-2017 00:51:37 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[03-May-2017 00:51:37 America/New_York] PHP Notice:  Trying to get property of non-object in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 52
+[03-May-2017 00:51:37 America/New_York] PHP Stack trace:
+[03-May-2017 00:51:37 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[03-May-2017 00:51:37 America/New_York] PHP Notice:  Undefined variable: ref_bonus in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 62
+[03-May-2017 00:51:37 America/New_York] PHP Stack trace:
+[03-May-2017 00:51:37 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[03-May-2017 00:51:37 America/New_York] PHP Notice:  Undefined variable: reg_bonus in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 62
+[03-May-2017 00:51:37 America/New_York] PHP Stack trace:
+[03-May-2017 00:51:37 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[03-May-2017 00:51:37 America/New_York] PHP Notice:  Undefined variable: reg_bonus in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 63
+[03-May-2017 00:51:37 America/New_York] PHP Stack trace:
+[03-May-2017 00:51:37 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[03-May-2017 00:51:37 America/New_York] PHP Notice:  Undefined variable: ref_bonus in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 64
+[03-May-2017 00:51:37 America/New_York] PHP Stack trace:
+[03-May-2017 00:51:37 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[03-May-2017 00:51:37 America/New_York] PHP Notice:  Undefined variable: reg_bonus in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 65
+[03-May-2017 00:51:37 America/New_York] PHP Stack trace:
+[03-May-2017 00:51:37 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[03-May-2017 00:54:38 America/New_York] PHP Fatal error:  'continue' not in the 'loop' or 'switch' context in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/received_payment.blade.php on line 53
+[04-May-2017 20:23:15 America/New_York] PHP Notice:  Undefined variable: donation in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 48
+[04-May-2017 20:23:15 America/New_York] PHP Stack trace:
+[04-May-2017 20:23:15 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[04-May-2017 20:23:15 America/New_York] PHP Notice:  Trying to get property of non-object in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 48
+[04-May-2017 20:23:15 America/New_York] PHP Stack trace:
+[04-May-2017 20:23:15 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[04-May-2017 20:23:15 America/New_York] PHP Notice:  Undefined variable: donation in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 49
+[04-May-2017 20:23:15 America/New_York] PHP Stack trace:
+[04-May-2017 20:23:15 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[04-May-2017 20:23:15 America/New_York] PHP Notice:  Trying to get property of non-object in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 49
+[04-May-2017 20:23:15 America/New_York] PHP Stack trace:
+[04-May-2017 20:23:15 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[04-May-2017 20:23:15 America/New_York] PHP Notice:  Undefined variable: donation in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 52
+[04-May-2017 20:23:15 America/New_York] PHP Stack trace:
+[04-May-2017 20:23:15 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[04-May-2017 20:23:15 America/New_York] PHP Notice:  Trying to get property of non-object in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 52
+[04-May-2017 20:23:15 America/New_York] PHP Stack trace:
+[04-May-2017 20:23:15 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[04-May-2017 20:23:15 America/New_York] PHP Notice:  Undefined variable: ref_bonus in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 62
+[04-May-2017 20:23:15 America/New_York] PHP Stack trace:
+[04-May-2017 20:23:15 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[04-May-2017 20:23:15 America/New_York] PHP Notice:  Undefined variable: reg_bonus in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 62
+[04-May-2017 20:23:15 America/New_York] PHP Stack trace:
+[04-May-2017 20:23:15 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[04-May-2017 20:23:15 America/New_York] PHP Notice:  Undefined variable: reg_bonus in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 63
+[04-May-2017 20:23:15 America/New_York] PHP Stack trace:
+[04-May-2017 20:23:15 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[04-May-2017 20:23:15 America/New_York] PHP Notice:  Undefined variable: ref_bonus in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 64
+[04-May-2017 20:23:15 America/New_York] PHP Stack trace:
+[04-May-2017 20:23:15 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[04-May-2017 20:23:15 America/New_York] PHP Notice:  Undefined variable: reg_bonus in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 65
+[04-May-2017 20:23:15 America/New_York] PHP Stack trace:
+[04-May-2017 20:23:15 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[04-May-2017 20:23:25 America/New_York] PHP Fatal error:  'continue' not in the 'loop' or 'switch' context in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/received_payment.blade.php on line 53
+[06-May-2017 18:27:02 America/New_York] PHP Notice:  Undefined variable: donation in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 48
+[06-May-2017 18:27:02 America/New_York] PHP Stack trace:
+[06-May-2017 18:27:02 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[06-May-2017 18:27:02 America/New_York] PHP Notice:  Trying to get property of non-object in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 48
+[06-May-2017 18:27:02 America/New_York] PHP Stack trace:
+[06-May-2017 18:27:02 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[06-May-2017 18:27:02 America/New_York] PHP Notice:  Undefined variable: donation in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 49
+[06-May-2017 18:27:02 America/New_York] PHP Stack trace:
+[06-May-2017 18:27:02 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[06-May-2017 18:27:02 America/New_York] PHP Notice:  Trying to get property of non-object in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 49
+[06-May-2017 18:27:02 America/New_York] PHP Stack trace:
+[06-May-2017 18:27:02 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[06-May-2017 18:27:02 America/New_York] PHP Notice:  Undefined variable: donation in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 52
+[06-May-2017 18:27:02 America/New_York] PHP Stack trace:
+[06-May-2017 18:27:02 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[06-May-2017 18:27:02 America/New_York] PHP Notice:  Trying to get property of non-object in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 52
+[06-May-2017 18:27:02 America/New_York] PHP Stack trace:
+[06-May-2017 18:27:02 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[06-May-2017 18:27:02 America/New_York] PHP Notice:  Undefined variable: ref_bonus in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 62
+[06-May-2017 18:27:02 America/New_York] PHP Stack trace:
+[06-May-2017 18:27:02 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[06-May-2017 18:27:02 America/New_York] PHP Notice:  Undefined variable: reg_bonus in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 62
+[06-May-2017 18:27:02 America/New_York] PHP Stack trace:
+[06-May-2017 18:27:02 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[06-May-2017 18:27:02 America/New_York] PHP Notice:  Undefined variable: reg_bonus in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 63
+[06-May-2017 18:27:02 America/New_York] PHP Stack trace:
+[06-May-2017 18:27:02 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[06-May-2017 18:27:02 America/New_York] PHP Notice:  Undefined variable: ref_bonus in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 64
+[06-May-2017 18:27:02 America/New_York] PHP Stack trace:
+[06-May-2017 18:27:02 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[06-May-2017 18:27:02 America/New_York] PHP Notice:  Undefined variable: reg_bonus in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 65
+[06-May-2017 18:27:02 America/New_York] PHP Stack trace:
+[06-May-2017 18:27:02 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[06-May-2017 18:27:06 America/New_York] PHP Fatal error:  'continue' not in the 'loop' or 'switch' context in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/received_payment.blade.php on line 53
+[08-May-2017 00:44:31 America/New_York] PHP Fatal error:  'continue' not in the 'loop' or 'switch' context in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/received_payment.blade.php on line 53
+[09-May-2017 22:01:25 America/New_York] PHP Notice:  Undefined variable: donation in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 48
+[09-May-2017 22:01:25 America/New_York] PHP Stack trace:
+[09-May-2017 22:01:25 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[09-May-2017 22:01:25 America/New_York] PHP Notice:  Trying to get property of non-object in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 48
+[09-May-2017 22:01:25 America/New_York] PHP Stack trace:
+[09-May-2017 22:01:25 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[09-May-2017 22:01:25 America/New_York] PHP Notice:  Undefined variable: donation in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 49
+[09-May-2017 22:01:25 America/New_York] PHP Stack trace:
+[09-May-2017 22:01:25 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[09-May-2017 22:01:25 America/New_York] PHP Notice:  Trying to get property of non-object in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 49
+[09-May-2017 22:01:25 America/New_York] PHP Stack trace:
+[09-May-2017 22:01:25 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[09-May-2017 22:01:25 America/New_York] PHP Notice:  Undefined variable: donation in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 52
+[09-May-2017 22:01:25 America/New_York] PHP Stack trace:
+[09-May-2017 22:01:25 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[09-May-2017 22:01:25 America/New_York] PHP Notice:  Trying to get property of non-object in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 52
+[09-May-2017 22:01:25 America/New_York] PHP Stack trace:
+[09-May-2017 22:01:25 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[09-May-2017 22:01:25 America/New_York] PHP Notice:  Undefined variable: ref_bonus in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 62
+[09-May-2017 22:01:25 America/New_York] PHP Stack trace:
+[09-May-2017 22:01:25 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[09-May-2017 22:01:25 America/New_York] PHP Notice:  Undefined variable: reg_bonus in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 62
+[09-May-2017 22:01:25 America/New_York] PHP Stack trace:
+[09-May-2017 22:01:25 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[09-May-2017 22:01:25 America/New_York] PHP Notice:  Undefined variable: reg_bonus in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 63
+[09-May-2017 22:01:25 America/New_York] PHP Stack trace:
+[09-May-2017 22:01:25 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[09-May-2017 22:01:25 America/New_York] PHP Notice:  Undefined variable: ref_bonus in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 64
+[09-May-2017 22:01:25 America/New_York] PHP Stack trace:
+[09-May-2017 22:01:25 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[09-May-2017 22:01:25 America/New_York] PHP Notice:  Undefined variable: reg_bonus in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 65
+[09-May-2017 22:01:25 America/New_York] PHP Stack trace:
+[09-May-2017 22:01:25 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[10-May-2017 05:32:40 America/New_York] PHP Fatal error:  'continue' not in the 'loop' or 'switch' context in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/received_payment.blade.php on line 53
+[19-May-2017 09:05:17 America/New_York] PHP Notice:  Undefined variable: donation in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 48
+[19-May-2017 09:05:17 America/New_York] PHP Stack trace:
+[19-May-2017 09:05:17 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[19-May-2017 09:05:17 America/New_York] PHP Notice:  Trying to get property of non-object in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 48
+[19-May-2017 09:05:17 America/New_York] PHP Stack trace:
+[19-May-2017 09:05:17 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[19-May-2017 09:05:17 America/New_York] PHP Notice:  Undefined variable: donation in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 49
+[19-May-2017 09:05:17 America/New_York] PHP Stack trace:
+[19-May-2017 09:05:17 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[19-May-2017 09:05:17 America/New_York] PHP Notice:  Trying to get property of non-object in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 49
+[19-May-2017 09:05:17 America/New_York] PHP Stack trace:
+[19-May-2017 09:05:17 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[19-May-2017 09:05:17 America/New_York] PHP Notice:  Undefined variable: donation in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 52
+[19-May-2017 09:05:17 America/New_York] PHP Stack trace:
+[19-May-2017 09:05:17 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[19-May-2017 09:05:17 America/New_York] PHP Notice:  Trying to get property of non-object in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 52
+[19-May-2017 09:05:17 America/New_York] PHP Stack trace:
+[19-May-2017 09:05:17 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[19-May-2017 09:05:17 America/New_York] PHP Notice:  Undefined variable: ref_bonus in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 62
+[19-May-2017 09:05:17 America/New_York] PHP Stack trace:
+[19-May-2017 09:05:17 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[19-May-2017 09:05:17 America/New_York] PHP Notice:  Undefined variable: reg_bonus in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 62
+[19-May-2017 09:05:17 America/New_York] PHP Stack trace:
+[19-May-2017 09:05:17 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[19-May-2017 09:05:17 America/New_York] PHP Notice:  Undefined variable: reg_bonus in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 63
+[19-May-2017 09:05:17 America/New_York] PHP Stack trace:
+[19-May-2017 09:05:17 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[19-May-2017 09:05:17 America/New_York] PHP Notice:  Undefined variable: ref_bonus in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 65
+[19-May-2017 09:05:17 America/New_York] PHP Stack trace:
+[19-May-2017 09:05:17 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[19-May-2017 09:05:17 America/New_York] PHP Notice:  Undefined variable: reg_bonus in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 66
+[19-May-2017 09:05:17 America/New_York] PHP Stack trace:
+[19-May-2017 09:05:17 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[24-May-2017 16:08:50 America/New_York] PHP Notice:  Undefined variable: donation in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 48
+[24-May-2017 16:08:50 America/New_York] PHP Stack trace:
+[24-May-2017 16:08:50 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[24-May-2017 16:08:50 America/New_York] PHP Notice:  Trying to get property of non-object in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 48
+[24-May-2017 16:08:50 America/New_York] PHP Stack trace:
+[24-May-2017 16:08:50 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[24-May-2017 16:08:50 America/New_York] PHP Notice:  Undefined variable: donation in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 49
+[24-May-2017 16:08:50 America/New_York] PHP Stack trace:
+[24-May-2017 16:08:50 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[24-May-2017 16:08:50 America/New_York] PHP Notice:  Trying to get property of non-object in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 49
+[24-May-2017 16:08:50 America/New_York] PHP Stack trace:
+[24-May-2017 16:08:50 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[24-May-2017 16:08:50 America/New_York] PHP Notice:  Undefined variable: donation in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 52
+[24-May-2017 16:08:50 America/New_York] PHP Stack trace:
+[24-May-2017 16:08:50 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[24-May-2017 16:08:50 America/New_York] PHP Notice:  Trying to get property of non-object in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 52
+[24-May-2017 16:08:50 America/New_York] PHP Stack trace:
+[24-May-2017 16:08:50 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[24-May-2017 16:08:50 America/New_York] PHP Notice:  Undefined variable: ref_bonus in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 62
+[24-May-2017 16:08:50 America/New_York] PHP Stack trace:
+[24-May-2017 16:08:50 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[24-May-2017 16:08:50 America/New_York] PHP Notice:  Undefined variable: reg_bonus in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 62
+[24-May-2017 16:08:50 America/New_York] PHP Stack trace:
+[24-May-2017 16:08:50 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[24-May-2017 16:08:50 America/New_York] PHP Notice:  Undefined variable: reg_bonus in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 63
+[24-May-2017 16:08:50 America/New_York] PHP Stack trace:
+[24-May-2017 16:08:50 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[24-May-2017 16:08:50 America/New_York] PHP Notice:  Undefined variable: ref_bonus in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 65
+[24-May-2017 16:08:50 America/New_York] PHP Stack trace:
+[24-May-2017 16:08:50 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[24-May-2017 16:08:50 America/New_York] PHP Notice:  Undefined variable: reg_bonus in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 66
+[24-May-2017 16:08:50 America/New_York] PHP Stack trace:
+[24-May-2017 16:08:50 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[02-Jun-2017 05:03:36 America/New_York] PHP Notice:  Undefined variable: donation in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 48
+[02-Jun-2017 05:03:36 America/New_York] PHP Stack trace:
+[02-Jun-2017 05:03:36 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[02-Jun-2017 05:03:36 America/New_York] PHP Notice:  Trying to get property of non-object in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 48
+[02-Jun-2017 05:03:36 America/New_York] PHP Stack trace:
+[02-Jun-2017 05:03:36 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[02-Jun-2017 05:03:36 America/New_York] PHP Notice:  Undefined variable: donation in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 49
+[02-Jun-2017 05:03:36 America/New_York] PHP Stack trace:
+[02-Jun-2017 05:03:36 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[02-Jun-2017 05:03:36 America/New_York] PHP Notice:  Trying to get property of non-object in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 49
+[02-Jun-2017 05:03:36 America/New_York] PHP Stack trace:
+[02-Jun-2017 05:03:36 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[02-Jun-2017 05:03:36 America/New_York] PHP Notice:  Undefined variable: donation in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 52
+[02-Jun-2017 05:03:36 America/New_York] PHP Stack trace:
+[02-Jun-2017 05:03:36 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[02-Jun-2017 05:03:36 America/New_York] PHP Notice:  Trying to get property of non-object in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 52
+[02-Jun-2017 05:03:36 America/New_York] PHP Stack trace:
+[02-Jun-2017 05:03:36 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[02-Jun-2017 05:03:36 America/New_York] PHP Notice:  Undefined variable: ref_bonus in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 62
+[02-Jun-2017 05:03:36 America/New_York] PHP Stack trace:
+[02-Jun-2017 05:03:36 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[02-Jun-2017 05:03:36 America/New_York] PHP Notice:  Undefined variable: reg_bonus in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 62
+[02-Jun-2017 05:03:36 America/New_York] PHP Stack trace:
+[02-Jun-2017 05:03:36 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[02-Jun-2017 05:03:36 America/New_York] PHP Notice:  Undefined variable: reg_bonus in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 63
+[02-Jun-2017 05:03:36 America/New_York] PHP Stack trace:
+[02-Jun-2017 05:03:36 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[02-Jun-2017 05:03:36 America/New_York] PHP Notice:  Undefined variable: ref_bonus in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 65
+[02-Jun-2017 05:03:36 America/New_York] PHP Stack trace:
+[02-Jun-2017 05:03:36 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[02-Jun-2017 05:03:36 America/New_York] PHP Notice:  Undefined variable: reg_bonus in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 66
+[02-Jun-2017 05:03:36 America/New_York] PHP Stack trace:
+[02-Jun-2017 05:03:36 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[02-Jun-2017 05:03:38 America/New_York] PHP Notice:  Undefined variable: donation in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 48
+[02-Jun-2017 05:03:38 America/New_York] PHP Stack trace:
+[02-Jun-2017 05:03:38 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[02-Jun-2017 05:03:38 America/New_York] PHP Notice:  Trying to get property of non-object in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 48
+[02-Jun-2017 05:03:38 America/New_York] PHP Stack trace:
+[02-Jun-2017 05:03:38 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[02-Jun-2017 05:03:38 America/New_York] PHP Notice:  Undefined variable: donation in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 49
+[02-Jun-2017 05:03:38 America/New_York] PHP Stack trace:
+[02-Jun-2017 05:03:38 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[02-Jun-2017 05:03:38 America/New_York] PHP Notice:  Trying to get property of non-object in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 49
+[02-Jun-2017 05:03:38 America/New_York] PHP Stack trace:
+[02-Jun-2017 05:03:38 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[02-Jun-2017 05:03:38 America/New_York] PHP Notice:  Undefined variable: donation in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 52
+[02-Jun-2017 05:03:38 America/New_York] PHP Stack trace:
+[02-Jun-2017 05:03:38 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[02-Jun-2017 05:03:38 America/New_York] PHP Notice:  Trying to get property of non-object in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 52
+[02-Jun-2017 05:03:38 America/New_York] PHP Stack trace:
+[02-Jun-2017 05:03:38 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[02-Jun-2017 05:03:38 America/New_York] PHP Notice:  Undefined variable: ref_bonus in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 62
+[02-Jun-2017 05:03:38 America/New_York] PHP Stack trace:
+[02-Jun-2017 05:03:38 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[02-Jun-2017 05:03:38 America/New_York] PHP Notice:  Undefined variable: reg_bonus in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 62
+[02-Jun-2017 05:03:38 America/New_York] PHP Stack trace:
+[02-Jun-2017 05:03:38 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[02-Jun-2017 05:03:38 America/New_York] PHP Notice:  Undefined variable: reg_bonus in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 63
+[02-Jun-2017 05:03:38 America/New_York] PHP Stack trace:
+[02-Jun-2017 05:03:38 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[02-Jun-2017 05:03:38 America/New_York] PHP Notice:  Undefined variable: ref_bonus in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 65
+[02-Jun-2017 05:03:38 America/New_York] PHP Stack trace:
+[02-Jun-2017 05:03:38 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[02-Jun-2017 05:03:38 America/New_York] PHP Notice:  Undefined variable: reg_bonus in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 66
+[02-Jun-2017 05:03:38 America/New_York] PHP Stack trace:
+[02-Jun-2017 05:03:38 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[10-Jun-2017 17:34:46 America/New_York] PHP Fatal error:  'continue' not in the 'loop' or 'switch' context in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/received_payment.blade.php on line 53
+[15-Jun-2017 23:25:08 America/New_York] PHP Notice:  Undefined variable: donation in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 48
+[15-Jun-2017 23:25:08 America/New_York] PHP Stack trace:
+[15-Jun-2017 23:25:08 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[15-Jun-2017 23:25:08 America/New_York] PHP Notice:  Trying to get property of non-object in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 48
+[15-Jun-2017 23:25:08 America/New_York] PHP Stack trace:
+[15-Jun-2017 23:25:08 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[15-Jun-2017 23:25:08 America/New_York] PHP Notice:  Undefined variable: donation in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 49
+[15-Jun-2017 23:25:08 America/New_York] PHP Stack trace:
+[15-Jun-2017 23:25:08 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[15-Jun-2017 23:25:08 America/New_York] PHP Notice:  Trying to get property of non-object in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 49
+[15-Jun-2017 23:25:08 America/New_York] PHP Stack trace:
+[15-Jun-2017 23:25:08 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[15-Jun-2017 23:25:08 America/New_York] PHP Notice:  Undefined variable: donation in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 52
+[15-Jun-2017 23:25:08 America/New_York] PHP Stack trace:
+[15-Jun-2017 23:25:08 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[15-Jun-2017 23:25:08 America/New_York] PHP Notice:  Trying to get property of non-object in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 52
+[15-Jun-2017 23:25:08 America/New_York] PHP Stack trace:
+[15-Jun-2017 23:25:08 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[15-Jun-2017 23:25:08 America/New_York] PHP Notice:  Undefined variable: ref_bonus in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 62
+[15-Jun-2017 23:25:08 America/New_York] PHP Stack trace:
+[15-Jun-2017 23:25:08 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[15-Jun-2017 23:25:08 America/New_York] PHP Notice:  Undefined variable: reg_bonus in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 62
+[15-Jun-2017 23:25:08 America/New_York] PHP Stack trace:
+[15-Jun-2017 23:25:08 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[15-Jun-2017 23:25:08 America/New_York] PHP Notice:  Undefined variable: reg_bonus in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 63
+[15-Jun-2017 23:25:08 America/New_York] PHP Stack trace:
+[15-Jun-2017 23:25:08 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[15-Jun-2017 23:25:08 America/New_York] PHP Notice:  Undefined variable: ref_bonus in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 65
+[15-Jun-2017 23:25:08 America/New_York] PHP Stack trace:
+[15-Jun-2017 23:25:08 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0
+[15-Jun-2017 23:25:08 America/New_York] PHP Notice:  Undefined variable: reg_bonus in /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php on line 66
+[15-Jun-2017 23:25:08 America/New_York] PHP Stack trace:
+[15-Jun-2017 23:25:08 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/gh/create.blade.php:0

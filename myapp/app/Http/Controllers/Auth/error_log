@@ -1,0 +1,102 @@
+[02-May-2017 19:58:11 America/New_York] PHP Fatal error:  Class 'App\Http\Controllers\Controller' not found in /home/afripeaj/public_html/giveandget/myapp/app/Http/Controllers/Auth/LoginController.php on line 10
+[02-May-2017 19:58:11 America/New_York] PHP Stack trace:
+[02-May-2017 19:58:11 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/app/Http/Controllers/Auth/LoginController.php:0
+[02-May-2017 19:58:16 America/New_York] PHP Fatal error:  Class 'App\Http\Controllers\Controller' not found in /home/afripeaj/public_html/giveandget/myapp/app/Http/Controllers/Auth/RegisterController.php on line 17
+[02-May-2017 19:58:16 America/New_York] PHP Stack trace:
+[02-May-2017 19:58:16 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/app/Http/Controllers/Auth/RegisterController.php:0
+[02-May-2017 19:58:23 America/New_York] PHP Fatal error:  Class 'App\Http\Controllers\Controller' not found in /home/afripeaj/public_html/giveandget/myapp/app/Http/Controllers/Auth/ResetPasswordController.php on line 8
+[02-May-2017 19:58:23 America/New_York] PHP Stack trace:
+[02-May-2017 19:58:23 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/app/Http/Controllers/Auth/ResetPasswordController.php:0
+[02-May-2017 19:58:27 America/New_York] PHP Fatal error:  Class 'App\Http\Controllers\Controller' not found in /home/afripeaj/public_html/giveandget/myapp/app/Http/Controllers/Auth/ForgotPasswordController.php on line 8
+[02-May-2017 19:58:27 America/New_York] PHP Stack trace:
+[02-May-2017 19:58:27 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/app/Http/Controllers/Auth/ForgotPasswordController.php:0
+[03-May-2017 05:18:06 America/New_York] PHP Fatal error:  Class 'App\Http\Controllers\Controller' not found in /home/afripeaj/public_html/giveandget/myapp/app/Http/Controllers/Auth/LoginController.php on line 10
+[03-May-2017 05:18:06 America/New_York] PHP Stack trace:
+[03-May-2017 05:18:06 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/app/Http/Controllers/Auth/LoginController.php:0
+[03-May-2017 05:18:12 America/New_York] PHP Fatal error:  Class 'App\Http\Controllers\Controller' not found in /home/afripeaj/public_html/giveandget/myapp/app/Http/Controllers/Auth/RegisterController.php on line 17
+[03-May-2017 05:18:12 America/New_York] PHP Stack trace:
+[03-May-2017 05:18:12 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/app/Http/Controllers/Auth/RegisterController.php:0
+[03-May-2017 05:18:45 America/New_York] PHP Fatal error:  Class 'App\Http\Controllers\Controller' not found in /home/afripeaj/public_html/giveandget/myapp/app/Http/Controllers/Auth/ResetPasswordController.php on line 8
+[03-May-2017 05:18:45 America/New_York] PHP Stack trace:
+[03-May-2017 05:18:45 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/app/Http/Controllers/Auth/ResetPasswordController.php:0
+[03-May-2017 05:19:19 America/New_York] PHP Fatal error:  Class 'App\Http\Controllers\Controller' not found in /home/afripeaj/public_html/giveandget/myapp/app/Http/Controllers/Auth/ForgotPasswordController.php on line 8
+[03-May-2017 05:19:19 America/New_York] PHP Stack trace:
+[03-May-2017 05:19:19 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/app/Http/Controllers/Auth/ForgotPasswordController.php:0
+[05-May-2017 06:36:14 America/New_York] PHP Fatal error:  Class 'App\Http\Controllers\Controller' not found in /home/afripeaj/public_html/giveandget/myapp/app/Http/Controllers/Auth/ForgotPasswordController.php on line 8
+[05-May-2017 06:36:14 America/New_York] PHP Stack trace:
+[05-May-2017 06:36:14 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/app/Http/Controllers/Auth/ForgotPasswordController.php:0
+[05-May-2017 06:36:15 America/New_York] PHP Fatal error:  Class 'App\Http\Controllers\Controller' not found in /home/afripeaj/public_html/giveandget/myapp/app/Http/Controllers/Auth/LoginController.php on line 10
+[05-May-2017 06:36:15 America/New_York] PHP Stack trace:
+[05-May-2017 06:36:15 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/app/Http/Controllers/Auth/LoginController.php:0
+[05-May-2017 06:36:17 America/New_York] PHP Fatal error:  Class 'App\Http\Controllers\Controller' not found in /home/afripeaj/public_html/giveandget/myapp/app/Http/Controllers/Auth/RegisterController.php on line 17
+[05-May-2017 06:36:17 America/New_York] PHP Stack trace:
+[05-May-2017 06:36:17 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/app/Http/Controllers/Auth/RegisterController.php:0
+[05-May-2017 06:36:19 America/New_York] PHP Fatal error:  Class 'App\Http\Controllers\Controller' not found in /home/afripeaj/public_html/giveandget/myapp/app/Http/Controllers/Auth/ResetPasswordController.php on line 8
+[05-May-2017 06:36:19 America/New_York] PHP Stack trace:
+[05-May-2017 06:36:19 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/app/Http/Controllers/Auth/ResetPasswordController.php:0
+[07-May-2017 12:52:35 America/New_York] PHP Fatal error:  Class 'App\Http\Controllers\Controller' not found in /home/afripeaj/public_html/giveandget/myapp/app/Http/Controllers/Auth/ForgotPasswordController.php on line 8
+[07-May-2017 12:52:35 America/New_York] PHP Stack trace:
+[07-May-2017 12:52:35 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/app/Http/Controllers/Auth/ForgotPasswordController.php:0
+[07-May-2017 12:52:37 America/New_York] PHP Fatal error:  Class 'App\Http\Controllers\Controller' not found in /home/afripeaj/public_html/giveandget/myapp/app/Http/Controllers/Auth/LoginController.php on line 10
+[07-May-2017 12:52:37 America/New_York] PHP Stack trace:
+[07-May-2017 12:52:37 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/app/Http/Controllers/Auth/LoginController.php:0
+[07-May-2017 12:52:39 America/New_York] PHP Fatal error:  Class 'App\Http\Controllers\Controller' not found in /home/afripeaj/public_html/giveandget/myapp/app/Http/Controllers/Auth/RegisterController.php on line 17
+[07-May-2017 12:52:39 America/New_York] PHP Stack trace:
+[07-May-2017 12:52:39 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/app/Http/Controllers/Auth/RegisterController.php:0
+[07-May-2017 12:52:41 America/New_York] PHP Fatal error:  Class 'App\Http\Controllers\Controller' not found in /home/afripeaj/public_html/giveandget/myapp/app/Http/Controllers/Auth/ResetPasswordController.php on line 8
+[07-May-2017 12:52:41 America/New_York] PHP Stack trace:
+[07-May-2017 12:52:41 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/app/Http/Controllers/Auth/ResetPasswordController.php:0
+[07-May-2017 18:31:52 America/New_York] PHP Fatal error:  Class 'App\Http\Controllers\Controller' not found in /home/afripeaj/public_html/giveandget/myapp/app/Http/Controllers/Auth/LoginController.php on line 10
+[07-May-2017 18:31:52 America/New_York] PHP Stack trace:
+[07-May-2017 18:31:52 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/app/Http/Controllers/Auth/LoginController.php:0
+[08-May-2017 03:12:32 America/New_York] PHP Fatal error:  Class 'App\Http\Controllers\Controller' not found in /home/afripeaj/public_html/giveandget/myapp/app/Http/Controllers/Auth/RegisterController.php on line 17
+[08-May-2017 03:12:32 America/New_York] PHP Stack trace:
+[08-May-2017 03:12:32 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/app/Http/Controllers/Auth/RegisterController.php:0
+[08-May-2017 04:29:42 America/New_York] PHP Fatal error:  Class 'App\Http\Controllers\Controller' not found in /home/afripeaj/public_html/giveandget/myapp/app/Http/Controllers/Auth/ResetPasswordController.php on line 8
+[08-May-2017 04:29:42 America/New_York] PHP Stack trace:
+[08-May-2017 04:29:42 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/app/Http/Controllers/Auth/ResetPasswordController.php:0
+[08-May-2017 13:44:02 America/New_York] PHP Fatal error:  Class 'App\Http\Controllers\Controller' not found in /home/afripeaj/public_html/giveandget/myapp/app/Http/Controllers/Auth/ForgotPasswordController.php on line 8
+[08-May-2017 13:44:02 America/New_York] PHP Stack trace:
+[08-May-2017 13:44:02 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/app/Http/Controllers/Auth/ForgotPasswordController.php:0
+[08-May-2017 19:43:38 America/New_York] PHP Fatal error:  Class 'App\Http\Controllers\Controller' not found in /home/afripeaj/public_html/giveandget/myapp/app/Http/Controllers/Auth/LoginController.php on line 10
+[08-May-2017 19:43:38 America/New_York] PHP Stack trace:
+[08-May-2017 19:43:38 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/app/Http/Controllers/Auth/LoginController.php:0
+[09-May-2017 13:26:30 America/New_York] PHP Fatal error:  Class 'App\Http\Controllers\Controller' not found in /home/afripeaj/public_html/giveandget/myapp/app/Http/Controllers/Auth/ForgotPasswordController.php on line 8
+[09-May-2017 13:26:30 America/New_York] PHP Stack trace:
+[09-May-2017 13:26:30 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/app/Http/Controllers/Auth/ForgotPasswordController.php:0
+[09-May-2017 15:34:40 America/New_York] PHP Fatal error:  Class 'App\Http\Controllers\Controller' not found in /home/afripeaj/public_html/giveandget/myapp/app/Http/Controllers/Auth/RegisterController.php on line 17
+[09-May-2017 15:34:40 America/New_York] PHP Stack trace:
+[09-May-2017 15:34:40 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/app/Http/Controllers/Auth/RegisterController.php:0
+[11-May-2017 09:24:37 America/New_York] PHP Fatal error:  Class 'App\Http\Controllers\Controller' not found in /home/afripeaj/public_html/giveandget/myapp/app/Http/Controllers/Auth/ResetPasswordController.php on line 8
+[11-May-2017 09:24:37 America/New_York] PHP Stack trace:
+[11-May-2017 09:24:37 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/app/Http/Controllers/Auth/ResetPasswordController.php:0
+[11-May-2017 09:25:22 America/New_York] PHP Fatal error:  Class 'App\Http\Controllers\Controller' not found in /home/afripeaj/public_html/giveandget/myapp/app/Http/Controllers/Auth/ForgotPasswordController.php on line 8
+[11-May-2017 09:25:22 America/New_York] PHP Stack trace:
+[11-May-2017 09:25:22 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/app/Http/Controllers/Auth/ForgotPasswordController.php:0
+[19-May-2017 06:06:50 America/New_York] PHP Fatal error:  Class 'App\Http\Controllers\Controller' not found in /home/afripeaj/public_html/giveandget/myapp/app/Http/Controllers/Auth/ResetPasswordController.php on line 8
+[19-May-2017 06:06:50 America/New_York] PHP Stack trace:
+[19-May-2017 06:06:50 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/app/Http/Controllers/Auth/ResetPasswordController.php:0
+[06-Jun-2017 00:06:43 America/New_York] PHP Fatal error:  Class 'App\Http\Controllers\Controller' not found in /home/afripeaj/public_html/giveandget/myapp/app/Http/Controllers/Auth/ForgotPasswordController.php on line 8
+[06-Jun-2017 00:06:43 America/New_York] PHP Stack trace:
+[06-Jun-2017 00:06:43 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/app/Http/Controllers/Auth/ForgotPasswordController.php:0
+[06-Jun-2017 17:27:51 America/New_York] PHP Fatal error:  Class 'App\Http\Controllers\Controller' not found in /home/afripeaj/public_html/giveandget/myapp/app/Http/Controllers/Auth/RegisterController.php on line 17
+[06-Jun-2017 17:27:51 America/New_York] PHP Stack trace:
+[06-Jun-2017 17:27:51 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/app/Http/Controllers/Auth/RegisterController.php:0
+[06-Jun-2017 19:25:08 America/New_York] PHP Fatal error:  Class 'App\Http\Controllers\Controller' not found in /home/afripeaj/public_html/giveandget/myapp/app/Http/Controllers/Auth/LoginController.php on line 10
+[06-Jun-2017 19:25:08 America/New_York] PHP Stack trace:
+[06-Jun-2017 19:25:08 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/app/Http/Controllers/Auth/LoginController.php:0
+[07-Jun-2017 03:26:36 America/New_York] PHP Fatal error:  Class 'App\Http\Controllers\Controller' not found in /home/afripeaj/public_html/giveandget/myapp/app/Http/Controllers/Auth/ResetPasswordController.php on line 8
+[07-Jun-2017 03:26:36 America/New_York] PHP Stack trace:
+[07-Jun-2017 03:26:36 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/app/Http/Controllers/Auth/ResetPasswordController.php:0
+[10-Jun-2017 16:00:58 America/New_York] PHP Fatal error:  Class 'App\Http\Controllers\Controller' not found in /home/afripeaj/public_html/giveandget/myapp/app/Http/Controllers/Auth/ForgotPasswordController.php on line 8
+[10-Jun-2017 16:00:58 America/New_York] PHP Stack trace:
+[10-Jun-2017 16:00:58 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/app/Http/Controllers/Auth/ForgotPasswordController.php:0
+[10-Jun-2017 17:34:38 America/New_York] PHP Fatal error:  Class 'App\Http\Controllers\Controller' not found in /home/afripeaj/public_html/giveandget/myapp/app/Http/Controllers/Auth/ResetPasswordController.php on line 8
+[10-Jun-2017 17:34:38 America/New_York] PHP Stack trace:
+[10-Jun-2017 17:34:38 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/app/Http/Controllers/Auth/ResetPasswordController.php:0
+[15-Jun-2017 23:10:00 America/New_York] PHP Fatal error:  Class 'App\Http\Controllers\Controller' not found in /home/afripeaj/public_html/giveandget/myapp/app/Http/Controllers/Auth/ResetPasswordController.php on line 8
+[15-Jun-2017 23:10:00 America/New_York] PHP Stack trace:
+[15-Jun-2017 23:10:00 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/app/Http/Controllers/Auth/ResetPasswordController.php:0
+[23-Jun-2017 13:30:15 America/New_York] PHP Fatal error:  Class 'App\Http\Controllers\Controller' not found in /home/afripeaj/public_html/giveandget/myapp/app/Http/Controllers/Auth/RegisterController.php on line 17
+[23-Jun-2017 13:30:15 America/New_York] PHP Stack trace:
+[23-Jun-2017 13:30:15 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/app/Http/Controllers/Auth/RegisterController.php:0

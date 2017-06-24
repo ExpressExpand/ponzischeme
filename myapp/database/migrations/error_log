@@ -1,0 +1,462 @@
+[02-May-2017 10:17:06 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_14_043647_helps.php on line 7
+[02-May-2017 10:17:06 America/New_York] PHP Stack trace:
+[02-May-2017 10:17:06 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_14_043647_helps.php:0
+[02-May-2017 10:18:26 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_12_085056_referrals.php on line 7
+[02-May-2017 10:18:26 America/New_York] PHP Stack trace:
+[02-May-2017 10:18:26 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_12_085056_referrals.php:0
+[02-May-2017 10:18:40 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_21_160613_gh_logs.php on line 7
+[02-May-2017 10:18:40 America/New_York] PHP Stack trace:
+[02-May-2017 10:18:40 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_21_160613_gh_logs.php:0
+[02-May-2017 10:20:37 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_16_205317_create_jobs_table.php on line 7
+[02-May-2017 10:20:37 America/New_York] PHP Stack trace:
+[02-May-2017 10:20:37 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_16_205317_create_jobs_table.php:0
+[02-May-2017 10:21:06 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2014_10_12_000000_create_users_table.php on line 7
+[02-May-2017 10:21:06 America/New_York] PHP Stack trace:
+[02-May-2017 10:21:06 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2014_10_12_000000_create_users_table.php:0
+[02-May-2017 10:21:10 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_11_034109_entrust_setup_tables.php on line 5
+[02-May-2017 10:21:10 America/New_York] PHP Stack trace:
+[02-May-2017 10:21:10 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_11_034109_entrust_setup_tables.php:0
+[02-May-2017 10:21:14 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_17_034945_email_verifications.php on line 7
+[02-May-2017 10:21:14 America/New_York] PHP Stack trace:
+[02-May-2017 10:21:14 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_17_034945_email_verifications.php:0
+[02-May-2017 10:21:20 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_17_035354_add_is_verified_to_users.php on line 7
+[02-May-2017 10:21:20 America/New_York] PHP Stack trace:
+[02-May-2017 10:21:20 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_17_035354_add_is_verified_to_users.php:0
+[02-May-2017 10:21:27 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_29_074226_messaging_transactions.php on line 7
+[02-May-2017 10:21:27 America/New_York] PHP Stack trace:
+[02-May-2017 10:21:27 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_29_074226_messaging_transactions.php:0
+[02-May-2017 10:21:31 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_21_033721_donation_transacations.php on line 7
+[02-May-2017 10:21:31 America/New_York] PHP Stack trace:
+[02-May-2017 10:21:31 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_21_033721_donation_transacations.php:0
+[02-May-2017 10:21:43 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_26_165036_messaging_transactions_new.php on line 7
+[02-May-2017 10:21:43 America/New_York] PHP Stack trace:
+[02-May-2017 10:21:43 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_26_165036_messaging_transactions_new.php:0
+[02-May-2017 10:23:37 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2014_10_12_100000_create_password_resets_table.php on line 7
+[02-May-2017 10:23:37 America/New_York] PHP Stack trace:
+[02-May-2017 10:23:37 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2014_10_12_100000_create_password_resets_table.php:0
+[02-May-2017 10:23:41 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_02_173726_add_isBonus_column_to_user.php on line 7
+[02-May-2017 10:23:41 America/New_York] PHP Stack trace:
+[02-May-2017 10:23:41 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_02_173726_add_isBonus_column_to_user.php:0
+[02-May-2017 10:23:41 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_07_040726_referral_bonuses_withdrawn.php on line 7
+[02-May-2017 10:23:41 America/New_York] PHP Stack trace:
+[02-May-2017 10:23:41 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_07_040726_referral_bonuses_withdrawn.php:0
+[02-May-2017 10:23:54 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_22_165640_add_column_points_to_donation_help.php on line 7
+[02-May-2017 10:23:54 America/New_York] PHP Stack trace:
+[02-May-2017 10:23:54 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_22_165640_add_column_points_to_donation_help.php:0
+[02-May-2017 10:23:54 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_25_180248_add_column_to_donation_transaction.php on line 7
+[02-May-2017 10:23:54 America/New_York] PHP Stack trace:
+[02-May-2017 10:23:54 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_25_180248_add_column_to_donation_transaction.php:0
+[02-May-2017 10:24:00 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_23_210012_add_column_matchCounter_matchDate_to_donation_help.php on line 7
+[02-May-2017 10:24:00 America/New_York] PHP Stack trace:
+[02-May-2017 10:24:00 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_23_210012_add_column_matchCounter_matchDate_to_donation_help.php:0
+[02-May-2017 16:52:22 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_29_074121_messaging.php on line 7
+[02-May-2017 16:52:22 America/New_York] PHP Stack trace:
+[02-May-2017 16:52:22 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_29_074121_messaging.php:0
+[02-May-2017 16:52:23 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_19_140922_announcements.php on line 7
+[02-May-2017 16:52:23 America/New_York] PHP Stack trace:
+[02-May-2017 16:52:23 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_19_140922_announcements.php:0
+[02-May-2017 16:52:27 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_03_204845_add_isdefaulted_to_donation_transaction.php on line 7
+[02-May-2017 16:52:27 America/New_York] PHP Stack trace:
+[02-May-2017 16:52:27 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_03_204845_add_isdefaulted_to_donation_transaction.php:0
+[03-May-2017 00:35:49 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_14_043647_helps.php on line 7
+[03-May-2017 00:35:49 America/New_York] PHP Stack trace:
+[03-May-2017 00:35:49 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_14_043647_helps.php:0
+[03-May-2017 00:36:31 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_12_085056_referrals.php on line 7
+[03-May-2017 00:36:31 America/New_York] PHP Stack trace:
+[03-May-2017 00:36:31 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_12_085056_referrals.php:0
+[03-May-2017 00:36:52 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_21_160613_gh_logs.php on line 7
+[03-May-2017 00:36:52 America/New_York] PHP Stack trace:
+[03-May-2017 00:36:52 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_21_160613_gh_logs.php:0
+[03-May-2017 00:37:20 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_29_074121_messaging.php on line 7
+[03-May-2017 00:37:20 America/New_York] PHP Stack trace:
+[03-May-2017 00:37:20 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_29_074121_messaging.php:0
+[03-May-2017 00:39:01 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_19_140922_announcements.php on line 7
+[03-May-2017 00:39:01 America/New_York] PHP Stack trace:
+[03-May-2017 00:39:01 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_19_140922_announcements.php:0
+[03-May-2017 00:39:22 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_16_205317_create_jobs_table.php on line 7
+[03-May-2017 00:39:22 America/New_York] PHP Stack trace:
+[03-May-2017 00:39:22 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_16_205317_create_jobs_table.php:0
+[03-May-2017 00:41:51 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_11_034109_entrust_setup_tables.php on line 5
+[03-May-2017 00:41:51 America/New_York] PHP Stack trace:
+[03-May-2017 00:41:51 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_11_034109_entrust_setup_tables.php:0
+[03-May-2017 00:43:16 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2014_10_12_000000_create_users_table.php on line 7
+[03-May-2017 00:43:16 America/New_York] PHP Stack trace:
+[03-May-2017 00:43:16 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2014_10_12_000000_create_users_table.php:0
+[03-May-2017 00:47:45 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_21_033721_donation_transacations.php on line 7
+[03-May-2017 00:47:45 America/New_York] PHP Stack trace:
+[03-May-2017 00:47:45 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_21_033721_donation_transacations.php:0
+[03-May-2017 00:47:54 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_29_074226_messaging_transactions.php on line 7
+[03-May-2017 00:47:54 America/New_York] PHP Stack trace:
+[03-May-2017 00:47:54 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_29_074226_messaging_transactions.php:0
+[03-May-2017 00:48:07 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_17_035354_add_is_verified_to_users.php on line 7
+[03-May-2017 00:48:07 America/New_York] PHP Stack trace:
+[03-May-2017 00:48:07 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_17_035354_add_is_verified_to_users.php:0
+[03-May-2017 00:48:16 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_02_173726_add_isBonus_column_to_user.php on line 7
+[03-May-2017 00:48:16 America/New_York] PHP Stack trace:
+[03-May-2017 00:48:16 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_02_173726_add_isBonus_column_to_user.php:0
+[03-May-2017 00:48:26 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_07_040726_referral_bonuses_withdrawn.php on line 7
+[03-May-2017 00:48:26 America/New_York] PHP Stack trace:
+[03-May-2017 00:48:26 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_07_040726_referral_bonuses_withdrawn.php:0
+[03-May-2017 00:48:46 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2014_10_12_100000_create_password_resets_table.php on line 7
+[03-May-2017 00:48:46 America/New_York] PHP Stack trace:
+[03-May-2017 00:48:46 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2014_10_12_100000_create_password_resets_table.php:0
+[03-May-2017 00:48:53 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_26_165036_messaging_transactions_new.php on line 7
+[03-May-2017 00:48:53 America/New_York] PHP Stack trace:
+[03-May-2017 00:48:53 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_26_165036_messaging_transactions_new.php:0
+[03-May-2017 00:54:32 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_25_180248_add_column_to_donation_transaction.php on line 7
+[03-May-2017 00:54:32 America/New_York] PHP Stack trace:
+[03-May-2017 00:54:32 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_25_180248_add_column_to_donation_transaction.php:0
+[03-May-2017 00:54:32 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_22_165640_add_column_points_to_donation_help.php on line 7
+[03-May-2017 00:54:32 America/New_York] PHP Stack trace:
+[03-May-2017 00:54:32 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_22_165640_add_column_points_to_donation_help.php:0
+[03-May-2017 00:54:37 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_03_204845_add_isdefaulted_to_donation_transaction.php on line 7
+[03-May-2017 00:54:37 America/New_York] PHP Stack trace:
+[03-May-2017 00:54:37 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_03_204845_add_isdefaulted_to_donation_transaction.php:0
+[03-May-2017 00:54:49 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_23_210012_add_column_matchCounter_matchDate_to_donation_help.php on line 7
+[03-May-2017 00:54:49 America/New_York] PHP Stack trace:
+[03-May-2017 00:54:49 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_23_210012_add_column_matchCounter_matchDate_to_donation_help.php:0
+[03-May-2017 10:33:45 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_17_034945_email_verifications.php on line 7
+[03-May-2017 10:33:45 America/New_York] PHP Stack trace:
+[03-May-2017 10:33:45 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_17_034945_email_verifications.php:0
+[04-May-2017 07:22:22 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2014_10_12_000000_create_users_table.php on line 7
+[04-May-2017 07:22:22 America/New_York] PHP Stack trace:
+[04-May-2017 07:22:22 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2014_10_12_000000_create_users_table.php:0
+[04-May-2017 07:22:26 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2014_10_12_100000_create_password_resets_table.php on line 7
+[04-May-2017 07:22:26 America/New_York] PHP Stack trace:
+[04-May-2017 07:22:26 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2014_10_12_100000_create_password_resets_table.php:0
+[04-May-2017 07:22:29 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_11_034109_entrust_setup_tables.php on line 5
+[04-May-2017 07:22:29 America/New_York] PHP Stack trace:
+[04-May-2017 07:22:29 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_11_034109_entrust_setup_tables.php:0
+[04-May-2017 07:22:31 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_12_085056_referrals.php on line 7
+[04-May-2017 07:22:31 America/New_York] PHP Stack trace:
+[04-May-2017 07:22:31 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_12_085056_referrals.php:0
+[04-May-2017 07:22:37 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_14_043647_helps.php on line 7
+[04-May-2017 07:22:37 America/New_York] PHP Stack trace:
+[04-May-2017 07:22:37 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_14_043647_helps.php:0
+[04-May-2017 07:22:43 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_17_034945_email_verifications.php on line 7
+[04-May-2017 07:22:43 America/New_York] PHP Stack trace:
+[04-May-2017 07:22:43 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_17_034945_email_verifications.php:0
+[04-May-2017 07:22:44 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_17_035354_add_is_verified_to_users.php on line 7
+[04-May-2017 07:22:44 America/New_York] PHP Stack trace:
+[04-May-2017 07:22:44 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_17_035354_add_is_verified_to_users.php:0
+[04-May-2017 07:22:47 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_19_140922_announcements.php on line 7
+[04-May-2017 07:22:47 America/New_York] PHP Stack trace:
+[04-May-2017 07:22:47 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_19_140922_announcements.php:0
+[04-May-2017 07:22:49 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_21_033721_donation_transacations.php on line 7
+[04-May-2017 07:22:49 America/New_York] PHP Stack trace:
+[04-May-2017 07:22:49 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_21_033721_donation_transacations.php:0
+[04-May-2017 07:22:52 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_22_165640_add_column_points_to_donation_help.php on line 7
+[04-May-2017 07:22:52 America/New_York] PHP Stack trace:
+[04-May-2017 07:22:52 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_22_165640_add_column_points_to_donation_help.php:0
+[04-May-2017 07:23:00 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_23_210012_add_column_matchCounter_matchDate_to_donation_help.php on line 7
+[04-May-2017 07:23:00 America/New_York] PHP Stack trace:
+[04-May-2017 07:23:00 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_23_210012_add_column_matchCounter_matchDate_to_donation_help.php:0
+[04-May-2017 07:23:02 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_25_180248_add_column_to_donation_transaction.php on line 7
+[04-May-2017 07:23:02 America/New_York] PHP Stack trace:
+[04-May-2017 07:23:02 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_25_180248_add_column_to_donation_transaction.php:0
+[04-May-2017 07:23:04 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_29_074121_messaging.php on line 7
+[04-May-2017 07:23:04 America/New_York] PHP Stack trace:
+[04-May-2017 07:23:04 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_29_074121_messaging.php:0
+[04-May-2017 07:23:06 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_29_074226_messaging_transactions.php on line 7
+[04-May-2017 07:23:06 America/New_York] PHP Stack trace:
+[04-May-2017 07:23:06 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_29_074226_messaging_transactions.php:0
+[04-May-2017 07:23:08 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_02_173726_add_isBonus_column_to_user.php on line 7
+[04-May-2017 07:23:08 America/New_York] PHP Stack trace:
+[04-May-2017 07:23:08 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_02_173726_add_isBonus_column_to_user.php:0
+[04-May-2017 07:23:09 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_03_204845_add_isdefaulted_to_donation_transaction.php on line 7
+[04-May-2017 07:23:09 America/New_York] PHP Stack trace:
+[04-May-2017 07:23:09 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_03_204845_add_isdefaulted_to_donation_transaction.php:0
+[04-May-2017 07:23:11 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_07_040726_referral_bonuses_withdrawn.php on line 7
+[04-May-2017 07:23:11 America/New_York] PHP Stack trace:
+[04-May-2017 07:23:11 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_07_040726_referral_bonuses_withdrawn.php:0
+[04-May-2017 07:23:13 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_16_205317_create_jobs_table.php on line 7
+[04-May-2017 07:23:13 America/New_York] PHP Stack trace:
+[04-May-2017 07:23:13 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_16_205317_create_jobs_table.php:0
+[04-May-2017 07:23:15 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_21_160613_gh_logs.php on line 7
+[04-May-2017 07:23:15 America/New_York] PHP Stack trace:
+[04-May-2017 07:23:15 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_21_160613_gh_logs.php:0
+[04-May-2017 07:23:24 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_26_165036_messaging_transactions_new.php on line 7
+[04-May-2017 07:23:24 America/New_York] PHP Stack trace:
+[04-May-2017 07:23:24 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_26_165036_messaging_transactions_new.php:0
+[05-May-2017 07:21:50 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2014_10_12_000000_create_users_table.php on line 7
+[05-May-2017 07:21:50 America/New_York] PHP Stack trace:
+[05-May-2017 07:21:50 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2014_10_12_000000_create_users_table.php:0
+[05-May-2017 07:21:51 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2014_10_12_100000_create_password_resets_table.php on line 7
+[05-May-2017 07:21:51 America/New_York] PHP Stack trace:
+[05-May-2017 07:21:51 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2014_10_12_100000_create_password_resets_table.php:0
+[05-May-2017 07:21:54 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_11_034109_entrust_setup_tables.php on line 5
+[05-May-2017 07:21:54 America/New_York] PHP Stack trace:
+[05-May-2017 07:21:54 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_11_034109_entrust_setup_tables.php:0
+[05-May-2017 07:21:55 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_12_085056_referrals.php on line 7
+[05-May-2017 07:21:55 America/New_York] PHP Stack trace:
+[05-May-2017 07:21:55 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_12_085056_referrals.php:0
+[05-May-2017 07:21:57 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_14_043647_helps.php on line 7
+[05-May-2017 07:21:57 America/New_York] PHP Stack trace:
+[05-May-2017 07:21:57 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_14_043647_helps.php:0
+[05-May-2017 07:21:58 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_17_034945_email_verifications.php on line 7
+[05-May-2017 07:21:58 America/New_York] PHP Stack trace:
+[05-May-2017 07:21:58 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_17_034945_email_verifications.php:0
+[05-May-2017 07:22:00 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_17_035354_add_is_verified_to_users.php on line 7
+[05-May-2017 07:22:00 America/New_York] PHP Stack trace:
+[05-May-2017 07:22:00 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_17_035354_add_is_verified_to_users.php:0
+[05-May-2017 07:22:02 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_19_140922_announcements.php on line 7
+[05-May-2017 07:22:02 America/New_York] PHP Stack trace:
+[05-May-2017 07:22:02 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_19_140922_announcements.php:0
+[05-May-2017 07:22:04 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_21_033721_donation_transacations.php on line 7
+[05-May-2017 07:22:04 America/New_York] PHP Stack trace:
+[05-May-2017 07:22:04 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_21_033721_donation_transacations.php:0
+[05-May-2017 07:22:06 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_22_165640_add_column_points_to_donation_help.php on line 7
+[05-May-2017 07:22:06 America/New_York] PHP Stack trace:
+[05-May-2017 07:22:06 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_22_165640_add_column_points_to_donation_help.php:0
+[05-May-2017 07:22:08 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_23_210012_add_column_matchCounter_matchDate_to_donation_help.php on line 7
+[05-May-2017 07:22:08 America/New_York] PHP Stack trace:
+[05-May-2017 07:22:08 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_23_210012_add_column_matchCounter_matchDate_to_donation_help.php:0
+[05-May-2017 07:22:10 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_25_180248_add_column_to_donation_transaction.php on line 7
+[05-May-2017 07:22:10 America/New_York] PHP Stack trace:
+[05-May-2017 07:22:10 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_25_180248_add_column_to_donation_transaction.php:0
+[05-May-2017 07:22:12 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_29_074121_messaging.php on line 7
+[05-May-2017 07:22:12 America/New_York] PHP Stack trace:
+[05-May-2017 07:22:12 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_29_074121_messaging.php:0
+[05-May-2017 07:22:14 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_29_074226_messaging_transactions.php on line 7
+[05-May-2017 07:22:14 America/New_York] PHP Stack trace:
+[05-May-2017 07:22:14 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_29_074226_messaging_transactions.php:0
+[05-May-2017 07:22:15 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_02_173726_add_isBonus_column_to_user.php on line 7
+[05-May-2017 07:22:15 America/New_York] PHP Stack trace:
+[05-May-2017 07:22:15 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_02_173726_add_isBonus_column_to_user.php:0
+[05-May-2017 07:22:17 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_03_204845_add_isdefaulted_to_donation_transaction.php on line 7
+[05-May-2017 07:22:17 America/New_York] PHP Stack trace:
+[05-May-2017 07:22:17 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_03_204845_add_isdefaulted_to_donation_transaction.php:0
+[05-May-2017 07:22:18 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_07_040726_referral_bonuses_withdrawn.php on line 7
+[05-May-2017 07:22:18 America/New_York] PHP Stack trace:
+[05-May-2017 07:22:18 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_07_040726_referral_bonuses_withdrawn.php:0
+[05-May-2017 07:22:21 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_16_205317_create_jobs_table.php on line 7
+[05-May-2017 07:22:21 America/New_York] PHP Stack trace:
+[05-May-2017 07:22:21 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_16_205317_create_jobs_table.php:0
+[05-May-2017 07:22:23 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_21_160613_gh_logs.php on line 7
+[05-May-2017 07:22:23 America/New_York] PHP Stack trace:
+[05-May-2017 07:22:23 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_21_160613_gh_logs.php:0
+[05-May-2017 07:22:25 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_26_165036_messaging_transactions_new.php on line 7
+[05-May-2017 07:22:25 America/New_York] PHP Stack trace:
+[05-May-2017 07:22:25 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_26_165036_messaging_transactions_new.php:0
+[05-May-2017 21:46:54 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_11_034109_entrust_setup_tables.php on line 5
+[05-May-2017 21:46:54 America/New_York] PHP Stack trace:
+[05-May-2017 21:46:54 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_11_034109_entrust_setup_tables.php:0
+[05-May-2017 21:46:56 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_12_085056_referrals.php on line 7
+[05-May-2017 21:46:56 America/New_York] PHP Stack trace:
+[05-May-2017 21:46:56 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_12_085056_referrals.php:0
+[05-May-2017 21:46:58 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_14_043647_helps.php on line 7
+[05-May-2017 21:46:58 America/New_York] PHP Stack trace:
+[05-May-2017 21:46:58 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_14_043647_helps.php:0
+[05-May-2017 21:47:00 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_17_034945_email_verifications.php on line 7
+[05-May-2017 21:47:00 America/New_York] PHP Stack trace:
+[05-May-2017 21:47:00 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_17_034945_email_verifications.php:0
+[05-May-2017 21:47:01 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_17_035354_add_is_verified_to_users.php on line 7
+[05-May-2017 21:47:01 America/New_York] PHP Stack trace:
+[05-May-2017 21:47:01 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_17_035354_add_is_verified_to_users.php:0
+[05-May-2017 21:47:03 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_19_140922_announcements.php on line 7
+[05-May-2017 21:47:03 America/New_York] PHP Stack trace:
+[05-May-2017 21:47:03 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_19_140922_announcements.php:0
+[05-May-2017 21:47:05 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_21_033721_donation_transacations.php on line 7
+[05-May-2017 21:47:05 America/New_York] PHP Stack trace:
+[05-May-2017 21:47:05 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_21_033721_donation_transacations.php:0
+[05-May-2017 21:47:06 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_22_165640_add_column_points_to_donation_help.php on line 7
+[05-May-2017 21:47:06 America/New_York] PHP Stack trace:
+[05-May-2017 21:47:06 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_22_165640_add_column_points_to_donation_help.php:0
+[05-May-2017 21:47:08 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_23_210012_add_column_matchCounter_matchDate_to_donation_help.php on line 7
+[05-May-2017 21:47:08 America/New_York] PHP Stack trace:
+[05-May-2017 21:47:08 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_23_210012_add_column_matchCounter_matchDate_to_donation_help.php:0
+[05-May-2017 21:47:10 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_25_180248_add_column_to_donation_transaction.php on line 7
+[05-May-2017 21:47:10 America/New_York] PHP Stack trace:
+[05-May-2017 21:47:10 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_25_180248_add_column_to_donation_transaction.php:0
+[05-May-2017 21:47:12 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_29_074121_messaging.php on line 7
+[05-May-2017 21:47:12 America/New_York] PHP Stack trace:
+[05-May-2017 21:47:12 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_29_074121_messaging.php:0
+[05-May-2017 21:47:13 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_29_074226_messaging_transactions.php on line 7
+[05-May-2017 21:47:13 America/New_York] PHP Stack trace:
+[05-May-2017 21:47:13 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_29_074226_messaging_transactions.php:0
+[05-May-2017 21:47:15 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_02_173726_add_isBonus_column_to_user.php on line 7
+[05-May-2017 21:47:15 America/New_York] PHP Stack trace:
+[05-May-2017 21:47:15 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_02_173726_add_isBonus_column_to_user.php:0
+[05-May-2017 21:47:17 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_03_204845_add_isdefaulted_to_donation_transaction.php on line 7
+[05-May-2017 21:47:17 America/New_York] PHP Stack trace:
+[05-May-2017 21:47:17 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_03_204845_add_isdefaulted_to_donation_transaction.php:0
+[05-May-2017 21:47:18 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_07_040726_referral_bonuses_withdrawn.php on line 7
+[05-May-2017 21:47:18 America/New_York] PHP Stack trace:
+[05-May-2017 21:47:18 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_07_040726_referral_bonuses_withdrawn.php:0
+[05-May-2017 21:47:20 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_16_205317_create_jobs_table.php on line 7
+[05-May-2017 21:47:20 America/New_York] PHP Stack trace:
+[05-May-2017 21:47:20 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_16_205317_create_jobs_table.php:0
+[05-May-2017 21:47:22 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_21_160613_gh_logs.php on line 7
+[05-May-2017 21:47:22 America/New_York] PHP Stack trace:
+[05-May-2017 21:47:22 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_21_160613_gh_logs.php:0
+[05-May-2017 21:47:23 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_26_165036_messaging_transactions_new.php on line 7
+[05-May-2017 21:47:23 America/New_York] PHP Stack trace:
+[05-May-2017 21:47:23 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_26_165036_messaging_transactions_new.php:0
+[05-May-2017 22:26:02 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2014_10_12_000000_create_users_table.php on line 7
+[05-May-2017 22:26:02 America/New_York] PHP Stack trace:
+[05-May-2017 22:26:02 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2014_10_12_000000_create_users_table.php:0
+[05-May-2017 22:26:04 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2014_10_12_100000_create_password_resets_table.php on line 7
+[05-May-2017 22:26:04 America/New_York] PHP Stack trace:
+[05-May-2017 22:26:04 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2014_10_12_100000_create_password_resets_table.php:0
+[07-May-2017 17:34:30 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_03_204845_add_isdefaulted_to_donation_transaction.php on line 7
+[07-May-2017 17:34:30 America/New_York] PHP Stack trace:
+[07-May-2017 17:34:30 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_03_204845_add_isdefaulted_to_donation_transaction.php:0
+[07-May-2017 17:34:33 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_19_140922_announcements.php on line 7
+[07-May-2017 17:34:33 America/New_York] PHP Stack trace:
+[07-May-2017 17:34:33 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_19_140922_announcements.php:0
+[07-May-2017 17:34:34 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_19_140922_announcements.php on line 7
+[07-May-2017 17:34:34 America/New_York] PHP Stack trace:
+[07-May-2017 17:34:34 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_19_140922_announcements.php:0
+[07-May-2017 18:57:10 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_29_074121_messaging.php on line 7
+[07-May-2017 18:57:10 America/New_York] PHP Stack trace:
+[07-May-2017 18:57:10 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_29_074121_messaging.php:0
+[08-May-2017 21:00:00 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_29_074121_messaging.php on line 7
+[08-May-2017 21:00:00 America/New_York] PHP Stack trace:
+[08-May-2017 21:00:00 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_29_074121_messaging.php:0
+[09-May-2017 06:42:05 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_19_140922_announcements.php on line 7
+[09-May-2017 06:42:05 America/New_York] PHP Stack trace:
+[09-May-2017 06:42:05 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_19_140922_announcements.php:0
+[09-May-2017 10:58:19 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_03_204845_add_isdefaulted_to_donation_transaction.php on line 7
+[09-May-2017 10:58:19 America/New_York] PHP Stack trace:
+[09-May-2017 10:58:19 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_03_204845_add_isdefaulted_to_donation_transaction.php:0
+[31-May-2017 11:55:40 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_26_165036_messaging_transactions_new.php on line 7
+[31-May-2017 11:55:40 America/New_York] PHP Stack trace:
+[31-May-2017 11:55:40 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_26_165036_messaging_transactions_new.php:0
+[31-May-2017 12:44:21 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_14_043647_helps.php on line 7
+[31-May-2017 12:44:21 America/New_York] PHP Stack trace:
+[31-May-2017 12:44:21 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_14_043647_helps.php:0
+[31-May-2017 12:44:25 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_21_160613_gh_logs.php on line 7
+[31-May-2017 12:44:25 America/New_York] PHP Stack trace:
+[31-May-2017 12:44:25 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_21_160613_gh_logs.php:0
+[31-May-2017 15:36:07 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_11_034109_entrust_setup_tables.php on line 5
+[31-May-2017 15:36:07 America/New_York] PHP Stack trace:
+[31-May-2017 15:36:07 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_11_034109_entrust_setup_tables.php:0
+[01-Jun-2017 23:16:31 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_19_140922_announcements.php on line 7
+[01-Jun-2017 23:16:31 America/New_York] PHP Stack trace:
+[01-Jun-2017 23:16:31 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_19_140922_announcements.php:0
+[01-Jun-2017 23:16:31 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_17_034945_email_verifications.php on line 7
+[01-Jun-2017 23:16:31 America/New_York] PHP Stack trace:
+[01-Jun-2017 23:16:31 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_17_034945_email_verifications.php:0
+[01-Jun-2017 23:16:43 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_21_033721_donation_transacations.php on line 7
+[01-Jun-2017 23:16:43 America/New_York] PHP Stack trace:
+[01-Jun-2017 23:16:43 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_21_033721_donation_transacations.php:0
+[01-Jun-2017 23:17:42 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_21_160613_gh_logs.php on line 7
+[01-Jun-2017 23:17:42 America/New_York] PHP Stack trace:
+[01-Jun-2017 23:17:42 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_21_160613_gh_logs.php:0
+[01-Jun-2017 23:17:45 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_14_043647_helps.php on line 7
+[01-Jun-2017 23:17:45 America/New_York] PHP Stack trace:
+[01-Jun-2017 23:17:45 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_14_043647_helps.php:0
+[01-Jun-2017 23:18:52 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_12_085056_referrals.php on line 7
+[01-Jun-2017 23:18:52 America/New_York] PHP Stack trace:
+[01-Jun-2017 23:18:52 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_12_085056_referrals.php:0
+[02-Jun-2017 03:19:58 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_29_074121_messaging.php on line 7
+[02-Jun-2017 03:19:58 America/New_York] PHP Stack trace:
+[02-Jun-2017 03:19:58 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_29_074121_messaging.php:0
+[02-Jun-2017 03:42:22 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_26_165036_messaging_transactions_new.php on line 7
+[02-Jun-2017 03:42:22 America/New_York] PHP Stack trace:
+[02-Jun-2017 03:42:22 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_26_165036_messaging_transactions_new.php:0
+[06-Jun-2017 00:35:28 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_03_204845_add_isdefaulted_to_donation_transaction.php on line 7
+[06-Jun-2017 00:35:28 America/New_York] PHP Stack trace:
+[06-Jun-2017 00:35:28 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_03_204845_add_isdefaulted_to_donation_transaction.php:0
+[06-Jun-2017 14:34:47 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_29_074121_messaging.php on line 7
+[06-Jun-2017 14:34:47 America/New_York] PHP Stack trace:
+[06-Jun-2017 14:34:47 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_29_074121_messaging.php:0
+[06-Jun-2017 18:28:13 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_14_043647_helps.php on line 7
+[06-Jun-2017 18:28:13 America/New_York] PHP Stack trace:
+[06-Jun-2017 18:28:13 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_14_043647_helps.php:0
+[06-Jun-2017 19:25:55 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_12_085056_referrals.php on line 7
+[06-Jun-2017 19:25:55 America/New_York] PHP Stack trace:
+[06-Jun-2017 19:25:55 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_12_085056_referrals.php:0
+[07-Jun-2017 00:45:41 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_16_205317_create_jobs_table.php on line 7
+[07-Jun-2017 00:45:41 America/New_York] PHP Stack trace:
+[07-Jun-2017 00:45:41 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_16_205317_create_jobs_table.php:0
+[07-Jun-2017 00:46:02 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_21_033721_donation_transacations.php on line 7
+[07-Jun-2017 00:46:02 America/New_York] PHP Stack trace:
+[07-Jun-2017 00:46:02 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_21_033721_donation_transacations.php:0
+[07-Jun-2017 00:48:45 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_17_034945_email_verifications.php on line 7
+[07-Jun-2017 00:48:45 America/New_York] PHP Stack trace:
+[07-Jun-2017 00:48:45 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_17_034945_email_verifications.php:0
+[07-Jun-2017 16:26:06 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_23_210012_add_column_matchCounter_matchDate_to_donation_help.php on line 7
+[07-Jun-2017 16:26:06 America/New_York] PHP Stack trace:
+[07-Jun-2017 16:26:06 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_23_210012_add_column_matchCounter_matchDate_to_donation_help.php:0
+[07-Jun-2017 18:27:05 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_02_173726_add_isBonus_column_to_user.php on line 7
+[07-Jun-2017 18:27:05 America/New_York] PHP Stack trace:
+[07-Jun-2017 18:27:05 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_02_173726_add_isBonus_column_to_user.php:0
+[07-Jun-2017 18:29:00 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_17_035354_add_is_verified_to_users.php on line 7
+[07-Jun-2017 18:29:00 America/New_York] PHP Stack trace:
+[07-Jun-2017 18:29:00 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_17_035354_add_is_verified_to_users.php:0
+[07-Jun-2017 18:29:53 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_22_165640_add_column_points_to_donation_help.php on line 7
+[07-Jun-2017 18:29:53 America/New_York] PHP Stack trace:
+[07-Jun-2017 18:29:53 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_22_165640_add_column_points_to_donation_help.php:0
+[07-Jun-2017 18:57:37 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2014_10_12_100000_create_password_resets_table.php on line 7
+[07-Jun-2017 18:57:37 America/New_York] PHP Stack trace:
+[07-Jun-2017 18:57:37 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2014_10_12_100000_create_password_resets_table.php:0
+[07-Jun-2017 20:49:16 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_29_074226_messaging_transactions.php on line 7
+[07-Jun-2017 20:49:16 America/New_York] PHP Stack trace:
+[07-Jun-2017 20:49:16 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_29_074226_messaging_transactions.php:0
+[09-Jun-2017 16:01:15 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_25_180248_add_column_to_donation_transaction.php on line 7
+[09-Jun-2017 16:01:15 America/New_York] PHP Stack trace:
+[09-Jun-2017 16:01:15 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_25_180248_add_column_to_donation_transaction.php:0
+[10-Jun-2017 16:00:31 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_17_034945_email_verifications.php on line 7
+[10-Jun-2017 16:00:31 America/New_York] PHP Stack trace:
+[10-Jun-2017 16:00:31 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_17_034945_email_verifications.php:0
+[10-Jun-2017 17:35:00 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_23_210012_add_column_matchCounter_matchDate_to_donation_help.php on line 7
+[10-Jun-2017 17:35:00 America/New_York] PHP Stack trace:
+[10-Jun-2017 17:35:00 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_23_210012_add_column_matchCounter_matchDate_to_donation_help.php:0
+[10-Jun-2017 17:51:55 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_25_180248_add_column_to_donation_transaction.php on line 7
+[10-Jun-2017 17:51:55 America/New_York] PHP Stack trace:
+[10-Jun-2017 17:51:55 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_25_180248_add_column_to_donation_transaction.php:0
+[10-Jun-2017 19:04:14 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_29_074121_messaging.php on line 7
+[10-Jun-2017 19:04:14 America/New_York] PHP Stack trace:
+[10-Jun-2017 19:04:14 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_29_074121_messaging.php:0
+[11-Jun-2017 00:45:38 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_21_033721_donation_transacations.php on line 7
+[11-Jun-2017 00:45:38 America/New_York] PHP Stack trace:
+[11-Jun-2017 00:45:38 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_21_033721_donation_transacations.php:0
+[15-Jun-2017 10:21:02 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_16_205317_create_jobs_table.php on line 7
+[15-Jun-2017 10:21:02 America/New_York] PHP Stack trace:
+[15-Jun-2017 10:21:02 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_16_205317_create_jobs_table.php:0
+[15-Jun-2017 10:25:51 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2014_10_12_000000_create_users_table.php on line 7
+[15-Jun-2017 10:25:51 America/New_York] PHP Stack trace:
+[15-Jun-2017 10:25:51 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2014_10_12_000000_create_users_table.php:0
+[15-Jun-2017 12:59:40 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_26_165036_messaging_transactions_new.php on line 7
+[15-Jun-2017 12:59:40 America/New_York] PHP Stack trace:
+[15-Jun-2017 12:59:40 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_26_165036_messaging_transactions_new.php:0
+[15-Jun-2017 22:52:58 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_22_165640_add_column_points_to_donation_help.php on line 7
+[15-Jun-2017 22:52:58 America/New_York] PHP Stack trace:
+[15-Jun-2017 22:52:58 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_22_165640_add_column_points_to_donation_help.php:0
+[15-Jun-2017 23:10:01 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_29_074121_messaging.php on line 7
+[15-Jun-2017 23:10:01 America/New_York] PHP Stack trace:
+[15-Jun-2017 23:10:01 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_29_074121_messaging.php:0
+[15-Jun-2017 23:28:01 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_17_035354_add_is_verified_to_users.php on line 7
+[15-Jun-2017 23:28:01 America/New_York] PHP Stack trace:
+[15-Jun-2017 23:28:01 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_17_035354_add_is_verified_to_users.php:0
+[15-Jun-2017 23:30:07 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_03_204845_add_isdefaulted_to_donation_transaction.php on line 7
+[15-Jun-2017 23:30:07 America/New_York] PHP Stack trace:
+[15-Jun-2017 23:30:07 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_03_204845_add_isdefaulted_to_donation_transaction.php:0
+[15-Jun-2017 23:31:37 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2014_10_12_100000_create_password_resets_table.php on line 7
+[15-Jun-2017 23:31:37 America/New_York] PHP Stack trace:
+[15-Jun-2017 23:31:37 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2014_10_12_100000_create_password_resets_table.php:0
+[16-Jun-2017 06:12:42 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_12_085056_referrals.php on line 7
+[16-Jun-2017 06:12:42 America/New_York] PHP Stack trace:
+[16-Jun-2017 06:12:42 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_12_085056_referrals.php:0
+[16-Jun-2017 07:20:42 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_21_160613_gh_logs.php on line 7
+[16-Jun-2017 07:20:42 America/New_York] PHP Stack trace:
+[16-Jun-2017 07:20:42 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_21_160613_gh_logs.php:0
+[21-Jun-2017 19:30:57 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_23_210012_add_column_matchCounter_matchDate_to_donation_help.php on line 7
+[21-Jun-2017 19:30:57 America/New_York] PHP Stack trace:
+[21-Jun-2017 19:30:57 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_23_210012_add_column_matchCounter_matchDate_to_donation_help.php:0
+[21-Jun-2017 19:30:57 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_23_210012_add_column_matchCounter_matchDate_to_donation_help.php on line 7
+[21-Jun-2017 19:30:57 America/New_York] PHP Stack trace:
+[21-Jun-2017 19:30:57 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_23_210012_add_column_matchCounter_matchDate_to_donation_help.php:0
+[21-Jun-2017 19:35:38 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_03_204845_add_isdefaulted_to_donation_transaction.php on line 7
+[21-Jun-2017 19:35:38 America/New_York] PHP Stack trace:
+[21-Jun-2017 19:35:38 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_04_03_204845_add_isdefaulted_to_donation_transaction.php:0
+[21-Jun-2017 19:35:43 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_19_140922_announcements.php on line 7
+[21-Jun-2017 19:35:43 America/New_York] PHP Stack trace:
+[21-Jun-2017 19:35:43 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_19_140922_announcements.php:0
+[21-Jun-2017 19:37:14 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2014_10_12_100000_create_password_resets_table.php on line 7
+[21-Jun-2017 19:37:14 America/New_York] PHP Stack trace:
+[21-Jun-2017 19:37:14 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2014_10_12_100000_create_password_resets_table.php:0
+[24-Jun-2017 05:56:41 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Migrations\Migration' not found in /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_14_043647_helps.php on line 7
+[24-Jun-2017 05:56:41 America/New_York] PHP Stack trace:
+[24-Jun-2017 05:56:41 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/migrations/2017_03_14_043647_helps.php:0

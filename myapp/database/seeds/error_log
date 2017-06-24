@@ -1,0 +1,96 @@
+[02-May-2017 10:22:32 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Seeder' not found in /home/afripeaj/public_html/giveandget/myapp/database/seeds/DatabaseSeeder.php on line 5
+[02-May-2017 10:22:32 America/New_York] PHP Stack trace:
+[02-May-2017 10:22:32 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/seeds/DatabaseSeeder.php:0
+[02-May-2017 10:23:06 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Seeder' not found in /home/afripeaj/public_html/giveandget/myapp/database/seeds/RoleDatabaseSeeder.php on line 6
+[02-May-2017 10:23:06 America/New_York] PHP Stack trace:
+[02-May-2017 10:23:06 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/seeds/RoleDatabaseSeeder.php:0
+[02-May-2017 10:23:32 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Seeder' not found in /home/afripeaj/public_html/giveandget/myapp/database/seeds/PermissionsTableSeeder.php on line 7
+[02-May-2017 10:23:32 America/New_York] PHP Stack trace:
+[02-May-2017 10:23:32 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/seeds/PermissionsTableSeeder.php:0
+[02-May-2017 16:52:27 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Seeder' not found in /home/afripeaj/public_html/giveandget/myapp/database/seeds/UsersTableSeeder.php on line 7
+[02-May-2017 16:52:27 America/New_York] PHP Stack trace:
+[02-May-2017 16:52:27 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/seeds/UsersTableSeeder.php:0
+[03-May-2017 00:54:18 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Seeder' not found in /home/afripeaj/public_html/giveandget/myapp/database/seeds/UsersTableSeeder.php on line 7
+[03-May-2017 00:54:18 America/New_York] PHP Stack trace:
+[03-May-2017 00:54:18 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/seeds/UsersTableSeeder.php:0
+[03-May-2017 00:54:20 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Seeder' not found in /home/afripeaj/public_html/giveandget/myapp/database/seeds/RoleDatabaseSeeder.php on line 6
+[03-May-2017 00:54:20 America/New_York] PHP Stack trace:
+[03-May-2017 00:54:20 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/seeds/RoleDatabaseSeeder.php:0
+[03-May-2017 00:54:26 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Seeder' not found in /home/afripeaj/public_html/giveandget/myapp/database/seeds/PermissionsTableSeeder.php on line 7
+[03-May-2017 00:54:26 America/New_York] PHP Stack trace:
+[03-May-2017 00:54:26 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/seeds/PermissionsTableSeeder.php:0
+[03-May-2017 10:33:47 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Seeder' not found in /home/afripeaj/public_html/giveandget/myapp/database/seeds/DatabaseSeeder.php on line 5
+[03-May-2017 10:33:47 America/New_York] PHP Stack trace:
+[03-May-2017 10:33:47 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/seeds/DatabaseSeeder.php:0
+[04-May-2017 07:23:26 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Seeder' not found in /home/afripeaj/public_html/giveandget/myapp/database/seeds/DatabaseSeeder.php on line 5
+[04-May-2017 07:23:26 America/New_York] PHP Stack trace:
+[04-May-2017 07:23:26 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/seeds/DatabaseSeeder.php:0
+[04-May-2017 07:23:27 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Seeder' not found in /home/afripeaj/public_html/giveandget/myapp/database/seeds/PermissionsTableSeeder.php on line 7
+[04-May-2017 07:23:27 America/New_York] PHP Stack trace:
+[04-May-2017 07:23:27 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/seeds/PermissionsTableSeeder.php:0
+[04-May-2017 07:23:38 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Seeder' not found in /home/afripeaj/public_html/giveandget/myapp/database/seeds/RoleDatabaseSeeder.php on line 6
+[04-May-2017 07:23:38 America/New_York] PHP Stack trace:
+[04-May-2017 07:23:38 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/seeds/RoleDatabaseSeeder.php:0
+[04-May-2017 07:23:40 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Seeder' not found in /home/afripeaj/public_html/giveandget/myapp/database/seeds/UsersTableSeeder.php on line 7
+[04-May-2017 07:23:40 America/New_York] PHP Stack trace:
+[04-May-2017 07:23:40 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/seeds/UsersTableSeeder.php:0
+[05-May-2017 07:22:27 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Seeder' not found in /home/afripeaj/public_html/giveandget/myapp/database/seeds/DatabaseSeeder.php on line 5
+[05-May-2017 07:22:27 America/New_York] PHP Stack trace:
+[05-May-2017 07:22:27 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/seeds/DatabaseSeeder.php:0
+[05-May-2017 07:22:28 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Seeder' not found in /home/afripeaj/public_html/giveandget/myapp/database/seeds/PermissionsTableSeeder.php on line 7
+[05-May-2017 07:22:28 America/New_York] PHP Stack trace:
+[05-May-2017 07:22:28 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/seeds/PermissionsTableSeeder.php:0
+[05-May-2017 07:22:30 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Seeder' not found in /home/afripeaj/public_html/giveandget/myapp/database/seeds/RoleDatabaseSeeder.php on line 6
+[05-May-2017 07:22:30 America/New_York] PHP Stack trace:
+[05-May-2017 07:22:30 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/seeds/RoleDatabaseSeeder.php:0
+[05-May-2017 07:22:32 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Seeder' not found in /home/afripeaj/public_html/giveandget/myapp/database/seeds/UsersTableSeeder.php on line 7
+[05-May-2017 07:22:32 America/New_York] PHP Stack trace:
+[05-May-2017 07:22:32 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/seeds/UsersTableSeeder.php:0
+[05-May-2017 21:47:25 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Seeder' not found in /home/afripeaj/public_html/giveandget/myapp/database/seeds/DatabaseSeeder.php on line 5
+[05-May-2017 21:47:25 America/New_York] PHP Stack trace:
+[05-May-2017 21:47:25 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/seeds/DatabaseSeeder.php:0
+[05-May-2017 21:47:27 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Seeder' not found in /home/afripeaj/public_html/giveandget/myapp/database/seeds/PermissionsTableSeeder.php on line 7
+[05-May-2017 21:47:27 America/New_York] PHP Stack trace:
+[05-May-2017 21:47:27 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/seeds/PermissionsTableSeeder.php:0
+[05-May-2017 21:47:28 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Seeder' not found in /home/afripeaj/public_html/giveandget/myapp/database/seeds/RoleDatabaseSeeder.php on line 6
+[05-May-2017 21:47:28 America/New_York] PHP Stack trace:
+[05-May-2017 21:47:28 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/seeds/RoleDatabaseSeeder.php:0
+[05-May-2017 21:47:30 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Seeder' not found in /home/afripeaj/public_html/giveandget/myapp/database/seeds/UsersTableSeeder.php on line 7
+[05-May-2017 21:47:30 America/New_York] PHP Stack trace:
+[05-May-2017 21:47:30 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/seeds/UsersTableSeeder.php:0
+[08-May-2017 02:11:12 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Seeder' not found in /home/afripeaj/public_html/giveandget/myapp/database/seeds/RoleDatabaseSeeder.php on line 6
+[08-May-2017 02:11:12 America/New_York] PHP Stack trace:
+[08-May-2017 02:11:12 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/seeds/RoleDatabaseSeeder.php:0
+[08-May-2017 09:28:48 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Seeder' not found in /home/afripeaj/public_html/giveandget/myapp/database/seeds/UsersTableSeeder.php on line 7
+[08-May-2017 09:28:48 America/New_York] PHP Stack trace:
+[08-May-2017 09:28:48 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/seeds/UsersTableSeeder.php:0
+[09-May-2017 22:01:45 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Seeder' not found in /home/afripeaj/public_html/giveandget/myapp/database/seeds/UsersTableSeeder.php on line 7
+[09-May-2017 22:01:45 America/New_York] PHP Stack trace:
+[09-May-2017 22:01:45 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/seeds/UsersTableSeeder.php:0
+[31-May-2017 13:36:36 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Seeder' not found in /home/afripeaj/public_html/giveandget/myapp/database/seeds/DatabaseSeeder.php on line 5
+[31-May-2017 13:36:36 America/New_York] PHP Stack trace:
+[31-May-2017 13:36:36 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/seeds/DatabaseSeeder.php:0
+[01-Jun-2017 23:35:33 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Seeder' not found in /home/afripeaj/public_html/giveandget/myapp/database/seeds/RoleDatabaseSeeder.php on line 6
+[01-Jun-2017 23:35:33 America/New_York] PHP Stack trace:
+[01-Jun-2017 23:35:33 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/seeds/RoleDatabaseSeeder.php:0
+[02-Jun-2017 03:42:10 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Seeder' not found in /home/afripeaj/public_html/giveandget/myapp/database/seeds/UsersTableSeeder.php on line 7
+[02-Jun-2017 03:42:10 America/New_York] PHP Stack trace:
+[02-Jun-2017 03:42:10 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/seeds/UsersTableSeeder.php:0
+[02-Jun-2017 06:39:00 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Seeder' not found in /home/afripeaj/public_html/giveandget/myapp/database/seeds/DatabaseSeeder.php on line 5
+[02-Jun-2017 06:39:00 America/New_York] PHP Stack trace:
+[02-Jun-2017 06:39:00 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/seeds/DatabaseSeeder.php:0
+[07-Jun-2017 03:58:24 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Seeder' not found in /home/afripeaj/public_html/giveandget/myapp/database/seeds/RoleDatabaseSeeder.php on line 6
+[07-Jun-2017 03:58:24 America/New_York] PHP Stack trace:
+[07-Jun-2017 03:58:24 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/seeds/RoleDatabaseSeeder.php:0
+[07-Jun-2017 20:49:09 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Seeder' not found in /home/afripeaj/public_html/giveandget/myapp/database/seeds/PermissionsTableSeeder.php on line 7
+[07-Jun-2017 20:49:09 America/New_York] PHP Stack trace:
+[07-Jun-2017 20:49:09 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/seeds/PermissionsTableSeeder.php:0
+[10-Jun-2017 16:18:10 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Seeder' not found in /home/afripeaj/public_html/giveandget/myapp/database/seeds/UsersTableSeeder.php on line 7
+[10-Jun-2017 16:18:10 America/New_York] PHP Stack trace:
+[10-Jun-2017 16:18:10 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/seeds/UsersTableSeeder.php:0
+[10-Jun-2017 19:27:45 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Seeder' not found in /home/afripeaj/public_html/giveandget/myapp/database/seeds/PermissionsTableSeeder.php on line 7
+[10-Jun-2017 19:27:45 America/New_York] PHP Stack trace:
+[10-Jun-2017 19:27:45 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/seeds/PermissionsTableSeeder.php:0
+[23-Jun-2017 16:56:05 America/New_York] PHP Fatal error:  Class 'Illuminate\Database\Seeder' not found in /home/afripeaj/public_html/giveandget/myapp/database/seeds/RoleDatabaseSeeder.php on line 6
+[23-Jun-2017 16:56:05 America/New_York] PHP Stack trace:
+[23-Jun-2017 16:56:05 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/seeds/RoleDatabaseSeeder.php:0

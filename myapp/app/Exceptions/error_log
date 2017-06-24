@@ -1,0 +1,27 @@
+[02-May-2017 10:21:37 America/New_York] PHP Fatal error:  Class 'Illuminate\Foundation\Exceptions\Handler' not found in /home/afripeaj/public_html/giveandget/myapp/app/Exceptions/Handler.php on line 9
+[02-May-2017 10:21:37 America/New_York] PHP Stack trace:
+[02-May-2017 10:21:37 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/app/Exceptions/Handler.php:0
+[03-May-2017 05:17:12 America/New_York] PHP Fatal error:  Class 'Illuminate\Foundation\Exceptions\Handler' not found in /home/afripeaj/public_html/giveandget/myapp/app/Exceptions/Handler.php on line 9
+[03-May-2017 05:17:12 America/New_York] PHP Stack trace:
+[03-May-2017 05:17:12 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/app/Exceptions/Handler.php:0
+[04-May-2017 07:21:26 America/New_York] PHP Fatal error:  Class 'Illuminate\Foundation\Exceptions\Handler' not found in /home/afripeaj/public_html/giveandget/myapp/app/Exceptions/Handler.php on line 9
+[04-May-2017 07:21:26 America/New_York] PHP Stack trace:
+[04-May-2017 07:21:26 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/app/Exceptions/Handler.php:0
+[05-May-2017 07:21:19 America/New_York] PHP Fatal error:  Class 'Illuminate\Foundation\Exceptions\Handler' not found in /home/afripeaj/public_html/giveandget/myapp/app/Exceptions/Handler.php on line 9
+[05-May-2017 07:21:19 America/New_York] PHP Stack trace:
+[05-May-2017 07:21:19 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/app/Exceptions/Handler.php:0
+[05-May-2017 22:25:31 America/New_York] PHP Fatal error:  Class 'Illuminate\Foundation\Exceptions\Handler' not found in /home/afripeaj/public_html/giveandget/myapp/app/Exceptions/Handler.php on line 9
+[05-May-2017 22:25:31 America/New_York] PHP Stack trace:
+[05-May-2017 22:25:31 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/app/Exceptions/Handler.php:0
+[08-May-2017 04:11:16 America/New_York] PHP Fatal error:  Class 'Illuminate\Foundation\Exceptions\Handler' not found in /home/afripeaj/public_html/giveandget/myapp/app/Exceptions/Handler.php on line 9
+[08-May-2017 04:11:16 America/New_York] PHP Stack trace:
+[08-May-2017 04:11:16 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/app/Exceptions/Handler.php:0
+[08-May-2017 17:29:28 America/New_York] PHP Fatal error:  Class 'Illuminate\Foundation\Exceptions\Handler' not found in /home/afripeaj/public_html/giveandget/myapp/app/Exceptions/Handler.php on line 9
+[08-May-2017 17:29:28 America/New_York] PHP Stack trace:
+[08-May-2017 17:29:28 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/app/Exceptions/Handler.php:0
+[08-May-2017 17:29:37 America/New_York] PHP Fatal error:  Class 'Illuminate\Foundation\Exceptions\Handler' not found in /home/afripeaj/public_html/giveandget/myapp/app/Exceptions/Handler.php on line 9
+[08-May-2017 17:29:37 America/New_York] PHP Stack trace:
+[08-May-2017 17:29:37 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/app/Exceptions/Handler.php:0
+[01-Jun-2017 23:16:11 America/New_York] PHP Fatal error:  Class 'Illuminate\Foundation\Exceptions\Handler' not found in /home/afripeaj/public_html/giveandget/myapp/app/Exceptions/Handler.php on line 9
+[01-Jun-2017 23:16:11 America/New_York] PHP Stack trace:
+[01-Jun-2017 23:16:11 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/app/Exceptions/Handler.php:0
