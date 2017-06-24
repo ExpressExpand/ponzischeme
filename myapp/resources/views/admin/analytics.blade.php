@@ -51,6 +51,7 @@
                            <td>{{ (isset($analytic->path)) ? $analytic->path : '' }}</td>
                            <td>{{ (isset($analytic->latitude)) ? $analytic->latitude : '' }}</td>
                            <td>{{ (isset($analytic->longitude)) ? $analytic->longitude : '' }}</td>
+                           <td>{{ (isset($analytic->created_at }}</td>
                         </tr>
                         @endforeach
                         @else

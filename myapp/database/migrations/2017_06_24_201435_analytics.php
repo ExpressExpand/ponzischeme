@@ -22,6 +22,7 @@ class Analytics extends Migration
             $table->string('path')->nullable();
             $table->string('latitude')->nullable();
             $table->string('longitude')->nullable();
+            $table->timestamps();
         });
     }
 
