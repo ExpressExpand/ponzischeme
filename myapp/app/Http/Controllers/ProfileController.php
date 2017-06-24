@@ -90,8 +90,8 @@ class ProfileController extends Controller
         if($user->isVerified == 1) {
             return redirect('Your email has previously been verified');
         }
-        $unique_hash = md5(uniqid(). time());
-        $hash = bcrypt($unique_hash);
+        $hash = uniqid(). time();
+        // $hash = bcrypt($unique_hash);
         
         try {
             //store the hash into the table
