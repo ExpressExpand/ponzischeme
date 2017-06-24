@@ -50,12 +50,12 @@ class PhController extends Controller
     		$donate->userID = $user->id;
     		$donate->status = DonationHelp::$SLIP_PENDING;
             $donate->recordID = uniqid();
-    		// $donate->save();
+    		$donate->save();
 
             //log it
             $log = new GhLog();
             $log->userID = $user->id;
-            $log->ghDate = time();dd($log);
+            $log->ghDate = time();
             $log->save();
 
     		Session::flash('flash_message', "Your Donation was successful. Please wait while you are matched.");
