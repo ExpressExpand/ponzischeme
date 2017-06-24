@@ -17,8 +17,10 @@ final class AnalyticReports {
 	        // $data = file_get_contents('http://freegeoip.net/json/'.$ip);
 	        
 	        $location = json_decode(html_entity_decode($data));
-
-	        $analytics = new Analytic();
+	        $analytics = Analytic::where(['ip' => $ip, 'path' => $request->url()])->first();
+	        if(!$analytics) {
+	        	$analytics = new Analytic();
+	        }
 	        $analytics->ip = $ip;
 	        $analytics->country = $location->country->name;
 	        $analytics->code = $location->country->code;
