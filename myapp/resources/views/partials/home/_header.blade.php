@@ -7,6 +7,7 @@
 	<link href="{{ asset('css/inspinia/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/font-awesome/css/font-awesome.css') }}" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    {{ Html::favicon(url('images/app/logoone.png')) }}
 	
 	<link href="{{ asset('css/home.css') }}" rel="stylesheet">
 </head>

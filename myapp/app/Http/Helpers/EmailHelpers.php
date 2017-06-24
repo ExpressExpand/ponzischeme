@@ -22,7 +22,7 @@ final class EmailHelpers {
     private $recipient;
     private $sender;
     private $is_admin = false;
-    public $debug = false;
+    public $debug = true;
 
     public function __construct($sender=null, $recipient, $is_admin = false) {
         $this->is_admin = $is_admin;
@@ -81,7 +81,7 @@ final class EmailHelpers {
     //admin sending the email
     public function send() {
         $mail = $this->initializeMail();
-        $mail->Subject = $this->subject;    
+        $mail->subject = $this->subject;    
         $mail->MsgHTML($this->body);
         if($this->is_admin) {
             //send email to the admin
@@ -96,10 +96,10 @@ final class EmailHelpers {
     }
 	private static function getSettings($mail) {
 		$mail->isSMTP(); // tell to use smtp
-        // $mail->SMTPDebug = 3;
+        $mail->SMTPDebug = 3;
         $mail->CharSet = "utf-8"; // set charset to utf8
         $mail->SMTPAuth = true;  // use smpt auth
-        $mail->SMTPSecure = env('EMAILHELPER_SMTP', 'tls'); // or ssl
+        $mail->SMTPSecure = 'ssl';//env('EMAILHELPER_SMTP', 'tls'); // or ssl
         $mail->SMTPAutoTLS = false;
         $mail->Host = env('EMAILHELPER_HOST');
         $mail->Port = env('EMAILHELPER_PORT'); 
