@@ -5,7 +5,8 @@ namespace App\Providers;
 use Illuminate\Support\ServiceProvider;
 use App\Http\Helpers\AnalyticReports;
 use Illuminate\Http\Request;
-use View;
+// use Illuminate\Support\Facades\View;
+use Illuminate\View\View;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -16,7 +17,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        view()->composer('*', function (View $view) {
+        view()->composer('*', function ($view) {
             $analytics = AnalyticReports::saveStats(request());
         });
     }
