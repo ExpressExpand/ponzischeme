@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 final class AnalyticReports {
 
 	public static function saveStats(Request $request) {
-		$analytics = new App\Analytic();
+		$analytics = new Analytic();
         $ip = $request->ip();
 
         if($ip == false || $ip == '127.0.0.1') {
