@@ -16,7 +16,7 @@ class GhLogs extends Migration
         Schema::create('gh_logs', function($table) {
             $table->increments('id');
             $table->integer('userID')->unique()->references('id')->on('users');
-            $table->integer('ghDate');
+            $table->integer('ghDate')->default(0);
             $table->integer('status')->default(0);
             $table->timestamps();
         });
