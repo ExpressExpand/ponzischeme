@@ -12,9 +12,9 @@ class GhLog extends Model
     public function user() {
     	return $this->belongsTo('App\User', 'userID');
     }
-    public function setGhDateAttribute() {
-    	$this->ghDate = time();
-    }
+    // public function setGhDateAttribute() {
+    // 	$this->ghDate = time();
+    // }
     public function getGhDateAttribute($value) {
     	
     }
