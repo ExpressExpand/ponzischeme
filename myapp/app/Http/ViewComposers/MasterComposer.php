@@ -3,10 +3,9 @@ namespace App\Http\ViewComposers;
 
 use Illuminate\View\View;
 use Auth;
-use App\MessagingTransaction;
 use App\Http\Helpers\AnalyticReports;
 use Illuminate\Http\Request;
-use App\Http\Helpers\AnalyticReports;
+
 /**
 * 
 */
