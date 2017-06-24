@@ -1,0 +1,42 @@
+[02-May-2017 10:21:48 America/New_York] PHP Notice:  Undefined variable: factory in /home/afripeaj/public_html/giveandget/myapp/database/factories/ModelFactory.php on line 15
+[02-May-2017 10:21:48 America/New_York] PHP Stack trace:
+[02-May-2017 10:21:48 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/factories/ModelFactory.php:0
+[02-May-2017 10:21:48 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function define() on null in /home/afripeaj/public_html/giveandget/myapp/database/factories/ModelFactory.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/database/factories/ModelFactory.php on line 15
+[03-May-2017 00:54:13 America/New_York] PHP Notice:  Undefined variable: factory in /home/afripeaj/public_html/giveandget/myapp/database/factories/ModelFactory.php on line 15
+[03-May-2017 00:54:13 America/New_York] PHP Stack trace:
+[03-May-2017 00:54:13 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/factories/ModelFactory.php:0
+[03-May-2017 00:54:13 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function define() on null in /home/afripeaj/public_html/giveandget/myapp/database/factories/ModelFactory.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/database/factories/ModelFactory.php on line 15
+[04-May-2017 07:22:19 America/New_York] PHP Notice:  Undefined variable: factory in /home/afripeaj/public_html/giveandget/myapp/database/factories/ModelFactory.php on line 15
+[04-May-2017 07:22:19 America/New_York] PHP Stack trace:
+[04-May-2017 07:22:19 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/factories/ModelFactory.php:0
+[04-May-2017 07:22:19 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function define() on null in /home/afripeaj/public_html/giveandget/myapp/database/factories/ModelFactory.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/database/factories/ModelFactory.php on line 15
+[05-May-2017 07:21:48 America/New_York] PHP Notice:  Undefined variable: factory in /home/afripeaj/public_html/giveandget/myapp/database/factories/ModelFactory.php on line 15
+[05-May-2017 07:21:48 America/New_York] PHP Stack trace:
+[05-May-2017 07:21:48 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/factories/ModelFactory.php:0
+[05-May-2017 07:21:48 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function define() on null in /home/afripeaj/public_html/giveandget/myapp/database/factories/ModelFactory.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/database/factories/ModelFactory.php on line 15
+[05-May-2017 22:26:00 America/New_York] PHP Notice:  Undefined variable: factory in /home/afripeaj/public_html/giveandget/myapp/database/factories/ModelFactory.php on line 15
+[05-May-2017 22:26:00 America/New_York] PHP Stack trace:
+[05-May-2017 22:26:00 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/factories/ModelFactory.php:0
+[05-May-2017 22:26:00 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function define() on null in /home/afripeaj/public_html/giveandget/myapp/database/factories/ModelFactory.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/database/factories/ModelFactory.php on line 15
+[31-May-2017 14:22:14 America/New_York] PHP Notice:  Undefined variable: factory in /home/afripeaj/public_html/giveandget/myapp/database/factories/ModelFactory.php on line 15
+[31-May-2017 14:22:14 America/New_York] PHP Stack trace:
+[31-May-2017 14:22:14 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/database/factories/ModelFactory.php:0
+[31-May-2017 14:22:14 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function define() on null in /home/afripeaj/public_html/giveandget/myapp/database/factories/ModelFactory.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/database/factories/ModelFactory.php on line 15

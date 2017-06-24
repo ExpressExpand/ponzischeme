@@ -1,0 +1,26 @@
+[05-May-2017 06:40:53 America/New_York] PHP Notice:  Undefined variable: level in /home/afripeaj/public_html/giveandget/myapp/resources/views/vendor/notifications/email-plain.blade.php on line 6
+[05-May-2017 06:40:53 America/New_York] PHP Stack trace:
+[05-May-2017 06:40:53 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/vendor/notifications/email-plain.blade.php:0
+[05-May-2017 06:40:53 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function config() in /home/afripeaj/public_html/giveandget/myapp/resources/views/vendor/notifications/email-plain.blade.php:22
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/resources/views/vendor/notifications/email-plain.blade.php on line 22
+[05-May-2017 06:40:55 America/New_York] PHP Notice:  Undefined variable: level in /home/afripeaj/public_html/giveandget/myapp/resources/views/vendor/notifications/email.blade.php on line 112
+[05-May-2017 06:40:55 America/New_York] PHP Stack trace:
+[05-May-2017 06:40:55 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/vendor/notifications/email.blade.php:0
+[05-May-2017 06:40:55 America/New_York] PHP Notice:  Undefined variable: level in /home/afripeaj/public_html/giveandget/myapp/resources/views/vendor/notifications/email.blade.php on line 115
+[05-May-2017 06:40:55 America/New_York] PHP Stack trace:
+[05-May-2017 06:40:55 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/vendor/notifications/email.blade.php:0
+[07-May-2017 12:55:05 America/New_York] PHP Notice:  Undefined variable: level in /home/afripeaj/public_html/giveandget/myapp/resources/views/vendor/notifications/email-plain.blade.php on line 6
+[07-May-2017 12:55:05 America/New_York] PHP Stack trace:
+[07-May-2017 12:55:05 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/vendor/notifications/email-plain.blade.php:0
+[07-May-2017 12:55:05 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function config() in /home/afripeaj/public_html/giveandget/myapp/resources/views/vendor/notifications/email-plain.blade.php:22
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/resources/views/vendor/notifications/email-plain.blade.php on line 22
+[07-May-2017 12:55:07 America/New_York] PHP Notice:  Undefined variable: level in /home/afripeaj/public_html/giveandget/myapp/resources/views/vendor/notifications/email.blade.php on line 112
+[07-May-2017 12:55:07 America/New_York] PHP Stack trace:
+[07-May-2017 12:55:07 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/vendor/notifications/email.blade.php:0
+[07-May-2017 12:55:07 America/New_York] PHP Notice:  Undefined variable: level in /home/afripeaj/public_html/giveandget/myapp/resources/views/vendor/notifications/email.blade.php on line 115
+[07-May-2017 12:55:07 America/New_York] PHP Stack trace:
+[07-May-2017 12:55:07 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/vendor/notifications/email.blade.php:0

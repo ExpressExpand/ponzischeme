@@ -1,0 +1,30 @@
+[02-May-2017 10:22:00 America/New_York] PHP Fatal error:  Class 'Illuminate\Foundation\Http\Kernel' not found in /home/afripeaj/public_html/giveandget/myapp/app/Http/Kernel.php on line 7
+[02-May-2017 10:22:00 America/New_York] PHP Stack trace:
+[02-May-2017 10:22:00 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/app/Http/Kernel.php:0
+[02-May-2017 19:57:48 America/New_York] PHP Fatal error:  Class 'Illuminate\Foundation\Http\Kernel' not found in /home/afripeaj/public_html/giveandget/myapp/app/Http/Kernel.php on line 7
+[02-May-2017 19:57:48 America/New_York] PHP Stack trace:
+[02-May-2017 19:57:48 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/app/Http/Kernel.php:0
+[03-May-2017 10:33:45 America/New_York] PHP Fatal error:  Class 'Illuminate\Foundation\Http\Kernel' not found in /home/afripeaj/public_html/giveandget/myapp/app/Http/Kernel.php on line 7
+[03-May-2017 10:33:45 America/New_York] PHP Stack trace:
+[03-May-2017 10:33:45 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/app/Http/Kernel.php:0
+[04-May-2017 07:21:38 America/New_York] PHP Fatal error:  Class 'Illuminate\Foundation\Http\Kernel' not found in /home/afripeaj/public_html/giveandget/myapp/app/Http/Kernel.php on line 7
+[04-May-2017 07:21:38 America/New_York] PHP Stack trace:
+[04-May-2017 07:21:38 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/app/Http/Kernel.php:0
+[05-May-2017 07:21:24 America/New_York] PHP Fatal error:  Class 'Illuminate\Foundation\Http\Kernel' not found in /home/afripeaj/public_html/giveandget/myapp/app/Http/Kernel.php on line 7
+[05-May-2017 07:21:24 America/New_York] PHP Stack trace:
+[05-May-2017 07:21:24 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/app/Http/Kernel.php:0
+[05-May-2017 22:25:37 America/New_York] PHP Fatal error:  Class 'Illuminate\Foundation\Http\Kernel' not found in /home/afripeaj/public_html/giveandget/myapp/app/Http/Kernel.php on line 7
+[05-May-2017 22:25:37 America/New_York] PHP Stack trace:
+[05-May-2017 22:25:37 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/app/Http/Kernel.php:0
+[01-Jun-2017 23:16:08 America/New_York] PHP Fatal error:  Class 'Illuminate\Foundation\Http\Kernel' not found in /home/afripeaj/public_html/giveandget/myapp/app/Http/Kernel.php on line 7
+[01-Jun-2017 23:16:08 America/New_York] PHP Stack trace:
+[01-Jun-2017 23:16:08 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/app/Http/Kernel.php:0
+[07-Jun-2017 17:15:41 America/New_York] PHP Fatal error:  Class 'Illuminate\Foundation\Http\Kernel' not found in /home/afripeaj/public_html/giveandget/myapp/app/Http/Kernel.php on line 7
+[07-Jun-2017 17:15:41 America/New_York] PHP Stack trace:
+[07-Jun-2017 17:15:41 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/app/Http/Kernel.php:0
+[10-Jun-2017 17:34:35 America/New_York] PHP Fatal error:  Class 'Illuminate\Foundation\Http\Kernel' not found in /home/afripeaj/public_html/giveandget/myapp/app/Http/Kernel.php on line 7
+[10-Jun-2017 17:34:35 America/New_York] PHP Stack trace:
+[10-Jun-2017 17:34:35 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/app/Http/Kernel.php:0
+[21-Jun-2017 19:49:10 America/New_York] PHP Fatal error:  Class 'Illuminate\Foundation\Http\Kernel' not found in /home/afripeaj/public_html/giveandget/myapp/app/Http/Kernel.php on line 7
+[21-Jun-2017 19:49:10 America/New_York] PHP Stack trace:
+[21-Jun-2017 19:49:10 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/app/Http/Kernel.php:0

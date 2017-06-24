@@ -1,0 +1,70 @@
+[02-May-2017 16:10:27 America/New_York] PHP Notice:  Undefined variable: user in /home/afripeaj/public_html/giveandget/myapp/resources/views/profile/index.blade.php on line 106
+[02-May-2017 16:10:27 America/New_York] PHP Stack trace:
+[02-May-2017 16:10:27 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/profile/index.blade.php:0
+[02-May-2017 16:10:27 America/New_York] PHP Notice:  Trying to get property of non-object in /home/afripeaj/public_html/giveandget/myapp/resources/views/profile/index.blade.php on line 106
+[02-May-2017 16:10:27 America/New_York] PHP Stack trace:
+[02-May-2017 16:10:27 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/profile/index.blade.php:0
+[02-May-2017 16:10:27 America/New_York] PHP Fatal error:  Uncaught Error: Class 'App\Http\Helpers\ApplicationHelpers' not found in /home/afripeaj/public_html/giveandget/myapp/resources/views/profile/index.blade.php:155
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/resources/views/profile/index.blade.php on line 155
+[03-May-2017 00:51:10 America/New_York] PHP Notice:  Undefined variable: user in /home/afripeaj/public_html/giveandget/myapp/resources/views/profile/index.blade.php on line 106
+[03-May-2017 00:51:10 America/New_York] PHP Stack trace:
+[03-May-2017 00:51:10 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/profile/index.blade.php:0
+[03-May-2017 00:51:10 America/New_York] PHP Notice:  Trying to get property of non-object in /home/afripeaj/public_html/giveandget/myapp/resources/views/profile/index.blade.php on line 106
+[03-May-2017 00:51:10 America/New_York] PHP Stack trace:
+[03-May-2017 00:51:10 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/profile/index.blade.php:0
+[03-May-2017 00:51:10 America/New_York] PHP Fatal error:  Uncaught Error: Class 'App\Http\Helpers\ApplicationHelpers' not found in /home/afripeaj/public_html/giveandget/myapp/resources/views/profile/index.blade.php:155
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/resources/views/profile/index.blade.php on line 155
+[04-May-2017 20:25:43 America/New_York] PHP Notice:  Undefined variable: user in /home/afripeaj/public_html/giveandget/myapp/resources/views/profile/index.blade.php on line 106
+[04-May-2017 20:25:43 America/New_York] PHP Stack trace:
+[04-May-2017 20:25:43 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/profile/index.blade.php:0
+[04-May-2017 20:25:43 America/New_York] PHP Notice:  Trying to get property of non-object in /home/afripeaj/public_html/giveandget/myapp/resources/views/profile/index.blade.php on line 106
+[04-May-2017 20:25:43 America/New_York] PHP Stack trace:
+[04-May-2017 20:25:43 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/profile/index.blade.php:0
+[04-May-2017 20:25:43 America/New_York] PHP Fatal error:  Uncaught Error: Class 'App\Http\Helpers\ApplicationHelpers' not found in /home/afripeaj/public_html/giveandget/myapp/resources/views/profile/index.blade.php:155
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/resources/views/profile/index.blade.php on line 155
+[06-May-2017 18:27:44 America/New_York] PHP Notice:  Undefined variable: user in /home/afripeaj/public_html/giveandget/myapp/resources/views/profile/index.blade.php on line 106
+[06-May-2017 18:27:44 America/New_York] PHP Stack trace:
+[06-May-2017 18:27:44 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/profile/index.blade.php:0
+[06-May-2017 18:27:44 America/New_York] PHP Notice:  Trying to get property of non-object in /home/afripeaj/public_html/giveandget/myapp/resources/views/profile/index.blade.php on line 106
+[06-May-2017 18:27:44 America/New_York] PHP Stack trace:
+[06-May-2017 18:27:44 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/profile/index.blade.php:0
+[06-May-2017 18:27:44 America/New_York] PHP Fatal error:  Uncaught Error: Class 'App\Http\Helpers\ApplicationHelpers' not found in /home/afripeaj/public_html/giveandget/myapp/resources/views/profile/index.blade.php:155
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/resources/views/profile/index.blade.php on line 155
+[07-May-2017 21:03:45 America/New_York] PHP Notice:  Undefined variable: user in /home/afripeaj/public_html/giveandget/myapp/resources/views/profile/index.blade.php on line 106
+[07-May-2017 21:03:45 America/New_York] PHP Stack trace:
+[07-May-2017 21:03:45 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/profile/index.blade.php:0
+[07-May-2017 21:03:45 America/New_York] PHP Notice:  Trying to get property of non-object in /home/afripeaj/public_html/giveandget/myapp/resources/views/profile/index.blade.php on line 106
+[07-May-2017 21:03:45 America/New_York] PHP Stack trace:
+[07-May-2017 21:03:45 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/profile/index.blade.php:0
+[07-May-2017 21:03:45 America/New_York] PHP Fatal error:  Uncaught Error: Class 'App\Http\Helpers\ApplicationHelpers' not found in /home/afripeaj/public_html/giveandget/myapp/resources/views/profile/index.blade.php:155
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/resources/views/profile/index.blade.php on line 155
+[08-May-2017 21:28:05 America/New_York] PHP Notice:  Undefined variable: user in /home/afripeaj/public_html/giveandget/myapp/resources/views/profile/index.blade.php on line 106
+[08-May-2017 21:28:05 America/New_York] PHP Stack trace:
+[08-May-2017 21:28:05 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/profile/index.blade.php:0
+[08-May-2017 21:28:05 America/New_York] PHP Notice:  Trying to get property of non-object in /home/afripeaj/public_html/giveandget/myapp/resources/views/profile/index.blade.php on line 106
+[08-May-2017 21:28:05 America/New_York] PHP Stack trace:
+[08-May-2017 21:28:05 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/profile/index.blade.php:0
+[08-May-2017 21:28:05 America/New_York] PHP Fatal error:  Uncaught Error: Class 'App\Http\Helpers\ApplicationHelpers' not found in /home/afripeaj/public_html/giveandget/myapp/resources/views/profile/index.blade.php:155
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/resources/views/profile/index.blade.php on line 155
+[09-Jun-2017 16:25:07 America/New_York] PHP Notice:  Undefined variable: user in /home/afripeaj/public_html/giveandget/myapp/resources/views/profile/index.blade.php on line 106
+[09-Jun-2017 16:25:07 America/New_York] PHP Stack trace:
+[09-Jun-2017 16:25:07 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/profile/index.blade.php:0
+[09-Jun-2017 16:25:07 America/New_York] PHP Notice:  Trying to get property of non-object in /home/afripeaj/public_html/giveandget/myapp/resources/views/profile/index.blade.php on line 106
+[09-Jun-2017 16:25:07 America/New_York] PHP Stack trace:
+[09-Jun-2017 16:25:07 America/New_York] PHP   1. {main}() /home/afripeaj/public_html/giveandget/myapp/resources/views/profile/index.blade.php:0
+[09-Jun-2017 16:25:07 America/New_York] PHP Fatal error:  Uncaught Error: Class 'App\Http\Helpers\ApplicationHelpers' not found in /home/afripeaj/public_html/giveandget/myapp/resources/views/profile/index.blade.php:155
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/resources/views/profile/index.blade.php on line 155

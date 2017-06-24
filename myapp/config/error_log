@@ -1,0 +1,404 @@
+[02-May-2017 00:18:47 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/config/app.php:28
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/app.php on line 28
+[02-May-2017 00:18:53 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/config/mail.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/mail.php on line 19
+[02-May-2017 00:18:55 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function base_path() in /home/afripeaj/public_html/giveandget/myapp/config/view.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/view.php on line 17
+[02-May-2017 00:19:01 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/config/queue.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/queue.php on line 18
+[02-May-2017 00:19:03 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/config/cache.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/cache.php on line 18
+[02-May-2017 00:19:19 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/config/session.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/session.php on line 19
+[02-May-2017 02:52:07 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/config/services.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/services.php on line 18
+[02-May-2017 02:52:11 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/config/database.php:29
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/database.php on line 29
+[02-May-2017 02:52:18 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function storage_path() in /home/afripeaj/public_html/giveandget/myapp/config/filesystems.php:48
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/filesystems.php on line 48
+[02-May-2017 02:52:44 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/config/broadcasting.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/broadcasting.php on line 18
+[02-May-2017 10:23:29 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function base_path() in /home/afripeaj/public_html/giveandget/myapp/config/view.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/view.php on line 17
+[02-May-2017 10:23:30 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/config/mail.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/mail.php on line 19
+[02-May-2017 10:23:30 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/config/app.php:28
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/app.php on line 28
+[02-May-2017 10:23:33 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/config/queue.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/queue.php on line 18
+[02-May-2017 10:23:33 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/config/cache.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/cache.php on line 18
+[02-May-2017 16:52:28 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/config/session.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/session.php on line 19
+[02-May-2017 19:58:01 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/config/mail.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/mail.php on line 19
+[02-May-2017 19:58:01 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function base_path() in /home/afripeaj/public_html/giveandget/myapp/config/view.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/view.php on line 17
+[02-May-2017 19:58:02 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/config/app.php:28
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/app.php on line 28
+[02-May-2017 19:58:06 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/config/queue.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/queue.php on line 18
+[02-May-2017 19:58:06 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/config/cache.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/cache.php on line 18
+[02-May-2017 19:58:13 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/config/database.php:29
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/database.php on line 29
+[02-May-2017 19:58:13 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/config/services.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/services.php on line 18
+[02-May-2017 19:58:16 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function storage_path() in /home/afripeaj/public_html/giveandget/myapp/config/filesystems.php:48
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/filesystems.php on line 48
+[02-May-2017 19:58:16 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/config/broadcasting.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/broadcasting.php on line 18
+[03-May-2017 03:59:29 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/config/app.php:28
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/app.php on line 28
+[03-May-2017 03:59:32 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/config/broadcasting.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/broadcasting.php on line 18
+[03-May-2017 03:59:34 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/config/cache.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/cache.php on line 18
+[03-May-2017 03:59:40 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/config/database.php:29
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/database.php on line 29
+[03-May-2017 03:59:43 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function storage_path() in /home/afripeaj/public_html/giveandget/myapp/config/filesystems.php:48
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/filesystems.php on line 48
+[03-May-2017 03:59:49 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/config/mail.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/mail.php on line 19
+[03-May-2017 03:59:51 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/config/queue.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/queue.php on line 18
+[03-May-2017 03:59:53 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/config/services.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/services.php on line 18
+[03-May-2017 03:59:55 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/config/session.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/session.php on line 19
+[03-May-2017 03:59:57 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function base_path() in /home/afripeaj/public_html/giveandget/myapp/config/view.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/view.php on line 17
+[05-May-2017 06:52:53 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/config/app.php:28
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/app.php on line 28
+[05-May-2017 06:52:57 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/config/broadcasting.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/broadcasting.php on line 18
+[05-May-2017 06:52:59 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/config/cache.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/cache.php on line 18
+[05-May-2017 06:53:05 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/config/database.php:29
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/database.php on line 29
+[05-May-2017 06:53:09 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function storage_path() in /home/afripeaj/public_html/giveandget/myapp/config/filesystems.php:48
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/filesystems.php on line 48
+[05-May-2017 06:53:18 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/config/mail.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/mail.php on line 19
+[05-May-2017 06:53:20 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/config/queue.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/queue.php on line 18
+[05-May-2017 06:53:24 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/config/services.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/services.php on line 18
+[05-May-2017 06:53:25 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/config/session.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/session.php on line 19
+[05-May-2017 06:53:29 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function base_path() in /home/afripeaj/public_html/giveandget/myapp/config/view.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/view.php on line 17
+[05-May-2017 06:55:31 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/config/app.php:28
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/app.php on line 28
+[05-May-2017 06:55:34 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/config/broadcasting.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/broadcasting.php on line 18
+[05-May-2017 06:55:36 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/config/cache.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/cache.php on line 18
+[05-May-2017 06:55:41 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/config/database.php:29
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/database.php on line 29
+[05-May-2017 06:55:44 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function storage_path() in /home/afripeaj/public_html/giveandget/myapp/config/filesystems.php:48
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/filesystems.php on line 48
+[05-May-2017 06:55:51 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/config/mail.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/mail.php on line 19
+[05-May-2017 06:55:53 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/config/queue.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/queue.php on line 18
+[05-May-2017 06:55:54 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/config/services.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/services.php on line 18
+[05-May-2017 06:55:56 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/config/session.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/session.php on line 19
+[05-May-2017 06:55:59 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function base_path() in /home/afripeaj/public_html/giveandget/myapp/config/view.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/view.php on line 17
+[07-May-2017 17:33:03 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function storage_path() in /home/afripeaj/public_html/giveandget/myapp/config/filesystems.php:48
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/filesystems.php on line 48
+[07-May-2017 17:33:06 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/config/session.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/session.php on line 19
+[07-May-2017 17:33:08 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/config/session.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/session.php on line 19
+[08-May-2017 00:26:18 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/config/broadcasting.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/broadcasting.php on line 18
+[08-May-2017 03:42:23 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/config/queue.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/queue.php on line 18
+[08-May-2017 03:42:27 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/config/cache.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/cache.php on line 18
+[08-May-2017 04:46:35 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/config/database.php:29
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/database.php on line 29
+[08-May-2017 17:16:26 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/config/cache.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/cache.php on line 18
+[08-May-2017 18:25:44 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/config/mail.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/mail.php on line 19
+[09-May-2017 02:27:03 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function base_path() in /home/afripeaj/public_html/giveandget/myapp/config/view.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/view.php on line 17
+[09-May-2017 02:27:11 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/config/session.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/session.php on line 19
+[09-May-2017 10:57:00 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/config/app.php:28
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/app.php on line 28
+[09-May-2017 10:57:05 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function storage_path() in /home/afripeaj/public_html/giveandget/myapp/config/filesystems.php:48
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/filesystems.php on line 48
+[09-May-2017 12:39:50 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/config/queue.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/queue.php on line 18
+[09-May-2017 12:39:52 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/config/broadcasting.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/broadcasting.php on line 18
+[10-May-2017 02:37:18 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/config/database.php:29
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/database.php on line 29
+[10-May-2017 04:32:53 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/config/services.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/services.php on line 18
+[31-May-2017 14:06:27 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/config/broadcasting.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/broadcasting.php on line 18
+[31-May-2017 15:05:18 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/config/database.php:29
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/database.php on line 29
+[01-Jun-2017 23:15:56 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function storage_path() in /home/afripeaj/public_html/giveandget/myapp/config/filesystems.php:48
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/filesystems.php on line 48
+[02-Jun-2017 03:19:17 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/config/database.php:29
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/database.php on line 29
+[02-Jun-2017 03:19:33 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/config/app.php:28
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/app.php on line 28
+[02-Jun-2017 03:19:55 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/config/cache.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/cache.php on line 18
+[02-Jun-2017 06:40:29 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/config/broadcasting.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/broadcasting.php on line 18
+[02-Jun-2017 06:40:32 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/config/broadcasting.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/broadcasting.php on line 18
+[02-Jun-2017 08:58:19 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function base_path() in /home/afripeaj/public_html/giveandget/myapp/config/view.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/view.php on line 17
+[02-Jun-2017 08:58:22 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function base_path() in /home/afripeaj/public_html/giveandget/myapp/config/view.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/view.php on line 17
+[06-Jun-2017 00:00:48 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/config/session.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/session.php on line 19
+[06-Jun-2017 00:32:44 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/config/cache.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/cache.php on line 18
+[06-Jun-2017 16:32:10 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/config/mail.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/mail.php on line 19
+[06-Jun-2017 20:53:58 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/config/app.php:28
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/app.php on line 28
+[07-Jun-2017 00:49:09 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function storage_path() in /home/afripeaj/public_html/giveandget/myapp/config/filesystems.php:48
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/filesystems.php on line 48
+[07-Jun-2017 00:49:42 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/config/services.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/services.php on line 18
+[10-Jun-2017 16:00:34 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/config/session.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/session.php on line 19
+[10-Jun-2017 16:02:04 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function base_path() in /home/afripeaj/public_html/giveandget/myapp/config/view.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/view.php on line 17
+[10-Jun-2017 17:53:09 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/config/queue.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/queue.php on line 18
+[10-Jun-2017 19:00:27 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/config/broadcasting.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/broadcasting.php on line 18
+[15-Jun-2017 10:25:50 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/config/cache.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/cache.php on line 18
+[15-Jun-2017 12:28:43 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/config/app.php:28
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/app.php on line 28
+[17-Jun-2017 16:34:35 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function base_path() in /home/afripeaj/public_html/giveandget/myapp/config/view.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/view.php on line 17
+[17-Jun-2017 17:41:15 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/config/cache.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/cache.php on line 18
+[18-Jun-2017 07:01:16 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/config/app.php:28
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/app.php on line 28
+[18-Jun-2017 13:41:15 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/config/mail.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/mail.php on line 19
+[19-Jun-2017 04:41:15 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/config/broadcasting.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/broadcasting.php on line 18
+[22-Jun-2017 03:28:27 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/afripeaj/public_html/giveandget/myapp/config/cache.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/cache.php on line 18
+[22-Jun-2017 04:52:01 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function base_path() in /home/afripeaj/public_html/giveandget/myapp/config/view.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/config/view.php on line 17

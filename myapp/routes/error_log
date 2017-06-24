@@ -1,0 +1,132 @@
+[02-May-2017 00:18:19 America/New_York] PHP Fatal error:  Uncaught Error: Class 'Route' not found in /home/afripeaj/public_html/giveandget/myapp/routes/web.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/routes/web.php on line 18
+[02-May-2017 00:18:22 America/New_York] PHP Fatal error:  Uncaught Error: Class 'Route' not found in /home/afripeaj/public_html/giveandget/myapp/routes/api.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/routes/api.php on line 16
+[02-May-2017 00:18:44 America/New_York] PHP Fatal error:  Uncaught Error: Class 'Artisan' not found in /home/afripeaj/public_html/giveandget/myapp/routes/console.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/routes/console.php on line 16
+[02-May-2017 10:23:10 America/New_York] PHP Fatal error:  Uncaught Error: Class 'Route' not found in /home/afripeaj/public_html/giveandget/myapp/routes/api.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/routes/api.php on line 16
+[02-May-2017 16:52:24 America/New_York] PHP Fatal error:  Uncaught Error: Class 'Route' not found in /home/afripeaj/public_html/giveandget/myapp/routes/web.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/routes/web.php on line 18
+[02-May-2017 16:52:28 America/New_York] PHP Fatal error:  Uncaught Error: Class 'Artisan' not found in /home/afripeaj/public_html/giveandget/myapp/routes/console.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/routes/console.php on line 16
+[02-May-2017 19:57:57 America/New_York] PHP Fatal error:  Uncaught Error: Class 'Route' not found in /home/afripeaj/public_html/giveandget/myapp/routes/api.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/routes/api.php on line 16
+[03-May-2017 04:00:22 America/New_York] PHP Fatal error:  Uncaught Error: Class 'Route' not found in /home/afripeaj/public_html/giveandget/myapp/routes/api.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/routes/api.php on line 16
+[03-May-2017 04:00:24 America/New_York] PHP Fatal error:  Uncaught Error: Class 'Artisan' not found in /home/afripeaj/public_html/giveandget/myapp/routes/console.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/routes/console.php on line 16
+[03-May-2017 04:00:26 America/New_York] PHP Fatal error:  Uncaught Error: Class 'Route' not found in /home/afripeaj/public_html/giveandget/myapp/routes/web.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/routes/web.php on line 18
+[05-May-2017 06:54:01 America/New_York] PHP Fatal error:  Uncaught Error: Class 'Route' not found in /home/afripeaj/public_html/giveandget/myapp/routes/api.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/routes/api.php on line 16
+[05-May-2017 06:54:03 America/New_York] PHP Fatal error:  Uncaught Error: Class 'Artisan' not found in /home/afripeaj/public_html/giveandget/myapp/routes/console.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/routes/console.php on line 16
+[05-May-2017 06:54:05 America/New_York] PHP Fatal error:  Uncaught Error: Class 'Route' not found in /home/afripeaj/public_html/giveandget/myapp/routes/web.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/routes/web.php on line 18
+[05-May-2017 06:56:09 America/New_York] PHP Fatal error:  Uncaught Error: Class 'Route' not found in /home/afripeaj/public_html/giveandget/myapp/routes/api.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/routes/api.php on line 16
+[05-May-2017 06:56:11 America/New_York] PHP Fatal error:  Uncaught Error: Class 'Artisan' not found in /home/afripeaj/public_html/giveandget/myapp/routes/console.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/routes/console.php on line 16
+[05-May-2017 06:56:13 America/New_York] PHP Fatal error:  Uncaught Error: Class 'Route' not found in /home/afripeaj/public_html/giveandget/myapp/routes/web.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/routes/web.php on line 18
+[07-May-2017 17:32:41 America/New_York] PHP Fatal error:  Uncaught Error: Class 'Route' not found in /home/afripeaj/public_html/giveandget/myapp/routes/api.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/routes/api.php on line 16
+[07-May-2017 20:26:31 America/New_York] PHP Fatal error:  Uncaught Error: Class 'Artisan' not found in /home/afripeaj/public_html/giveandget/myapp/routes/console.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/routes/console.php on line 16
+[08-May-2017 10:13:30 America/New_York] PHP Fatal error:  Uncaught Error: Class 'Route' not found in /home/afripeaj/public_html/giveandget/myapp/routes/api.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/routes/api.php on line 16
+[08-May-2017 20:44:36 America/New_York] PHP Fatal error:  Uncaught Error: Class 'Route' not found in /home/afripeaj/public_html/giveandget/myapp/routes/web.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/routes/web.php on line 18
+[09-May-2017 02:27:09 America/New_York] PHP Fatal error:  Uncaught Error: Class 'Artisan' not found in /home/afripeaj/public_html/giveandget/myapp/routes/console.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/routes/console.php on line 16
+[09-May-2017 21:03:14 America/New_York] PHP Fatal error:  Uncaught Error: Class 'Route' not found in /home/afripeaj/public_html/giveandget/myapp/routes/api.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/routes/api.php on line 16
+[01-Jun-2017 23:16:21 America/New_York] PHP Fatal error:  Uncaught Error: Class 'Artisan' not found in /home/afripeaj/public_html/giveandget/myapp/routes/console.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/routes/console.php on line 16
+[01-Jun-2017 23:17:15 America/New_York] PHP Fatal error:  Uncaught Error: Class 'Route' not found in /home/afripeaj/public_html/giveandget/myapp/routes/web.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/routes/web.php on line 18
+[02-Jun-2017 08:35:16 America/New_York] PHP Fatal error:  Uncaught Error: Class 'Route' not found in /home/afripeaj/public_html/giveandget/myapp/routes/api.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/routes/api.php on line 16
+[06-Jun-2017 18:16:35 America/New_York] PHP Fatal error:  Uncaught Error: Class 'Route' not found in /home/afripeaj/public_html/giveandget/myapp/routes/web.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/routes/web.php on line 18
+[07-Jun-2017 03:12:39 America/New_York] PHP Fatal error:  Uncaught Error: Class 'Artisan' not found in /home/afripeaj/public_html/giveandget/myapp/routes/console.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/routes/console.php on line 16
+[10-Jun-2017 16:34:35 America/New_York] PHP Fatal error:  Uncaught Error: Class 'Artisan' not found in /home/afripeaj/public_html/giveandget/myapp/routes/console.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/routes/console.php on line 16
+[15-Jun-2017 18:51:43 America/New_York] PHP Fatal error:  Uncaught Error: Class 'Route' not found in /home/afripeaj/public_html/giveandget/myapp/routes/api.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/routes/api.php on line 16
+[15-Jun-2017 23:10:00 America/New_York] PHP Fatal error:  Uncaught Error: Class 'Artisan' not found in /home/afripeaj/public_html/giveandget/myapp/routes/console.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/routes/console.php on line 16
+[23-Jun-2017 05:27:13 America/New_York] PHP Fatal error:  Uncaught Error: Class 'Route' not found in /home/afripeaj/public_html/giveandget/myapp/routes/web.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/routes/web.php on line 18
+[23-Jun-2017 12:26:00 America/New_York] PHP Fatal error:  Uncaught Error: Class 'Route' not found in /home/afripeaj/public_html/giveandget/myapp/routes/api.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/routes/api.php on line 16
+[23-Jun-2017 16:58:08 America/New_York] PHP Fatal error:  Uncaught Error: Class 'Route' not found in /home/afripeaj/public_html/giveandget/myapp/routes/web.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/routes/web.php on line 18

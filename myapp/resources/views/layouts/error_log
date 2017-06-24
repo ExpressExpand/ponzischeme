@@ -1,0 +1,24 @@
+[03-May-2017 05:10:31 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function csrf_token() in /home/afripeaj/public_html/giveandget/myapp/resources/views/layouts/app.blade.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/resources/views/layouts/app.blade.php on line 19
+[04-May-2017 20:23:38 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function csrf_token() in /home/afripeaj/public_html/giveandget/myapp/resources/views/layouts/app.blade.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/resources/views/layouts/app.blade.php on line 19
+[06-May-2017 18:27:09 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function csrf_token() in /home/afripeaj/public_html/giveandget/myapp/resources/views/layouts/app.blade.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/resources/views/layouts/app.blade.php on line 19
+[07-May-2017 18:31:44 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function csrf_token() in /home/afripeaj/public_html/giveandget/myapp/resources/views/layouts/app.blade.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/resources/views/layouts/app.blade.php on line 19
+[08-May-2017 20:13:47 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function csrf_token() in /home/afripeaj/public_html/giveandget/myapp/resources/views/layouts/app.blade.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/resources/views/layouts/app.blade.php on line 19
+[23-Jun-2017 05:28:38 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function csrf_token() in /home/afripeaj/public_html/giveandget/myapp/resources/views/layouts/app.blade.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/afripeaj/public_html/giveandget/myapp/resources/views/layouts/app.blade.php on line 19
