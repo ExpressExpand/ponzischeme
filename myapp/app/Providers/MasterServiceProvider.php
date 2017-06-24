@@ -12,8 +12,8 @@ class MasterServiceProvider extends ServiceProvider
      * @return void
      */
     public function boot()
-    {
-        view()->composer(['layouts/master'],
+    {exit;
+        view()->composer('layouts/master',
          'App\Http\ViewComposers\MasterComposer');
     }
 
