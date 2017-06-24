@@ -53,6 +53,11 @@ return [
 
     'url' => env('APP_URL', 'http://localhost'),
 
+    'EMAILHELPER_HOST' => env('EMAILHELPER_HOST', ''),
+    'EMAILHELPER_PORT' => env('EMAILHELPER_PORT' 110),
+    'EMAILHELPER_USERNAME' => env('EMAILHELPER_USERNAME', ''),
+    'EMAILHELPER_PASSWORD' => env('EMAILHELPER_PASSWORD', ''),
+
     /*
     |--------------------------------------------------------------------------
     | Application Timezone
