@@ -17,7 +17,8 @@ class SidebarComposer
 	}
 	public function compose(View $view) {
 		//show the analytics
-        AnalyticReports::saveStats($request);
+
+        AnalyticReports::saveStats(request());
 
 		$user = Auth::User();
 		//get the message
