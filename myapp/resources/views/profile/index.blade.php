@@ -113,7 +113,7 @@
                              'class' => 'form-horizontal']) }}
                                 @if(!strlen($user->bankName))
                                 <div class="alert alert-warning"> 
-                                    You have to contact admin to be able to change your bank details.</div>
+                                    You have to contact admin to be able to change your bank details once set.</div>
                                 @else
                                 <div class="alert alert-warning"> 
                                     Once the bank details changed, you cannot edit it 

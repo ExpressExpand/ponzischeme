@@ -33,12 +33,12 @@ class PhController extends Controller
             switch($request->input('paymentType')){
                 case 'bank':
                     if(strlen($user->bankName) == 0){
-                        return redirect()->back()->withErrors('You need to configure your bank details first from your profile.');
+                        return redirect('/profile')->withErrors('You need to configure your bank details first from your profile.');
                     }
                 break;
                 case 'bitcoin':
                     if(strlen($user->bitcoinAddress) == 0){
-                        return redirect()->back()->withErrors('You need to configure your bitcoin details first from your profile.');
+                        return redirect('/profile')->withErrors('You need to configure your bitcoin details first from your profile.');
                     }
                 break;
             }
@@ -55,6 +55,7 @@ class PhController extends Controller
             //log it
             $log = new GhLog();
             $log->userID = $user->id;
+            $log->ghDate = time();
             $log->save();
 
     		Session::flash('flash_message', "Your Donation was successful. Please wait while you are matched.");
