@@ -90,6 +90,7 @@ final class EmailHelpers {
         }else{
             $mail->addAddress($this->recipient->email, $this->recipient->name);
             $mail->setFrom(env('EMAILHELPER_USERNAME'), env('EMAILHELPER_ADMIN_NAME'));
+            dd(env('EMAILHELPER_USERNAME'));
         }dd($mail);
         $mail->send();
         return $mail;
