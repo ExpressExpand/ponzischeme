@@ -5,7 +5,7 @@ namespace App\Providers;
 use Illuminate\Support\ServiceProvider;
 use App\Http\Helpers\AnalyticReports;
 use Illuminate\Http\Request;
-
+use View;
 
 class AppServiceProvider extends ServiceProvider
 {
