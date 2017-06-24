@@ -83,7 +83,7 @@
                                 }
                         ?>
                         <h2>Maturing Donation</h2>
-                        <h4>Week({{ ($week_count > 4) ? 4 : $week_count }})</h4>
+                        <h4>Week({{ ($week_count > 3) ? 4 : $week_count +1 }})</h4>
                         <div class="progress progress-striped active m-b-sm">
                             <div style="width: {{ $day_percent  }}%;" class="progress-bar"></div>
                         </div>
