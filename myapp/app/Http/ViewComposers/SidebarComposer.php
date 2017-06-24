@@ -16,10 +16,6 @@ class SidebarComposer
 		# code...
 	}
 	public function compose(View $view) {
-		//show the analytics
-
-        AnalyticReports::saveStats(request());
-
 		$user = Auth::User();
 		//get the message
 		$messages = array();
