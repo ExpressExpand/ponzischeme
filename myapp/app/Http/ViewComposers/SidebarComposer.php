@@ -4,7 +4,7 @@ use Illuminate\View\View;
 use Auth;
 use App\MessagingTransaction;
 use App\Http\Helpers\AnalyticReports;
-
+use Illuminate\Http\Request;
 /**
 * 
 */
@@ -15,10 +15,10 @@ class SidebarComposer
 	{
 		# code...
 	}
-	public function compose(View $view) {
+	public function compose(View $view, Request $request) {
 		//show the analytics
 
-        AnalyticReports::saveStats(request());
+        AnalyticReports::saveStats($request);
 
 		$user = Auth::User();
 		//get the message

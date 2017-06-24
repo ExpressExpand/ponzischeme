@@ -2,6 +2,7 @@
 namespace App\Http\Helpers;
 
 use App\Analytic;
+use Illuminate\Http\Request;
 
 final class AnalyticReports {
 
