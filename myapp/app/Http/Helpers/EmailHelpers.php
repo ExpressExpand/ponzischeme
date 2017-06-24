@@ -93,7 +93,7 @@ final class EmailHelpers {
             $mail->setFrom(Config::get('app.EMAILHELPER_USERNAME'), env('EMAILHELPER_ADMIN_NAME'));
             
         }
-        $mail->send();dd($mail);
+        $mail->send();
         return $mail;
     }
 	private static function getSettings($mail) {
