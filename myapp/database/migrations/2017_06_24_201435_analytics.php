@@ -23,6 +23,7 @@ class Analytics extends Migration
             $table->string('latitude')->nullable();
             $table->string('longitude')->nullable();
             $table->timestamps();
+            
         });
     }
 
