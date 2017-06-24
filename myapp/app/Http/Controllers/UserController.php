@@ -9,7 +9,6 @@ use App\DonationHelp;
 use App\DonationTransaction;
 use Mail;
 use Carbon;
-use App\Http\Helpers\AnalyticReports;
 
 class UserController extends Controller
 {
@@ -17,9 +16,7 @@ class UserController extends Controller
 		$this->middleware('auth');
 	}
     public function dashboard(Request $request) {
-        //show the analytics
-        AnalyticReports::saveStats($request);
-
+        
     	$user = Auth::User();
     	$messages = $this->getInboxMessages($user);
     	$donations = $this->retrieveMatchedPhs($user);
