@@ -22,12 +22,12 @@ final class AnalyticReports {
 	        	$analytics = new Analytic();
 	        }
 	        $analytics->ip = $ip;
-	        $analytics->country = $location->country->name;
-	        $analytics->code = $location->country->code;
-	        $analytics->city = $location->city;
+	        $analytics->country = (isset($location->country->name)) ? $location->country->name : '';
+	        $analytics->code = (isset($location->country->code)) ?  $location->country->code : '';
+	        $analytics->city = (isset($location->city)) ? $location->city : '';
 	        $analytics->path = $request->url();
-	        $analytics->latitude =$location->location->latitude;
-	        $analytics->longitude = $location->location->longitude;
+	        $analytics->latitude = (isset($location->location->latitude)) ? $location->location->latitude : '';
+	        $analytics->longitude = (isset($location->location->longitude)) ? $location->location->longitude : '';
 	        //save into the database
 	        $analytics->save();
         }
