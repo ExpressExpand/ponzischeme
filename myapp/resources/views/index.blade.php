@@ -97,11 +97,12 @@
 			<h3>What are the bonuses</h3>
 			<p>You get registration bonus as a first timer. Below is the breakdown: 
 			<ul>
-				<li>You get N5,000 bonus for amount above 16,000 and less thant 160,000. </li>
+				<li>You get N5,000 bonus for amount above 16,000 and less than	 160,000. </li>
 				<li>You get N10,000  for amount above 160,000 and less than 500,000.</li>
 				<li>You get 32,000 for amount above 500,000.</li>
 			</ul>
-			<p>You will also continue to earn 10% of adny amount provided by your referrals.</p>
+			
+			<p>You will also continue to earn 10% of any amount provided by your referrals.</p>
 		</div>
 	</div>
 </div>
