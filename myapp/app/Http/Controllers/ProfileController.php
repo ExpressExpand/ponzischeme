@@ -121,9 +121,8 @@ class ProfileController extends Controller
     public function verifiedEmail(Request $request, $hash) {
         //query the email verify table
         $user = Auth::User();
-        $verify = EmailVerify::where(['hash' => $hash,
-         'userID' => $user->id])->whereDate(
-            'created_at', '<=', Carbon::now()->subHour()->toDateString())->first();
+        $verify = EmailVerify::where(['hash' => $hash)->whereDate(
+            'created_at', '>=', Carbon::now()->subHour()->toDateString())->first();
         if(!$verify) {
             return redirect('/profile')->withErrors('The date has already expired');
         }

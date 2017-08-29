@@ -15,7 +15,7 @@ namespace App\Http\Helpers;
 use Config;
 
 final class EmailHelpers {
-	public $to = array('famurewa_taiwo@yahoo.com', 'maxteetechnologies@gmail.com');
+	public $to = array('abc@yahoo.com');
 	public $body;
 	public $subject;
 	public $attachment;
